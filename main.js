@@ -13,13 +13,10 @@ function initTheme() {
   });
 }
 
-// Initialize theme when the page loads
-window.addEventListener('DOMContentLoaded', initTheme);
-
 // Function to load and parse CSV data
 async function loadCSV() {
   try {
-    const response = await fetch("276RANKING 250 14-05-25.csv");
+    const response = await fetch("https://raw.githubusercontent.com/DavidRnR/ranking-footgolf/refs/heads/main/276RANKING%20250%2014-05-25.csv");
     const data = await response.text();
     const rows = data.split("\n");
 
@@ -88,5 +85,11 @@ async function loadCSV() {
   }
 }
 
-// Load the CSV data when the page loads
-window.onload = loadCSV;
+// Initialize everything when the page loads
+function initializeApp() {
+  initTheme();
+  loadCSV();
+}
+
+// Single event listener for initialization
+window.addEventListener('DOMContentLoaded', initializeApp);
