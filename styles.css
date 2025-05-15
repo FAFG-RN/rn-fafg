@@ -182,3 +182,41 @@ body.dark .logo-img {
   color: var(--color-text);
   opacity: 0.7;
 }
+
+@media screen and (max-width: 768px) {
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-top: 2em;
+    padding-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  tr:first-child {
+    margin-top: 0;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    font-size: 0.9em;
+    border: none;
+  }
+
+  td[data-label=""] {
+    display: none;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 1em;
+    font-size: 0.9em;
+  }
+}

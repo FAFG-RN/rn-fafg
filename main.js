@@ -1,5 +1,50 @@
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv";
 
+const tableConfig = {
+  headers: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA', 'TARJETA 15', 'PUNTOS QUE PIERDE', 'TARJETA 16'],
+  mobileHeaders: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA'],
+  columns: [
+    {
+      key: 'position',
+      index: 0,
+      className: 'rank'
+    },
+    {
+      key: 'player',
+      index: 1
+    },
+    {
+      key: 'points',
+      index: 2,
+      className: 'points'
+    },
+    {
+      key: 'hcp',
+      index: 3
+    },
+    {
+      key: 'tournaments',
+      index: 4
+    },
+    {
+      key: 'origin',
+      index: 5
+    },
+    {
+      key: 'card15',
+      index: 6
+    },
+    {
+      key: 'pointsLost',
+      index: 7
+    },
+    {
+      key: 'card16',
+      index: 8
+    }
+  ]
+};
+
 // Theme switching functionality
 function initTheme() {
   console.log('Initializing theme...');
@@ -67,6 +112,17 @@ function handleSearch(e) {
   renderTableRows(filteredRows);
 }
 
+// Function to generate table headers
+function generateTableHeaders() {
+  const $tableHeader = document.getElementById('tableHeader');
+  
+  tableConfig.headers.forEach(header => {
+    const th = document.createElement('th');
+    th.textContent = header;
+    $tableHeader.appendChild(th);
+  });
+}
+
 // Function to render table rows
 function renderTableRows(rows) {
   const $tableBody = document.querySelector(".tableContainer table tbody");
@@ -78,52 +134,23 @@ function renderTableRows(rows) {
       if (columns.length > 1) {
         const tr = document.createElement("tr");
 
-        // Add position
-        const posTd = document.createElement("td");
-        posTd.className = "rank";
-        posTd.textContent = columns[0];
-        tr.appendChild(posTd);
+        tableConfig.columns.forEach(column => {
+          const td = document.createElement("td");
+          td.textContent = columns[column.index];
+          
+          if (column.className) {
+            td.className = column.className;
+          }
 
-        // Add player name
-        const playerTd = document.createElement("td");
-        playerTd.textContent = columns[1];
-        tr.appendChild(playerTd);
-
-        // Add points
-        const pointsTd = document.createElement("td");
-        pointsTd.className = "points";
-        pointsTd.textContent = columns[2];
-        tr.appendChild(pointsTd);
-
-        // Add HCP
-        const hcpTd = document.createElement("td");
-        hcpTd.textContent = columns[3];
-        tr.appendChild(hcpTd);
-
-        // Add tournaments
-        const tournamentsTd = document.createElement("td");
-        tournamentsTd.textContent = columns[4];
-        tr.appendChild(tournamentsTd);
-
-        // Add origin
-        const originTd = document.createElement("td");
-        originTd.textContent = columns[5];
-        tr.appendChild(originTd);
-
-        // Add card 15
-        const card15Td = document.createElement("td");
-        card15Td.textContent = columns[6];
-        tr.appendChild(card15Td);
-
-        // Add points lost
-        const pointsLostTd = document.createElement("td");
-        pointsLostTd.textContent = columns[7];
-        tr.appendChild(pointsLostTd);
-
-        // Add card 16
-        const card16Td = document.createElement("td");
-        card16Td.textContent = columns[8];
-        tr.appendChild(card16Td);
+          // Use mobileHeaders for the first 6 columns, hide the rest on mobile
+          if (column.index < tableConfig.mobileHeaders.length) {
+            td.setAttribute('data-label', tableConfig.mobileHeaders[column.index]);
+          } else {
+            td.setAttribute('data-label', '');
+          }
+          
+          tr.appendChild(td);
+        });
 
         $tableBody.appendChild(tr);
       }
@@ -135,6 +162,7 @@ function renderTableRows(rows) {
 function initializeApp() {
   console.log('Initializing application...');
   initTheme();
+  generateTableHeaders();
   loadCSV();
   console.log('Application initialized');
 }
