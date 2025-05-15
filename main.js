@@ -1,5 +1,6 @@
 // Theme switching functionality
 function initTheme() {
+  console.log('Initializing theme...');
   const themeToggle = document.getElementById('themeToggle');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
@@ -11,10 +12,12 @@ function initTheme() {
     document.body.classList.toggle('dark');
     document.body.classList.toggle('light');
   });
+  console.log('Theme initialized');
 }
 
 // Function to load and parse CSV data
 async function loadCSV() {
+  console.log('Loading CSV data...');
   try {
     const response = await fetch("https://raw.githubusercontent.com/DavidRnR/ranking-footgolf/refs/heads/main/276RANKING%20250%2014-05-25.csv");
     const data = await response.text();
@@ -80,6 +83,7 @@ async function loadCSV() {
         }
       }
     });
+    console.log('CSV data loaded successfully');
   } catch (error) {
     console.error("Error loading CSV:", error);
   }
@@ -87,9 +91,26 @@ async function loadCSV() {
 
 // Initialize everything when the page loads
 function initializeApp() {
+  console.log('Initializing application...');
   initTheme();
   loadCSV();
+  console.log('Application initialized');
 }
 
-// Single event listener for initialization
-window.addEventListener('DOMContentLoaded', initializeApp);
+// Try DOMContentLoaded first
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeApp);
+} else {
+  // If DOMContentLoaded already fired, initialize immediately
+  initializeApp();
+}
+
+// Fallback to window.onload
+window.onload = function() {
+  console.log('Window loaded');
+  // Check if initialization hasn't happened yet
+  if (!document.body.classList.contains('dark') && !document.body.classList.contains('light')) {
+    console.log('Initializing from window.onload');
+    initializeApp();
+  }
+};
