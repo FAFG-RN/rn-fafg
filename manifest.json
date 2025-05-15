@@ -1,0 +1,24 @@
+{
+  "theme_color": "#4a8db3",
+  "background_color": "#194990",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "assets/icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "assets/icon512_rounded.png",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "any",
+  "display": "standalone",
+  "dir": "auto",
+  "lang": "en",
+  "name": "Ranking Nacional Footgolf",
+  "short_name": "Ranking Footgolf"
+}

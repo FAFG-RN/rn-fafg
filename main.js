@@ -1,8 +1,7 @@
 const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv";
 
 const tableConfig = {
-  headers: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA', 'TARJETA 15', 'PUNTOS QUE PIERDE', 'TARJETA 16'],
-  mobileHeaders: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA'],
+  headers: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA'],
   columns: [
     {
       key: 'position',
@@ -29,18 +28,6 @@ const tableConfig = {
     {
       key: 'origin',
       index: 5
-    },
-    {
-      key: 'card15',
-      index: 6
-    },
-    {
-      key: 'pointsLost',
-      index: 7
-    },
-    {
-      key: 'card16',
-      index: 8
     }
   ]
 };
@@ -142,21 +129,30 @@ function renderTableRows(rows) {
             td.className = column.className;
           }
 
-          // Use mobileHeaders for the first 6 columns, hide the rest on mobile
-          if (column.index < tableConfig.mobileHeaders.length) {
-            td.setAttribute('data-label', tableConfig.mobileHeaders[column.index]);
-          } else {
-            td.setAttribute('data-label', '');
-          }
-          
+          td.setAttribute('data-label', tableConfig.headers[column.index]);
           tr.appendChild(td);
         });
 
-        $tableBody.appendChild(tr);
+        // Only wrap in mobile view
+        if (window.innerWidth <= 768) {
+          const mobileWrapper = document.createElement("div");
+          mobileWrapper.className = "mobile-row-wrapper";
+          mobileWrapper.appendChild(tr);
+          $tableBody.appendChild(mobileWrapper);
+        } else {
+          $tableBody.appendChild(tr);
+        }
       }
     }
   });
 }
+
+// Add resize listener to handle window size changes
+window.addEventListener('resize', () => {
+  if (window.allRows) {
+    renderTableRows(window.allRows);
+  }
+});
 
 // Initialize everything when the page loads
 function initializeApp() {
