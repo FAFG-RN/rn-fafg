@@ -1,0 +1,155 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+  --color-bg: light-dark(#ffffff, #1a1a1a);
+  --color-text: light-dark(#000000, #ffffff);
+  --color-table-bg: light-dark(#ffffff, #2a2a2a);
+  --color-table-header: light-dark(#f8f9fa, #333333);
+  --color-table-hover: light-dark(#f5f5f5, #333333);
+  --color-shadow: light-dark(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  --color-primary: light-dark(#316d93, #4a8db3);
+  --color-border: light-dark(#d1d5db, #4b5563);
+  --color-success: light-dark(#10b981, #34d399);
+}
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 1.25em 1.25em 1.25em;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.25em;
+}
+
+.tableContainer {
+  background-color: var(--color-table-bg);
+  border-radius: 0.5em;
+  box-shadow: 0 0.125em 0.25em var(--color-shadow);
+  padding: 1.25em;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.25em;
+}
+
+th {
+  background-color: var(--color-table-header);
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+tr:hover {
+  background-color: var(--color-table-hover);
+}
+
+th,
+td {
+  padding: 0.9em;
+  text-align: left;
+  border-bottom: 0.0625em solid var(--color-border);
+  color: var(--color-text);
+}
+
+.rank {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.points {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+.themeContainer {
+  position: sticky;
+  width: 100%;
+  padding: 1.25em;
+  background-color: var(--color-bg);
+  top: 0;
+  right: 1.25em;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-table-hover);
+}
+
+.sun-icon,
+.moon-icon {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.dark .sun-icon {
+  display: none;
+}
+
+.light .moon-icon {
+  display: none;
+}
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: 1.25em;
+}
+
+.logo-img {
+  width: 12.5em;
+  max-width: 12.5em;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: filter 0.3s;
+}
+
+/* In light mode, make the logo black */
+body.light .logo-img {
+  filter: invert(1) brightness(0.1) contrast(100);
+}
+
+/* In dark mode, keep the logo white */
+body.dark .logo-img {
+  filter: none;
+}
