@@ -1,3 +1,5 @@
+console.log('Script starting...');
+
 // Theme switching functionality
 function initTheme() {
   console.log('Initializing theme...');
@@ -97,17 +99,20 @@ function initializeApp() {
   console.log('Application initialized');
 }
 
-// Try DOMContentLoaded first
+// Immediate initialization attempt
+console.log('Current document readyState:', document.readyState);
+
 if (document.readyState === 'loading') {
+  console.log('Document still loading, adding DOMContentLoaded listener');
   document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
-  // If DOMContentLoaded already fired, initialize immediately
+  console.log('Document already loaded, initializing immediately');
   initializeApp();
 }
 
 // Fallback to window.onload
 window.onload = function() {
-  console.log('Window loaded');
+  console.log('Window loaded event fired');
   // Check if initialization hasn't happened yet
   if (!document.body.classList.contains('dark') && !document.body.classList.contains('light')) {
     console.log('Initializing from window.onload');
