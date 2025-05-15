@@ -1,0 +1,70 @@
+.tableContainer {
+  background-color: var(--color-table-bg);
+  border-radius: 0.5em;
+  padding: 1.25em;
+  margin: 0 1.25em;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.25em;
+}
+
+th {
+  background-color: var(--color-table-header);
+  font-weight: bold;
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+th:first-child {
+  border-top-left-radius: 0.5em;
+}
+
+th:last-child {
+  border-top-right-radius: 0.5em;
+}
+
+tr:hover {
+  background-color: var(--color-table-hover);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-striped);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--color-table-bg);
+}
+
+th,
+td {
+  padding: 1.5em 0.7em;
+  text-align: left;
+  border-bottom: 0.0625em solid var(--color-border);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.rank {
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.1em;
+}
+
+.player {
+  color: var(--color-player);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.points {
+  color: var(--color-success);
+  font-weight: bold;
+  font-size: 1.1em;
+} 

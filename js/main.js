@@ -1,51 +1,52 @@
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv";
+const SHEET_URL =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv";
 
 const tableConfig = {
-  headers: ['POS', 'JUGADOR', 'PUNTOS', 'HCP', 'TORNEOS', 'PROCEDENCIA'],
+  headers: ["POS", "JUGADOR", "PUNTOS", "HCP", "TORNEOS", "PROCEDENCIA"],
   columns: [
     {
-      key: 'position',
+      key: "position",
       index: 0,
-      className: 'rank'
+      className: "rank",
     },
     {
-      key: 'player',
+      key: "player",
       index: 1,
-      className: 'player'
+      className: "player",
     },
     {
-      key: 'points',
+      key: "points",
       index: 2,
-      className: 'points'
+      className: "points",
     },
     {
-      key: 'hcp',
-      index: 3
+      key: "hcp",
+      index: 3,
     },
     {
-      key: 'tournaments',
-      index: 4
+      key: "tournaments",
+      index: 4,
     },
     {
-      key: 'origin',
-      index: 5
-    }
-  ]
+      key: "origin",
+      index: 5,
+    },
+  ],
 };
 
 // Theme switching functionality
 function initTheme() {
-  console.log('Initializing theme...');
-  const themeToggle = document.getElementById('themeToggle');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
+  console.log("Initializing theme...");
+  const themeToggle = document.getElementById("themeToggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
   // Set initial theme based on system preference
-  document.body.classList.add(prefersDark ? 'dark' : 'light');
-  
+  document.body.classList.add(prefersDark ? "dark" : "light");
+
   // Toggle theme when button is clicked
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    document.body.classList.toggle('light');
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
   });
 }
 
@@ -71,18 +72,18 @@ async function loadCSV() {
 
     // Create the table body
     const $tableBody = document.querySelector(".tableContainer table tbody");
-    $tableBody.innerHTML = ''; // Clear existing content
+    $tableBody.innerHTML = ""; // Clear existing content
 
     // Store all rows for filtering
-    window.allRows = rows.slice(1).filter(row => row.trim());
+    window.allRows = rows.slice(1).filter((row) => row.trim());
 
     // Get search term from URL
     const urlParams = new URLSearchParams(window.location.search);
-    const searchTerm = urlParams.get('search');
+    const searchTerm = urlParams.get("search");
 
     // If there's a search term, filter the rows
     if (searchTerm) {
-      const searchInput = document.getElementById('searchInput');
+      const searchInput = document.getElementById("searchInput");
       searchInput.value = searchTerm;
       filterTable(searchTerm);
     } else {
@@ -91,11 +92,11 @@ async function loadCSV() {
     }
 
     // Add search functionality with debounce
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById("searchInput");
     const debouncedSearch = debounce(handleSearch, 300); // 300ms delay
-    searchInput.addEventListener('input', debouncedSearch);
-    
-    console.log('CSV data loaded successfully');
+    searchInput.addEventListener("input", debouncedSearch);
+
+    console.log("CSV data loaded successfully");
   } catch (error) {
     console.error("Error loading CSV:", error);
   }
@@ -103,7 +104,7 @@ async function loadCSV() {
 
 // Function to handle search filtering
 function handleSearch(e) {
-  const searchTerm = e.target.value.toLowerCase();
+  const searchTerm = e.target.value.toLowerCase().trim();
   updateSearchInURL(searchTerm);
   filterTable(searchTerm);
 }
@@ -112,18 +113,18 @@ function handleSearch(e) {
 function updateSearchInURL(searchTerm) {
   const url = new URL(window.location);
   if (searchTerm) {
-    url.searchParams.set('search', searchTerm);
+    url.searchParams.set("search", searchTerm);
   } else {
-    url.searchParams.delete('search');
+    url.searchParams.delete("search");
   }
-  window.history.replaceState({}, '', url);
+  window.history.replaceState({}, "", url);
 }
 
 // Function to filter table rows
 function filterTable(searchTerm) {
-  const filteredRows = window.allRows.filter(row => {
+  const filteredRows = window.allRows.filter((row) => {
     const columns = row.split(",");
-    return columns.some(column => column.toLowerCase().includes(searchTerm));
+    return columns.some((column) => column.toLowerCase().includes(searchTerm));
   });
   renderTableRows(filteredRows);
 }
@@ -131,19 +132,19 @@ function filterTable(searchTerm) {
 // Function to initialize search from URL
 function initSearchFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
-  const searchTerm = urlParams.get('search');
+  const searchTerm = urlParams.get("search");
   if (searchTerm) {
-    const searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById("searchInput");
     searchInput.value = searchTerm;
   }
 }
 
 // Function to generate table headers
 function generateTableHeaders() {
-  const $tableHeader = document.getElementById('tableHeader');
-  
-  tableConfig.headers.forEach(header => {
-    const th = document.createElement('th');
+  const $tableHeader = document.getElementById("tableHeader");
+
+  tableConfig.headers.forEach((header) => {
+    const th = document.createElement("th");
     th.textContent = header;
     $tableHeader.appendChild(th);
   });
@@ -152,7 +153,7 @@ function generateTableHeaders() {
 // Function to render table rows
 function renderTableRows(rows) {
   const $tableBody = document.querySelector(".tableContainer table tbody");
-  $tableBody.innerHTML = ''; // Clear existing content
+  $tableBody.innerHTML = ""; // Clear existing content
 
   rows.forEach((row) => {
     if (row.trim()) {
@@ -160,17 +161,17 @@ function renderTableRows(rows) {
       if (columns.length > 1) {
         const tr = document.createElement("tr");
 
-        tableConfig.columns.forEach(column => {
+        tableConfig.columns.forEach((column) => {
           const td = document.createElement("td");
           const span = document.createElement("span");
           span.textContent = columns[column.index];
           td.appendChild(span);
-          
+
           if (column.className) {
             td.className = column.className;
           }
 
-          td.setAttribute('data-label', tableConfig.headers[column.index]);
+          td.setAttribute("data-label", tableConfig.headers[column.index]);
           tr.appendChild(td);
         });
 
@@ -189,44 +190,48 @@ function renderTableRows(rows) {
 }
 
 // Add resize listener to handle window size changes
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   if (window.allRows) {
     renderTableRows(window.allRows);
   }
 });
 
 // Register Service Worker
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
-      .then(registration => {
-        console.log('ServiceWorker registration successful');
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        console.log("ServiceWorker registration successful");
       })
-      .catch(err => {
-        console.log('ServiceWorker registration failed: ', err);
+      .catch((err) => {
+        console.log("ServiceWorker registration failed: ", err);
       });
   });
 }
 
 // Initialize everything when the page loads
 function initializeApp() {
-  console.log('Initializing application...');
+  console.log("Initializing application...");
   initTheme();
   generateTableHeaders();
   loadCSV();
-  console.log('Application initialized');
+  console.log("Application initialized");
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initializeApp);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializeApp);
 } else {
   initializeApp();
 }
 
 // Fallback to window.onload
-window.onload = function() {
+window.onload = function () {
   // Check if initialization hasn't happened yet
-  if (!document.body.classList.contains('dark') && !document.body.classList.contains('light')) {
+  if (
+    !document.body.classList.contains("dark") &&
+    !document.body.classList.contains("light")
+  ) {
     initializeApp();
   }
 };
