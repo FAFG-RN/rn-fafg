@@ -10,7 +10,8 @@ const tableConfig = {
     },
     {
       key: 'player',
-      index: 1
+      index: 1,
+      className: 'player'
     },
     {
       key: 'points',
@@ -67,7 +68,7 @@ async function loadCSV() {
     const response = await fetch(SHEET_URL);
     const data = await response.text();
     const rows = data.split("\n");
-    
+
     // Create the table body
     const $tableBody = document.querySelector(".tableContainer table tbody");
     $tableBody.innerHTML = ''; // Clear existing content
@@ -75,8 +76,19 @@ async function loadCSV() {
     // Store all rows for filtering
     window.allRows = rows.slice(1).filter(row => row.trim());
 
-    // Initial render
-    renderTableRows(window.allRows);
+    // Get search term from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchTerm = urlParams.get('search');
+
+    // If there's a search term, filter the rows
+    if (searchTerm) {
+      const searchInput = document.getElementById('searchInput');
+      searchInput.value = searchTerm;
+      filterTable(searchTerm);
+    } else {
+      // Otherwise render all rows
+      renderTableRows(window.allRows);
+    }
 
     // Add search functionality with debounce
     const searchInput = document.getElementById('searchInput');
@@ -92,11 +104,38 @@ async function loadCSV() {
 // Function to handle search filtering
 function handleSearch(e) {
   const searchTerm = e.target.value.toLowerCase();
+  updateSearchInURL(searchTerm);
+  filterTable(searchTerm);
+}
+
+// Function to update URL with search parameter
+function updateSearchInURL(searchTerm) {
+  const url = new URL(window.location);
+  if (searchTerm) {
+    url.searchParams.set('search', searchTerm);
+  } else {
+    url.searchParams.delete('search');
+  }
+  window.history.replaceState({}, '', url);
+}
+
+// Function to filter table rows
+function filterTable(searchTerm) {
   const filteredRows = window.allRows.filter(row => {
     const columns = row.split(",");
     return columns.some(column => column.toLowerCase().includes(searchTerm));
   });
   renderTableRows(filteredRows);
+}
+
+// Function to initialize search from URL
+function initSearchFromURL() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get('search');
+  if (searchTerm) {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.value = searchTerm;
+  }
 }
 
 // Function to generate table headers
@@ -123,7 +162,9 @@ function renderTableRows(rows) {
 
         tableConfig.columns.forEach(column => {
           const td = document.createElement("td");
-          td.textContent = columns[column.index];
+          const span = document.createElement("span");
+          span.textContent = columns[column.index];
+          td.appendChild(span);
           
           if (column.className) {
             td.className = column.className;
@@ -153,6 +194,19 @@ window.addEventListener('resize', () => {
     renderTableRows(window.allRows);
   }
 });
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => {
+        console.log('ServiceWorker registration successful');
+      })
+      .catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
 
 // Initialize everything when the page loads
 function initializeApp() {
