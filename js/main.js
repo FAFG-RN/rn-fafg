@@ -188,13 +188,13 @@ function renderTableRows(rows) {
             // Set the appropriate medal based on position
             switch (index) {
               case 0:
-                medalImg.src = "/assets/icons/medal-gold.png";
+                medalImg.src = "assets/icons/medal-gold.png";
                 break;
               case 1:
-                medalImg.src = "/assets/icons/medal-silver.png";
+                medalImg.src = "assets/icons/medal-silver.png";
                 break;
               case 2:
-                medalImg.src = "/assets/icons/medal-bronze.png";
+                medalImg.src = "assets/icons/medal-bronze.png";
                 break;
             }
             
