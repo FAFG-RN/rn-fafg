@@ -38,6 +38,20 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+  position: sticky;
+  width: 100%;
+  padding: 1.25em;
+  background-color: var(--color-bg);
+  top: 0;
+  right: 1.25em;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
 .title {
   text-align: center;
   font-size: 1.5rem;
@@ -70,3 +84,11 @@ body {
 .light .logo-img.logo-filtered-black {
   filter: brightness(0);
 }
+
+.switch-view-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  padding: 0 1.25em;
+}
+

@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .logo-img {
     width: 5em;
   }
@@ -7,74 +7,17 @@
     filter: none;
   }
 
-  thead {
+  .switch-view-container,
+  app-table {
     display: none;
   }
 
-  th .mobile-header,
-  td .mobile-header {
-    display: table-cell;
-  }
-
-  .mobile-row-wrapper {
-    background-color: light-dark(var(--color-striped), var(--color-table-bg));
-    border-radius: 0.5em;
-    margin-bottom: 1.5em;
-    padding: 0.5em;
-    overflow: hidden;
-  }
-
-  tr:nth-child(even),
-  tr:nth-child(odd) {
-    background-color: light-dark(var(--color-striped), var(--color-table-bg));
-  }
-
-  tr {
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: light-dark(var(--color-striped), var(--color-table-bg));
-  }
-
-  td {
-    padding: 0.5em;
-    font-size: 0.9em;
-    border: none;
-    max-width: none;
-  }
-
-  .cell-content {
-    display: flex;
+  header {
     justify-content: space-between;
-    align-items: center;
   }
 
-  .cell-value {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 220px;
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-  }
-
-  .tableContainer {
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .rank {
-    width: auto;
-  }
-
-  .rank,
-  .player,
-  .points {
-    font-size: 1rem;
-  }
-
-  .rank .cell-value {
-    font-size: 1.5rem;
+  header app-search {
+    flex: 1;
+    max-width: 400px;
   }
 }
