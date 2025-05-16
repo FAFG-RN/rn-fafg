@@ -39,14 +39,22 @@
     </header>
 
     <div class="logos-container">
-      <img src="assets/images/logo.png" alt="logo" class="logo-img logo-filtered-blue" />
-      <img
-        src="assets/images/logo-copa-republica.png"
-        alt="logo"
-        class="logo-img logo-filtered-black"
-      />
-      <img src="assets/images/logo-liga1.png" alt="logo" class="logo-img" />
-      <img src="assets/images/logo-ln.png" alt="logo" class="logo-img" />
+      <picture>
+        <source srcset="assets/images/logo.webp" type="image/webp">
+        <img src="assets/images/logo.png" alt="logo" class="logo-img logo-filtered-blue" />
+      </picture>
+      <picture>
+        <source srcset="assets/images/logo-copa-republica.webp" type="image/webp">
+        <img src="assets/images/logo-copa-republica.png" alt="logo" class="logo-img logo-filtered-black" />
+      </picture>
+      <picture>
+        <source srcset="assets/images/logo-liga1.webp" type="image/webp">
+        <img src="assets/images/logo-liga1.png" alt="logo" class="logo-img" />
+      </picture>
+      <picture>
+        <source srcset="assets/images/logo-ln.webp" type="image/webp">
+        <img src="assets/images/logo-ln.png" alt="logo" class="logo-img" />
+      </picture>
     </div>
 
     <h1 class="title">RANKING NACIONAL</h1>
@@ -57,8 +65,10 @@
         <app-switch-view></app-switch-view>
       </div>
     </div>
-    <app-players-list></app-players-list>
-    <app-table></app-table>
+    <!-- The list or table loads dynamically - By default shows the list -->
+    <div class="container">
+      <app-players-list></app-players-list>
+    </div>
   </body>
   <script src="js/components/ThemeMode.js"></script>
   <script src="js/components/Search.js"></script>

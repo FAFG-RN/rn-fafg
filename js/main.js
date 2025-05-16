@@ -1,8 +1,8 @@
 const SHEET_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv";
 
-
 let playersList = [];
+let $container = document.querySelector(".container");
 let $tableComponent;
 let $playersListComponent;
 let $switchViewComponent;
@@ -11,24 +11,62 @@ let $searchComponent;
 // Theme switching functionality
 function initTheme() {
   console.log("Initializing theme...");
-  const themeMode = document.querySelector('app-theme-mode');
+  const themeMode = document.querySelector("app-theme-mode");
   themeMode.initTheme();
 }
 
+function getSearchTerm() {
+  // Get search term from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchTerm = urlParams.get("search");
+  return searchTerm;
+}
+
 function handleChangeView(view) {
-  if (view === 'table') {
-    $tableComponent.style.display = 'block';
-    $playersListComponent.style.display = 'none';
+  const existingTable = $container.querySelector("app-table");
+  const existingList = $container.querySelector("app-players-list");
+
+  const searchTerm = getSearchTerm();
+
+  if (view === "table") {
+    // Remove list if exists
+    if (existingList) {
+      existingList.remove();
+    }
+
+    // Create and initialize table if it doesn't exist
+    if (!existingTable) {
+      $tableComponent = document.createElement("app-table");
+      $tableComponent.generateTableHeaders();
+      $tableComponent.setRows(playersList);
+      if (searchTerm) {
+        $tableComponent.filterTable(searchTerm);
+      }
+      $container.appendChild($tableComponent);
+    }
   } else {
-    $tableComponent.style.display = 'none';
-    $playersListComponent.style.display = 'block';
+    // Remove table if exists
+    if (existingTable) {
+      existingTable.remove();
+    }
+
+    // Create and initialize list if it doesn't exist
+    if (!existingList) {
+      $playersListComponent = document.createElement("app-players-list");
+      $playersListComponent.setPlayers(playersList);
+      if (searchTerm) {
+        $playersListComponent.filterPlayers(searchTerm);
+      }
+      $container.appendChild($playersListComponent);
+    }
   }
 }
+
 // Function to load and parse CSV data
 async function loadCSV() {
   try {
-    // Show skeleton loading state
-    $playersListComponent = document.querySelector('app-players-list');
+    // Show skeleton loading state for initial list view
+    $playersListComponent = document.querySelector("app-players-list");
     $playersListComponent.showSkeleton();
 
     const response = await fetch(SHEET_URL);
@@ -39,44 +77,44 @@ async function loadCSV() {
     playersList = rows.slice(1).filter((row) => row.trim());
 
     // Get lastUpdate from first player
-    let lastUpdate = '';
+    let lastUpdate = "";
     if (playersList.length > 0) {
       const firstPlayerColumns = playersList[0].split(",");
       lastUpdate = firstPlayerColumns[firstPlayerColumns.length - 1];
     }
 
-    const lastUpdateElement = document.querySelector('.last-update');
-    lastUpdateElement.textContent = `Última actualización: ${lastUpdate || 'No disponible'}`;
+    const lastUpdateElement = document.querySelector(".last-update");
+    lastUpdateElement.textContent = `Última actualización: ${
+      lastUpdate || "No disponible"
+    }`;
 
     // Get search term from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const searchTerm = urlParams.get("search");
+    const searchTerm = getSearchTerm();
 
-    // Initialize table
-    $tableComponent = document.querySelector('app-table');
-    $tableComponent.generateTableHeaders();
-    $tableComponent.setRows(playersList);
+    // Initialize view switching
+    $switchViewComponent = document.querySelector("app-switch-view");
+    $switchViewComponent.addEventListener("viewChange", (e) => {
+      handleChangeView(e.detail.view);
+    });
 
     // Initialize players list
     $playersListComponent.setPlayers(playersList);
 
-    // Initialize view switching
-    $switchViewComponent = document.querySelector('app-switch-view');
-    $switchViewComponent.addEventListener('viewChange', (e) => {
-      handleChangeView(e.detail.view);
-    });
-
     // If there's a search term, filter the rows
     if (searchTerm) {
-      $tableComponent.filterTable(searchTerm);
       $playersListComponent.filterPlayers(searchTerm);
     }
 
     // Add search event listener
-    $searchComponent = document.querySelector('app-search');
-    $searchComponent.addEventListener('search', (e) => {
-      $tableComponent.filterTable(e.detail.searchTerm);
-      $playersListComponent.filterPlayers(e.detail.searchTerm);
+    $searchComponent = document.querySelector("app-search");
+    $searchComponent.addEventListener("search", (e) => {
+      const activeView =
+        document.querySelector("app-table") ||
+        document.querySelector("app-players-list");
+      if (activeView) {
+        activeView.filterTable?.(e.detail.searchTerm);
+        activeView.filterPlayers?.(e.detail.searchTerm);
+      }
     });
 
     console.log("CSV data loaded successfully");
@@ -85,23 +123,24 @@ async function loadCSV() {
   }
 }
 
-// // Register Service Worker
-// if ("serviceWorker" in navigator) {
-//   window.addEventListener("load", () => {
-//     navigator.serviceWorker
-//       .register("/sw.js")
-//       .then((registration) => {
-//         console.log("ServiceWorker registration successful");
-//       })
-//       .catch((err) => {
-//         console.log("ServiceWorker registration failed: ", err);
-//       });
-//   });
-// }
+// Register Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        console.log("ServiceWorker registration successful");
+      })
+      .catch((err) => {
+        console.log("ServiceWorker registration failed: ", err);
+      });
+  });
+}
 
 // Add resize listener to handle window size changes
 window.addEventListener("resize", () => {
-  const view = window.innerWidth < 1024 ? 'list' : $switchViewComponent.currentView;
+  const view =
+    window.innerWidth < 1024 ? "list" : $switchViewComponent.currentView;
   $switchViewComponent.switchView(view);
 });
 
