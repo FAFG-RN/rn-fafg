@@ -98,3 +98,7 @@ header {
   display: flex;
   justify-content: flex-end;
 }
+
+app-table {
+  display: none;
+}

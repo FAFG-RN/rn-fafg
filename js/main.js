@@ -36,6 +36,10 @@ function handleChangeView(view) {
 // Function to load and parse CSV data
 async function loadCSV() {
   try {
+    // Show skeleton loading state
+    $playersListComponent = document.querySelector('app-players-list');
+    $playersListComponent.showSkeleton();
+
     const response = await fetch(SHEET_URL);
     const data = await response.text();
     const rows = data.split("\n");
@@ -53,7 +57,6 @@ async function loadCSV() {
     $tableComponent.setRows(playersList);
 
     // Initialize players list
-    $playersListComponent = document.querySelector('app-players-list');
     $playersListComponent.setPlayers(playersList);
 
     // Initialize view switching

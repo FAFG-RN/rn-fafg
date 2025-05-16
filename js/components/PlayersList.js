@@ -55,6 +55,26 @@ const playersListStyle = `
       font-weight: bold;
     }
 
+    /* Skeleton loading styles */
+    .skeleton {
+      background: linear-gradient(90deg, var(--color-table-bg) 25%, var(--color-table-hover) 50%, var(--color-table-bg) 75%);
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+      border-radius: 4px;
+      height: 60px;
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
     /* Styles for top 3 positions */
     app-accordion:nth-child(1) .player-points {
       font-size: 1.4rem;
@@ -83,21 +103,21 @@ const playersListStyle = `
         font-size: 0.8rem;
       }
 
-    /* Styles for top 3 positions */
-    app-accordion:nth-child(1) .player-points,
-    app-accordion:nth-child(1) .player-name {
-      font-size: 1rem;
-    }
+      /* Styles for top 3 positions */
+      app-accordion:nth-child(1) .player-points,
+      app-accordion:nth-child(1) .player-name {
+        font-size: 1rem;
+      }
 
-    app-accordion:nth-child(2) .player-points,
-    app-accordion:nth-child(1) .player-name {
-      font-size: 0.9rem;
-    }
+      app-accordion:nth-child(2) .player-points,
+      app-accordion:nth-child(1) .player-name {
+        font-size: 0.9rem;
+      }
 
-    app-accordion:nth-child(3) .player-points,
-    app-accordion:nth-child(3) .player-name {
-      font-size: 0.85rem;
-    }
+      app-accordion:nth-child(3) .player-points,
+      app-accordion:nth-child(3) .player-name {
+        font-size: 0.85rem;
+      }
     }
   </style>
 `;
@@ -118,6 +138,16 @@ class PlayersList extends HTMLElement {
     this.shadowRoot.appendChild($playersListTemplate.content.cloneNode(true));
     this.playersList = this.shadowRoot.querySelector(".players-list");
     this.allPlayers = []; // Store all players for filtering
+  }
+
+  showSkeleton() {
+    this.playersList.innerHTML = ""; // Clear existing content
+    // Create 10 skeleton items
+    for (let i = 0; i < 10; i++) {
+      const skeletonPlayer = document.createElement("div");
+      skeletonPlayer.className = "skeleton";
+      this.playersList.appendChild(skeletonPlayer);
+    }
   }
 
   setPlayers(players) {
@@ -161,7 +191,6 @@ class PlayersList extends HTMLElement {
           <div class="player-info-item"><span>Procedencia:</span> <span>${procedencia}</span></div>
         </div>
       `;
-
 
       // Add content to accordion
       accordion.appendChild(collapsedContent);
