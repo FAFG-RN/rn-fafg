@@ -67,6 +67,6 @@ body {
     brightness(90%) contrast(101%);
 }
 
-.logo-img.logo-filtered-black {
+.light .logo-img.logo-filtered-black {
   filter: brightness(0);
 }

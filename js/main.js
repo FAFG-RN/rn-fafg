@@ -194,7 +194,7 @@ function renderTableRows(rows) {
                 medalImg.src = "/assets/icons/medal-silver.png";
                 break;
               case 2:
-                medalImg.src = "/assets/icons/medal-bronce.png";
+                medalImg.src = "/assets/icons/medal-bronze.png";
                 break;
             }
             
