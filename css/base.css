@@ -19,6 +19,8 @@ body {
   --color-border: light-dark(#d1d5db, #4b5563);
   --color-striped: light-dark(#f8fafc, #333333);
   --color-alternate: light-dark(#1e40af, #93c5fd);
+  --color-success: light-dark(#16a34a, #16a34a);
+  --color-danger: light-dark(#dc2626, #dc2626);
 }
 
 .light {
@@ -56,10 +58,10 @@ header {
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.5em;
 }
 
-.logosContainer {
+.logos-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +85,12 @@ header {
 
 .light .logo-img.logo-filtered-black {
   filter: brightness(0);
+}
+
+.last-update {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1em;
 }
 
 .switch-view-container {

@@ -7,8 +7,6 @@ let $tableComponent;
 let $playersListComponent;
 let $switchViewComponent;
 let $searchComponent;
-let $themeMode;
-
 
 // Theme switching functionality
 function initTheme() {
@@ -39,6 +37,16 @@ async function loadCSV() {
 
     // Store all rows for filtering
     playersList = rows.slice(1).filter((row) => row.trim());
+
+    // Get lastUpdate from first player
+    let lastUpdate = '';
+    if (playersList.length > 0) {
+      const firstPlayerColumns = playersList[0].split(",");
+      lastUpdate = firstPlayerColumns[firstPlayerColumns.length - 1];
+    }
+
+    const lastUpdateElement = document.querySelector('.last-update');
+    lastUpdateElement.textContent = `Última actualización: ${lastUpdate || 'No disponible'}`;
 
     // Get search term from URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -77,19 +85,19 @@ async function loadCSV() {
   }
 }
 
-// Register Service Worker
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw.js")
-      .then((registration) => {
-        console.log("ServiceWorker registration successful");
-      })
-      .catch((err) => {
-        console.log("ServiceWorker registration failed: ", err);
-      });
-  });
-}
+// // Register Service Worker
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker
+//       .register("/sw.js")
+//       .then((registration) => {
+//         console.log("ServiceWorker registration successful");
+//       })
+//       .catch((err) => {
+//         console.log("ServiceWorker registration failed: ", err);
+//       });
+//   });
+// }
 
 // Add resize listener to handle window size changes
 window.addEventListener("resize", () => {

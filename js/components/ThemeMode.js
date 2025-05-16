@@ -119,7 +119,7 @@ class ThemeMode extends HTMLElement {
     // Get theme from localStorage or use system preference
     const savedTheme = localStorage.getItem('theme');
     const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
-    
+    console.log(initialTheme);
     // Set initial theme
     document.body.classList.add(initialTheme);
   

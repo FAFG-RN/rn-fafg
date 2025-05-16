@@ -99,14 +99,17 @@ class Table extends HTMLElement {
     this.tableBody = this.shadowRoot.getElementById("tableBody");
     
     this.tableConfig = {
-      headers: ["POS", "JUGADOR", "PUNTOS", "HCP", "TORNEOS", "PROCEDENCIA"],
+      headers: ["POS", "JUGADOR", "PUNTOS", "HCP", "TORNEOS", "PROCEDENCIA", "TARJETA 15", "PUNTOS QUE PIERDE", "TARJETA 16"],
       columns: [
         { key: "position", index: 0, className: "rank is-number" },
         { key: "player", index: 1, className: "player" },
         { key: "points", index: 2, className: "points is-number" },
         { key: "hcp", index: 3, className: "is-number" },
         { key: "tournaments", index: 4, className: "is-number" },
-        { key: "origin", index: 5 }
+        { key: "origin", index: 5 },
+        { key: "card15", index: 6, className: "is-number" },
+        { key: "pointsLost", index: 7, className: "is-number" },
+        { key: "card16", index: 8, className: "is-number" }
       ]
     };
   }
@@ -122,17 +125,13 @@ class Table extends HTMLElement {
   renderTableRows(rows) {
     this.tableBody.innerHTML = ""; // Clear existing content
 
-    // Check if there's a search term
-    const searchComponent = document.querySelector('app-search');
-    const hasSearchTerm = searchComponent.searchTerm.length > 0;
-
     rows.forEach((row, index) => {
       if (row.trim()) {
         const columns = row.split(",");
         if (columns.length > 1) {
           const tr = document.createElement("tr");
 
-          this.tableConfig.columns.forEach((column, colIndex) => {
+          this.tableConfig.columns.forEach((column) => {
             const td = document.createElement("td");
             const divContent = document.createElement("div");
             divContent.className = "cell-content";

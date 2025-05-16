@@ -14,9 +14,9 @@ const playersListStyle = `
 
     .player-info {
       display: grid;
-      grid-template-columns: 75px 1fr 90px;
+      grid-template-columns: auto 20px 1fr 90px;
       align-items: center;
-      gap: 0.2em;
+      gap: 0.5em;
     }
 
     .player-points {
@@ -24,11 +24,36 @@ const playersListStyle = `
       margin-right: 0.5em;
     }
 
+    .rank-up,
+    .rank-down,
+    .rank-neutral {
+      font-size: 1.3rem;
+      font-weight: bold;
+      line-height: 1.3rem;
+      text-align: center;
+    }
+
+    .rank-up {
+      color: var(--color-success);
+    }
+
+    .rank-down {
+      color: var(--color-danger);
+    }
+
+    .rank-neutral {
+      color: var(--color-border);
+    }
+
     .player-name,
     .player-points,
     .player-position {
       font-weight: bold;
       font-size: 1.1rem;
+    }
+
+    .player-name {
+      padding-left: 1em;
     }
 
     .player-position,
@@ -57,7 +82,11 @@ const playersListStyle = `
 
     /* Skeleton loading styles */
     .skeleton {
-      background: linear-gradient(90deg, var(--color-table-bg) 25%, var(--color-striped) 50%, var(--color-table-bg) 75%);
+      background: linear-gradient(90deg, 
+        var(--color-table-bg) 25%, 
+        var(--color-table-hover) 50%, 
+        var(--color-table-bg) 75%
+      );
       background-size: 200% 100%;
       animation: loading 1.5s infinite;
       border-radius: 4px;
@@ -72,6 +101,16 @@ const playersListStyle = `
       }
       100% {
         background-position: -200% 0;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      .skeleton {
+        background: linear-gradient(90deg, 
+          var(--color-table-bg) 25%, 
+          var(--color-striped) 50%, 
+          var(--color-table-bg) 75%
+        );
       }
     }
 
@@ -94,13 +133,17 @@ const playersListStyle = `
       }
 
       .player-info {
-        grid-template-columns: 40px 1fr 75px;
+        gap: 0.2em;
       }
 
       .player-position,
       .player-name,
       .player-points {
         font-size: 0.8rem;
+      }
+
+      .player-name {
+        padding-left: 0;
       }
 
       /* Styles for top 3 positions */
@@ -158,13 +201,20 @@ class PlayersList extends HTMLElement {
   renderPlayers(players) {
     this.playersList.innerHTML = ""; // Clear existing content
 
-    // Check if there's a search term
-    const searchComponent = document.querySelector("app-search");
-    const hasSearchTerm = searchComponent.searchTerm.length > 0;
-
-    players.forEach((player, index) => {
+    players.forEach((player) => {
       const columns = player.split(",");
-      const [position, playerName, points, hcp, torneos, procedencia] = columns;
+      const [
+        position,
+        playerName,
+        points,
+        hcp,
+        tournaments,
+        origin,
+        card15,
+        pointsLost,
+        card16,
+        posBefore,
+      ] = columns;
 
       const accordion = document.createElement("app-accordion");
 
@@ -173,9 +223,17 @@ class PlayersList extends HTMLElement {
       collapsedContent.slot = "collapsed";
       collapsedContent.classList.add("player-collapsed-content");
 
+      const posBeforeArrow =
+        parseInt(posBefore) > parseInt(position)
+          ? `<span class="rank-up">↑</span>`
+          : parseInt(posBefore) < parseInt(position)
+          ? `<span class="rank-down">↓</span>`
+          : `<span class="rank-neutral">•</span>`;
+
       collapsedContent.innerHTML = `
         <div class="player-info">
           <span class="player-position">${position}</span>
+          ${posBeforeArrow}
           <span class="player-name">${playerName}</span>
           <span class="player-points">${points}</span>
         </div>
@@ -187,8 +245,11 @@ class PlayersList extends HTMLElement {
       expandedContent.innerHTML = `
         <div class="player-info-expanded">
           <div class="player-info-item"><span>HCP:</span> <span>${hcp}</span></div>
-          <div class="player-info-item"><span>Torneos:</span> <span>${torneos}</span></div>
-          <div class="player-info-item"><span>Procedencia:</span> <span>${procedencia}</span></div>
+          <div class="player-info-item"><span>Torneos:</span> <span>${tournaments}</span></div>
+          <div class="player-info-item"><span>Procedencia:</span> <span>${origin}</span></div>
+          <div class="player-info-item"><span>Tarjeta 15:</span> <span>${card15}</span></div>
+          <div class="player-info-item"><span>Puntos que pierde:</span> <span>${pointsLost}</span></div>
+          <div class="player-info-item"><span>Tarjeta 16:</span> <span>${card16}</span></div>
         </div>
       `;
 
