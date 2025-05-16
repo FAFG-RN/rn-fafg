@@ -12,7 +12,7 @@ const themeStyle = `
       align-items: center;
       justify-content: center;
       color: var(--color-text);
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
     }
 
     .theme-toggle:hover {
@@ -125,10 +125,13 @@ class ThemeMode extends HTMLElement {
     // Listen for theme changes from the web component
     this.addEventListener('themeChange', (e) => {
       const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
-      document.body.classList.toggle("dark");
-      document.body.classList.toggle("light");
-      // Save theme preference to localStorage
-      localStorage.setItem('theme', newTheme);
+      // Use requestAnimationFrame for smoother transition
+      requestAnimationFrame(() => {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+        // Save theme preference to localStorage
+        localStorage.setItem('theme', newTheme);
+      });
     });
   }
 }

@@ -21,6 +21,7 @@ body {
   --color-alternate: light-dark(#1e40af, #93c5fd);
   --color-success: light-dark(#16a34a, #16a34a);
   --color-danger: light-dark(#dc2626, #dc2626);
+  --transition-duration: 0.3s;
 }
 
 .light {
@@ -37,7 +38,8 @@ body {
   margin: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color var(--transition-duration) ease,
+              color var(--transition-duration) ease;
 }
 
 header {
@@ -52,6 +54,7 @@ header {
   align-items: center;
   justify-content: flex-end;
   gap: 2em;
+  transition: background-color var(--transition-duration) ease;
 }
 
 .title {
@@ -75,7 +78,7 @@ header {
   max-width: 12.5em;
   height: auto;
   display: block;
-  transition: filter 0.3s;
+  transition: filter var(--transition-duration) ease;
 }
 
 .logo-img.logo-filtered-blue {
