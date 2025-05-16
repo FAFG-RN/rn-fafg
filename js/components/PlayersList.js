@@ -82,9 +82,10 @@ const playersListStyle = `
 
     /* Skeleton loading styles */
     .skeleton {
-      background: linear-gradient(90deg, 
-        var(--color-table-bg) 25%, 
-        var(--color-table-hover) 50%, 
+      background: linear-gradient(
+        90deg,
+        var(--color-table-bg) 25%,
+        var(--color-table-hover) 50%,
         var(--color-table-bg) 75%
       );
       background-size: 200% 100%;
@@ -106,9 +107,10 @@ const playersListStyle = `
 
     @media (prefers-color-scheme: light) {
       .skeleton {
-        background: linear-gradient(90deg, 
-          var(--color-table-bg) 25%, 
-          var(--color-striped) 50%, 
+        background: linear-gradient(
+          90deg,
+          var(--color-table-bg) 25%,
+          var(--color-striped) 50%,
           var(--color-table-bg) 75%
         );
       }
@@ -165,12 +167,11 @@ const playersListStyle = `
   </style>
 `;
 
-$playersListTemplate.innerHTML =
-  `
-    <div class="players-list">
-      <!-- Players will be dynamically added here -->
-    </div>
-  ` + playersListStyle;
+$playersListTemplate.innerHTML = `
+  <div class="players-list">
+    <!-- Players will be dynamically added here -->
+  </div>
+` + playersListStyle;
 
 class PlayersList extends HTMLElement {
   allPlayers = [];
