@@ -127,8 +127,8 @@ async function loadCSV() {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/sw.js")
-      .then((registration) => {
+      .register("./sw.js")
+      .then((_) => {
         console.log("ServiceWorker registration successful");
       })
       .catch((err) => {

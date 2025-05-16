@@ -116,17 +116,11 @@ const playersListStyle = `
       }
     }
 
-    /* Styles for top 3 positions */
-    app-accordion:nth-child(1) .player-points {
+    /* Styles for top 1 position */
+    app-accordion:nth-child(1) .player-position,
+    app-accordion:nth-child(1) .player-points,
+    app-accordion:nth-child(1) .player-name {
       font-size: 1.4rem;
-    }
-
-    app-accordion:nth-child(2) .player-points {
-      font-size: 1.3rem;
-    }
-
-    app-accordion:nth-child(3) .player-points {
-      font-size: 1.2rem;
     }
 
     @media screen and (max-width: 1024px) {
@@ -148,20 +142,11 @@ const playersListStyle = `
         padding-left: 0;
       }
 
-      /* Styles for top 3 positions */
+      /* Styles for top 1 position */
+      app-accordion:nth-child(1) .player-position,
       app-accordion:nth-child(1) .player-points,
       app-accordion:nth-child(1) .player-name {
         font-size: 1rem;
-      }
-
-      app-accordion:nth-child(2) .player-points,
-      app-accordion:nth-child(1) .player-name {
-        font-size: 0.9rem;
-      }
-
-      app-accordion:nth-child(3) .player-points,
-      app-accordion:nth-child(3) .player-name {
-        font-size: 0.85rem;
       }
     }
   </style>
