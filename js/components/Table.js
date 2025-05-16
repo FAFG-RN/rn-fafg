@@ -8,6 +8,8 @@ const tableStyle = `
   padding: 1.25em;
   margin: 0 1.25em;
   overflow-x: auto;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 table {
@@ -49,7 +51,7 @@ th, td {
   color: var(--color-text);
 }
 
-.cell-content {
+.is-number .cell-content {
   text-align: center;
 }
 
@@ -60,29 +62,13 @@ th, td {
   width: 100px;
 }
 
-.rank .cell-content {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-
-.player .cell-content {
-  color: var(--color-alternate);
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
+.player .cell-content,
 .points .cell-content {
   color: var(--color-alternate);
   font-weight: bold;
   font-size: 1.1em;
 }
 
-.medal-icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-} 
   </style>
 `;
 
@@ -103,7 +89,7 @@ $tableTemplate.innerHTML = `
 
 class Table extends HTMLElement {
   allRows = [];
-  
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -115,11 +101,11 @@ class Table extends HTMLElement {
     this.tableConfig = {
       headers: ["POS", "JUGADOR", "PUNTOS", "HCP", "TORNEOS", "PROCEDENCIA"],
       columns: [
-        { key: "position", index: 0, className: "rank" },
+        { key: "position", index: 0, className: "rank is-number" },
         { key: "player", index: 1, className: "player" },
-        { key: "points", index: 2, className: "points" },
-        { key: "hcp", index: 3 },
-        { key: "tournaments", index: 4 },
+        { key: "points", index: 2, className: "points is-number" },
+        { key: "hcp", index: 3, className: "is-number" },
+        { key: "tournaments", index: 4, className: "is-number" },
         { key: "origin", index: 5 }
       ]
     };
@@ -150,31 +136,7 @@ class Table extends HTMLElement {
             const td = document.createElement("td");
             const divContent = document.createElement("div");
             divContent.className = "cell-content";
-                                   
-            // Add medal for top 3 positions only if there's no search term
-            if (column.key === "position" && index < 3 && !hasSearchTerm) {
-              const medalImg = document.createElement("img");
-              medalImg.className = "medal-icon";
-              medalImg.alt = `${index + 1} place medal`;
-              
-              // Set the appropriate medal based on position
-              switch (index) {
-                case 0:
-                  medalImg.src = "assets/icons/medal-gold.png";
-                  break;
-                case 1:
-                  medalImg.src = "assets/icons/medal-silver.png";
-                  break;
-                case 2:
-                  medalImg.src = "assets/icons/medal-bronze.png";
-                  break;
-              }
-              
-              divContent.appendChild(document.createTextNode(columns[column.index]));
-              divContent.appendChild(medalImg);
-            } else {
-              divContent.textContent = columns[column.index];
-            }
+            divContent.textContent = columns[column.index];
 
             if (column.className) {
               td.className = column.className;

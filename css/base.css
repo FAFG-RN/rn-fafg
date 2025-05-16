@@ -54,7 +54,7 @@ header {
 
 .title {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.25em;
 }
@@ -87,8 +87,14 @@ header {
 
 .switch-view-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 0.5em;
   padding: 0 1.25em;
 }
 
+.switch-view-wrapper {
+  max-width: 1380px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

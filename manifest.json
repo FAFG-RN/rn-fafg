@@ -25,7 +25,7 @@
       "purpose": "maskable"
     }
   ],
-  "orientation": "any",
+  "orientation": "portrait",
   "display": "standalone",
   "dir": "auto",
   "lang": "es",

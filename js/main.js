@@ -3,6 +3,10 @@ const SHEET_URL =
 
 
 let playersList = [];
+let $tableComponent;
+let $playersListComponent;
+let $switchViewComponent;
+let $searchComponent;
 
 // Theme switching functionality
 function initTheme() {
@@ -20,6 +24,15 @@ function initTheme() {
   });
 }
 
+function handleChangeView(view) {
+  if (view === 'table') {
+    $tableComponent.style.display = 'block';
+    $playersListComponent.style.display = 'none';
+  } else {
+    $tableComponent.style.display = 'none';
+    $playersListComponent.style.display = 'block';
+  }
+}
 // Function to load and parse CSV data
 async function loadCSV() {
   try {
@@ -35,38 +48,31 @@ async function loadCSV() {
     const searchTerm = urlParams.get("search");
 
     // Initialize table
-    const tableComponent = document.querySelector('app-table');
-    tableComponent.generateTableHeaders();
-    tableComponent.setRows(playersList);
+    $tableComponent = document.querySelector('app-table');
+    $tableComponent.generateTableHeaders();
+    $tableComponent.setRows(playersList);
 
     // Initialize players list
-    const playersListComponent = document.querySelector('app-players-list');
-    playersListComponent.setPlayers(playersList);
+    $playersListComponent = document.querySelector('app-players-list');
+    $playersListComponent.setPlayers(playersList);
 
     // Initialize view switching
-    const switchViewComponent = document.querySelector('app-switch-view');
-    switchViewComponent.addEventListener('viewChange', (e) => {
-      const view = e.detail.view;
-      if (view === 'table') {
-        tableComponent.style.display = 'block';
-        playersListComponent.style.display = 'none';
-      } else {
-        tableComponent.style.display = 'none';
-        playersListComponent.style.display = 'block';
-      }
+    $switchViewComponent = document.querySelector('app-switch-view');
+    $switchViewComponent.addEventListener('viewChange', (e) => {
+      handleChangeView(e.detail.view);
     });
 
     // If there's a search term, filter the rows
     if (searchTerm) {
-      tableComponent.filterTable(searchTerm);
-      playersListComponent.filterPlayers(searchTerm);
+      $tableComponent.filterTable(searchTerm);
+      $playersListComponent.filterPlayers(searchTerm);
     }
 
     // Add search event listener
-    const searchComponent = document.querySelector('app-search');
-    searchComponent.addEventListener('search', (e) => {
-      tableComponent.filterTable(e.detail.searchTerm);
-      playersListComponent.filterPlayers(e.detail.searchTerm);
+    $searchComponent = document.querySelector('app-search');
+    $searchComponent.addEventListener('search', (e) => {
+      $tableComponent.filterTable(e.detail.searchTerm);
+      $playersListComponent.filterPlayers(e.detail.searchTerm);
     });
 
     console.log("CSV data loaded successfully");
@@ -88,6 +94,12 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
+
+// Add resize listener to handle window size changes
+window.addEventListener("resize", () => {
+  const view = window.innerWidth < 1024 ? 'list' : $switchViewComponent.currentView;
+  $switchViewComponent.switchView(view);
+});
 
 // Initialize everything when the page loads
 function initializeApp() {

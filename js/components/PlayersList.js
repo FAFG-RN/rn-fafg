@@ -3,9 +3,9 @@ const $playersListTemplate = document.createElement("template");
 const playersListStyle = `
   <style>
     .players-list {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 1em;
+      padding: 0 1em;
     }
 
     .player-collapsed-content {
@@ -17,6 +17,11 @@ const playersListStyle = `
       grid-template-columns: 75px 1fr 90px;
       align-items: center;
       gap: 0.2em;
+    }
+
+    .player-points {
+      text-align: right;
+      margin-right: 0.5em;
     }
 
     .player-name,
@@ -31,21 +36,11 @@ const playersListStyle = `
       color: var(--color-alternate);
     }
 
-    .position-container {
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-    }
-
-    .medal-icon {
-      width: 24px;
-      height: 24px;
-    }
-
     .player-info-expanded {
       display: flex;
       flex-direction: column;
       gap: 1.5em;
+      padding: 1em;
     }
 
     .player-info-item {
@@ -74,8 +69,12 @@ const playersListStyle = `
     }
 
     @media screen and (max-width: 1024px) {
+      .players-list {
+        margin: 2em 0;
+      }
+
       .player-info {
-        grid-template-columns: 50px 1fr 75px;
+        grid-template-columns: 40px 1fr 75px;
       }
 
       .player-position,
@@ -144,34 +143,9 @@ class PlayersList extends HTMLElement {
       collapsedContent.slot = "collapsed";
       collapsedContent.classList.add("player-collapsed-content");
 
-      // Create position container with medal for top 3
-      let positionHtml = `<span class="player-position">${position}</span>`;
-      if (index < 3 && !hasSearchTerm) {
-        let medalSrc = "";
-        switch (index) {
-          case 0:
-            medalSrc = "assets/icons/medal-gold.png";
-            break;
-          case 1:
-            medalSrc = "assets/icons/medal-silver.png";
-            break;
-          case 2:
-            medalSrc = "assets/icons/medal-bronze.png";
-            break;
-        }
-        positionHtml = `
-          <div class="position-container">
-            <span class="player-position">${position}</span>
-            <img src="${medalSrc}" alt="${
-          index + 1
-        } place medal" class="medal-icon">
-          </div>
-        `;
-      }
-
       collapsedContent.innerHTML = `
         <div class="player-info">
-          ${positionHtml}
+          <span class="player-position">${position}</span>
           <span class="player-name">${playerName}</span>
           <span class="player-points">${points}</span>
         </div>
