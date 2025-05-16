@@ -1,10 +1,19 @@
 @media screen and (max-width: 768px) {
   .logo-img {
-    width: 10em;
+    width: 5em;
+  }
+
+  .dark .logo-img.logo-filtered-black {
+    filter: none;
   }
 
   thead {
     display: none;
+  }
+
+  th .mobile-header,
+  td .mobile-header {
+    display: table-cell;
   }
 
   .mobile-row-wrapper {
@@ -28,33 +37,44 @@
   }
 
   td {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0.5em;
     font-size: 0.9em;
     border: none;
     max-width: none;
   }
 
-  td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    margin-right: 1em;
+  .cell-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  td > span {
-    text-align: right;
+  .cell-value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
   }
 
   .tableContainer {
-    margin: 0 0.5em;
-    padding: 0.5em;
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .rank {
+    width: auto;
   }
 
   .rank,
   .player,
   .points {
-    font-size: 1em;
+    font-size: 1rem;
   }
-} 
+
+  .rank .cell-value {
+    font-size: 1.5rem;
+  }
+}

@@ -155,23 +155,62 @@ function renderTableRows(rows) {
   const $tableBody = document.querySelector(".tableContainer table tbody");
   $tableBody.innerHTML = ""; // Clear existing content
 
-  rows.forEach((row) => {
+  // Check if there's a search term
+  const searchInput = document.getElementById("searchInput");
+  const hasSearchTerm = searchInput.value.trim().length > 0;
+
+  rows.forEach((row, index) => {
     if (row.trim()) {
       const columns = row.split(",");
       if (columns.length > 1) {
         const tr = document.createElement("tr");
 
-        tableConfig.columns.forEach((column) => {
+        tableConfig.columns.forEach((column, colIndex) => {
           const td = document.createElement("td");
-          const span = document.createElement("span");
-          span.textContent = columns[column.index];
-          td.appendChild(span);
+          const div = document.createElement("div");
+          div.className = "cell-content";
+          
+          // Create header span for mobile view
+          const headerSpan = document.createElement("span");
+          headerSpan.className = "mobile-header";
+          headerSpan.textContent = tableConfig.headers[colIndex];
+          
+          // Create value span
+          const valueSpan = document.createElement("span");
+          valueSpan.className = "cell-value";
+          
+          // Add medal for top 3 positions only if there's no search term
+          if (column.key === "position" && index < 3 && !hasSearchTerm) {
+            const medalImg = document.createElement("img");
+            medalImg.className = "medal-icon";
+            medalImg.alt = `${index + 1} place medal`;
+            
+            // Set the appropriate medal based on position
+            switch (index) {
+              case 0:
+                medalImg.src = "/assets/icons/medal-gold.png";
+                break;
+              case 1:
+                medalImg.src = "/assets/icons/medal-silver.png";
+                break;
+              case 2:
+                medalImg.src = "/assets/icons/medal-bronce.png";
+                break;
+            }
+            
+            valueSpan.appendChild(document.createTextNode(columns[column.index]));
+            valueSpan.appendChild(medalImg);
+          } else {
+            valueSpan.textContent = columns[column.index];
+          }
 
           if (column.className) {
             td.className = column.className;
           }
-
-          td.setAttribute("data-label", tableConfig.headers[column.index]);
+          
+          div.appendChild(headerSpan);
+          div.appendChild(valueSpan);
+          td.appendChild(div);
           tr.appendChild(td);
         });
 

@@ -17,9 +17,8 @@ body {
   --color-table-hover: light-dark(#f5f5f5, #333333);
   --color-primary: light-dark(#194990, #4a8db3);
   --color-border: light-dark(#d1d5db, #4b5563);
-  --color-success: light-dark(#059669, #6ee7b7);
   --color-striped: light-dark(#f8fafc, #333333);
-  --color-player: light-dark(#1e40af, #93c5fd);
+  --color-alternate: light-dark(#1e40af, #93c5fd);
 }
 
 .light {
@@ -46,9 +45,13 @@ body {
   margin-bottom: 1.25em;
 }
 
-.logoContainer {
-  text-align: center;
-  margin-bottom: 1.25em;
+.logosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  margin: 2.25em 0;
+  padding: 0 1.25em;
 }
 
 .logo-img {
@@ -56,8 +59,14 @@ body {
   max-width: 12.5em;
   height: auto;
   display: block;
-  margin: 0 auto;
   transition: filter 0.3s;
+}
+
+.logo-img.logo-filtered-blue {
   filter: invert(45%) sepia(100%) saturate(1000%) hue-rotate(180deg)
     brightness(90%) contrast(101%);
-} 
+}
+
+.logo-img.logo-filtered-black {
+  filter: brightness(0);
+}

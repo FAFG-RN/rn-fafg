@@ -39,32 +39,53 @@ tr:nth-child(odd) {
   background-color: var(--color-table-bg);
 }
 
-th,
-td {
-  padding: 1.5em 0.7em;
-  text-align: left;
+th, td {
   border-bottom: 0.0625em solid var(--color-border);
+  padding: 1.5em 0.7em;
   color: var(--color-text);
+}
+
+th .cell-value,
+td .cell-value {
+  text-align: left;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
 }
 
+th .mobile-header,
+td .mobile-header {
+  display: none;
+}
+
 .rank {
   font-weight: bold;
   color: var(--color-primary);
   font-size: 1.1em;
+  width: 100px;
 }
 
-.player {
-  color: var(--color-player);
+.rank .cell-value {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.player .cell-value {
+  color: var(--color-alternate);
   font-weight: bold;
   font-size: 1.1em;
 }
 
-.points {
-  color: var(--color-success);
+.points .cell-value {
+  color: var(--color-alternate);
   font-weight: bold;
   font-size: 1.1em;
+}
+
+.medal-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
 } 
