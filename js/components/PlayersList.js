@@ -57,7 +57,7 @@ const playersListStyle = `
 
     /* Skeleton loading styles */
     .skeleton {
-      background: linear-gradient(90deg, var(--color-table-bg) 25%, var(--color-table-hover) 50%, var(--color-table-bg) 75%);
+      background: linear-gradient(90deg, var(--color-table-bg) 25%, var(--color-striped) 50%, var(--color-table-bg) 75%);
       background-size: 200% 100%;
       animation: loading 1.5s infinite;
       border-radius: 4px;

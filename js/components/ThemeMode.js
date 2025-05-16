@@ -112,6 +112,26 @@ class ThemeMode extends HTMLElement {
       this.moonIcon.style.display = 'none';
     }
   }
+
+  initTheme() {   
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    // Get theme from localStorage or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+    
+    // Set initial theme
+    document.body.classList.add(initialTheme);
+  
+    // Listen for theme changes from the web component
+    this.addEventListener('themeChange', (e) => {
+      const newTheme = document.body.classList.contains("dark") ? "light" : "dark";
+      document.body.classList.toggle("dark");
+      document.body.classList.toggle("light");
+      // Save theme preference to localStorage
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 }
 
 window.customElements.define("app-theme-mode", ThemeMode);

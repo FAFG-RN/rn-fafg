@@ -7,21 +7,14 @@ let $tableComponent;
 let $playersListComponent;
 let $switchViewComponent;
 let $searchComponent;
+let $themeMode;
+
 
 // Theme switching functionality
 function initTheme() {
   console.log("Initializing theme...");
   const themeMode = document.querySelector('app-theme-mode');
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  // Set initial theme based on system preference
-  document.body.classList.add(prefersDark ? "dark" : "light");
-
-  // Listen for theme changes from the web component
-  themeMode.addEventListener('themeChange', (e) => {
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-  });
+  themeMode.initTheme();
 }
 
 function handleChangeView(view) {
