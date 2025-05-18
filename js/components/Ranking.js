@@ -1,6 +1,6 @@
-const $playersListTemplate = document.createElement("template");
+const $rankingTemplate = document.createElement('template');
 
-const playersListStyle = `
+const rankingStyle = `
   <style>
     .players-list {
       max-width: 1400px;
@@ -117,9 +117,7 @@ const playersListStyle = `
     }
 
     /* Styles for top 1 position */
-    app-accordion:nth-child(1) .player-position,
-    app-accordion:nth-child(1) .player-points,
-    app-accordion:nth-child(1) .player-name {
+    .top-1{
       font-size: 1.4rem;
     }
 
@@ -143,38 +141,37 @@ const playersListStyle = `
       }
 
       /* Styles for top 1 position */
-      app-accordion:nth-child(1) .player-position,
-      app-accordion:nth-child(1) .player-points,
-      app-accordion:nth-child(1) .player-name {
+      .top-1 {
         font-size: 1rem;
       }
     }
   </style>
 `;
 
-$playersListTemplate.innerHTML = `
+$rankingTemplate.innerHTML =
+  `
   <div class="players-list">
     <!-- Players will be dynamically added here -->
   </div>
-` + playersListStyle;
+` + rankingStyle;
 
-class PlayersList extends HTMLElement {
+class Ranking extends HTMLElement {
   allPlayers = [];
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild($playersListTemplate.content.cloneNode(true));
-    this.playersList = this.shadowRoot.querySelector(".players-list");
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild($rankingTemplate.content.cloneNode(true));
+    this.playersList = this.shadowRoot.querySelector('.players-list');
     this.allPlayers = []; // Store all players for filtering
   }
 
   showSkeleton() {
-    this.playersList.innerHTML = ""; // Clear existing content
+    this.playersList.innerHTML = ''; // Clear existing content
     // Create 10 skeleton items
     for (let i = 0; i < 10; i++) {
-      const skeletonPlayer = document.createElement("div");
-      skeletonPlayer.className = "skeleton";
+      const skeletonPlayer = document.createElement('div');
+      skeletonPlayer.className = 'skeleton';
       this.playersList.appendChild(skeletonPlayer);
     }
   }
@@ -185,49 +182,37 @@ class PlayersList extends HTMLElement {
   }
 
   renderPlayers(players) {
-    this.playersList.innerHTML = ""; // Clear existing content
+    this.playersList.innerHTML = ''; // Clear existing content
 
-    players.forEach((player) => {
-      const columns = player.split(",");
-      const [
-        position,
-        playerName,
-        points,
-        hcp,
-        tournaments,
-        origin,
-        card15,
-        pointsLost,
-        card16,
-        posBefore,
-      ] = columns;
-
-      const accordion = document.createElement("app-accordion");
+    players.forEach(({ position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, posBefore }) => {
+      const accordion = document.createElement('app-accordion');
 
       // Create collapsed content (player name)
-      const collapsedContent = document.createElement("div");
-      collapsedContent.slot = "collapsed";
-      collapsedContent.classList.add("player-collapsed-content");
+      const collapsedContent = document.createElement('div');
+      collapsedContent.slot = 'collapsed';
+      collapsedContent.classList.add('player-collapsed-content');
+
+      const top1 = position === 1;
 
       const posBeforeArrow =
-        parseInt(posBefore) > parseInt(position)
+        posBefore > position
           ? `<span class="rank-up">↑</span>`
-          : parseInt(posBefore) < parseInt(position)
-          ? `<span class="rank-down">↓</span>`
-          : `<span class="rank-neutral">•</span>`;
+          : posBefore < position
+            ? `<span class="rank-down">↓</span>`
+            : `<span class="rank-neutral">•</span>`;
 
       collapsedContent.innerHTML = `
         <div class="player-info">
-          <span class="player-position">${position}</span>
+          <span class="player-position ${top1 ? 'top-1' : ''}">${position}</span>
           ${posBeforeArrow}
-          <span class="player-name">${playerName}</span>
-          <span class="player-points">${points}</span>
+          <span class="player-name ${top1 ? 'top-1' : ''}">${name}</span>
+          <span class="player-points ${top1 ? 'top-1' : ''}">${points}</span>
         </div>
       `;
 
       // Create expanded content (empty for now)
-      const expandedContent = document.createElement("div");
-      expandedContent.slot = "expanded";
+      const expandedContent = document.createElement('div');
+      expandedContent.slot = 'expanded';
       expandedContent.innerHTML = `
         <div class="player-info-expanded">
           <div class="player-info-item"><span>HCP:</span> <span>${hcp}</span></div>
@@ -254,15 +239,12 @@ class PlayersList extends HTMLElement {
       return;
     }
 
-    const filteredPlayers = this.allPlayers.filter((player) => {
-      const columns = player.split(",");
-      return columns.some((column) =>
-        column.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    });
+    const filteredPlayers = this.allPlayers.filter((player) =>
+      player.columns.some((column) => column.toLowerCase().includes(searchTerm.toLowerCase())),
+    );
 
     this.renderPlayers(filteredPlayers);
   }
 }
 
-customElements.define("app-players-list", PlayersList);
+customElements.define('app-ranking', Ranking);
