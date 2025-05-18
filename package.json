@@ -1,6 +1,6 @@
 {
   "name": "ranking-footgolf",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Desarrollado por David Martín - carlosdavidmartin@gmail.com",
   "main": "./js/main.js",
   "scripts": {

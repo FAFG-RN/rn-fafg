@@ -23,6 +23,7 @@ const rankingTableStyle = `
       font-weight: bold;
       color: var(--color-text);
       font-size: 1.1rem;
+      white-space: nowrap;
     }
 
     th:first-child {
@@ -155,8 +156,24 @@ class RankingTable extends HTMLElement {
     });
   }
 
+  renderNoResults() {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    td.colSpan = this.tableConfig.headers.length;
+    td.style.textAlign = 'center';
+    td.innerHTML = '<app-no-results></app-no-results>';
+    tr.appendChild(td);
+    this.tableBody.innerHTML = '';
+    this.tableBody.appendChild(tr);
+  }
+
   renderTableRows(rowsPlayers) {
     this.tableBody.innerHTML = ''; // Clear existing content
+
+    if (rowsPlayers.length === 0) {
+      this.renderNoResults();
+      return;
+    }
 
     rowsPlayers.forEach((player) => {
       const tr = document.createElement('tr');

@@ -39,11 +39,11 @@ export async function getRanking() {
       };
     });
 
-    // Get lastUpdate from first player
+    // Get lastUpdate from first player - The last update column is the same value for all players
     let lastUpdate = '';
+
     if (ranking.length > 0) {
-      const firstPlayerColumns = ranking[0].lastUpdate;
-      lastUpdate = firstPlayerColumns[firstPlayerColumns.length - 1];
+      lastUpdate = ranking[0].lastUpdate;
     }
 
     console.log('CSV data loaded and parsed successfully');

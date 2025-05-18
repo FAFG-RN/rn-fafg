@@ -181,8 +181,17 @@ class Ranking extends HTMLElement {
     this.renderPlayers(players);
   }
 
+  renderEmpty() {
+    this.playersList.innerHTML = '<app-no-results></app-no-results>';
+  }
+
   renderPlayers(players) {
     this.playersList.innerHTML = ''; // Clear existing content
+
+    if (players.length === 0) {
+      this.renderEmpty();
+      return;
+    }
 
     players.forEach(({ position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, posBefore }) => {
       const accordion = document.createElement('app-accordion');

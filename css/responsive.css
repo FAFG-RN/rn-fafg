@@ -1,3 +1,10 @@
+@media screen and (max-width: 1366px) {
+  .switch-view-container,
+  app-ranking-table {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .logo-img {
     width: 5em;
@@ -5,11 +12,6 @@
 
   .dark .logo-img.logo-filtered-black {
     filter: none;
-  }
-
-  .switch-view-container,
-  app-ranking-table {
-    display: none;
   }
 
   header {
@@ -29,3 +31,4 @@
     font-size: 0.7rem;
   }
 }
+

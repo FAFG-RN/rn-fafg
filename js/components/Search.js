@@ -8,11 +8,12 @@ const searchStyle = `
       gap: 0.5em;
       flex: 1;
       max-width: 400px;
+      position: relative;
     }
 
     .search-input {
       width: 100%;
-      padding: 0.5em 1em;
+      padding: 0.5em 2.5em 0.5em 1em;
       border: 1px solid var(--color-border);
       border-radius: 0.5em;
       background-color: var(--color-table-bg);
@@ -30,6 +31,22 @@ const searchStyle = `
       color: var(--color-text);
       opacity: 0.7;
     }
+
+    .search-icon, 
+    .search-clear {
+      position: absolute;
+      right: 0.75em;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--color-text);
+      opacity: 0.7;
+      width: 16px;
+      height: 16px;
+    }
+
+    .search-clear {
+      cursor: pointer;
+    }
       
     @media screen and (max-width: 1024px) {
         .search-container {
@@ -46,7 +63,18 @@ $searchTemplate.innerHTML =
       type="text"
       class="search-input"
       placeholder="Buscar..."
+      maxlength="50"
     />
+    <span class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/>
+        </svg>
+    </span>
+    <span class="search-clear" style="display: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+      </svg>
+    </span>
   </div>
 ` + searchStyle;
 
@@ -60,12 +88,18 @@ class Search extends HTMLElement {
 
     this.searchInput = this.shadowRoot.querySelector('.search-input');
     this.debouncedSearch = this.debounce(() => this.handleSearch(), 300);
-
+    this.searchClear = this.shadowRoot.querySelector('.search-clear');
+    this.searchIcon = this.shadowRoot.querySelector('.search-icon');
     // Initialize search from URL if present
     this.initSearchFromURL();
 
     // Add search functionality with debounce
     this.searchInput.addEventListener('input', this.debouncedSearch);
+    // Add search clear functionality
+    this.searchClear.addEventListener('click', () => {
+      this.searchInput.value = '';
+      this.handleSearch();
+    });
   }
 
   // Function to debounce search input
@@ -81,10 +115,17 @@ class Search extends HTMLElement {
     };
   }
 
+  toggleSearchIcon() {
+    this.searchClear.style.display = this.searchInput.value ? 'block' : 'none';
+    this.searchIcon.style.display = this.searchInput.value ? 'none' : 'block';
+  }
+
   // Function to handle search filtering
   handleSearch() {
     const searchTerm = this.searchInput.value.toLowerCase().trim();
     this.updateSearchInURL(searchTerm);
+    this.toggleSearchIcon();
+
     this.dispatchEvent(
       new CustomEvent('search', {
         detail: { searchTerm },
@@ -115,6 +156,7 @@ class Search extends HTMLElement {
   // Function to initialize search from URL
   initSearchFromURL() {
     this.searchInput.value = this.getSearchTerm();
+    this.toggleSearchIcon();
   }
 
   // Getter for current search term

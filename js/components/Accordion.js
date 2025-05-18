@@ -77,7 +77,6 @@ class Accordion extends HTMLElement {
     this.icon.classList.toggle('expanded', isExpanded);
   }
 
-  // Optional: Add methods to programmatically control the accordion
   expand() {
     this.content.classList.add('expanded');
     this.icon.classList.add('expanded');

@@ -4,6 +4,7 @@ import './components/RankingTable.js';
 import './components/Accordion.js';
 import './components/Ranking.js';
 import './components/SwitchView.js';
+import './components/NoResults.js';
 import { VIEWS } from './components/SwitchView.js';
 import { getRanking } from './services/rankingService.js';
 
@@ -15,7 +16,6 @@ const $lastUpdateElement = document.querySelector('.last-update');
 const $switchViewComponent = document.querySelector('app-switch-view');
 const $searchComponent = document.querySelector('app-search');
 
-// Theme switching functionality
 function initTheme() {
   console.log('Initializing theme...');
   const themeMode = document.querySelector('app-theme-mode');
@@ -62,10 +62,8 @@ function handleChangeView(view) {
   }
 }
 
-// Function to load and parse CSV data
 async function loadRanking() {
   try {
-    // Show skeleton loading state for initial list view
     $rankingComponent.showSkeleton();
 
     const { ranking: rankingData, lastUpdate } = await getRanking();
@@ -73,23 +71,18 @@ async function loadRanking() {
 
     $lastUpdateElement.textContent = `Última actualización: ${lastUpdate || 'No disponible'}`;
 
-    // Get search term from URL
     const searchTerm = $searchComponent.getSearchTerm();
 
-    // Initialize view switching
     $switchViewComponent.addEventListener('viewChange', (e) => {
       handleChangeView(e.detail.view);
     });
 
-    // Initialize players list
     $rankingComponent.setPlayers(ranking);
 
-    // If there's a search term, filter the rows
     if (searchTerm) {
       $rankingComponent.filterPlayers(searchTerm);
     }
 
-    // Add search event listener
     $searchComponent.addEventListener('search', (e) => {
       const activeView = $switchViewComponent.currentView === 'table' ? $tableComponent : $rankingComponent;
       activeView.filterPlayers?.(e.detail.searchTerm);
@@ -117,11 +110,10 @@ if ('serviceWorker' in navigator) {
 
 // Add resize listener to handle window size changes
 window.addEventListener('resize', () => {
-  const view = window.innerWidth < 1024 ? 'list' : $switchViewComponent.currentView;
+  const view = window.innerWidth < 1366 ? 'list' : $switchViewComponent.currentView;
   $switchViewComponent.switchView(view);
 });
 
-// Initialize everything when the page loads
 function initializeApp() {
   console.log('Initializing application...');
   initTheme();
@@ -134,11 +126,3 @@ if (document.readyState === 'loading') {
 } else {
   initializeApp();
 }
-
-// Fallback to window.onload
-window.onload = function () {
-  // Check if initialization hasn't happened yet
-  if (!document.body.classList.contains('dark') && !document.body.classList.contains('light')) {
-    initializeApp();
-  }
-};
