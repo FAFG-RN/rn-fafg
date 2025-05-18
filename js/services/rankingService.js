@@ -1,8 +1,11 @@
 const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv';
 
-function parseStringToNumber(position) {
+function parseStringToNumber(position, decimal = false) {
   try {
+    if (decimal) {
+      return parseFloat(position).toFixed(2);
+    }
     return parseInt(position, 10);
   } catch {
     return null;
@@ -24,15 +27,15 @@ export async function getRanking() {
         columns;
 
       return {
-        card15: parseStringToNumber(card15),
-        card16: parseStringToNumber(card16),
+        card15: parseStringToNumber(card15, true),
+        card16: parseStringToNumber(card16, true),
         columns,
         hcp: parseStringToNumber(hcp),
         lastUpdate: lastUpdate?.trim() || null,
         name: name?.trim() || '',
         origin: origin?.trim() || '',
-        points: parseStringToNumber(points),
-        pointsLost: parseStringToNumber(pointsLost),
+        points: parseStringToNumber(points, true),
+        pointsLost: parseStringToNumber(pointsLost, true),
         posBefore: parseStringToNumber(posBefore),
         position: parseStringToNumber(position),
         tournaments: parseStringToNumber(tournaments),
