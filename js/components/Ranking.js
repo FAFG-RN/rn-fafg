@@ -193,7 +193,7 @@ class Ranking extends HTMLElement {
       return;
     }
 
-    players.forEach(({ position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, posBefore }) => {
+    players.forEach(({ position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, changes }) => {
       const accordion = document.createElement('app-accordion');
 
       // Create collapsed content (player name)
@@ -203,17 +203,17 @@ class Ranking extends HTMLElement {
 
       const top1 = position === 1;
 
-      const posBeforeArrow =
-        posBefore > position
+      const changesArrow =
+        changes > 0
           ? `<span class="rank-up">↑</span>`
-          : posBefore < position
+          : changes < 0
             ? `<span class="rank-down">↓</span>`
             : `<span class="rank-neutral">•</span>`;
 
       collapsedContent.innerHTML = `
         <div class="player-info">
           <span class="player-position ${top1 ? 'top-1' : ''}">${position}</span>
-          ${posBeforeArrow}
+          ${changesArrow}
           <span class="player-name ${top1 ? 'top-1' : ''}">${name}</span>
           <span class="player-points ${top1 ? 'top-1' : ''}">${points}</span>
         </div>

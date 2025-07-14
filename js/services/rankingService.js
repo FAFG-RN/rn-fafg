@@ -23,7 +23,7 @@ export async function getRanking() {
     const csvParsed = rows.slice(1).filter((row) => row.trim());
     const ranking = csvParsed.map((player) => {
       const columns = player.split(',');
-      const [position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, posBefore, lastUpdate] =
+      const [position, name, points, hcp, tournaments, origin, card15, pointsLost, card16, changes, lastUpdate] =
         columns;
 
       return {
@@ -36,7 +36,7 @@ export async function getRanking() {
         origin: origin?.trim() || '',
         points: parseStringToNumber(points, true),
         pointsLost: parseStringToNumber(pointsLost, true),
-        posBefore: parseStringToNumber(posBefore),
+        changes: parseStringToNumber(changes),
         position: parseStringToNumber(position),
         tournaments: parseStringToNumber(tournaments),
       };

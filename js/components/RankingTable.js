@@ -135,7 +135,7 @@ class RankingTable extends HTMLElement {
       ],
       columns: [
         { key: 'position', index: 0, className: 'player-position is-number' },
-        { key: 'posBefore', index: 9, className: 'is-number' },
+        { key: 'changes', index: 9, className: 'is-number' },
         { key: 'name', index: 1, className: 'player-name' },
         { key: 'points', index: 2, className: 'player-points is-number' },
         { key: 'hcp', index: 3, className: 'is-number' },
@@ -182,18 +182,18 @@ class RankingTable extends HTMLElement {
         const td = document.createElement('td');
         const divContent = document.createElement('div');
 
-        const isPosBefore = column.index === 9;
-        divContent.className = isPosBefore ? 'cell-content is-position' : 'cell-content';
+        const isChanges = column.index === 9;
+        divContent.className = isChanges ? 'cell-content is-position' : 'cell-content';
 
-        if (isPosBefore) {
-          const posBeforeArrow =
-            player.posBefore > player.position
+        if (isChanges) {
+          const changesArrow =
+            player.changes > 0
               ? `<span class="rank-up">↑</span>`
-              : player.posBefore < player.position
+              : player.changes < 0
                 ? `<span class="rank-down">↓</span>`
                 : `<span class="rank-neutral">•</span>`;
 
-          divContent.innerHTML = posBeforeArrow;
+          divContent.innerHTML = changesArrow;
         } else {
           divContent.textContent = player[column.key];
         }
