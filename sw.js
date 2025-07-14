@@ -1,4 +1,4 @@
-const CACHE_NAME = 'footgolf-cache-v1';
+const CACHE_NAME = 'footgolf-cache-v1.1';
 const SHEET_URL =
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ_z4_nPfXouAPBrb5eP2u5JqNXsg1aQedaRk25l36isMLJy21nPlxeKE1GvOX75MFp5sCLXjc6BegJ/pub?output=csv';
 
