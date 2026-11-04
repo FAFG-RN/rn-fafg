@@ -33,6 +33,10 @@
       .logos-container{display:grid;grid-template-columns:repeat(5,160px);justify-content:center;align-items:center;column-gap:30px;row-gap:20px;width:100%;max-width:1100px;margin:32px auto 28px;padding:0 20px;box-sizing:border-box}
       .logos-container picture{display:flex;align-items:center;justify-content:center;width:160px;height:150px;min-width:0}
       .logos-container .logo-img{display:block;width:100%;height:100%;max-width:160px;max-height:150px;object-fit:contain;object-position:center;margin:0}
+      /* Equilibrio visual de escudos con márgenes internos en sus archivos */
+      .logos-container picture:nth-child(2) .logo-img{transform:scale(1.25)}
+      .logos-container picture:nth-child(3) .logo-img{transform:scale(1.22)}
+      .logos-container picture:nth-child(4) .logo-img{transform:scale(1.18)}
       @media(max-width:1000px){.logos-container{grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;max-width:850px}.logos-container picture{width:100%;height:125px}.logos-container .logo-img{max-width:100%;max-height:125px}}
       @media(max-width:600px){.logos-container{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin:22px auto;padding:0 16px}.logos-container picture{flex:0 0 calc((100% - 32px)/3);width:calc((100% - 32px)/3);height:100px}.logos-container .logo-img{max-height:100px}}
     </style>
