@@ -77,6 +77,7 @@ async function renderSession(session){
   if(!current){profileMessage.textContent='FAFG todavía no cargó tu ranking.';return;}
   const values=[['Posición',current.posicion?current.posicion+'°':'—'],['Puntos',Number(current.puntos).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})],['HCP',current.hcp??'—'],['Torneos',current.torneos_computados],['Temporada',current.temporada],['Categoría',current.categoria]];
   const grid=document.getElementById('profile-stats');
+  grid.replaceChildren();
   values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(strong,small);grid.append(cell)});
   profileMessage.textContent='Datos deportivos administrados por FAFG.';
 }
