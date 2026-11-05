@@ -59,6 +59,14 @@
       .logos-container picture:nth-child(5) .logo-img{transform:scale(1.38)!important;transform-origin:center center}
       @media(max-width:1000px){.logos-container{gap:14px;padding:0 18px}.logos-container picture{height:125px}.logos-container .logo-img{max-height:125px!important}}
       @media(max-width:600px){.logos-container{grid-template-columns:repeat(3,minmax(0,1fr));justify-items:center;column-gap:12px;row-gap:12px;margin:22px auto;padding:0 14px}.logos-container picture{height:100px}.logos-container .logo-img{max-width:100%!important;max-height:100px!important}.logos-container picture:nth-child(4){grid-column:1}.logos-container picture:nth-child(5){grid-column:3}}
+      .home-national-search{max-width:780px;margin:18px auto 26px;padding:0 20px}
+      .home-national-search-form{padding:18px 20px;background:rgba(255,255,255,.94);border:1px solid #d2e3ed;border-radius:16px;box-shadow:0 8px 26px #14395718}
+      .home-national-search label{display:block;font-size:16px;font-weight:700;color:#153a58;margin-bottom:12px}
+      .home-national-search-controls{display:flex;gap:10px}
+      .home-national-search input{flex:1;min-width:0;padding:13px 14px;border:1px solid #b9cfde;border-radius:9px;font:inherit;color:#153a58;background:white}
+      .home-national-search button{background:#155d8a;color:white;border:0;border-radius:9px;padding:12px 18px;font:inherit;font-weight:700;cursor:pointer}
+      .home-national-search button:hover{background:#0d456c}
+      @media(max-width:550px){.home-national-search-controls{flex-direction:column}.home-national-search button{width:100%}}
     </style>
 
     <title>Ranking Nacional Footgolf</title>
@@ -109,6 +117,15 @@
 
 
     <div style="text-align:center;margin:16px auto 24px;padding:0 16px"><a href="./categorias.html" style="display:inline-block;background:#235f89;color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:10px">Ver ranking 2026 por categorías →</a></div>
+    <section class="home-national-search" aria-label="Buscador nacional de jugadores">
+      <form action="./categorias.html" method="get" class="home-national-search-form">
+        <label for="home-player-search">Buscar jugador en el Ranking Nacional 2026</label>
+        <div class="home-national-search-controls">
+          <input id="home-player-search" name="buscar" type="search" placeholder="Nombre, apellido o ciudad…" autocomplete="off" required />
+          <button type="submit">Buscar jugador</button>
+        </div>
+      </form>
+    </section>
     <div class="last-update"></div>
     <div class="switch-view-container">
       <div class="switch-view-wrapper">
