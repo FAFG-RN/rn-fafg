@@ -54,9 +54,9 @@
       .logos-container picture:nth-child(3) .logo-img{width:156px;max-height:132px}
       .logos-container picture:nth-child(4) .logo-img{width:156px;max-height:132px}
       .logos-container picture:nth-child(5) .logo-img{width:145px;max-height:143px}
-      /* Solo Liga 1 y Copa Federación: +15% sin deformación */
+      /* Liga 1 y Copa Federación: +20% adicional sobre ajuste anterior (1.15 × 1.20 = 1.38) */
       .logos-container picture:nth-child(3) .logo-img,
-      .logos-container picture:nth-child(5) .logo-img{transform:scale(1.15)!important;transform-origin:center center}
+      .logos-container picture:nth-child(5) .logo-img{transform:scale(1.38)!important;transform-origin:center center}
       @media(max-width:1000px){.logos-container{gap:14px;padding:0 18px}.logos-container picture{height:125px}.logos-container .logo-img{max-height:125px!important}}
       @media(max-width:600px){.logos-container{grid-template-columns:repeat(3,minmax(0,1fr));justify-items:center;column-gap:12px;row-gap:12px;margin:22px auto;padding:0 14px}.logos-container picture{height:100px}.logos-container .logo-img{max-width:100%!important;max-height:100px!important}.logos-container picture:nth-child(4){grid-column:1}.logos-container picture:nth-child(5){grid-column:3}}
     </style>
