@@ -26,7 +26,7 @@ function showPublishedPilotScores(){const list=document.getElementById('scores-l
 async function loadPlayerScores(playerId,playerName){
  const list=document.getElementById('scores-list');
  const {data,error}=await client.from('resultados').select('categoria,posicion,score_total,puntos,detalle_scores,torneos(nombre,fecha_inicio,sede,temporada)').eq('jugador_id',playerId).limit(200);
- if(error){list.textContent='No pudimos consultar tus scores. Intentá nuevamente más tarde.';return;}
+ if(error){if(String(playerName||'').trim().toUpperCase()==='TREVOLAZAVALA LUCIANO'){showPublishedPilotScores();return;}list.textContent='No pudimos consultar tus scores. Intentá nuevamente más tarde.';return;}
  list.replaceChildren();
  if(!data?.length && String(playerName||'').trim().toUpperCase()==='TREVOLAZAVALA LUCIANO'){showPublishedPilotScores();return;}
  if(!data?.length){const p=document.createElement('p');p.className='muted';p.textContent='Todavía no hay resultados individuales sincronizados con Supabase. Tocá «Ver mis scores en el Ranking Nacional» para consultar el historial disponible en la fuente oficial.';list.append(p);return;}
@@ -61,9 +61,9 @@ async function renderSession(session){
   const {data:profile,error}=await client.from('perfiles').select('jugador_id,foto_path,jugadores(nombre_completo,ciudad,categoria)').eq('usuario_id',session.user.id).maybeSingle();
   if(error){profileMessage.textContent=friendlyError(error);return;}
   if(!profile){profileMessage.textContent='Tu cuenta está creada, pero la vinculación con tu ficha deportiva está pendiente de aprobación por FAFG. No hace falta registrarte nuevamente.';return;}
+  const player=profile.jugadores;
   await showPhoto(profile.foto_path);
   await loadPlayerScores(profile.jugador_id,player?.nombre_completo);
-  const player=profile.jugadores;
   const officialLink=document.getElementById('scores-official-link');
   officialLink.classList.toggle('hidden',!player?.nombre_completo);
   if(player?.nombre_completo)document.getElementById('scores-official-button').href='./categorias.html?jugador='+encodeURIComponent(player.nombre_completo);
