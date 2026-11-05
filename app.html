@@ -55,11 +55,13 @@ async function renderSession(session){
   document.getElementById('profile-meta').textContent='';
   document.getElementById('profile-stats').replaceChildren();document.getElementById('scores-list').textContent='Cargando resultados…';
   profileMessage.textContent='Cargando tus datos oficiales…';
+  const {data:personalPhoto}=await client.from('fotos_perfil').select('foto_path').eq('usuario_id',session.user.id).maybeSingle();
+  await showPhoto(personalPhoto?.foto_path);
   const {data:profile,error}=await client.from('perfiles').select('jugador_id,foto_path,jugadores(nombre_completo,ciudad,categoria)').eq('usuario_id',session.user.id).maybeSingle();
   if(error){profileMessage.textContent=friendlyError(error);return;}
   if(!profile){if(session.user.id==='6d2887ea-5b84-4ee3-84d4-8a88a36da00c'){document.getElementById('profile-name').textContent='TREVOLAZAVALA LUCIANO';profileMessage.textContent='Resultados históricos disponibles en modo piloto. La vinculación definitiva de tu ficha deportiva sigue pendiente.';showPublishedPilotScores();return;}profileMessage.textContent='Tu cuenta ya está habilitada para usar FAFG App. Tu ficha deportiva oficial todavía no está vinculada; podés utilizar Noticias, inscripciones y demás servicios sin esperar aprobación.';return;}
   const player=profile.jugadores;
-  await showPhoto(profile.foto_path);
+  if(!personalPhoto?.foto_path)await showPhoto(profile.foto_path);
   await loadPlayerScores(profile.jugador_id,player?.nombre_completo);
   document.getElementById('profile-name').textContent=player?.nombre_completo||'Mi perfil';
   document.getElementById('profile-meta').textContent=[player?.ciudad,player?.categoria].filter(Boolean).join(' · ');
@@ -138,8 +140,8 @@ document.getElementById('photo-upload').addEventListener('click',async()=>{
  try{
   const {error:uploadError}=await client.storage.from('fotos-jugadores').upload(path,file,{contentType:file.type,upsert:false});
   if(uploadError)throw uploadError;
-  const {data,error:updateError}=await client.from('perfiles').update({foto_path:path}).eq('usuario_id',userId).select('foto_path').maybeSingle();
-  if(updateError||!data){await client.storage.from('fotos-jugadores').remove([path]);if(!data&&!updateError){message.classList.add('error');message.textContent='Tu cuenta está activa, pero aún no tiene un registro de perfil para guardar la foto. No es una autorización pendiente: estamos ajustando esta función.';return;}throw updateError;}
+  const {data,error:updateError}=await client.from('fotos_perfil').upsert({usuario_id:userId,foto_path:path,actualizado_en:new Date().toISOString()},{onConflict:'usuario_id'}).select('foto_path').maybeSingle();
+  if(updateError||!data){await client.storage.from('fotos-jugadores').remove([path]);if(!data&&!updateError){message.classList.add('error');message.textContent='No se pudo guardar la foto. Intentá nuevamente.';return;}throw updateError;}
   if(activeUserId!==userId)return;
   await showPhoto(data.foto_path);
   message.textContent='Foto de perfil actualizada correctamente.';
