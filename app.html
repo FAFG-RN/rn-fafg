@@ -21,11 +21,14 @@ let activeUserId=null;let photoObjectUrl=null;
 function clearPhoto(){const img=document.getElementById('profile-photo');img.hidden=true;img.removeAttribute('src');document.getElementById('profile-placeholder').hidden=false;if(photoObjectUrl){URL.revokeObjectURL(photoObjectUrl);photoObjectUrl=null}}
 async function showPhoto(path){clearPhoto();if(!path||!activeUserId||!path.startsWith(activeUserId+'/'))return;const {data,error}=await client.storage.from('fotos-jugadores').download(path);if(error||!data)return;photoObjectUrl=URL.createObjectURL(data);const img=document.getElementById('profile-photo');img.src=photoObjectUrl;img.hidden=false;document.getElementById('profile-placeholder').hidden=true;}
 function friendlyError(error){if(!navigator.onLine)return 'No hay conexión a Internet.';if(error?.message?.includes('Invalid login credentials'))return 'Correo o contraseña incorrectos.';if(error?.message?.includes('Email not confirmed'))return 'Tu correo todavía no está confirmado.';return 'No pudimos completar la operación. '+(error?.message||'Intentá nuevamente.')}
-async function loadPlayerScores(playerId){
+const PILOT_LUCIANO_SCORES=[["LN 2025 5°","29/11/25",75,"+3",6,17,151.59],["LN 2025 6°","30/11/25",72,"0",7,20,139.46],["CR 2026 1° 2° 3°","01/02/26",204,"-12",11,14,399.64],["SF 2026 2°","12/04/26",73,"+1",8,31,51.32],["LN NORTE 2026 1°","02/05/26",68,"-4",5,13,164.77],["LN NORTE 2026 2°","03/05/26",76,"+4",10,25,108.6],["SF 2026 3°","11/05/26",73,"+1",7,15,55.78],["LIGA 1 2026 1° 2° 3°","17/05/26",224,"+8",23,19,36.73],["SF 2026 4°","09/06/26",72,"0",6,19,60.64],["SF 2026 5°","04/07/26",68,"-4",0,1,100],["SERRANO 2026 3°","01/08/26",73,"+1",7,4,41.84],["SF 2026 6°","15/08/26",64,"-8",2,3,84.64],["LN NORTE 2026 3°","22/08/26",64,"-8",1,3,230],["LN NORTE 2026 4°","23/08/26",65,"-7",2,3,211.6],["SF 2026 7°","15/09/26",70,"-2",7,8,55.78],["SF 2026 8°","04/10/26",72,"0",8,23,38.49],["LN 2026 5°","24/10/26",72,"0",5,10,164.77],["LN 2026 6°","25/10/26",67,"-5",1,3,230]];
+function showPublishedPilotScores(){const list=document.getElementById('scores-list');list.replaceChildren();const info=document.createElement('p');info.className='muted';info.textContent='18 resultados de tu tabla individual ya publicada en el Ranking Nacional. Incluye 2025 y 2026. El total de puntos de estas participaciones no equivale al ranking oficial, que computa 15 torneos.';list.append(info);for(const row of [...PILOT_LUCIANO_SCORES].reverse()){const entry=document.createElement('article');entry.className='score-entry';const title=document.createElement('h3');title.textContent=row[0];entry.append(title);const meta=document.createElement('div');meta.className='score-meta';meta.textContent=row[1];entry.append(meta);const chips=document.createElement('div');chips.className='score-values';for(const [label,val] of [['Score',row[2]],['Dif. par',row[3]],['Dif. ganador',row[4]],['Posición',row[5]+'°'],['Puntos',Number(row[6]).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})]]){const chip=document.createElement('span');chip.textContent=label+': '+val;chips.append(chip)}entry.append(chips);list.append(entry)}}
+async function loadPlayerScores(playerId,playerName){
  const list=document.getElementById('scores-list');
  const {data,error}=await client.from('resultados').select('categoria,posicion,score_total,puntos,detalle_scores,torneos(nombre,fecha_inicio,sede,temporada)').eq('jugador_id',playerId).limit(200);
  if(error){list.textContent='No pudimos consultar tus scores. Intentá nuevamente más tarde.';return;}
  list.replaceChildren();
+ if(!data?.length && String(playerName||'').trim().toUpperCase()==='TREVOLAZAVALA LUCIANO'){showPublishedPilotScores();return;}
  if(!data?.length){const p=document.createElement('p');p.className='muted';p.textContent='Todavía no hay resultados individuales sincronizados con Supabase. Tocá «Ver mis scores en el Ranking Nacional» para consultar el historial disponible en la fuente oficial.';list.append(p);return;}
  data.sort((a,b)=>String(b.torneos?.fecha_inicio||'').localeCompare(String(a.torneos?.fecha_inicio||'')));
  for(const result of data){
@@ -59,7 +62,7 @@ async function renderSession(session){
   if(error){profileMessage.textContent=friendlyError(error);return;}
   if(!profile){profileMessage.textContent='Tu cuenta está creada, pero la vinculación con tu ficha deportiva está pendiente de aprobación por FAFG. No hace falta registrarte nuevamente.';return;}
   await showPhoto(profile.foto_path);
-  await loadPlayerScores(profile.jugador_id);
+  await loadPlayerScores(profile.jugador_id,player?.nombre_completo);
   const player=profile.jugadores;
   const officialLink=document.getElementById('scores-official-link');
   officialLink.classList.toggle('hidden',!player?.nombre_completo);
