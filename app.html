@@ -57,7 +57,7 @@ async function renderSession(session){
   profileMessage.textContent='Cargando tus datos oficiales…';
   const {data:profile,error}=await client.from('perfiles').select('jugador_id,foto_path,jugadores(nombre_completo,ciudad,categoria)').eq('usuario_id',session.user.id).maybeSingle();
   if(error){profileMessage.textContent=friendlyError(error);return;}
-  if(!profile){profileMessage.textContent='Tu cuenta está activa, pero FAFG todavía no vinculó tu ficha deportiva.';return;}
+  if(!profile){profileMessage.textContent='Tu cuenta está creada, pero la vinculación con tu ficha deportiva está pendiente de aprobación por FAFG. No hace falta registrarte nuevamente.';return;}
   await showPhoto(profile.foto_path);
   await loadPlayerScores(profile.jugador_id);
   const player=profile.jugadores;
@@ -80,11 +80,11 @@ document.querySelectorAll('[data-access]').forEach(button=>button.addEventListen
  if(kind==='existing'){
   document.getElementById('access-heading').textContent='Ya soy jugador FAFG';
   document.getElementById('access-description').textContent='Vamos a vincular tu cuenta con tu ficha deportiva y tus resultados.';
-  document.getElementById('access-notice').textContent='La activación con DNI y correo registrado está en preparación. Por seguridad, el DNI no habilita el acceso por sí solo. Hasta que FAFG active la verificación, solicitá la habilitación de tu cuenta a la Federación.';
+  document.getElementById('access-notice').textContent='Podés crear una cuenta con tu correo y contraseña. Después FAFG deberá verificar tu identidad y aprobar la vinculación con tu ficha deportiva. El DNI se comprobará por un canal privado; no lo compartas por mensajes.';
  }else if(kind==='new'){
   document.getElementById('access-heading').textContent='Soy nuevo en FAFG';
-  document.getElementById('access-description').textContent='Próximamente vas a poder crear tu cuenta y solicitar una ficha deportiva.';
-  document.getElementById('access-notice').textContent='El alta automática todavía no está habilitada. FAFG debe validar la identidad y el registro antes de vincular resultados oficiales.';
+  document.getElementById('access-description').textContent='Podés crear tu cuenta ahora. La ficha deportiva se habilitará cuando FAFG apruebe tu registro.';
+  document.getElementById('access-notice').textContent='Crear la cuenta no te asigna una ficha deportiva ni resultados oficiales. La aprobación de FAFG es necesaria.';
  }
 }));
 document.getElementById('access-back').addEventListener('click',()=>{
