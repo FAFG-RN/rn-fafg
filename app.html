@@ -47,6 +47,24 @@
   #inicio .home-link-icon {flex-basis:34px;width:34px;height:34px;}
   #inicio .home-link-copy small {font-size:10px;margin-top:2px;}
 }
+
+/* Distribución equilibrada de Inicio en pantallas altas */
+@media (max-width:699px) and (min-height:780px) {
+  body:has(#inicio.active) .app {min-height:100dvh;}
+  #inicio.active {
+    display:flex;
+    flex-direction:column;
+    min-height:max(0px, calc(100dvh - 340px - env(safe-area-inset-bottom)));
+  }
+  #inicio.active .home-links {
+    gap:clamp(10px,1.5dvh,17px);
+    margin-top:clamp(12px,1.6dvh,20px);
+  }
+  #inicio.active .home-link {
+    min-height:clamp(72px,9.1dvh,91px);
+    padding:clamp(11px,1.4dvh,16px) 13px;
+  }
+}
 </style></head><body><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
