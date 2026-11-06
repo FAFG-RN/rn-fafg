@@ -8,7 +8,7 @@ const generateShareImage=async()=>{
  const logo=await logoImage();fill('#edf5fc',0,0,W,H);
  const gradient=g.createLinearGradient(0,0,W,340);gradient.addColorStop(0,'#082a53');gradient.addColorStop(0.55,'#116da8');gradient.addColorStop(1,'#0c477d');fill(gradient,0,0,W,310);
  g.globalAlpha=.11;g.fillStyle='#8fd4ff';g.beginPath();g.moveTo(1000,0);g.lineTo(2000,0);g.lineTo(1700,310);g.lineTo(800,310);g.fill();g.globalAlpha=1;
- if(logo){const k=Math.min(580/logo.width,125/logo.height),w=logo.width*k,h=logo.height*k;round(46,35,w+36,h+26,18,'#fff');g.drawImage(logo,64,48,w,h)}else{text('FAFG APP',64,115,76,'#fff',true)}
+ if(logo){const k=Math.min(580/logo.width,125/logo.height),w=logo.width*k,h=logo.height*k;g.drawImage(logo,64,48,w,h)}else{text('FAFG APP',64,115,76,'#fff',true)}
  text('TARJETA DIGITAL',680,114,75,'#fff',true);text('Ronda de entrenamiento',683,177,39,'#e1f4ff');
  round(1400,42,550,146,22,'#e9f4ff');text(roundDate(),1435,103,36,'#103a66',true);
  const course=state.course.trim();text(course?(course.length>28?course.slice(0,27)+'…':course):'Ronda de FootGolf',1435,154,35,'#103a66',true);
