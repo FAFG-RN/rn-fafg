@@ -43,7 +43,7 @@ async function loadPlayerScores(playerId,playerName){
  if(!data?.length && String(playerName||'').trim().toUpperCase()==='TREVOLAZAVALA LUCIANO'){showPublishedPilotScores();return;}
  if(!data?.length){list.textContent='Todavía no hay resultados individuales sincronizados con Supabase.';return;}
  data.sort((a,b)=>String(b.torneos?.fecha_inicio||'').localeCompare(String(a.torneos?.fecha_inicio||'')));
- renderScoreCards(data.map(r=>({name:r.torneos?.nombre||'Torneo sin identificar',date:r.torneos?.fecha_inicio?new Date(r.torneos.fecha_inicio+'T12:00:00').toLocaleDateString('es-AR'):null,sede:r.torneos?.sede,category:r.categoria,points:r.puntos,position:r.posicion,score:r.score_total,rounds:r.detalle_scores})),null);
+ renderScoreCards(data.map(r=>({name:r.torneos?.nombre||'Torneo sin identificar',date:r.torneos?.fecha_inicio?new Date(r.torneos.fecha_inicio+'T12:00:00').toLocaleDateString('es-AR'):null,sede:r.torneos?.sede,category:r.categoria,points:r.puntos,position:r.posicion,score:r.score_total,par:Array.isArray(r.detalle_scores)?r.detalle_scores[0]?.dif_par:null,difference:Array.isArray(r.detalle_scores)?r.detalle_scores[0]?.dif_ganador:null,rounds:Array.isArray(r.detalle_scores)&&r.detalle_scores[0]?.dif_par!=null?null:r.detalle_scores})),null);
 }
 document.getElementById('scores-toggle').addEventListener('click',()=>{const content=document.getElementById('scores-content'),button=document.getElementById('scores-toggle');const opening=content.classList.contains('hidden');content.classList.toggle('hidden',!opening);button.setAttribute('aria-expanded',String(opening));document.getElementById('scores-chevron').textContent=opening?'▴':'▾';});
 async function renderSession(session){
