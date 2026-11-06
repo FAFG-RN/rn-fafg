@@ -15,5 +15,5 @@ $$;
 revoke all on function public.is_fafg_admin() from public;
 grant execute on function public.is_fafg_admin() to authenticated;
 -- Habilitar el administrador principal DESPUÉS de confirmar su UUID en Authentication > Users:
--- insert into public.fafg_admins(user_id) values ('UUID_DEL_USUARIO') on conflict do nothing;
+insert into public.fafg_admins(user_id) values ('6d2887ea-5b84-4ee3-84d4-8a88a36da00c') on conflict do nothing;
 -- Toda futura tabla de torneos/resultados requiere políticas RLS propias.
