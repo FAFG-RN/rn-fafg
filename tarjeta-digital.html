@@ -13,7 +13,7 @@ const generateShareImage=async()=>{
  round(1400,42,550,146,22,'#e9f4ff');text(roundDate(),1435,103,36,'#103a66',true);
  const course=state.course.trim();text(course?(course.length>28?course.slice(0,27)+'…':course):'Ronda de FootGolf',1435,154,35,'#103a66',true);
  text('FAFG APP · 18 HOYOS',60,259,30,'#e5f4ff',true);
- const left=38,top=340,labelW=370,colW=70,subW=82,totalW=103,diffW=100;
+ const left=38,top=340,labelW=370,colW=65,subW=82,totalW=103,diffW=100;
  const widths=[labelW,...Array(9).fill(colW),subW,...Array(9).fill(colW),subW,totalW,diffW];
  const xs=[left];for(const w of widths)xs.push(xs[xs.length-1]+w);
  const rowHeights=[68,72,88,88,88,88,76,74],ys=[top];for(const h of rowHeights)ys.push(ys[ys.length-1]+h);
