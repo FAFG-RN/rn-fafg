@@ -160,6 +160,14 @@ body:has(#inicio.active #fafg-notification-list:not(.hidden)) main {flex:0 0 aut
 #inicio.active:has(#fafg-notification-list:not(.hidden)) #fafg-notification-list {display:block;overflow:visible!important;}
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-links {display:grid!important;flex:0 0 auto!important;grid-template-rows:none!important;grid-auto-rows:auto!important;min-height:0!important;}
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-link {height:var(--fafg-home-link-height,76px)!important;min-height:var(--fafg-home-link-height,76px)!important;flex-shrink:0!important;}
+
+/* Cinco accesos de Inicio con altura idéntica, sin alterar contenido ni estilos */
+@media (max-width:699px) {
+ #inicio.active {display:flex;flex-direction:column;justify-content:stretch;}
+ #inicio.active .home-links {display:grid;flex:1 1 0;min-height:0;grid-template-rows:repeat(5,minmax(0,1fr));gap:clamp(7px,1.1dvh,12px);}
+ #inicio.active .home-links .home-link {height:100%;min-height:0;max-height:none;box-sizing:border-box;}
+ #inicio.active #home-link-notice.hidden {display:none;}
+}
 </style></head><body><div id="fafg-splash" aria-hidden="true"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><span class="splash-label">APP OFICIAL</span></div><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
