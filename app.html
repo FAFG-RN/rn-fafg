@@ -161,14 +161,15 @@ body:has(#inicio.active #fafg-notification-list:not(.hidden)) main {flex:0 0 aut
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-links {display:grid!important;flex:0 0 auto!important;grid-template-rows:none!important;grid-auto-rows:auto!important;min-height:0!important;}
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-link {height:var(--fafg-home-link-height,76px)!important;min-height:var(--fafg-home-link-height,76px)!important;flex-shrink:0!important;}
 
-/* Inicio: una sola grilla de cinco filas iguales, con espacio y tamaño reales */
+/* Inicio: cinco botones iguales que llenan el espacio disponible hasta la navegación */
 @media (max-width:699px) {
- body:has(#inicio.active) {overflow-y:auto!important;}
- body:has(#inicio.active) .app {height:auto!important;min-height:100dvh!important;overflow:visible!important;}
- body:has(#inicio.active) main {display:block!important;flex:0 0 auto!important;min-height:0!important;}
- #inicio.active {display:block!important;flex:0 0 auto!important;min-height:0!important;padding:10px 0!important;}
- #inicio.active > .home-links {display:grid!important;flex:none!important;grid-template-rows:repeat(5,76px)!important;grid-auto-rows:76px!important;gap:9px!important;margin:0!important;}
- #inicio.active > .home-links > .home-link {display:flex!important;width:100%!important;height:76px!important;min-height:76px!important;max-height:76px!important;box-sizing:border-box!important;padding:8px 13px!important;margin:0!important;flex:none!important;}
+ body:has(#inicio.active) {height:100dvh!important;overflow:hidden!important;}
+ body:has(#inicio.active) .app {display:flex!important;flex-direction:column!important;height:100dvh!important;min-height:0!important;overflow:hidden!important;padding-bottom:calc(78px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important;}
+ body:has(#inicio.active) .hero {flex:0 0 auto!important;}
+ body:has(#inicio.active) main {display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;overflow:hidden!important;}
+ #inicio.active {display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;padding:8px 0!important;overflow:hidden!important;}
+ #inicio.active > .home-links {display:grid!important;flex:1 1 0!important;min-height:0!important;grid-template-rows:repeat(5,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:clamp(7px,1.1dvh,12px)!important;margin:0!important;}
+ #inicio.active > .home-links > .home-link {display:flex!important;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;box-sizing:border-box!important;padding:clamp(6px,1dvh,12px) 13px!important;margin:0!important;flex:none!important;}
  #inicio.active #home-link-notice.hidden {display:none!important;}
 }
 </style></head><body><div id="fafg-splash" aria-hidden="true"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><span class="splash-label">APP OFICIAL</span></div><div class="app">
