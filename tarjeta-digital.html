@@ -8,7 +8,7 @@ const generateShareImage=async()=>{
  const logo=await logoImage();fill('#edf5fc',0,0,W,H);
  const gradient=g.createLinearGradient(0,0,W,340);gradient.addColorStop(0,'#082a53');gradient.addColorStop(0.55,'#116da8');gradient.addColorStop(1,'#0c477d');fill(gradient,0,0,W,310);
  g.globalAlpha=.11;g.fillStyle='#8fd4ff';g.beginPath();g.moveTo(1000,0);g.lineTo(2000,0);g.lineTo(1700,310);g.lineTo(800,310);g.fill();g.globalAlpha=1;
- if(logo){const k=Math.min(667/logo.width,144/logo.height),w=logo.width*k,h=logo.height*k;g.drawImage(logo,64,43,w,h)}else{text('FAFG APP',64,115,76,'#fff',true)}
+ if(logo){const k=Math.min(667/logo.width,165/logo.height),w=logo.width*k,h=logo.height*k;g.drawImage(logo,64,43,w,h)}else{text('FAFG APP',64,115,76,'#fff',true)}
  
  text(roundDate(),1435,123,29,'#ffffff',true);
  const course=state.course.trim();text(course?(course.length>28?course.slice(0,27)+'…':course):'Ronda de FootGolf',1435,154,35,'#ffffff',true);
