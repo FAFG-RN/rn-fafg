@@ -207,8 +207,8 @@ async function renderSession(session){
   const grid=document.getElementById('profile-stats');
   grid.replaceChildren();
   values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(small,strong);grid.append(cell)});
-  // No afirmar afiliación activa sin una fuente de estado verificada.
-  const member=document.createElement('div');member.className='stat member-unknown';const memberLabel=document.createElement('small');memberLabel.textContent='Estado de socio';const memberValue=document.createElement('strong');memberValue.textContent='Sin verificar';member.append(memberLabel,memberValue);grid.append(member);
+  // Criterio FAFG: todo jugador con registro en el ranking es socio activo.
+  const member=document.createElement('div');member.className='stat member-active';const memberLabel=document.createElement('small');memberLabel.textContent='Estado de socio';const memberValue=document.createElement('strong');memberValue.textContent='Activo';member.append(memberLabel,memberValue);grid.append(member);
   profileMessage.textContent='Datos deportivos administrados por FAFG.';
 }
 document.querySelectorAll('[data-access]').forEach(button=>button.addEventListener('click',()=>{
