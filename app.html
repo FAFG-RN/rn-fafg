@@ -161,12 +161,15 @@ body:has(#inicio.active #fafg-notification-list:not(.hidden)) main {flex:0 0 aut
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-links {display:grid!important;flex:0 0 auto!important;grid-template-rows:none!important;grid-auto-rows:auto!important;min-height:0!important;}
 #inicio.active:has(#fafg-notification-list:not(.hidden)) .home-link {height:var(--fafg-home-link-height,76px)!important;min-height:var(--fafg-home-link-height,76px)!important;flex-shrink:0!important;}
 
-/* Cinco accesos de Inicio con altura idéntica, sin alterar contenido ni estilos */
+/* Inicio: una sola grilla de cinco filas iguales, con espacio y tamaño reales */
 @media (max-width:699px) {
- #inicio.active {display:flex;flex-direction:column;justify-content:stretch;}
- #inicio.active .home-links {display:grid;flex:1 1 0;min-height:0;grid-template-rows:repeat(5,minmax(0,1fr));gap:clamp(7px,1.1dvh,12px);}
- #inicio.active .home-links .home-link {height:100%;min-height:0;max-height:none;box-sizing:border-box;}
- #inicio.active #home-link-notice.hidden {display:none;}
+ body:has(#inicio.active) {overflow-y:auto!important;}
+ body:has(#inicio.active) .app {height:auto!important;min-height:100dvh!important;overflow:visible!important;}
+ body:has(#inicio.active) main {display:block!important;flex:0 0 auto!important;min-height:0!important;}
+ #inicio.active {display:block!important;flex:0 0 auto!important;min-height:0!important;padding:10px 0!important;}
+ #inicio.active > .home-links {display:grid!important;flex:none!important;grid-template-rows:repeat(5,76px)!important;grid-auto-rows:76px!important;gap:9px!important;margin:0!important;}
+ #inicio.active > .home-links > .home-link {display:flex!important;width:100%!important;height:76px!important;min-height:76px!important;max-height:76px!important;box-sizing:border-box!important;padding:8px 13px!important;margin:0!important;flex:none!important;}
+ #inicio.active #home-link-notice.hidden {display:none!important;}
 }
 </style></head><body><div id="fafg-splash" aria-hidden="true"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><span class="splash-label">APP OFICIAL</span></div><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
