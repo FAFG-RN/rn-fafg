@@ -122,6 +122,18 @@
  body:has(#inicio.active) .brand-title .app-wordmark {font-size:29px;}
  body:has(#inicio.active) .welcome {margin-top:5px;font-size:18px;}
 }
+
+/* Perfil FAFG: indicadores compactos apilados */
+#perfil .stat-grid{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+#perfil .stat{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;background:#fff;border:1px solid #dce6f2;border-radius:10px;padding:9px 12px;min-height:39px}
+#perfil .stat small{font-size:12px;font-weight:600;color:#375b7f;order:0}
+#perfil .stat strong{font-size:16px;color:#123f72;order:1;white-space:nowrap}
+#perfil .stat.member-active{border-color:#c9e9d5}
+#perfil .stat.member-active strong{color:#16834b}
+#perfil .stat.member-unknown strong{color:#64748b}
+#perfil #private-profile{padding:14px}
+#perfil #scores-card{margin-top:12px!important;padding:12px}
+#perfil .photo-controls{margin-top:12px}
 </style></head><body><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
@@ -180,10 +192,12 @@ async function renderSession(session){
   if(rankingError){profileMessage.textContent=friendlyError(rankingError);return;}
   const current=ranking?.find(x=>x.temporada===2026&&x.categoria===player?.categoria)||ranking?.[0];
   if(!current){profileMessage.textContent='FAFG todavía no cargó tu ranking.';return;}
-  const values=[['Posición',current.posicion?current.posicion+'°':'—'],['Puntos',Number(current.puntos).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})],['HCP',current.hcp??'—'],['Torneos',current.torneos_computados],['Temporada',current.temporada],['Categoría',current.categoria]];
+  const values=[['Posición ranking nacional · '+(current.categoria||player?.categoria||'Categoría'),current.posicion?current.posicion+'°':'—'],['Puntos',Number.isFinite(Number(current.puntos))?Number(current.puntos).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2}):'—'],['HCP',current.hcp??'—'],['Torneos',current.torneos_computados??'—']];
   const grid=document.getElementById('profile-stats');
   grid.replaceChildren();
-  values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(strong,small);grid.append(cell)});
+  values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(small,strong);grid.append(cell)});
+  // No afirmar afiliación activa sin una fuente de estado verificada.
+  const member=document.createElement('div');member.className='stat member-unknown';const memberLabel=document.createElement('small');memberLabel.textContent='Estado de socio';const memberValue=document.createElement('strong');memberValue.textContent='Sin verificar';member.append(memberLabel,memberValue);grid.append(member);
   profileMessage.textContent='Datos deportivos administrados por FAFG.';
 }
 document.querySelectorAll('[data-access]').forEach(button=>button.addEventListener('click',()=>{
