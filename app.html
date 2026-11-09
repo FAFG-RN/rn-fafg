@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102c53"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="FAFG App"><meta name="description" content="FAFG App: ranking, torneos y perfil del jugador"><link rel="manifest" href="./app-manifest.json"><link rel="apple-touch-icon" href="./assets/icons/icon-192.png"><link rel="icon" href="./assets/icons/favicon.ico"><title>FAFG | App Oficial</title>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102c53"><meta name="color-scheme" content="light dark"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="FAFG App"><meta name="description" content="FAFG App: ranking, torneos y perfil del jugador"><link rel="manifest" href="./app-manifest.json"><link rel="apple-touch-icon" href="./assets/icons/icon-192.png"><link rel="icon" href="./assets/icons/favicon.ico"><title>FAFG | App Oficial</title>
 <meta property="og:type" content="website">
 <meta property="og:title" content="FAFG | App Oficial">
 <meta property="og:description" content="Rankings nacionales, torneos, resultados y perfil del jugador. Todo el footgolf argentino en un solo lugar.">
@@ -174,6 +174,23 @@ body:has(#inicio.active #fafg-notification-list:not(.hidden)) main {flex:0 0 aut
 }
 /* Contraste del subtítulo sobre el degradé azul de inscripción */
 #inicio .home-link[href*="docs.google.com/forms"] .home-link-copy small {color:#fff!important;opacity:1!important;}
+
+/* FAFG: tema oscuro automático según la preferencia del dispositivo. */
+:root{color-scheme:light dark}
+@media (prefers-color-scheme:dark){
+:root{color-scheme:dark;color:#e7f1fc;background:#091a2e}
+body,main{background-color:#091a2e;color:#e7f1fc}
+.card,#perfil .stat,#perfil .score-card,.score-card,.score-detail,#perfil #edit-profile-panel{background:#102c53!important;color:#e7f1fc!important;border-color:#315779!important}
+.card h1,.card h2,.card h3,.card strong,#perfil .stat strong,#perfil .stat small,#perfil .score-card small,#perfil .score-card strong,.score-detail h3{color:#f1f7ff!important}
+.muted,.score-meta,.score-rounds,.score-card em,.score-detail p,.score-card .score-date,#profile-meta{color:#b9cee3!important}
+.score-detail-grid span,.score-values span,.stat-grid .stat,.notice{background:#1b426b;color:#f1f7ff;border-color:#315779}
+.auth-field,input,select,textarea{background:#142f4b!important;color:#f1f7ff!important;border-color:#51718f!important}
+.auth-field::placeholder,input::placeholder,textarea::placeholder{color:#b9cee3}
+.button.secondary,.access-back{background:#1b426b;color:#fff;border-color:#51718f}
+#perfil .score-card[aria-expanded=true]{background:#20517c!important;border-color:#64b7ee!important}
+#fafg-about-panel{background:#091a2e!important}
+#perfil #edit-dni[readonly]{background:#1b3653!important;color:#c3d5e8!important}
+}
 </style></head><body><div id="fafg-splash" aria-hidden="true"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><span class="splash-label">APP OFICIAL</span></div><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
