@@ -12,20 +12,20 @@
 /* Portada animada institucional: no interfiere con la navegación ni con la sesión */
 #fafg-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#09284f 0%,#135f99 60%,#0a3767 100%);pointer-events:none;animation:fafgSplashOut .55s ease 2.25s forwards}
 #fafg-splash .splash-marquee{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:.045}
-#fafg-splash .splash-track{position:absolute;left:0;display:flex;width:max-content;gap:0;white-space:nowrap;font-size:15dvh;font-weight:900;letter-spacing:-.09em;line-height:.78;color:#d9edff;will-change:transform}
+#fafg-splash .splash-track{position:absolute;left:0;display:flex;width:max-content;gap:0;white-space:nowrap;font-size:10dvh;font-weight:900;letter-spacing:-.09em;line-height:1;color:#d9edff;will-change:transform}
 #fafg-splash .splash-track span{display:block;flex:none;width:auto;text-align:left}
-#fafg-splash .splash-track:nth-child(1){top:-3.0%;animation:fafgRibbonRight 19.2s linear infinite}
-#fafg-splash .splash-track:nth-child(2){top:6.1%;animation:fafgRibbonLeft 20.4s linear infinite}
-#fafg-splash .splash-track:nth-child(3){top:15.2%;animation:fafgRibbonRight 21.6s linear infinite}
-#fafg-splash .splash-track:nth-child(4){top:24.3%;animation:fafgRibbonLeft 22.8s linear infinite}
-#fafg-splash .splash-track:nth-child(5){top:33.4%;animation:fafgRibbonRight 19.2s linear infinite}
-#fafg-splash .splash-track:nth-child(6){top:42.5%;animation:fafgRibbonLeft 20.4s linear infinite}
-#fafg-splash .splash-track:nth-child(7){top:51.6%;animation:fafgRibbonRight 21.6s linear infinite}
-#fafg-splash .splash-track:nth-child(8){top:60.7%;animation:fafgRibbonLeft 22.8s linear infinite}
-#fafg-splash .splash-track:nth-child(9){top:69.8%;animation:fafgRibbonRight 19.2s linear infinite}
-#fafg-splash .splash-track:nth-child(10){top:78.9%;animation:fafgRibbonLeft 20.4s linear infinite}
-#fafg-splash .splash-track:nth-child(11){top:88.0%;animation:fafgRibbonRight 21.6s linear infinite}
-#fafg-splash .splash-track:nth-child(12){top:97.1%;animation:fafgRibbonLeft 22.8s linear infinite}
+#fafg-splash .splash-track:nth-child(1){top:0.0000%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(2){top:8.3333%;animation:fafgRibbonLeft 20.4s linear infinite}
+#fafg-splash .splash-track:nth-child(3){top:16.6666%;animation:fafgRibbonRight 21.6s linear infinite}
+#fafg-splash .splash-track:nth-child(4){top:24.9999%;animation:fafgRibbonLeft 22.8s linear infinite}
+#fafg-splash .splash-track:nth-child(5){top:33.3332%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(6){top:41.6665%;animation:fafgRibbonLeft 20.4s linear infinite}
+#fafg-splash .splash-track:nth-child(7){top:49.9998%;animation:fafgRibbonRight 21.6s linear infinite}
+#fafg-splash .splash-track:nth-child(8){top:58.3331%;animation:fafgRibbonLeft 22.8s linear infinite}
+#fafg-splash .splash-track:nth-child(9){top:66.6664%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(10){top:74.9997%;animation:fafgRibbonLeft 20.4s linear infinite}
+#fafg-splash .splash-track:nth-child(11){top:83.3330%;animation:fafgRibbonRight 21.6s linear infinite}
+#fafg-splash .splash-track:nth-child(12){top:91.6663%;animation:fafgRibbonLeft 22.8s linear infinite}
 @keyframes fafgRibbonRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @keyframes fafgRibbonLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 #fafg-splash img{position:relative;z-index:1;display:block;width:min(85vw,440px);height:auto;max-height:40vh;object-fit:contain;filter:drop-shadow(0 12px 28px rgba(0,0,0,.16));animation:fafgLogoIn 1.5s cubic-bezier(.2,.7,.2,1) both}
