@@ -14,6 +14,8 @@ function parseStringToNumber(position, decimal = false) {
 // Function to load and parse CSV data from the Google Sheet
 export async function getRanking() {
   try {
+    const approved = await window.FAFGPublishedRanking?.latest();
+    if (approved) return { ranking: window.FAFGPublishedRanking.general(approved.payload), lastUpdate: new Date(approved.payload.updated).toLocaleDateString('es-AR') };
     const response = await fetch(SHEET_URL);
     const data = await response.text();
     const rows = data.split('\n');
