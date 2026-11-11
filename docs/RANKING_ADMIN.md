@@ -4,11 +4,11 @@ Implementado en `feature/ranking-admin-import`, a partir de main vigente. Entrad
 
 ## Activación pendiente
 
-1. Aplicar `supabase/ranking-admin.sql` en Supabase SQL Editor. Requiere la configuración administrativa existente (`panel-admin-roles.sql` o `is_fafg_admin()` previamente instalada). El script no asigna roles nuevos.
+1. COMPLETADO: `supabase/ranking-admin.sql` instalado el 11/11/2026 en FAFG APP mediante migración `20261111093131_fafg_ranking_admin_publication`. Se conservaron los roles existentes. Verificados RLS, privilegios de tabla y funciones, y lectura REST pública HTTP 200 (sin publicaciones todavía).
 2. Probar con la cuenta administradora real, una cuenta sin permisos y una sesión anónima. Los operadores no pueden publicar rankings.
 3. Probar dos sesiones de administrador: la segunda publicación basada en una versión anterior debe fallar sin sobrescribir la primera.
 4. Revisar una planilla real, publicar una versión y confirmar coincidencia entre portada web, Top 10, categorías y perfil. Validar snapshots y auditoría con otra sesión.
-5. Solo después desplegar la rama revisada. No se ejecutó SQL ni se modificaron datos oficiales desde este trabajo.
+5. Solo después desplegar la rama revisada. La configuración SQL está instalada; no se publicó ningún ranking ni se alteraron datos oficiales.
 
 ## Funcionamiento
 
@@ -30,6 +30,6 @@ Exportación: JSON del ranking y Excel general, femenino, categorías e incidenc
 
 - `node tests/ranking-admin.cjs`: base real, Mario Boero, nombres normalizados, homónimos, duplicados, datos inválidos, conservación de tarjetas/perfiles/campos, exclusión, empates, adaptadores públicos y lectura/escritura XLSX real.
 - Análisis de sintaxis de scripts nuevos e inline de app/categorías.
-- Pendiente: ejecución de migración y prueba autenticada extremo a extremo. No se dispone de conexión administrativa de Supabase en esta sesión.
+- Migración ejecutada. Verificación posterior: cero versiones; jugadores/perfiles/resultados mantienen 13/4/152 registros. Permisos de publicación anónima e historial bloqueados; escritura directa autenticada bloqueada. La prueba transaccional con cambio de rol fue rechazada por la conexión antes de ejecutarse; pendiente prueba autenticada extremo a extremo y concurrencia real. El asesor de seguridad señala las funciones SECURITY DEFINER expuestas: su exposición está acotada intencionalmente a lectura del último payload público y publicación con verificación is_fafg_admin; no se expone el historial por la RPC pública.
 
 Dependencia local: SheetJS CE 0.20.3, Apache 2.0, `vendor/SHEETJS-LICENSE`.
