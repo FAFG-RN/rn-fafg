@@ -302,32 +302,26 @@ async function renderSession(session){
   const normalizarNombre=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toUpperCase().replace(/[^A-Z ]/g,' ').replace(/\\s+/g,' ').trim().split(' ').sort().join(' ');
   const socioConfirmado=[...sociosIniciales].some(n=>normalizarNombre(n)===normalizarNombre(player?.nombre_completo));
   function agregarEstadoSocio(grid){const member=document.createElement('div');member.className='stat'+(socioConfirmado?' member-active':'');const label=document.createElement('small');label.textContent='Estado de socio';const value=document.createElement('strong');value.textContent=socioConfirmado?'Activo':'Pendiente de verificación';member.append(label,value);grid.append(member)}
-  // La tabla publica de ranking se actualiza por CSV; Supabase conserva los scores historicos.
-  // Vinculacion conservadora por nombre normalizado, sin escribir ni alterar la base.
-  let updatedMario=null;
-  if(normalizarNombre(player?.nombre_completo)===normalizarNombre('MARIO BOERO')){
-    try{
-      const response=await fetch('./data/ranking-general-2026.csv?v=20261111',{cache:'no-store'});
-      if(response.ok){
-        const lines=(await response.text()).replace(/\r/g,'').split('\n').slice(1);
-        const matches=lines.map(line=>line.split(',')).filter(cols=>cols.length>=6&&normalizarNombre((cols[1]||'').replace(/\s*\(\d+\)\s*$/,''))===normalizarNombre(player.nombre_completo));
-        if(matches.length===1){
-          const cols=matches[0];
-          updatedMario={position:Number(cols[0]),points:Number(cols[2]),hcp:Number(cols[3]),tournaments:Number(cols[4])};
-        }
-      }
-    }catch(e){console.warn('Ranking CSV no disponible para ficha individual',e)}
-  }
+  // Ranking oficial por categoria: comparar nombres normalizados sin modificar Supabase.
+  let rankingActualizado=null;
+  try{
+    const response=await fetch('./data/ranking-categorias-2026.json?v=20261111',{cache:'no-store'});
+    if(response.ok){
+      const data=await response.json();
+      const matches=(data.categories||[]).flatMap(group=>(group.players||[]).filter(p=>normalizarNombre(p.name)===normalizarNombre(player?.nombre_completo)).map(p=>({...p,category:group.name})));
+      if(matches.length===1)rankingActualizado=matches[0];
+    }
+  }catch(e){console.warn('Ranking por categorias no disponible',e)}
   const current=ranking?.find(x=>x.temporada===2026&&x.categoria===player?.categoria)||ranking?.[0];
-  if(!current&&!updatedMario){agregarEstadoSocio(document.getElementById('profile-stats'));profileMessage.textContent='FAFG todavía no cargó tu ranking.';return;}
-  const values=updatedMario?
-    [['Ranking Nacional · General',updatedMario.position+'°'],['Puntos',updatedMario.points.toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2})],['HCP',updatedMario.hcp],['Torneos',updatedMario.tournaments]]:
+  if(!current&&!rankingActualizado){agregarEstadoSocio(document.getElementById('profile-stats'));profileMessage.textContent='FAFG todavía no cargó tu ranking.';return;}
+  const values=rankingActualizado?
+    [['Ranking Nacional • Cat. '+rankingActualizado.category.replace(/general caballeros/ig,'gral Cab.'),rankingActualizado.pos+'°'],['Puntos',rankingActualizado.points],['HCP',rankingActualizado.hcp],['Torneos',rankingActualizado.events]]:
     [['Ranking Nacional • Cat. '+(current.categoria||player?.categoria||'—').replace(/general caballeros/ig,'gral Cab.'),current.posicion?current.posicion+'°':'—'],['Puntos',Number.isFinite(Number(current.puntos))?Number(current.puntos).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2}):'—'],['HCP',current.hcp??'—'],['Torneos',current.torneos_computados??'—']];
   const grid=document.getElementById('profile-stats');
   grid.replaceChildren();
   values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(small,strong);grid.append(cell)});
   agregarEstadoSocio(grid);
-  profileMessage.textContent=updatedMario?'Ranking general actualizado al 11/11/2026. Resultados históricos conservados.':'Datos deportivos administrados por FAFG.';
+  profileMessage.textContent=rankingActualizado?'Ranking por categoría actualizado al 11/11/2026. Resultados históricos conservados.':'Datos deportivos administrados por FAFG.';
 }
 document.querySelectorAll('[data-access]').forEach(button=>button.addEventListener('click',()=>{
  const kind=button.dataset.access;
