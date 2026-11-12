@@ -640,7 +640,9 @@ function updateProfileGreeting(){
     return;
   }
   const fullName=document.getElementById('profile-name')?.textContent?.trim();
-  const firstName=fullName&&fullName!=='Mi perfil'?fullName.split(/\s+/)[0]:'';
+  const parts=fullName&&fullName!=='Mi perfil'?fullName.split(/\s+/).filter(Boolean):[];
+  // Las fichas deportivas pueden guardar APELLIDO NOMBRE en mayúsculas.
+  const firstName=parts.length?(parts.length>1&&fullName===fullName.toUpperCase()?parts[parts.length-1]:parts[0]):'';
   welcome.textContent=firstName?'¡Hola, '+firstName+'!':'Mi perfil';
 }
 const profileGreetingObserver=new MutationObserver(()=>updateProfileGreeting());
