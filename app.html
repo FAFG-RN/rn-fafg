@@ -10,7 +10,7 @@
 
 <style>
 /* Portada animada institucional: no interfiere con la navegación ni con la sesión */
-#fafg-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#09284f 0%,#135f99 60%,#0a3767 100%);pointer-events:none;animation:fafgSplashOut .55s ease 2.25s forwards}
+#fafg-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#09284f 0%,#135f99 60%,#0a3767 100%);pointer-events:none;perspective:1000px;animation:fafgSplashOut .45s ease 2.45s forwards}
 #fafg-splash .splash-marquee{position:absolute;inset:0;overflow:hidden;pointer-events:none;opacity:.045}
 #fafg-splash .splash-track{position:absolute;left:0;display:flex;width:max-content;gap:0;white-space:nowrap;font-size:12dvh;font-weight:900;letter-spacing:-.09em;line-height:.833333;color:#d9edff;will-change:transform}
 #fafg-splash .splash-track span{display:block;flex:none;width:auto;text-align:left}
@@ -26,9 +26,10 @@
 #fafg-splash .splash-track:nth-child(10){top:90%;animation:fafgRibbonLeft 20.4s linear infinite}
 @keyframes fafgRibbonRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @keyframes fafgRibbonLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-#fafg-splash img{position:relative;z-index:1;display:block;width:min(85vw,440px);height:auto;max-height:40vh;object-fit:contain;filter:drop-shadow(0 12px 28px rgba(0,0,0,.16));animation:fafgLogoIn 1.5s cubic-bezier(.2,.7,.2,1) both}
+#fafg-splash img{position:relative;z-index:1;display:block;width:min(85vw,440px);height:auto;max-height:40vh;object-fit:contain;transform-origin:center center;backface-visibility:hidden;will-change:transform,opacity,filter;animation:fafgLogoDepth 2.2s cubic-bezier(.16,.7,.18,1) both}
 #fafg-splash .splash-label{position:absolute;z-index:1;bottom:max(12vh,65px);font-size:12px;letter-spacing:.35em;color:#d7ecff;font-weight:700;animation:fafgLogoIn 1.5s ease .2s both}
 @keyframes fafgLogoIn{from{transform:translateX(-55px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes fafgLogoDepth{0%{transform:translateZ(-700px) scale(.48);opacity:0;filter:blur(14px) drop-shadow(0 0 0 transparent)}25%{opacity:.75;filter:blur(5px) drop-shadow(0 5px 14px #001b3c44)}72%{transform:translateZ(35px) scale(1.035);opacity:1;filter:blur(0) drop-shadow(0 15px 30px #001b3c77)}100%{transform:translateZ(0) scale(1);opacity:1;filter:blur(0) drop-shadow(0 12px 25px #001b3c66)}}
 @keyframes fafgSplashOut{to{opacity:0;visibility:hidden}}
 @media(prefers-reduced-motion:reduce){#fafg-splash{animation:fafgSplashOut .1s linear .4s forwards}#fafg-splash .splash-track,#fafg-splash img,#fafg-splash .splash-label{animation:none}}
 
