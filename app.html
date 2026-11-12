@@ -627,7 +627,22 @@ let topTenLoaded=false;
 const rankingGeneralTop10=[["GHEZZI MARCOS",2681.09],["DELFINO MAXIMILIANO",2268.57],["TREVOLAZAVALA LUCIANO",2220.75],["CLEMENZ CRISTIAN EZEQUIEL",2059.61],["OLMEDO SEBASTIAN",2046.35],["MOSCONI SILVIO",2044.1],["MARINONE DIEGO",2017.08],["MARTINEZ MEIER GERMAN",1999.5],["AMERI GERARDO",1989.01],["GARCIA LUCIANO MIGUEL",1892.8]];
 async function loadTopTen(){if(topTenLoaded)return;topTenLoaded=true;const target=document.getElementById('ranking-top10');const draw=rows=>{target.replaceChildren();rows.forEach(([player,points,position],i)=>{const item=document.createElement('div');item.className='top10-row';const pos=document.createElement('span');pos.className='top10-pos';pos.textContent=(position||i+1)+'°';const name=document.createElement('span');name.className='top10-name';name.textContent=player;const pts=document.createElement('span');pts.className='top10-points';pts.textContent=scoreNumber(points)+' pts';item.append(pos,name,pts);target.append(item)})};draw(rankingGeneralTop10);const approved=await window.FAFGPublishedRanking.latest();if(approved){draw(window.FAFGPublishedRanking.general(approved.payload).slice(0,10).map(p=>[p.name,Number(p.points),p.position]));const subtitle=document.querySelector('#ranking .muted');if(subtitle)subtitle.textContent='Versión aprobada · '+new Date(approved.payload.updated).toLocaleDateString('es-AR')}}
 
-function navigate(id){if(id==='ranking')loadTopTen();document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.bottom-nav button').forEach(x=>{if(x.dataset.go===id)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});window.scrollTo({top:0,behavior:'instant'});}
+function updateProfileGreeting(){
+  const welcome=document.querySelector('header .welcome');
+  if(!welcome)return;
+  if(!welcome.dataset.defaultText)welcome.dataset.defaultText=welcome.textContent;
+  if(!document.getElementById('perfil')?.classList.contains('active')){
+    welcome.textContent=welcome.dataset.defaultText;
+    return;
+  }
+  const fullName=document.getElementById('profile-name')?.textContent?.trim();
+  const firstName=fullName&&fullName!=='Mi perfil'?fullName.split(/\\s+/)[0]:'';
+  welcome.textContent=firstName?'¡Hola, '+firstName+'!':'Mi perfil';
+}
+const profileGreetingObserver=new MutationObserver(()=>updateProfileGreeting());
+const profileNameForGreeting=document.getElementById('profile-name');
+if(profileNameForGreeting)profileGreetingObserver.observe(profileNameForGreeting,{childList:true,characterData:true,subtree:true});
+function navigate(id){if(id==='ranking')loadTopTen();document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.bottom-nav button').forEach(x=>{if(x.dataset.go===id)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});updateProfileGreeting();window.scrollTo({top:0,behavior:'instant'});}
 document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>navigate(b.dataset.go)));
 let installPrompt=null;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;void 0});window.addEventListener('appinstalled',()=>{document.getElementById('install-note').textContent='FAFG App se agregó a tu dispositivo.'});
 if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./app-sw.js',{scope:'./'}).catch(()=>{}))}
