@@ -439,6 +439,17 @@ main,.app,.tab{color:#fff}
 :is(input,textarea)::placeholder{color:#60758a!important;-webkit-text-fill-color:#60758a}
 /* Official blue primary CTAs, official logo assets and splash remain unchanged. */
 </style>
+
+<style id="fafg-calendar-legibility-fix-2026-11-12">
+/* Calendar is an inline panel within Inicio; prevent pale date tiles and inherited gray text. */
+#inicio #fafg-calendar-panel{background:linear-gradient(155deg,#0b2b50,#155b8d)!important;color:#fff!important;border:1px solid rgba(255,255,255,.35)!important;box-shadow:0 10px 25px rgba(0,15,35,.2)}
+#inicio #fafg-calendar-panel .fafg-calendar-heading h2,#inicio #fafg-calendar-panel .fafg-calendar-heading button{color:#fff!important;opacity:1!important}
+#inicio #fafg-calendar-panel .fafg-calendar-event{background:rgba(255,255,255,.16)!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:12px;padding:12px!important;margin:9px 0!important;align-items:flex-start}
+#inicio #fafg-calendar-panel .fafg-calendar-date{background:rgba(255,255,255,.25)!important;border:1px solid rgba(255,255,255,.3)!important;color:#fff!important;flex-shrink:0}
+#inicio #fafg-calendar-panel .fafg-calendar-event :is(strong,small,span,p,div,time),#inicio #fafg-calendar-panel .fafg-calendar-date *{color:#fff!important;opacity:1!important;-webkit-text-fill-color:#fff!important}
+#inicio #fafg-calendar-panel .fafg-calendar-filters button{background:rgba(255,255,255,.18)!important;color:#fff!important;border:1px solid rgba(255,255,255,.4)!important;-webkit-text-fill-color:#fff!important}
+#inicio #fafg-calendar-panel .fafg-calendar-filters button[aria-pressed=true]{background:#fff!important;color:#103c70!important;-webkit-text-fill-color:#103c70!important;font-weight:800}
+</style>
 </head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
