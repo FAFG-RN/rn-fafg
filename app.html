@@ -334,70 +334,17 @@ h1,h2,h3,h4,h5,h6{font-weight:700}
 .stat strong,.score-values,.score-meta{font-family:'Inter',system-ui,sans-serif;font-variant-numeric:tabular-nums}
 </style>
 <link rel="preload" as="image" href="./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg" fetchpriority="high"><style>html,body{background:#102c53}</style>
-<style>
-/* FAFG translucent white controls - 2026-11-12 */
-/* Soften only formerly white interactive surfaces; preserve institutional blue CTAs. */
-/* White labels and icons remain legible against translucent controls. */
-.tile,.home-link,.button.secondary,#perfil .stat,#perfil .score-card,.score-card{color:#fff!important;text-shadow:0 1px 3px rgba(4,26,49,.5)}
-.tile small,.home-link small,.home-link span,.home-link strong,.home-link p,#perfil .stat small,#perfil .stat strong,#perfil .score-card small,#perfil .score-card strong,.score-card small,.score-card strong{color:#fff!important}
-.tile svg,.home-link svg,.button.secondary svg,#perfil .score-card svg,.score-card svg{color:#fff!important;stroke:currentColor}
-
-:root{--fafg-glass-bg:rgba(255,255,255,.18);--fafg-glass-border:rgba(113,161,197,.30)}
-.tile,.home-link,#perfil .stat,#perfil .score-card,.score-card,.button.secondary{
- background:var(--fafg-glass-bg)!important;
- border-color:var(--fafg-glass-border)!important;
- backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
- box-shadow:0 5px 18px rgba(12,54,91,.055);
-}
-.tile,.home-link,.button.secondary{transition:background-color .2s ease,border-color .2s ease,box-shadow .2s ease}
-.tile:hover,.home-link:hover,.button.secondary:hover{background:rgba(255,255,255,.30)!important}
-.bottom-nav button[aria-current=page]:not([data-go="perfil"]){background:rgba(255,255,255,.17)!important}
-@media(prefers-color-scheme:dark){
- :root{--fafg-glass-bg:rgba(255,255,255,.10);--fafg-glass-border:rgba(190,215,236,.23)}
- .tile:hover,.home-link:hover,.button.secondary:hover{background:rgba(255,255,255,.17)!important}
-}
-@media(prefers-reduced-transparency:reduce){.tile,.home-link,#perfil .stat,#perfil .score-card,.score-card,.button.secondary{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(235,245,251,.90)!important}}
-</style>
-
-<style>
-/* FAFG all white bubbles - 2026-11-12 */
-/* Unified translucent treatment for white cards, pills and rounded surfaces. */
-.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell{
- background:rgba(255,255,255,.16)!important;
- border-color:rgba(168,205,232,.27)!important;
- backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-}
-/* Preserve readability of text on dark blue/photo backgrounds. */
-.hero .card,.hero .tile,.hero .home-link,.hero .stat,.hero .score-card{color:#fff!important}
-/* Keep form inputs, modal content, official logos and blue action buttons untouched. */
-@media(prefers-color-scheme:dark){.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell{background:rgba(255,255,255,.10)!important}}
-</style>
-
-<style>
-/* FAFG glass typography contrast fix - 2026-11-12 */
-/* All translucent bubbles carry white foreground, including nested labels and icons. */
-:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){color:#fff!important;text-shadow:0 1px 3px rgba(2,24,47,.65)}
-:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary) :is(h1,h2,h3,h4,p,small,span,strong,b,label,a,button,svg,i){color:#fff!important}
-:is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,#perfil .career-overview,#fafg-career-screen .career-pane,#fafg-career-screen .history-card,#fafg-notices-screen .notice-card){background:rgba(12,49,88,.60)!important;border-color:rgba(255,255,255,.20)!important}
-/* Readable fields are intentionally opaque even inside translucent cards. */
+<style id="fafg-glass-unified-2026-11-12">
+/* One consistent white translucent glass system across every screen. */
+:root{--fafg-glass-white:rgba(255,255,255,.27);--fafg-glass-stroke:rgba(255,255,255,.42)}
+:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){background:var(--fafg-glass-white)!important;border-color:var(--fafg-glass-stroke)!important;color:#fff!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 6px 20px rgba(2,20,43,.13);text-shadow:0 1px 3px rgba(0,17,41,.65)}
+:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary) :is(h1,h2,h3,h4,h5,p,small,span,strong,b,label,a,svg,i){color:#fff!important}
+:is(.tile,.home-link,.button.secondary):hover{background:rgba(255,255,255,.35)!important}
+/* Keep the original blue primary buttons and functional form controls. */
 :is(.card,#perfil #edit-profile-panel,#fafg-career-screen .career-pane) :is(input,textarea,select){background:#fff!important;color:#163d60!important;text-shadow:none!important}
-</style>
-
-<style>
-/* FAFG global screen glass consistency - 2026-11-12 */
-/* Shared glass surfaces across Inicio, Noticias, Ranking, Perfil, Carrera, Calendario and Ayuda. */
-:where(.tab,.app,#fafg-career-screen,#fafg-notices-screen) :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,.career-overview,.career-tabs,.career-tabs button,.career-pane,.career-stat,.history-card,.history-details summary,.notice-filters,.notice-filters button,.notice-card,.button.secondary){
- background:rgba(11,46,84,.66)!important;
- border-color:rgba(255,255,255,.24)!important;
- color:#fff!important;
- -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
- text-shadow:0 1px 3px rgba(0,15,35,.45);
-}
-:where(.tab,.app,#fafg-career-screen,#fafg-notices-screen) :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,.career-overview,.career-tabs,.career-pane,.career-stat,.history-card,.notice-filters,.notice-card,.button.secondary) :is(h1,h2,h3,h4,h5,p,small,span,strong,b,label,a,button,svg,i){color:#fff!important}
-/* Keep text inputs usable, and never recolor official blue primary actions. */
-:where(.tab,.app,#fafg-career-screen,#fafg-notices-screen) :is(input,textarea,select,option){color:#163d60!important;text-shadow:none!important}
-:where(.tab,.app,#fafg-career-screen,#fafg-notices-screen) :is(input,textarea,select){background:#fff!important}
-:where(.tab,.app,#fafg-career-screen,#fafg-notices-screen) :is(.button:not(.secondary),.home-link-primary){text-shadow:none}
+:is(.card,#perfil #edit-profile-panel,#fafg-career-screen .career-pane) :is(input,textarea,select) :is(option){color:#163d60!important}
+.bottom-nav button[aria-current=page]:not([data-go="perfil"]){background:rgba(255,255,255,.27)!important}
+@media(prefers-reduced-transparency:reduce){:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){background:rgba(45,88,132,.95)!important;backdrop-filter:none;-webkit-backdrop-filter:none}}
 </style>
 </head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
