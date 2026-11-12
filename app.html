@@ -636,7 +636,7 @@ function updateProfileGreeting(){
     return;
   }
   const fullName=document.getElementById('profile-name')?.textContent?.trim();
-  const firstName=fullName&&fullName!=='Mi perfil'?fullName.split(/\\s+/)[0]:'';
+  const firstName=fullName&&fullName!=='Mi perfil'?fullName.split(/\s+/)[0]:'';
   welcome.textContent=firstName?'¡Hola, '+firstName+'!':'Mi perfil';
 }
 const profileGreetingObserver=new MutationObserver(()=>updateProfileGreeting());
