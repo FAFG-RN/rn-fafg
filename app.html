@@ -407,6 +407,24 @@ body{min-height:100vh;min-height:100dvh;background:linear-gradient(155deg,#071b3
 #perfil #profile-stats .stat strong{font-size:16px!important;white-space:normal!important;overflow-wrap:anywhere}
 #perfil #profile-stats .stat:nth-child(n+4){display:none!important}
 </style>
+
+<style id="fafg-consistent-overlays-2026-11-12">
+/* Unified design tokens: blue gradient + visible white glass + white text. */
+:root{--fafg-screen-gradient:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%);--fafg-glass-bg:rgba(255,255,255,.27);--fafg-glass-edge:rgba(255,255,255,.43)}
+/* Full-screen panels must not expose their former light backgrounds. */
+#fafg-about-panel,#fafg-calendar-panel,#fafg-career-screen,#fafg-notices-screen{background:var(--fafg-screen-gradient)!important;color:#fff!important}
+#fafg-about-panel :is(.card,.notice),#fafg-calendar-panel :is(.card,.fafg-calendar-event),#fafg-notices-screen :is(.notice-card,.notice-filters){background:var(--fafg-glass-bg)!important;border:1px solid var(--fafg-glass-edge)!important;color:#fff!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#fafg-about-panel :is(h1,h2,h3,h4,p,small,span,strong,.muted),#fafg-calendar-panel :is(h1,h2,h3,h4,p,small,span,strong,.muted),#fafg-notices-screen :is(h1,h2,h3,h4,p,small,span,strong,.muted){color:#fff!important;opacity:1!important;text-shadow:0 1px 2px rgba(0,15,35,.4)}
+/* Default white-glass cards and their subdued copy across ordinary tabs. */
+.tab :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,.button.secondary){color:#fff!important}
+.tab :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail) :is(.muted,small,p,label,em){color:#fff!important;opacity:1!important}
+/* Leave colored brand buttons and official image assets unchanged. */
+#inicio .home-link:not([style*="background:linear-gradient"]){background:var(--fafg-glass-bg)!important;border-color:var(--fafg-glass-edge)!important}
+#inicio .home-link:not([style*="background:linear-gradient"]) :is(strong,small,span){color:#fff!important}
+#inicio .home-link-icon{background:rgba(255,255,255,.16)!important}
+/* Form fields keep a solid surface for editing, regardless of theme. */
+.tab :is(input:not([type=checkbox]):not([type=radio]),textarea,select),#fafg-career-screen :is(input,select,textarea){background:#fff!important;color:#123f6b!important;text-shadow:none!important}
+</style>
 </head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
