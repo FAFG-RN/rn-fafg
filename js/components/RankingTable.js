@@ -1,3 +1,5 @@
+import { formatRankingPoints } from '../utils/formatRankingPoints.js';
+
 const $rankingTableTemplate = document.createElement('template');
 
 const rankingTableStyle = `
@@ -54,6 +56,12 @@ const rankingTableStyle = `
 
     .is-number .cell-content {
       text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .player-points .cell-content, .points-decimal .cell-content {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
     }
 
     .player-position {
@@ -195,7 +203,10 @@ class RankingTable extends HTMLElement {
 
           divContent.innerHTML = changesArrow;
         } else {
-          divContent.textContent = player[column.key];
+          divContent.textContent = ['points', 'pointsLost', 'card15', 'card16'].includes(column.key)
+            ? formatRankingPoints(player[column.key])
+            : player[column.key];
+          if (['points', 'pointsLost', 'card15', 'card16'].includes(column.key)) td.classList.add('points-decimal');
         }
 
         if (column.className) {
