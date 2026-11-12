@@ -337,6 +337,11 @@ h1,h2,h3,h4,h5,h6{font-weight:700}
 <style>
 /* FAFG translucent white controls - 2026-11-12 */
 /* Soften only formerly white interactive surfaces; preserve institutional blue CTAs. */
+/* White labels and icons remain legible against translucent controls. */
+.tile,.home-link,.button.secondary,#perfil .stat,#perfil .score-card,.score-card{color:#fff!important;text-shadow:0 1px 3px rgba(4,26,49,.5)}
+.tile small,.home-link small,.home-link span,.home-link strong,.home-link p,#perfil .stat small,#perfil .stat strong,#perfil .score-card small,#perfil .score-card strong,.score-card small,.score-card strong{color:#fff!important}
+.tile svg,.home-link svg,.button.secondary svg,#perfil .score-card svg,.score-card svg{color:#fff!important;stroke:currentColor}
+
 :root{--fafg-glass-bg:rgba(255,255,255,.18);--fafg-glass-border:rgba(113,161,197,.30)}
 .tile,.home-link,#perfil .stat,#perfil .score-card,.score-card,.button.secondary{
  background:var(--fafg-glass-bg)!important;
