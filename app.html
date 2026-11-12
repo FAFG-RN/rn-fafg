@@ -355,6 +355,23 @@ body{min-height:100vh;min-height:100dvh;background:linear-gradient(155deg,#071b3
 .tab{background:transparent}
 /* Preserve glass bubbles, photo splash, official logos and primary actions. */
 </style>
+
+<style id="fafg-profile-visual-repair-2026-11-12">
+/* Profile: same visible white glass as the rest of the application. */
+#perfil :is(.tile,.home-link,.card,.button.secondary,#career-toggle,#scores-toggle,#fafg-admin-toggle,#logout-btn){background:rgba(255,255,255,.27)!important;border:1px solid rgba(255,255,255,.43)!important;color:#fff!important;text-shadow:0 1px 3px rgba(0,22,48,.48)!important;box-shadow:0 5px 17px rgba(3,26,55,.12)!important}
+#perfil :is(.tile,.home-link,.button.secondary,#career-toggle,#scores-toggle,#fafg-admin-toggle,#logout-btn) :is(span,small,strong){color:#fff!important}
+/* Data and secondary copy should never inherit low-contrast gray. */
+#perfil :is(.muted,#profile-personal-details,#profile-meta,#profile-message,.card p,.card small,.card label,.stat small,.stat strong,.score-card small,.score-card strong){color:#fff!important;opacity:1!important}
+#perfil #profile-personal-details :is(span,strong,b,small){color:#fff!important;opacity:1!important}
+/* Give the scores accordion a readable title and avoid a blank-looking pill. */
+#perfil #scores-card{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#perfil #scores-toggle{min-height:54px;padding:14px 18px!important;justify-content:space-between!important;font-weight:700!important;opacity:1!important}
+#perfil #scores-toggle::before{content:'📋';margin-right:9px}
+#perfil #scores-content{padding:12px}
+/* Profile action cards, including the previously solid-blue ones. */
+#perfil :is(.profile-action,.profile-tile,.profile-link,#career-card){background:rgba(255,255,255,.27)!important;border-color:rgba(255,255,255,.43)!important}
+/* Keep the official blue navigation and brand logos unchanged. */
+</style>
 </head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
