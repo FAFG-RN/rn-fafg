@@ -372,6 +372,18 @@ body{min-height:100vh;min-height:100dvh;background:linear-gradient(155deg,#071b3
 #perfil :is(.profile-action,.profile-tile,.profile-link,#career-card){background:rgba(255,255,255,.27)!important;border-color:rgba(255,255,255,.43)!important}
 /* Keep the official blue navigation and brand logos unchanged. */
 </style>
+
+<style id="fafg-career-contrast-repair-2026-11-12">
+/* Career is a fixed full-screen view: give it the same gradient as the app. */
+#fafg-career-screen{background:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%)!important;color:#fff!important}
+#fafg-career-screen :is(.career-shell,.career-pane,.career-tabs,.career-stat,.history-card,.history-details,.history-details summary){color:#fff!important}
+#fafg-career-screen :is(.career-pane,.career-tabs,.career-stat,.history-card,.history-details summary){background:rgba(255,255,255,.25)!important;border-color:rgba(255,255,255,.4)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+/* Fix low-contrast history list, labels and chart captions. */
+#fafg-career-screen :is(.history-name,.history-date,.history-values,.history-values *, .history-details,.history-details *, .career-stat strong,.career-stat small,.career-pane p,.career-pane span,.career-pane small,.career-pane strong,.career-pane label,.career-pane li,.career-pane h1,.career-pane h2,.career-pane h3,.career-pane button:not([aria-selected=true])){color:#fff!important;opacity:1!important;text-shadow:0 1px 2px rgba(0,16,38,.35)}
+#fafg-career-screen .career-tabs button[aria-selected=true]{background:#176a9c!important;color:#fff!important}
+#fafg-career-screen :is(input,select,textarea){background:#fff!important;color:#123f6b!important;text-shadow:none!important}
+#fafg-career-screen :is(.history-values,.history-card){border-color:rgba(255,255,255,.35)!important}
+</style>
 </head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <header class="hero"><div class="brand"><div class="brand-title"><img class="fafg-logo" src="./assets/images/FAFG-Horizontal-2.png" alt="Logo oficial de la Federación Argentina de Footgolf"><h1 class="app-wordmark">APP</h1></div></div><div class="welcome">Tu footgolf, en un solo lugar.</div></header>
 <main>
