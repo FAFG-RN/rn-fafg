@@ -1,3 +1,5 @@
+import { formatRankingPoints } from '../utils/formatRankingPoints.js';
+
 const $rankingTemplate = document.createElement('template');
 
 const rankingStyle = `
@@ -21,6 +23,7 @@ const rankingStyle = `
 
     .player-points {
       text-align: right;
+      font-variant-numeric: tabular-nums;
       margin-right: 0.5em;
     }
 
@@ -215,7 +218,7 @@ class Ranking extends HTMLElement {
           <span class="player-position ${top1 ? 'top-1' : ''}">${position}</span>
           ${changesArrow}
           <span class="player-name ${top1 ? 'top-1' : ''}">${name}</span>
-          <span class="player-points ${top1 ? 'top-1' : ''}">${points}</span>
+          <span class="player-points ${top1 ? 'top-1' : ''}">${formatRankingPoints(points)}</span>
         </div>
       `;
 
@@ -227,9 +230,9 @@ class Ranking extends HTMLElement {
           <div class="player-info-item"><span>HCP:</span> <span>${hcp}</span></div>
           <div class="player-info-item"><span>Torneos:</span> <span>${tournaments}</span></div>
           <div class="player-info-item"><span>Procedencia:</span> <span>${origin}</span></div>
-          <div class="player-info-item"><span>Tarjeta 15:</span> <span>${card15}</span></div>
-          <div class="player-info-item"><span>Puntos que pierde:</span> <span>${pointsLost}</span></div>
-          <div class="player-info-item"><span>Tarjeta 16:</span> <span>${card16}</span></div>
+          <div class="player-info-item"><span>Tarjeta 15:</span> <span>${formatRankingPoints(card15)}</span></div>
+          <div class="player-info-item"><span>Puntos que pierde:</span> <span>${formatRankingPoints(pointsLost)}</span></div>
+          <div class="player-info-item"><span>Tarjeta 16:</span> <span>${formatRankingPoints(card16)}</span></div>
         </div>
       `;
 
