@@ -105,3 +105,8 @@ Usuario aprobó la vista previa y solicitó aplicarla para todos los perfiles, r
 Validación: vista privada revisada en navegador con ancho de contenido móvil, cuatro logos completos; compilan 10 scripts inline y ambos módulos. Publicación autorizada por el usuario; comprobar Pages después de fusionar.
 
 Publicación comprobada: PR #9 fusionado en main, commit d056b4ace10ea6aa49ff9184712e1c9da201880f. Pages devuelve HTTP 200 con los cuatro logos y sin «Modo prueba». Navegador confirmó carga correcta de los cuatro PNG oficiales en la app pública. app-sw.js mantiene estrategia de red para app.html; basta reabrir o recargar online para recibir la actualización.
+
+
+## Botones de torneos blancos translúcidos — 13/11/2026
+
+Solicitud directa del usuario según captura: fondo blanco transparente para distinguir logos y títulos. Encabezados de las cuatro competencias con blanco al 82%, títulos, subtítulos y flechas azul #103c70, sin sombra de texto. Logos, tamaño, orden, desplegables, tarjetas y datos conservados. Cambio exclusivamente CSS, aplicado en main en a04b9e59784158d2fb161193a920b3fa5477bdb7. Confirmación de entrega Pages pendiente; revisión visual autenticada no realizada.
