@@ -96,3 +96,10 @@ Publicación Liga 1 confirmada — 13/11/2026: PR #8 fusionado, commit c3a7b2373
 ## Orden de Mis torneos FAFG — 13/11/2026
 
 Solicitud directa del usuario: Liga Nacional, Liga 1, Copa de la República, Copa Federación. Se reordenan únicamente los cuatro bloques HTML existentes, preservando exactamente sus contenidos, IDs y manejadores. Verificación del cambio mediante sustitución inversa exacta. No cambia datos ni funcionalidad de tarjetas.
+
+
+## 2026-11-13 · Logos oficiales en Mis torneos FAFG
+
+Usuario aprobó la vista previa y solicitó aplicarla para todos los perfiles, retirando «Modo prueba». Se reutilizan los cuatro PNG oficiales existentes, sin modificar sus bytes ni proporciones. Columna uniforme de 68 × 48 px, ajuste de márgenes transparentes y filas de al menos 84 px; títulos y estados alineados. Orden: Liga Nacional, Liga 1, Copa de la República, Copa Federación. Se retira la etiqueta de prueba del encabezado y de los módulos; se conserva el aviso de validación pendiente y separación respecto al ranking oficial. Datos, vinculación personal, permisos y tarjetas sin cambios.
+
+Validación: vista privada revisada en navegador con ancho de contenido móvil, cuatro logos completos; compilan 10 scripts inline y ambos módulos. Publicación autorizada por el usuario; comprobar Pages después de fusionar.
