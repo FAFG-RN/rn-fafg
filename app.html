@@ -505,7 +505,7 @@ color:#fff!important
 <section id="instalar" class="tab"><div class="card"><h2>❔ Ayuda · FAFG App</h2><p class="muted">Guía para instalar y utilizar las principales funciones de la aplicación.</p></div><div class="card"><h2>📲 ¿Cómo agrego la app a mi celular?</h2><h3>iPhone · Safari</h3><ol class="list"><li>Abrí FAFG App en Safari.</li><li>Tocá el botón Compartir.</li><li>Elegí <strong>Agregar a pantalla de inicio</strong> y confirmá.</li></ol><h3>Android · Chrome</h3><ol class="list"><li>Abrí FAFG App en Chrome.</li><li>Tocá el menú de tres puntos.</li><li>Seleccioná <strong>Instalar aplicación</strong> o <strong>Agregar a pantalla principal</strong>.</li></ol><p id="install-note" class="muted">No necesitás descargarla desde App Store ni Google Play. Las opciones dependen del dispositivo y navegador.</p></div><div class="card"><h2>👤 ¿Cómo uso Mi perfil?</h2><p>Ingresá a <strong>Mi perfil</strong> e iniciá sesión con tu cuenta. Ahí podés consultar tu información deportiva, editar tus datos personales y, si tu ficha deportiva está vinculada, abrir tu credencial.</p><p class="muted">Los datos oficiales de jugador y ranking son administrados por FAFG.</p></div><div class="card"><h2>⛳ ¿Dónde veo mis scores por torneo?</h2><p>Entrá a <strong>Mi perfil</strong> y tocá <strong>Mis scores por torneo</strong>. El botón despliega los resultados disponibles de tus participaciones. Si no aparecen, puede faltar cargar o vincular tu historial deportivo.</p></div><div class="card"><h2>📊 ¿Dónde veo mi hándicap?</h2><p>En <strong>Mi perfil</strong>, buscá el dato <strong>HCP</strong> junto a tus estadísticas del ranking. Se muestra cuando FAFG tiene tu ficha y tus datos oficiales vinculados.</p></div><div class="card"><h2>🏆 ¿Cómo consulto el ranking?</h2><p>Desde <strong>Ranking</strong> podés ver el Top 10 nacional. Tocá <strong>Ranking por categorías</strong> para consultar las posiciones de los demás jugadores.</p></div><div class="card"><h2>📝 ¿Cómo uso la Tarjeta Digital?</h2><ol class="list"><li>Desde <strong>Inicio</strong>, entrá a <strong>Tarjeta digital</strong>.</li><li>Completá los nombres de los jugadores y los pares de la cancha cuando corresponda.</li><li>Elegí el hoyo y utilizá los botones <strong>+</strong> y <strong>−</strong> para registrar los golpes.</li><li>Avanzá entre hoyos y consultá la tarjeta completa para revisar los resultados.</li><li>Al finalizar la ronda, podés compartir la imagen de la tarjeta.</li></ol><p class="muted">En torneos oficiales, la tarjeta de papel verificada sigue siendo la referencia reglamentaria. La tarjeta digital es una herramienta de seguimiento.</p></div><div class="card"><h2>🔔 ¿Cómo veo las novedades?</h2><p>En la campanita de <strong>Notificaciones FAFG</strong> encontrás avisos internos sobre torneos y actualizaciones del ranking. La pestaña <strong>Noticias</strong> reúne publicaciones de las asociaciones.</p></div></section>
 </main><p class="footer">FAFG App · Versión inicial · Datos deportivos oficiales consultables desde el ranking</p></div>
 <nav class="bottom-nav" aria-label="Navegación principal"><span class="nav-watermark" aria-hidden="true">FAFG</span><button type="button" data-go="inicio" aria-current="page"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Inicio</span></button><button type="button" data-go="noticias"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4h16v16H4zM8 4v16M11 8h6M11 12h6M11 16h6"/></svg><span>Noticias</span></button><button type="button" class="nav-profile" data-go="perfil" aria-label="Mi perfil"><span class="nav-profile-circle"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></span></button><button type="button" data-go="ranking"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 3h8v6a4 4 0 0 1-8 0ZM8 5H4v2a4 4 0 0 0 4 4M16 5h4v2a4 4 0 0 1-4 4M12 13v6M8 21h8M10 19h4"/></svg><span>Ranking</span></button><button type="button" data-go="instalar"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4M12 17h.01"/></svg><span>Ayuda</span></button></nav>
-<script src="./js/ranking-public.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
+<script src="./js/ranking-public.js?v=perfil-fuente-publica-20261113"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script>
 const SUPABASE_URL='https://kkrzqxiomkorxyjlnjqc.supabase.co';
 const SUPABASE_KEY='sb_publishable_9BJJ0ZYFX1B6hkmG-wUbhg_llNAeGc5';
 const client=window.supabase?.createClient(SUPABASE_URL,SUPABASE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:'fafg-app-auth'}});
@@ -593,34 +593,32 @@ async function renderSession(session){
   await loadPlayerScores(profile.jugador_id,player?.nombre_completo);
   document.getElementById('profile-name').textContent=player?.nombre_completo||'Mi perfil';
   document.getElementById('profile-meta').textContent=[player?.ciudad,player?.categoria].filter(Boolean).join(' · ');const cred=document.getElementById('fafg-credential');document.getElementById('credential-name').textContent=player?.nombre_completo||'Jugador FAFG';document.getElementById('credential-location').textContent=player?.ciudad||'';document.getElementById('credential-category').textContent='Categoría: '+(player?.categoria||'Sin categoría registrada');const credPhoto=document.getElementById('credential-photo'),profilePhoto=document.getElementById('profile-photo');if(profilePhoto?.src&&!profilePhoto.hidden){credPhoto.src=profilePhoto.src;credPhoto.hidden=false}else{credPhoto.hidden=true;credPhoto.removeAttribute('src')}document.getElementById('credential-open').classList.remove('hidden');
-  const {data:ranking,error:rankingError}=await client.from('rankings').select('temporada,categoria,posicion,puntos,hcp,torneos_computados').eq('jugador_id',profile.jugador_id).order('temporada',{ascending:false}).limit(20);
-  if(rankingError){profileMessage.textContent=friendlyError(rankingError);return;}
   // Socios activos confirmados por FAFG para las diez fichas individuales iniciales.
   const sociosIniciales=new Set(['LUCIANO TREVOLAZAVALA','RODRIGO UBEDA','ALBANO CASONI','MATIAS RAMIRO FERREYRA','SEBASTIAN OLMEDO','MARIO BOERO','VICTOR GONZALEZ','BRUNO PIRCHIO','LEONARDO ZELAYA','IVAN VILLALBA']);
   const normalizarNombre=s=>String(s||'').normalize('NFD').replace(/[\\u0300-\\u036f]/g,'').toUpperCase().replace(/[^A-Z ]/g,' ').replace(/\\s+/g,' ').trim().split(' ').sort().join(' ');
   const socioConfirmado=[...sociosIniciales].some(n=>normalizarNombre(n)===normalizarNombre(player?.nombre_completo));
   function agregarEstadoSocio(grid){const member=document.createElement('div');member.className='stat'+(socioConfirmado?' member-active':'');const label=document.createElement('small');label.textContent='Estado de socio';const value=document.createElement('strong');value.textContent=socioConfirmado?'Activo':'Pendiente de verificación';member.append(label,value);grid.append(member)}
-  // Ranking oficial por categoria: comparar nombres normalizados sin modificar Supabase.
-  let rankingActualizado=null;
+  // Puntos, posición, HCP y torneos provienen del ranking público, sin recurrir a tablas anteriores.
+  let rankingActualizado=null,rankingUpdated='',rankingIssue='';
   try{
-    const approved=await window.FAFGPublishedRanking.latest();
-    const response=approved?{ok:true,json:async()=>({categories:window.FAFGPublishedRanking.categories(approved.payload)})}:await fetch('./data/ranking-categorias-2026.json?v=20261111',{cache:'no-store'});
-    if(response.ok){
-      const data=await response.json();
-      const matches=(data.categories||[]).flatMap(group=>(group.players||[]).filter(p=>normalizarNombre(p.name)===normalizarNombre(player?.nombre_completo)).map(p=>({...p,category:group.name})));
-      if(matches.length===1)rankingActualizado=matches[0];
-    }
-  }catch(e){console.warn('Ranking por categorias no disponible',e)}
-  const current=ranking?.find(x=>x.temporada===2026&&x.categoria===player?.categoria)||ranking?.[0];
-  if(!current&&!rankingActualizado){agregarEstadoSocio(document.getElementById('profile-stats'));profileMessage.textContent='FAFG todavía no cargó tu ranking.';return;}
-  const values=rankingActualizado?
-    [['Ranking Nacional • Cat. '+rankingActualizado.category.replace(/general caballeros/ig,'gral Cab.'),rankingActualizado.pos+'°'],['Puntos',rankingActualizado.points],['HCP',rankingActualizado.hcp],['Torneos',rankingActualizado.events]]:
-    [['Ranking Nacional • Cat. '+(current.categoria||player?.categoria||'—').replace(/general caballeros/ig,'gral Cab.'),current.posicion?current.posicion+'°':'—'],['Puntos',Number.isFinite(Number(current.puntos))?Number(current.puntos).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2}):'—'],['HCP',current.hcp??'—'],['Torneos',current.torneos_computados??'—']];
+    const resolved=await window.FAFGPublishedRanking.profile(player?.nombre_completo,player?.categoria);
+    if(activeUserId!==session.user.id)return;
+    if(resolved.status==='matched'){rankingActualizado=resolved.player;rankingUpdated=resolved.updated;}
+    else rankingIssue=resolved.status==='ambiguous'?'Tu ficha requiere verificar la coincidencia con el Ranking Nacional.':'Tu ficha todavía no tiene una coincidencia en el Ranking Nacional publicado.';
+  }catch(e){if(activeUserId!==session.user.id)return;rankingIssue='No pudimos consultar el Ranking Nacional publicado. Volvé a intentar.';console.warn('Ranking público no disponible',e)}
+  const category=rankingActualizado?.category||player?.categoria||'—';
+  const values=[
+    ['Ranking Nacional • Cat. '+category.replace(/general caballeros/ig,'gral Cab.'),rankingActualizado?.pos!=null?rankingActualizado.pos+'°':'—'],
+    ['Puntos',rankingActualizado?.points??'—'],
+    ['HCP',rankingActualizado?.hcp??'—'],
+    ['Torneos',rankingActualizado?.events??'—']
+  ];
   const grid=document.getElementById('profile-stats');
   grid.replaceChildren();
   values.forEach(([label,value])=>{const cell=document.createElement('div');cell.className='stat';const strong=document.createElement('strong');strong.textContent=String(value);const small=document.createElement('small');small.textContent=label;cell.append(small,strong);grid.append(cell)});
   agregarEstadoSocio(grid);
-  profileMessage.textContent=rankingActualizado?'Ranking por categoría actualizado al 11/11/2026. Resultados históricos conservados.':'Datos deportivos administrados por FAFG.';
+  const updateLabel=/^\d{4}-\d{2}-\d{2}/.test(String(rankingUpdated))?' · Actualizado al '+String(rankingUpdated).slice(0,10).split('-').reverse().join('/'):'';
+  profileMessage.textContent=rankingActualizado?'Ranking Nacional publicado'+updateLabel+'. Resultados históricos conservados.':rankingIssue;
 }
 document.querySelectorAll('[data-access]').forEach(button=>button.addEventListener('click',()=>{
  const kind=button.dataset.access;
