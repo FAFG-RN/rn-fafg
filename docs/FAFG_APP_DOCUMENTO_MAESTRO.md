@@ -74,3 +74,6 @@ Validación: sintaxis de todos los scripts inline y del módulo; 500 registros y
 Usuario aprobó «excelente, hagamos esa prueba» tras definir un botón personal en Mi perfil sobre Mis tours. Se reemplaza la entrada directa de Liga Nacional por un desplegable Mis torneos FAFG con Liga 1, Copa de la República, Liga Nacional y Copa Federación. No hay selector de nombres en la app; el nombre proviene de la ficha deportiva vinculada. Liga Nacional conserva el módulo probado de tarjetas; las otras tres competencias indican planillas pendientes sin inferir que el jugador no participó.
 
 La vista privada de revisión se ajusta a un ejemplo personal de Luciano sin selector de nombres. Verificados orden, cuatro competencias, ausencia de selector y sintaxis de scripts. Publicación del modo prueba solicitada por usuario; confirmar entrega en Pages después de fusionar PR #7. No cambia resultados, rankings ni Supabase.
+
+
+Publicación confirmada — 13/11/2026: PR #7 fusionado con autorización del usuario, commit a473203250383b0081bcb4d23264188df9c92f25. GitHub Pages sirve HTTP 200 para app.html con Mis torneos FAFG y los cuatro desplegables, módulo JS y archivo de 500 registros. No hay selector de nombres en el nuevo menú. La revisión visual del ejemplo personal funcionó; falta corroborar dentro de la sesión real del usuario en la PWA.
