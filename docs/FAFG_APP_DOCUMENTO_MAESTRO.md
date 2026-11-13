@@ -122,3 +122,12 @@ Site desplegado privado; comunidad con búsqueda, filtros, CSV e informe. Carrer
 
 
 Publicación de acceso comprobada — 13/11/2026: PR #10 fusionado, commit 37c27ebcd734ca5569dcaa2c69536db3ae66f5d1. Pages run 43465272887 completado con success. HTTP de app.html entregado con el nuevo enlace Comunidad y beneficios · Jugadores por ciudad. No se verificó la sesión administradora real en iPhone; el acceso al Site publicado requiere la cuenta propietaria de ChatGPT. Revisión local del Site: logo oficial íntegro, filtro Córdoba = 10 y búsqueda trevolazavala con ficha y ocho resultados de Santa Fe. Pruebas automáticas con SQLite local: controles de versión, motivo obligatorio, origen, vista previa, instantáneas publicadas inmutables, auditoría, diferencias y duplicados correctos. No se ejecutaron correcciones de prueba sobre producción.
+
+
+## Fecha de nacimiento en celular — 13/11/2026
+
+Solicitud del usuario: un amigo no logra aplicar la fecha de nacimiento al registrarse. Revisión de app.html: el registro de cuenta solo pide correo, DNI y contraseña; la fecha se completa en Editar perfil. Se comprobó un fallo de precarga: la expresión regular de populateEditableProfile estaba doblemente escapada y rechazaba una fecha ISO válida, mostrando vacío el campo guardado. No se reprodujo el selector nativo del dispositivo del amigo.
+
+Corrección en fix/fecha-nacimiento-movil: reemplazo del calendario nativo por selectores Día y Mes y campo Año de cuatro dígitos con teclado numérico; conserva fecha_nacimiento en ISO YYYY-MM-DD en los metadatos privados de la cuenta. Corrige precarga de fecha guardada. Fecha opcional; si se empieza a completar, exige las tres partes. Valida calendario, bisiestos y futuro. No se agregan límites de edad, no se cambia registro, permisos, identidad deportiva ni ranking.
+
+Validación local: fechas válidas, 29/2 bisiesto/no bisiesto, 31/4, futuro, fecha parcial, vacío opcional y precarga/lectura de 1983-08-18; diez scripts inline compilan. Prueba en iPhone físico y guardado desde la sesión real del amigo pendientes. No se crearon usuarios ni se modificaron perfiles ajenos. Preparado para publicar; verificar estado de PR y Pages.
