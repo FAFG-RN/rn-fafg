@@ -206,3 +206,11 @@ Corrección: nuevo resolver FAFGPublishedRanking.profile en js/ranking-public.js
 No se alteran tablas, puntos oficiales, cálculos, afiliación, permisos, resultados ni archivos de ranking. La función histórica de estado de socio permanece intacta. Cache de biblioteca renovada en app.html. Posición de Luciano: 2 en General Caballeros, 3 en general; puntos iguales (2220.75). Esa diferencia de posición es legítima por ámbito.
 
 Validación: 276 coincidencias de fichas correctas, dos filas duplicadas MORALEDA ANDRES bloqueadas; nombres invertidos/edad/tildes, categoría, homónimos, ceros, snapshot posterior, errores de red y diez scripts inline correctos. Caso Luciano: 2.220,75 puntos idénticos al CSV público, posición de categoría 2, HCP 0 y 15 torneos. Pendiente comprobar entrega Pages al fusionar. Publicación autorizada por pedido directo de corrección.
+
+## Cierre de Mi carrera y retiro de Beneficios — 13/11/2026
+
+La pantalla de carrera y el acordeón histórico escuchaban el mismo botón: al volver al perfil quedaba visible la lista histórica. Se elimina el manejador del acordeón y el desplazamiento al contenido antiguo; la tarjeta histórica queda oculta como fuente de datos para la pantalla nueva. Apertura y cierre restablecen el estado cerrado, detalles y aria-expanded; se elimina el segundo manejador redundante de la tarjeta. Se conserva la carga de resultados para todas las cuentas.
+
+Se retira únicamente el acceso público «Beneficios FAFG» del Inicio a pedido de Luciano; el módulo y herramientas administrativas se conservan para continuar su desarrollo. Sin modificaciones en datos o permisos.
+
+Validación: tests/career-close.cjs (tres ciclos de apertura/cierre, detalles, foco, manejador único, lista oculta y enlace retirado), tests/profile-public-ranking.cjs (276 fichas y diez scripts inline) y git diff --check correctos. Navegador local bloqueado por restricciones de sockets del entorno; queda pendiente verificación visual en iPhone. Publicación autorizada por pedido directo de corregir la app; comprobar Pages al integrar.
