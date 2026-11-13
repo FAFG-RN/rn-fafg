@@ -177,3 +177,10 @@ Mis tours: originales disponibles — 13/11/2026. Luciano copió los cinco JPG a
 
 
 Publicación de Mis tours comprobada — 13/11/2026: PR #15 fusionado en 6807bc7e8660513ff1aed6a7890d921d623b14ca. Pages run 43503051753 completado con success. Navegador HTTPS revisó pruebas/mis-tours-logos.html a 390 px: cinco JPG cargados con sus dimensiones originales (1080×1080 salvo Sudoeste 461×406), imágenes completas visibles, mismos encabezados y fondo que torneos FAFG, sin desbordes. Se verificó integridad binaria adicional comparando SHA Git local de cada original con su blob remoto. Diez scripts inline compilan; navegación de cinco asociaciones probada. Sigue pendiente corroborar dentro de la sesión personal de cada jugador; no cambian sus resultados, rankings ni permisos. El bloqueo de originales quedó resuelto y no requiere más acción del usuario.
+
+
+## Logos de Mis tours sin fondos — 13/11/2026
+
+Pedido expreso de Luciano: quitar fondos blancos, negro y celeste/verde y recortar para dejar solo los logos. Se enmascaró el exterior y se recortaron márgenes sobre los JPG originales, preservando los blancos y colores internos de cada marca. La prueba generativa fue descartada porque reinterpretó detalles; ninguno de sus píxeles se utiliza en producción. Los cinco recortes maestros verifican cero cambios RGB respecto del original dentro de su caja; solo cambia el canal alfa y la caja exterior. Se conservan los JPG originales. Para la app se exportan PNG transparentes de hasta 256×256 px con escala proporcional, aptos para las cajas 68×48 de los botones, sin recomprimir como JPEG ni deformar.
+
+Solo se sustituyen cinco rutas .jpg por .png en app.html y su página de revisión. Scripts de consultas y resultados íntegros; sin cambios a perfiles, ranking, permisos, navegación o Supabase. Revisión de recortes sobre fondos claro y azul realizada. Publicación autorizada por la solicitud de aplicar el recorte en la app; verificar entrega y fondos transparentes al terminar Pages.
