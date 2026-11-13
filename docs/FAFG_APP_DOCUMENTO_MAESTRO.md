@@ -187,3 +187,8 @@ Solo se sustituyen cinco rutas .jpg por .png en app.html y su página de revisi�
 
 
 Publicación de logos transparentes comprobada — 13/11/2026: PR #16 fusionado en 77a6790f4c5b26c8a8e4080a13ef408f8b288005; Pages run 43504777682 completado con success. Navegador HTTPS revisó los cinco PNG a 390 px: cargados correctamente, sin rectángulos exteriores y con blancos internos conservados. Dimensiones de derivados: BAFG 256×232, Ramallo 256×220, Santa Fe 181×256, Sudoeste 256×235 y Tandil 256×231. app.html y vista de revisión usan PNG; no cambian scripts ni resultados.
+
+
+## Mi carrera deportiva: acceso alineado — 13/11/2026
+
+Pedido directo según captura: mismo título/alineación/flecha que Mis torneos FAFG y Mis tours. Cambio exclusivamente CSS para la primera tarjeta generada de perfil (Mi carrera deportiva): fila única, padding de 20 px, altura mínima de 86 px como las tarjetas superiores, título heredado de la tipografía del perfil y chevron ⌄ a la derecha. Se ocultan solo en ese acceso el trofeo y el subtítulo Historial y resultados para igualar la gráfica. El botón, su texto, sus manejadores y la pantalla de carrera permanecen intactos; credencial y editar perfil sin cambios. Verificación por eliminación inversa exacta del bloque CSS: todo el HTML y JavaScript original se conserva. Publicación autorizada por la solicitud; verificar Pages después de fusionar.
