@@ -110,3 +110,12 @@ Publicación comprobada: PR #9 fusionado en main, commit d056b4ace10ea6aa49ff918
 ## Botones de torneos blancos translúcidos — 13/11/2026
 
 Solicitud directa del usuario según captura: fondo blanco transparente para distinguir logos y títulos. Encabezados de las cuatro competencias con blanco al 82%, títulos, subtítulos y flechas azul #103c70, sin sombra de texto. Logos, tamaño, orden, desplegables, tarjetas y datos conservados. Cambio exclusivamente CSS, aplicado en main en a04b9e59784158d2fb161193a920b3fa5477bdb7. Confirmación de entrega Pages pendiente; revisión visual autenticada no realizada.
+
+
+## Comunidad y beneficios — 13/11/2026
+
+Nuevo acceso dentro de Mi perfil → Panel de administrador: «Comunidad y beneficios · Jugadores por ciudad», enlaza al Site privado https://fafg-carrera-historica.weedychub6.chatgpt.site. Conserva íntegramente la condición de acceso existente al panel y los permisos de Supabase; el Site tiene su propio acceso privado de propietario. No se transfieren credenciales ni parámetros de sesión en el enlace.
+
+Relevamiento del archivo 322RANKING 250 11-11-26(1).xlsx: General 262 registros + Femenino 16 = 278; deduplicación por nombre normalizado (sin edad) elimina un duplicado interno de General y siete coincidencias entre hojas: 270 nombres únicos, 77 localidades, 8 jurisdicciones. No equivale a padrón validado por DNI ni a socios activos. Procedencia del ranking, no residencia actual. Hoja DATOS histórica excluida. CO y CB = Córdoba, confirmado por Luciano. Marcos Juárez 10. ROCA/GENERAL ROCA y BUENOS AIRES/CABA se mantienen separados hasta corroboración. Equivalencias tipográficas y geográficas adicionales documentadas en el informe del Site.
+
+Site desplegado privado; comunidad con búsqueda, filtros, CSV e informe. Carrera con 799 resultados procedentes de los JSON de Santa Fe y Sudoeste publicados en el repositorio. Revisión, importación JSON normalizado, diferencias, motivos, versiones y publicación de instantáneas internas. Tarjetas individuales y cortes históricos de ranking faltan cargar; Excel/fotos requieren extracción. No se conecta aún publicación de correcciones con app/web FAFG; no se modifica ranking ni Supabase. Integración del acceso preparada en rama feature/admin-comunidad-beneficios; verificar estado de PR y despliegue antes de afirmar disponibilidad en app.
