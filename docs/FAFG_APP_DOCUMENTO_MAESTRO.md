@@ -146,3 +146,18 @@ Comprobaciones locales: sintaxis, totales 270/77, Córdoba=10; casos sin sesión
 
 
 Publicación nativa de Comunidad comprobada — 13/11/2026: PR #12 fusionado, commit 8268aacac5c0fbb435d6c609dd381fedeb12dd39. Pages run 43467661971 completado con success. HTTPS entrega admin-comunidad.html con la sesión fafg-app-auth y RPC is_fafg_admin, y app.html con enlace relativo ./admin-comunidad.html. No solicita login de ChatGPT. Pendiente confirmar dentro de la sesión real del usuario en su celular.
+
+
+## Beneficios y panel comercial — publicación autorizada 13/11/2026
+
+Luciano aprobó la vista previa y solicitó expresamente «aplicalo a la app». La integración se reconstruye desde main actual en release/beneficios-comercial, sin incorporar la rama administrativa histórica ni el admin.html de desarrollo.
+
+- Inicio agrega Beneficios FAFG hacia ./beneficios.html, respetando clases existentes. Mi perfil → Panel de administrador agrega Beneficios y panel comercial hacia ./comercial.html, dentro del control de acceso existente. Comunidad por ciudad se conserva.
+- Catálogo público: ciudad, rubro, búsqueda, condiciones, destinatarios y vigencia. Sin comercios ni descuentos ficticios cargados. Solo beneficios publicados y vigentes son consultables públicamente por RLS.
+- Panel comercial: getUser + is_fafg_admin; contactos y negociaciones privados, próxima gestión, borradores con vista previa antes de publicar, pausa, aportes previstos/confirmados/recibidos/cancelados, dinero por moneda y canjes separados; exportación CSV. Misma sesión fafg-app-auth, sin login de ChatGPT ni proveedores adicionales.
+- Relevamiento agregado: 270 nombres únicos, 77 localidades, 8 jurisdicciones, corte 11/11/2026. Procedencia pendiente de validar como residencia actual; no equivale a socios activos. Exportación por filtro.
+- Base previamente aplicada: beneficios_comercial_v1 y beneficios_comercial_estado_utf8, nuevas tablas con RLS e historial no editable por clientes. Sin cambios en datos deportivos, perfiles, Auth o rankings.
+- Pruebas previas: CRUD administrativo, auditoría y restricciones monetarias/canjes; aislamiento de anónimos y no admins; cinco resultados SQL correctos, fixtures revertidos. Frontend: vigencias inclusivas, estados, URL segura, escape HTML, CSV y totales. En integración: sustitución inversa exacta del app.html actual y compilación de todos los scripts.
+- Revisión visual móvil y con sesión real aún pendiente; la previa local no fue alcanzable por el navegador. Usuario conoce la limitación y autorizó aplicar tras ver la demostración descargable.
+- No se contrataron servicios pagos. Sin validación automática de socio, cupones ni seguimiento automático de consultas/canjes de jugadores; acreditación según condiciones de cada comercio.
+- Estado: integrado en rama para publicación autorizada. Verificar entrega HTTPS de páginas y recursos después de fusionar antes de afirmar publicado.
