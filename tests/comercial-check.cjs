@@ -5,7 +5,7 @@ const context={window:{},document:{getElementById:()=>({})},Intl,Date,URL,Blob,s
 vm.createContext(context);
 vm.runInContext(source.slice(0,source.indexOf('(async()=>{try{if(!db)'))+'\nthis.testAPI={esc,norm,today,validURL,eligible,csv,card};',context);
 const t=context.testAPI;
-assert.equal(t.norm('  BAH�A BLANCA  '),'bahia blanca');
+assert.equal(t.norm('  BAHÍA BLANCA  '),'bahia blanca');
 assert.equal(t.esc('<img onerror="x">'),'&lt;img onerror=&quot;x&quot;&gt;');
 assert.equal(t.validURL('javascript:alert(1)'),null);
 assert.equal(t.validURL('http://example.com'),null);
@@ -26,4 +26,3 @@ assert.equal(places.reduce((s,p)=>s+p.jugadores,0),270);
 assert.equal(new Set(places.map(p=>p.provincia)).size,8);
 assert.equal(places.find(p=>p.ciudad==='ROSARIO').jugadores,17);
 console.log('PASS: fechas inclusivas, estados, URLs, escape HTML, CSV y relevamiento (77 / 270 / 8).');
-
