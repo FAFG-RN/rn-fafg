@@ -56,3 +56,14 @@ Usuario aprobó la previa y solicitó aplicar en la app. app.html actualizado en
 ## Mis tours para todos — 13/11/2026
 
 Solicitud expresa: habilitar la opción a todos y compartir Santa Fe. Se elimina la condición por nombre Luciano Trevolazavala; la sección sigue dentro del perfil privado autenticado. Todos pueden elegir cualquiera de los cinco tours existentes. Santa Fe muestra ranking compartido de 117 jugadores, puntos, búsqueda normalizada y paginación. Otros tours conservan aviso de planilla pendiente. No se importaron nuevos scores: detalle por fecha existente solo para Luciano (F2–F9); los demás indican importación pendiente. Se corrige acumulación de overlays al cambiar el tour/renderizar. Sin cambios de datos oficiales ni Supabase. Commit f84527ea386bf61da35cec775dd5e5351e46210c. Sintaxis de scripts y habilitación con cuatro nombres comprobadas; revisión visual autenticada sigue pendiente por restricción local de Chromium. Publicación autorizada por usuario, primer control Pages aún anterior.
+
+
+## Liga Nacional · Tarjetas hoyo por hoyo — 13/11/2026
+
+Implementado en feature/liga-nacional-tarjetas-prueba: nuevo desplegable «Liga Nacional · Modo prueba» en Mi perfil, antes de Mis tours, bajo Torneos oficiales FAFG. Consulta automática por coincidencia exacta de todos los tokens del nombre deportivo normalizado, sin coincidencias parciales. Una clave con identidad de origen inconsistente queda bloqueada para revisión; sin coincidencia no se presume ausencia en el torneo. El estado no persiste entre cambios de jugador.
+
+Se extraen solo AC/RE correspondientes a las fechas nominales de cada uno de los cinco archivos aportados: Norte F1–F4, Sur F1–F4 y Finales F5–F6. 500 registros, 442 tarjetas completas con suma de 18 hoyos reconciliada contra SCORE AC y 58 NPT sin ceros inventados. Siete registros requieren cotejo AC/RE o par/salidas; se muestran advertencias y se conservan ambos scores. Las referencias de temporada heredadas de 2025/2026 no se resuelven automáticamente: fecha, sede y temporada pendientes de corroboración. No cambia puntos, rankings, Supabase ni archivos originales.
+
+Datos distribuidos mediante lista permitida de campos deportivos: nombres, zona, fecha ordinal, hoyos, par de referencia, score, posición/puntos RE y procedencia por hoja/fila. Excluidos DNI, pagos, afiliación y contactos. El par por hoyo se rotula «Par ref.» y las salidas diferenciadas requieren confirmación.
+
+Validación: sintaxis de todos los scripts inline y del módulo; 500 registros y 442 sumas; NPT y privacidad de campos; seis tarjetas de Luciano. La vista privada de revisión se publica aparte en Coordinación interna /pruebas/liga/. Integración preparada en rama; no fusionada ni disponible todavía en la app pública.
