@@ -88,3 +88,6 @@ Fuente: AC1/RE1, AC2/RE2, AC3/RE3; total en RESULTADOS. Solo las tres rondas ind
 47 jugadores; 141 registros, 136 tarjetas completas con suma de 18 hoyos igual a SCORE y 5 NPT conservados sin ceros ficticios. 47 filas de resultado final, 44 totales completos reconciliados contra las tres rondas. Tres participantes no tienen total final en la fuente y conservan ese estado. No se detectaron discrepancias de score AC/RE ni colisiones de identidad dentro de este libro. Datos exportados solo deportivos; DNI, pagos, cuotas y contactos excluidos.
 
 Verificados sintaxis de scripts, ambos paneles, privacidad, rondas y totales. La fuente original se incorpora también a Documentos de Coordinación interna. Cambios preparados para publicación autorizada; verificar entrega GitHub Pages después de fusionar.
+
+
+Publicación Liga 1 confirmada — 13/11/2026: PR #8 fusionado, commit c3a7b23735fe5a829f0aac186d53160ca8ea3397. GitHub Pages sirve HTTP 200 para app.html con liga1-details, liga1-prueba.js y liga1-prueba.json con 141 registros y 47 resultados finales. La vista personal fue revisada en navegador; la sesión real de cada jugador sigue su vinculación deportiva existente.
