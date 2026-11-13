@@ -35,3 +35,16 @@ Actualizado: 2026-11-06. Proyecto privado en desarrollo. Fuente: decisiones de t
 4. Para cambios de esquema proporcionar SQL seguro, reversible si es posible, y políticas RLS.
 5. Mantener actualizado documento maestro y checklist después de decisiones importantes; registrar fecha, commit y pendientes.
 6. Si el usuario dice “retomemos FAFG App”, continuar desde el último estado verificable, sin reiniciar el diseño.
+
+
+## Beneficios y panel comercial — 13/11/2026
+- Decidido: desarrollar Beneficios FAFG y panel comercial, con la suscripción a ChatGPT como único gasto actual informado. No se contrataron servicios pagos.
+- Rama: feature/beneficios-comercial, basada en feature/panel-admin-fafg. No fusionada ni publicada. La rama administrativa base es histórica; reconciliar con main antes de desplegar.
+- Implementado en rama: beneficios.html (catálogo público con filtros y vigencia), comercial.html + comercial.js + comercial.css (admin, comercios/sponsors, borradores, vista previa/publicación/pausa, aportes, canjes, resumen y exportaciones CSV), enlace desde admin.html.
+- Snapshot comercial-ciudades.json: 270 nombres únicos, 77 localidades y 8 jurisdicciones. Fuente Relevamiento_FAFG_por_ciudad.md; ranking corte 11/11/2026. Procedencia histórica, no residencia verificada ni condición de socio. CO/CB = Córdoba.
+- Base aplicada: migración beneficios_comercial_v1 en FAFG APP. Tablas nuevas fafg_comercios, fafg_beneficios, fafg_aportes y fafg_comercial_historial. RLS, contactos/aportes privados; público solo beneficios publicados y vigentes. Historial por trigger en esquema privado, no editable por clientes. Sin cambios a ranking ni perfiles.
+- Verificado: pruebas SQL transaccionales de CRUD administrativo, historial, restricciones de canjes, catálogo anónimo y bloqueo de usuarios no administradores: todas pasaron. Fixtures revertidos; tablas comerciales vacías. Pruebas Node de estados/vigencias, escape HTML, URLs, CSV y totales del relevamiento: pasaron.
+- Revisión de seguridad: sin hallazgos nuevos relativos a estas tablas; el proyecto conserva avisos previos ajenos al módulo (funciones security definer, protección de contraseñas y tablas privadas sin políticas). No se cambiaron esos componentes.
+- Pendiente: revisión visual móvil y prueba extremo a extremo con sesión real; navegador no pudo abrir el servidor local. No afirmar publicado. No hay convenios ni beneficios reales cargados.
+- Acceso a beneficios para socios: condiciones y acreditación manual acordadas con comercio. Sin validación automática de membresía, cupones ni seguimiento automático de clics/canjes de jugadores.
+- Próximo paso: revisar interfaz, reconciliar integración con versión actual de main y agregar acceso de jugadores a beneficios.html en la app vigente; publicar solo después de pruebas y autorización.
