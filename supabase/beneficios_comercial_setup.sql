@@ -1,4 +1,4 @@
--- Instalaci�n aditiva. No modifica jugadores, ranking ni resultados.
+-- Instalación aditiva. No modifica jugadores, ranking ni resultados.
 begin;
 create table public.fafg_comercios (
  id uuid primary key default gen_random_uuid(),
@@ -7,7 +7,7 @@ create table public.fafg_comercios (
  ciudad text not null check(length(trim(ciudad)) between 1 and 300),
  provincia text not null check(length(trim(provincia)) between 1 and 300),
  rubro text not null,
- estado text not null default 'Prospecto' check(estado in ('Prospecto','Contactado','En negociaci�n','Confirmado','Pausado')),
+ estado text not null default 'Prospecto' check(estado in ('Prospecto','Contactado','En negociación','Confirmado','Pausado')),
  contacto text not null default '',email text not null default '',telefono text not null default '',
  notas text not null default '' check(length(notas)<=2000),proxima_gestion date,
  created_at timestamptz not null default now(),updated_at timestamptz not null default now()
@@ -84,4 +84,3 @@ create trigger comercio_historial before insert or update on public.fafg_comerci
 create trigger beneficio_historial before insert or update on public.fafg_beneficios for each row execute function fafg_private.registrar_comercial();
 create trigger aporte_historial before insert or update on public.fafg_aportes for each row execute function fafg_private.registrar_comercial();
 commit;
-
