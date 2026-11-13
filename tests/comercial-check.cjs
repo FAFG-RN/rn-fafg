@@ -1,5 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const source=fs.readFileSync(__dirname+'/comercial.js','utf8');
+const root=fs.existsSync(__dirname+'/comercial.js')?__dirname:require('node:path').resolve(__dirname,'..');
+const source=fs.readFileSync(root+'/comercial.js','utf8');
 const context={window:{},document:{getElementById:()=>({})},Intl,Date,URL,Blob,setTimeout};
 vm.createContext(context);
 vm.runInContext(source.slice(0,source.indexOf('(async()=>{try{if(!db)'))+'\nthis.testAPI={esc,norm,today,validURL,eligible,csv,card};',context);
@@ -19,7 +20,7 @@ assert.equal(t.eligible({...b,estado:'pausado'},'2026-11-13'),false);
 assert.match(t.csv([{nombre:'=HYPERLINK("evil")'}]),/'=HYPERLINK/);
 assert.match(t.card({...b,titulo:'<script>alert(1)</script>',url_publica:'javascript:alert(1)'}),/&lt;script&gt;/);
 assert.doesNotMatch(t.card({...b,url_publica:'javascript:alert(1)'}),/href=/);
-const places=JSON.parse(fs.readFileSync(__dirname+'/comercial-ciudades.json','utf8'));
+const places=JSON.parse(fs.readFileSync(root+'/comercial-ciudades.json','utf8'));
 assert.equal(places.length,77);
 assert.equal(places.reduce((s,p)=>s+p.jugadores,0),270);
 assert.equal(new Set(places.map(p=>p.provincia)).size,8);
