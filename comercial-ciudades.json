@@ -1,0 +1,388 @@
+[
+  {
+    "ciudad": "TANDIL",
+    "provincia": "Buenos Aires",
+    "jugadores": 32
+  },
+  {
+    "ciudad": "BAHIA BLANCA",
+    "provincia": "Buenos Aires",
+    "jugadores": 22
+  },
+  {
+    "ciudad": "CABA",
+    "provincia": "Ciudad Aut�noma de Buenos Aires",
+    "jugadores": 20
+  },
+  {
+    "ciudad": "ROSARIO",
+    "provincia": "Santa Fe",
+    "jugadores": 17
+  },
+  {
+    "ciudad": "MARCOS JUAREZ",
+    "provincia": "C�rdoba",
+    "jugadores": 10
+  },
+  {
+    "ciudad": "MARIA JUANA",
+    "provincia": "Santa Fe",
+    "jugadores": 10
+  },
+  {
+    "ciudad": "PARANA",
+    "provincia": "Entre R�os",
+    "jugadores": 10
+  },
+  {
+    "ciudad": "LAS ROSAS",
+    "provincia": "Santa Fe",
+    "jugadores": 6
+  },
+  {
+    "ciudad": "SAN JORGE",
+    "provincia": "Santa Fe",
+    "jugadores": 6
+  },
+  {
+    "ciudad": "PUNTA ALTA",
+    "provincia": "Buenos Aires",
+    "jugadores": 5
+  },
+  {
+    "ciudad": "CORONEL PRINGLES",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "GENERAL ROCA",
+    "provincia": "R�o Negro",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "LA PLATA",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "MAR DEL PLATA",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "PILAR",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "SALDUNGARAY",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "SUNCHALES",
+    "provincia": "Santa Fe",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "TRENQUE LAUQUEN",
+    "provincia": "Buenos Aires",
+    "jugadores": 4
+  },
+  {
+    "ciudad": "BUENOS AIRES",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "CASILDA",
+    "provincia": "Santa Fe",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "CORONEL SUAREZ",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "GONZALEZ CHAVEZ",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "JOSE C PAZ",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "OLAVARRIA",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "RAFAELA",
+    "provincia": "Santa Fe",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "RAMALLO",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "SANTA ROSA",
+    "provincia": "La Pampa",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "TORTUGUITAS",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "VICTORIA",
+    "provincia": "Entre R�os",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "VILLA GESELL",
+    "provincia": "Buenos Aires",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "VILLA LA ANGOSTURA",
+    "provincia": "Neuqu�n",
+    "jugadores": 3
+  },
+  {
+    "ciudad": "BARILOCHE",
+    "provincia": "R�o Negro",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "BELLA ITALIA",
+    "provincia": "Santa Fe",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "BRAGADO",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "CAMPANA",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "GENERAL LA MADRID",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "LOS CARDOS",
+    "provincia": "Santa Fe",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "MACACHIN",
+    "provincia": "La Pampa",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "PERGAMINO",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "PUERTO SAN MARTIN",
+    "provincia": "Santa Fe",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "ROCA",
+    "provincia": "R�o Negro",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "SAN FERNANDO",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "SAN ISIDRO",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "SANTA FE",
+    "provincia": "Santa Fe",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "TOTORAS",
+    "provincia": "Santa Fe",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "VILLA BOSCH",
+    "provincia": "Buenos Aires",
+    "jugadores": 2
+  },
+  {
+    "ciudad": "ALVAREZ",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "ANGELICA",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "ARRECIFES",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "ARROYO SECO",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "BERISSO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "BIGAND",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "CANADA DE GOMEZ",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "CARCARANA",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "CARDALES",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "CASAS",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "CIUDAD EVITA",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "DEL VISO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "EL TREBOL",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "ITUZAINGO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "LIBERTADOR SAN MARTIN",
+    "provincia": "Entre R�os",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "LOMAS DEL MIRADOR",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "MARTINEZ",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "MERLO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "MORENO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "QUILMES",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "RICARDONE",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "RIO COLORADO",
+    "provincia": "R�o Negro",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "ROJAS",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "SAN LORENZO",
+    "provincia": "Santa Fe",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "SAN MARTIN",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "SAN PEDRO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "TIGRE",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "TOAY",
+    "provincia": "La Pampa",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "VICENTE LOPEZ",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "VILLA DE MAYO",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  },
+  {
+    "ciudad": "VILLA REAL",
+    "provincia": "Buenos Aires",
+    "jugadores": 1
+  }
+]
+
