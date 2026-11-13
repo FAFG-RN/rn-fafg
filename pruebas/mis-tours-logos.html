@@ -1,0 +1,544 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mis tours · Revisión FAFG</title><style>
+/* Portada animada institucional: no interfiere con la navegación ni con la sesión */
+#fafg-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,rgba(236,245,255,.55) 0%,rgba(215,233,251,.48) 60%,rgba(226,240,255,.56) 100%),url('./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg') 55% center/cover no-repeat;background-color:#09284f;pointer-events:none;perspective:1000px;animation:fafgSplashOut .45s ease 2.45s forwards}
+#fafg-splash .splash-marquee{display:none}
+/* Esperar la foto antes de iniciar la animación del logo y cerrar la portada */
+#fafg-splash:not(.splash-ready){animation-play-state:paused}
+#fafg-splash:not(.splash-ready) .splash-logo-3d,#fafg-splash:not(.splash-ready) .splash-label{animation-play-state:paused}
+#fafg-splash:not(.splash-ready) .splash-logo-3d{opacity:0}
+#fafg-splash.splash-ready{background-image:linear-gradient(145deg,rgba(236,245,255,.55) 0%,rgba(215,233,251,.48) 60%,rgba(226,240,255,.56) 100%),url('./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg')}
+#fafg-splash .splash-track{position:absolute;left:0;display:flex;width:max-content;gap:0;white-space:nowrap;font-size:12dvh;font-weight:900;letter-spacing:-.09em;line-height:.833333;color:#d9edff;will-change:transform}
+#fafg-splash .splash-track span{display:block;flex:none;width:auto;text-align:left}
+#fafg-splash .splash-track:nth-child(1){top:0%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(2){top:10%;animation:fafgRibbonLeft 20.4s linear infinite}
+#fafg-splash .splash-track:nth-child(3){top:20%;animation:fafgRibbonRight 21.6s linear infinite}
+#fafg-splash .splash-track:nth-child(4){top:30%;animation:fafgRibbonLeft 22.8s linear infinite}
+#fafg-splash .splash-track:nth-child(5){top:40%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(6){top:50%;animation:fafgRibbonLeft 20.4s linear infinite}
+#fafg-splash .splash-track:nth-child(7){top:60%;animation:fafgRibbonRight 21.6s linear infinite}
+#fafg-splash .splash-track:nth-child(8){top:70%;animation:fafgRibbonLeft 22.8s linear infinite}
+#fafg-splash .splash-track:nth-child(9){top:80%;animation:fafgRibbonRight 19.2s linear infinite}
+#fafg-splash .splash-track:nth-child(10){top:90%;animation:fafgRibbonLeft 20.4s linear infinite}
+@keyframes fafgRibbonRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes fafgRibbonLeft{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+#fafg-splash .splash-logo-3d{position:relative;z-index:1;width:min(85vw,440px);transform-style:preserve-3d;will-change:transform,opacity,filter;animation:fafgLogoSolidFly 2.25s cubic-bezier(.16,.7,.18,1) both}
+#fafg-splash .splash-logo-3d img{display:block;width:100%;height:auto;max-height:40vh;object-fit:contain}
+#fafg-splash .splash-logo-face{position:relative;z-index:3;transform:translateZ(7px);filter:drop-shadow(0 1px 1px #d6f4ff66) drop-shadow(0 9px 18px #001b3c66)}
+#fafg-splash .splash-logo-edge{position:absolute;inset:0;z-index:1;transform:translate3d(4px,3px,-5px);filter:brightness(.45) sepia(1) saturate(2) hue-rotate(166deg) drop-shadow(1px 1px 0 #03172c)}
+#fafg-splash .splash-logo-middle{position:absolute;inset:0;z-index:2;transform:translate3d(2px,1px,-2px);filter:brightness(.65) sepia(1) saturate(1.5) hue-rotate(165deg)}
+@keyframes fafgLogoSolidFly{0%{transform:translateZ(-750px) rotateY(-31deg) rotateX(11deg) scale(.45);opacity:0;filter:blur(12px)}20%{opacity:1;filter:blur(5px)}65%{transform:translateZ(48px) rotateY(-18deg) rotateX(5deg) scale(1.045);opacity:1;filter:blur(0)}85%{transform:translateZ(12px) rotateY(-8deg) rotateX(2deg) scale(1.015)}100%{transform:translateZ(0) rotateY(-10deg) rotateX(2deg) scale(1);opacity:1;filter:blur(0)}}
+@media(prefers-reduced-motion:reduce){#fafg-splash .splash-logo-3d{animation:none;transform:none}}
+#fafg-splash .splash-label{position:absolute;z-index:1;bottom:max(12vh,65px);font-size:12px;letter-spacing:.35em;color:#d7ecff;font-weight:700;animation:fafgLogoIn 1.5s ease .2s both}
+@keyframes fafgLogoIn{from{transform:translateX(-55px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes fafgLogoDepth{0%{transform:translateZ(-700px) scale(.48);opacity:0;filter:blur(14px) drop-shadow(0 0 0 transparent)}25%{opacity:.75;filter:blur(5px) drop-shadow(0 5px 14px #001b3c44)}72%{transform:translateZ(35px) scale(1.035);opacity:1;filter:blur(0) drop-shadow(0 15px 30px #001b3c77)}100%{transform:translateZ(0) scale(1);opacity:1;filter:blur(0) drop-shadow(0 12px 25px #001b3c66)}}
+@keyframes fafgSplashOut{to{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){#fafg-splash{animation:fafgSplashOut .1s linear .4s forwards}#fafg-splash .splash-track,#fafg-splash img,#fafg-splash .splash-label{animation:none}}
+
+
+/* Nueva bienvenida aprobada: fotografía oscura, logo plano y subtítulo legible */
+#fafg-splash{background:#071d38;isolation:isolate;animation:fafgSplashOut .45s ease 3.25s forwards;animation-play-state:paused}
+#fafg-splash.splash-ready{animation-play-state:running}
+#fafg-splash .splash-photo{position:absolute;inset:0;background:url('./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg') 55% center/cover no-repeat;transform:scale(1.045);animation:fafgPhotoIn 3.2s ease-out both;animation-play-state:paused}
+#fafg-splash .splash-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,22,46,.62) 0%,rgba(7,36,72,.42) 43%,rgba(2,19,43,.74) 100%)}
+#fafg-splash .splash-grain{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 10%,rgba(0,12,31,.18) 100%)}
+#fafg-splash .splash-brand{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:22px;transform:translateY(-3%);animation:fafgBrandIn 1.15s cubic-bezier(.2,.8,.2,1) .45s both;animation-play-state:paused}
+#fafg-splash .splash-brand img{width:min(87%,360px);height:auto;max-height:26vh;object-fit:contain;filter:drop-shadow(0 7px 16px rgba(0,0,0,.45))}
+#fafg-splash .splash-line{width:50px;height:2px;border-radius:2px;background:rgba(255,255,255,.75)}
+#fafg-splash .splash-subtitle{font-size:clamp(17px,5vw,23px);font-weight:750;letter-spacing:.28em;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.8);margin-left:.28em;color:#fff}
+#fafg-splash .splash-footer{position:absolute;bottom:max(11%,48px);left:0;right:0;text-align:center;font-size:11px;letter-spacing:.15em;font-weight:650;color:#fff;opacity:.83}
+#fafg-splash.splash-ready .splash-photo,#fafg-splash.splash-ready .splash-brand{animation-play-state:running}
+@keyframes fafgBrandIn{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:translateY(-3%) scale(1)}}
+@keyframes fafgPhotoIn{from{opacity:.75;transform:scale(1.085)}to{opacity:1;transform:scale(1.045)}}
+@media(prefers-reduced-motion:reduce){#fafg-splash{animation:fafgSplashOut .1s linear .8s forwards;animation-play-state:paused}#fafg-splash.splash-ready{animation-play-state:running}#fafg-splash .splash-brand,#fafg-splash .splash-photo{animation:none}}
+
+:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#142f4b;background:#f3f7fb}*{box-sizing:border-box}body{margin:0}.app{max-width:680px;margin:auto;min-height:100dvh;padding:0 16px 100px}.hero{margin:0 -16px;padding:30px 22px 32px;background:linear-gradient(135deg,#102c53,#176a9c);color:white;border-radius:0 0 25px 25px}.brand{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand h1{font-size:28px;margin:0;letter-spacing:-.04em}.brand span{font-size:11px;background:#ffffff25;border:1px solid #ffffff40;border-radius:20px;padding:7px 10px}.hero p{color:#dceef9;margin:12px 0 0;font-size:14px}.welcome{margin-top:25px;font-size:24px;font-weight:750}
+/* Encabezado consistente en todas las pestañas, incluido el saludo personalizado de Perfil */
+.hero .welcome{white-space:nowrap;letter-spacing:normal;font-family:inherit;font-weight:750;}
+.muted{color:#617487;font-size:14px;line-height:1.5}.hero .muted{color:#d6e6f2}.card{background:white;border:1px solid #e0eaf1;border-radius:18px;padding:20px;margin-top:16px;box-shadow:0 7px 25px #183a5810}.card h2{font-size:19px;margin:0 0 10px}.card p{margin:8px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tile{display:block;text-decoration:none;color:#173d5f;background:white;border:1px solid #dce7f0;border-radius:16px;padding:18px;font-weight:700}.tile span{display:block;font-size:25px;margin-bottom:12px}.tile small{display:block;font-size:12px;color:#647b8d;font-weight:400;margin-top:6px}.button{display:inline-flex;justify-content:center;align-items:center;text-align:center;text-decoration:none;background:#155e8d;color:white;border:0;border-radius:11px;padding:13px 18px;font:inherit;font-weight:700;cursor:pointer}.button.secondary{background:#e8f2f9;color:#164e73}.button:focus-visible,a:focus-visible{outline:3px solid #33b7e8;outline-offset:2px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.tab{display:none}.tab.active{display:block}.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(110deg,#092f59 0%,#125a92 48%,#3198c9 100%);backdrop-filter:blur(12px);border-top:1px solid #6bb6df;display:flex;justify-content:center;padding:9px 8px calc(9px + env(safe-area-inset-bottom));z-index:10}.bottom-nav{isolation:isolate;overflow:hidden}.bottom-nav .nav-watermark{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;font-size:clamp(315px,78vw,540px);font-weight:900;letter-spacing:-.09em;line-height:1;white-space:nowrap;color:rgba(255,255,255,.14);pointer-events:none;user-select:none;z-index:0;overflow:hidden}.bottom-nav button{position:relative;z-index:1}.bottom-nav button{border:0;background:transparent;color:#dceffc;font:inherit;font-size:12px;font-weight:650;flex:1;max-width:150px;padding:8px 4px;cursor:pointer}.bottom-nav button[aria-current=page]{color:#ffffff;background:rgba(255,255,255,.16);border-radius:12px}.bottom-nav b{display:block;font-size:22px;margin-bottom:3px}.avatar{width:76px;height:76px;border-radius:50%;background:#e5eff7;display:grid;place-items:center;font-size:36px;color:#386588;flex-shrink:0}.profile-row{display:flex;align-items:center;gap:16px}.notice{border-left:3px solid #2d91be;background:#eef8fe;border-radius:8px;padding:13px;margin-top:15px;font-size:13px;line-height:1.5}.list{padding-left:20px;line-height:1.9;font-size:14px}.status{display:inline-block;border-radius:100px;background:#e8f1f8;color:#235d80;font-size:12px;padding:6px 10px;font-weight:700}.footer{font-size:12px;color:#6b8091;text-align:center;margin:28px 0} @media(min-width:700px){.hero{margin:0 -16px}.bottom-nav{max-width:680px;margin:auto;border-left:1px solid #dbe6ed;border-right:1px solid #dbe6ed}}
+.auth-field{display:block;width:100%;padding:13px;border:1px solid #c7d7e4;border-radius:10px;font:inherit;margin:7px 0 14px}.auth-label{font-size:13px;font-weight:700}.auth-message{font-size:13px;line-height:1.5;margin-top:12px}.auth-message.error{color:#ad2831}.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{background:#f0f6fa;padding:12px 7px;text-align:center;border-radius:12px}.stat strong{display:block;font-size:20px}.stat small{color:#60788a;font-size:11px}.hidden{display:none!important}.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover}.photo-controls{margin-top:15px}.photo-controls input{display:block;margin:10px 0;max-width:100%;font-size:13px}.brand-title{display:flex;align-items:center;gap:12px;min-width:0}.fafg-logo{display:block;width:94px;max-width:30vw;height:58px;object-fit:contain;flex-shrink:0;background:#fff;border-radius:9px;padding:5px}.brand-title h1{white-space:nowrap}.avatar{width:76px!important;height:76px!important;min-width:76px!important;min-height:76px!important;aspect-ratio:1/1!important;overflow:hidden;border-radius:50%!important;flex:0 0 76px!important}.avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}.avatar img[hidden]{display:none}.profile-row{min-width:0}.profile-row>div:last-child{min-width:0;overflow-wrap:anywhere}@media(max-width:390px){.fafg-logo{width:70px;height:48px}.brand-title{gap:8px}.brand-title h1{font-size:23px}.brand>span{font-size:9px;padding:6px}}.brand-title{gap:15px}.fafg-logo{width:122px;height:70px;max-width:38vw;padding:7px;background:#fff;border-radius:12px;box-shadow:0 4px 16px #061b3540}.brand-title .app-wordmark{font-size:31px;font-weight:800;letter-spacing:.13em;color:#fff;line-height:1}.hero>.welcome{margin-top:24px}.avatar{box-sizing:border-box!important;display:flex!important;align-items:center;justify-content:center;width:84px!important;height:84px!important;min-width:84px!important;min-height:84px!important;max-width:84px!important;max-height:84px!important;flex:0 0 84px!important;aspect-ratio:1 / 1!important;border-radius:9999px!important;overflow:hidden!important;position:relative}.avatar img{position:absolute;inset:0;width:100%!important;height:100%!important;min-width:100%;min-height:100%;object-fit:cover!important;object-position:center;border-radius:inherit!important}.avatar img[hidden]{display:none!important}@media(max-width:390px){.fafg-logo{width:95px;height:61px}.brand-title .app-wordmark{font-size:26px;letter-spacing:.1em}}.fafg-logo{background:transparent!important;box-shadow:none!important;padding:0!important;border-radius:0!important;filter:none!important;mix-blend-mode:normal!important;object-fit:contain}.brand-title{gap:16px}.fafg-logo{background:transparent!important;border-radius:0!important;padding:0!important;box-shadow:none!important;filter:none!important;mix-blend-mode:normal!important}.score-entry{border-top:1px solid #e0eaf1;padding:15px 0}.score-entry:first-child{border-top:0}.score-entry h3{margin:0 0 6px;font-size:16px}.score-meta{font-size:13px;color:#617487;line-height:1.6}.score-values{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.score-values span{background:#eef5fa;border-radius:8px;padding:7px 10px;font-size:12px;font-weight:650}.score-rounds{font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:9px;color:#36536a}.access-options{display:grid;gap:10px}.access-options h2{margin-bottom:0}.access-options .muted{margin-bottom:8px}.access-button{width:100%;min-height:52px}.access-back{border:0;background:none;color:#155e8d;font:inherit;font-weight:700;padding:4px 0 16px;cursor:pointer;text-align:left}#access-information .notice{margin-top:12px}.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,rgba(9,35,66,.84),rgba(13,57,91,.66)),url('./assets/images/fafg-cover-preview.jpg') center 68%/cover no-repeat,linear-gradient(135deg,#102c53,#176a9c);min-height:195px;display:flex;flex-direction:column;justify-content:center}.hero .brand,.hero .welcome,.hero p{position:relative;z-index:1}.hero .welcome{text-shadow:0 1px 5px #071e37a6}.hero .muted{text-shadow:0 1px 4px #071e37a6}
+.hero .brand{justify-content:center;width:100%}.hero .brand-title{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-width:0}.hero .fafg-logo{width:118px;max-width:36vw;height:66px;object-fit:contain;flex:0 1 auto}.hero .brand-title .app-wordmark{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:clamp(22px,6vw,29px);font-weight:750;letter-spacing:.21em;line-height:1.1;color:#fff;text-shadow:0 2px 9px #061d3899;border-left:1px solid #ffffff70;padding:8px 0 8px 17px;margin:0;white-space:nowrap}.hero .welcome,.hero>p{text-align:center}@media(max-width:390px){.hero .brand-title{gap:9px}.hero .fafg-logo{width:100px;height:59px}.hero .brand-title .app-wordmark{padding-left:12px;letter-spacing:.16em;font-size:23px}}
+.hero .fafg-logo{filter:none!important;mix-blend-mode:normal!important;background:transparent!important;border-radius:0!important;padding:0!important;box-sizing:border-box;object-fit:contain}
+.home-links{display:grid;gap:12px;margin-top:16px}.home-link{width:100%;display:flex;align-items:center;gap:14px;padding:18px 16px;border-radius:17px;border:1px solid #dce7f0;background:#fff;color:#173d5f;text-decoration:none;text-align:left;font:inherit;cursor:pointer;box-shadow:0 7px 25px #183a5810;min-height:88px}.home-link:focus-visible{outline:3px solid #33b7e8;outline-offset:2px}.home-link-icon{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;background:#eaf4fa;border-radius:13px;font-size:23px}.home-link-copy{display:block;flex:1;min-width:0}.home-link-copy strong{display:block;font-size:16px;line-height:1.3}.home-link-copy small{display:block;margin-top:5px;font-size:12px;font-weight:400;line-height:1.4;color:#617487}.home-link-arrow{font-size:26px;color:#2476a5;line-height:1}.home-link:hover{border-color:#8ac3df;background:#fafdff}
+.bottom-nav button{max-width:125px;font-size:11px;padding:7px 2px}.bottom-nav b{font-size:21px}.news-feature{border-color:#b7d9ec;background:linear-gradient(160deg,#fff,#f3faff)}@media(max-width:390px){.bottom-nav button{font-size:10px}.bottom-nav b{font-size:19px}}
+.association-heading{display:flex;align-items:center;gap:13px;margin-top:12px}.association-avatar{width:62px;height:62px;min-width:62px;border-radius:50%;object-fit:cover;border:2px solid #dceaf4;background:#edf3f8}.association-heading h2{font-size:1.12rem;line-height:1.3}
+.bottom-nav button[data-go="inicio"]{order:1}.bottom-nav button[data-go="noticias"]{order:2}.bottom-nav button[data-go="ranking"]{order:3}.bottom-nav button[data-go="perfil"]{order:5}.bottom-nav button[data-go="instalar"]{order:6}.bottom-nav .nav-card-link{order:4}
+
+.score-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:14px}.score-card{border:1px solid #dce7f0;background:#f0f6fa;border-radius:13px;padding:12px 5px;color:#173d5f;cursor:pointer;text-align:center;font:inherit;min-width:0}.score-card small{display:block;font-size:10px;color:#617487;line-height:1.35;margin-bottom:7px;overflow-wrap:anywhere}.score-card strong{display:block;font-size:20px;font-variant-numeric:tabular-nums}.score-card em{display:block;font-size:11px;font-style:normal;color:#617487;margin-top:4px}.score-card[aria-expanded=true]{border:2px solid #176a9c;background:#e6f3fc;padding:11px 4px}.score-detail{grid-column:1/-1;background:#edf5fa;border-radius:13px;padding:14px;color:#173d5f}.score-detail h3{font-size:14px;margin:0 0 5px}.score-detail .score-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.score-detail-grid span{background:#fff;border-radius:9px;padding:9px;font-size:12px}.score-detail-grid b{display:block;font-size:16px;margin-top:3px}.score-detail p{font-size:12px;color:#617487;margin:5px 0}.score-card:focus-visible{outline:3px solid #33b7e8;outline-offset:2px}@media(max-width:360px){.score-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+ .bottom-nav .nav-card-link{display:block;flex:1;max-width:125px;text-align:center;text-decoration:none;color:#0d6197;font:inherit;font-size:11px;font-weight:650;padding:7px 2px;white-space:nowrap}.bottom-nav .nav-card-link b{display:block;font-size:21px;margin-bottom:3px}.bottom-nav .nav-card-link:focus-visible{outline:3px solid #33b7e8;outline-offset:2px}@media(max-width:390px){.bottom-nav .nav-card-link{font-size:10px}.bottom-nav .nav-card-link b{font-size:19px}}.bottom-nav button,.bottom-nav .nav-card-link{min-width:0;max-width:105px;padding-left:1px;padding-right:1px}.bottom-nav .nav-card-link{font-size:10px;letter-spacing:-.2px}.bottom-nav button{font-size:10px}@media(max-width:390px){.bottom-nav button,.bottom-nav .nav-card-link{font-size:9px}.bottom-nav b,.bottom-nav .nav-card-link b{font-size:19px}}
+/* Inicio compacto en celulares: conservar accesos, mejorar encuadre y áreas seguras. */
+@media (max-width:699px) {
+  body:has(#inicio.active) .app {padding-bottom:calc(76px + env(safe-area-inset-bottom));}
+  body:has(#inicio.active) .hero {padding:12px 18px 14px;border-radius:0 0 19px 19px;}
+  body:has(#inicio.active) .fafg-logo {height:40px;width:76px;padding:3px;}
+  body:has(#inicio.active) .brand-title h1 {font-size:21px;}
+  body:has(#inicio.active) .welcome {margin-top:7px;font-size:clamp(17px,4.8vw,21px);line-height:1.2;}
+  #inicio .home-links {gap:8px;margin-top:10px;}
+  #inicio .home-link {min-height:64px;padding:10px 12px;gap:11px;border-radius:14px;box-shadow:0 3px 12px #183a580c;}
+  #inicio .home-link-icon {flex-basis:38px;width:38px;height:38px;border-radius:11px;font-size:20px;}
+  #inicio .home-link-copy strong {font-size:clamp(13px,3.6vw,15px);line-height:1.2;}
+  #inicio .home-link-copy small {margin-top:3px;font-size:11px;line-height:1.2;}
+  #inicio .home-link-arrow {font-size:21px;}
+  body:has(#inicio.active) .footer {display:none;}
+  .bottom-nav {padding:5px 6px calc(5px + env(safe-area-inset-bottom));}
+  .bottom-nav button {padding:5px 2px;font-size:10px;}
+  .bottom-nav b {font-size:19px;margin-bottom:2px;}
+}
+@media (max-width:699px) and (max-height:740px) {
+  body:has(#inicio.active) .hero {padding-top:8px;padding-bottom:9px;}
+  body:has(#inicio.active) .fafg-logo {height:34px;}
+  body:has(#inicio.active) .welcome {margin-top:4px;font-size:17px;}
+  #inicio .home-links {gap:6px;margin-top:7px;}
+  #inicio .home-link {min-height:56px;padding:7px 10px;}
+  #inicio .home-link-icon {flex-basis:34px;width:34px;height:34px;}
+  #inicio .home-link-copy small {font-size:10px;margin-top:2px;}
+}
+
+/* Distribución equilibrada de Inicio en pantallas altas */
+@media (max-width:699px) and (min-height:780px) {
+  body:has(#inicio.active) .app {min-height:100dvh;}
+  #inicio.active {
+    display:flex;
+    flex-direction:column;
+    min-height:max(0px, calc(100dvh - 340px - env(safe-area-inset-bottom)));
+  }
+  #inicio.active .home-links {
+    gap:clamp(10px,1.5dvh,17px);
+    margin-top:clamp(12px,1.6dvh,20px);
+  }
+  #inicio.active .home-link {
+    min-height:clamp(72px,9.1dvh,91px);
+    padding:clamp(11px,1.4dvh,16px) 13px;
+  }
+}
+
+/* Inicio: cinco accesos distribuidos proporcionalmente en el alto útil del móvil. */
+@media (max-width:699px) and (min-height:780px) {
+ body:has(#inicio.active) .app {display:flex;flex-direction:column;min-height:100dvh;padding-bottom:calc(82px + env(safe-area-inset-bottom));}
+ body:has(#inicio.active) main {display:flex;flex:1;min-height:0;flex-direction:column;}
+ #inicio.active {display:grid;flex:1;min-height:0;grid-template-rows:repeat(5,minmax(0,1fr));gap:clamp(9px,1.4dvh,16px);padding-top:clamp(12px,1.8dvh,20px);padding-bottom:12px;}
+ #inicio.active .home-links {display:contents;}
+ #inicio.active .home-link {height:100%;min-height:0;margin:0;padding:8px 13px;}
+ #inicio.active .home-link-copy strong {font-size:clamp(13px,3.6vw,15px);}
+}
+
+/* Inicio a pantalla completa: reparto real de los cinco botones sin scroll. */
+@media (max-width:699px) {
+  body:has(#inicio.active) {overflow:hidden;}
+  body:has(#inicio.active) .app {
+    height:100dvh;min-height:0;display:flex;flex-direction:column;
+    padding-bottom:calc(78px + env(safe-area-inset-bottom));overflow:hidden;
+  }
+  body:has(#inicio.active) .hero {flex:0 0 auto;}
+  body:has(#inicio.active) main {flex:1 1 0;min-height:0;display:flex;flex-direction:column;}
+  #inicio.active {
+    flex:1 1 0;min-height:0;display:flex;flex-direction:column;
+    gap:clamp(8px,1.25dvh,15px);padding:clamp(10px,1.3dvh,16px) 0 10px;
+  }
+  #inicio.active .home-links {display:grid;min-height:0;margin:0;gap:clamp(8px,1.25dvh,15px);}
+  #inicio.active .home-links:first-child {flex:4 1 0;grid-template-rows:repeat(4,minmax(0,1fr));}
+  #inicio.active .home-links:last-of-type {flex:1 1 0;grid-template-rows:minmax(0,1fr);}
+  #inicio.active .home-link {
+    height:100%;min-height:0;max-height:none;margin:0;
+    padding:clamp(8px,1.3dvh,15px) 13px;
+  }
+  #inicio.active .home-link-copy strong {font-size:clamp(13px,3.6vw,16px);}
+  #inicio.active .home-link-copy small {font-size:clamp(10px,2.8vw,12px);}
+}
+@media (max-width:699px) and (max-height:680px) {
+  body:has(#inicio.active) .hero {padding-top:7px;padding-bottom:8px;}
+  #inicio.active {gap:6px;padding-top:7px;padding-bottom:6px;}
+  #inicio.active .home-links {gap:6px;}
+  #inicio.active .home-link {padding:5px 9px;}
+  #inicio.active .home-link-icon {flex-basis:30px;width:30px;height:30px;font-size:17px;}
+}
+
+/* Cabecera móvil: FAFG y APP protagonistas, sin alterar la grilla de accesos. */
+@media (max-width:699px) {
+ body:has(#inicio.active) .hero {padding:16px 18px 18px;}
+ body:has(#inicio.active) .brand {justify-content:center;}
+ body:has(#inicio.active) .brand-title {gap:clamp(15px,4vw,24px);justify-content:center;}
+ body:has(#inicio.active) .fafg-logo {width:clamp(108px,31vw,142px);height:clamp(65px,9dvh,80px);max-width:none;padding:6px;object-fit:contain;}
+ body:has(#inicio.active) .brand-title .app-wordmark {font-size:clamp(32px,9vw,43px);letter-spacing:.12em;}
+ body:has(#inicio.active) .welcome {margin-top:14px;font-size:clamp(19px,5vw,24px);text-align:center;}
+}
+@media (max-width:699px) and (max-height:700px) {
+ body:has(#inicio.active) .hero {padding:9px 14px 11px;}
+ body:has(#inicio.active) .fafg-logo {height:48px;width:96px;}
+ body:has(#inicio.active) .brand-title .app-wordmark {font-size:29px;}
+ body:has(#inicio.active) .welcome {margin-top:5px;font-size:18px;}
+}
+
+/* Perfil FAFG: indicadores compactos apilados */
+#perfil .stat-grid{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+#perfil .stat{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;background:#fff;border:1px solid #dce6f2;border-radius:10px;padding:9px 12px;min-height:39px}
+#perfil .stat small{font-size:12px;font-weight:600;color:#375b7f;order:0}
+#perfil .stat strong{font-size:16px;color:#123f72;order:1;white-space:nowrap}
+#perfil .stat.member-active{border-color:#c9e9d5}
+#perfil .stat.member-active strong{color:#16834b}
+#perfil .stat.member-unknown strong{color:#64748b}
+#perfil #private-profile{padding:14px}
+#perfil #scores-card{margin-top:12px!important;padding:12px}
+#perfil .photo-controls{margin-top:12px}
+
+/* Scores individuales: una fila por torneo, fecha y puntos visibles */
+#perfil .score-cards{display:flex;flex-direction:column;gap:7px;margin-top:12px}
+#perfil .score-card{display:flex;align-items:center;gap:10px;text-align:left;padding:10px 12px;background:#fff;border:1px solid #dce6f2;border-radius:10px;min-height:52px}
+#perfil .score-card small{flex:1;min-width:0;font-size:12px;color:#123f72;font-weight:650;margin:0;line-height:1.35}
+#perfil .score-card .score-date{display:block;font-size:11px;color:#617487;font-weight:400;margin-bottom:2px}
+#perfil .score-card strong{font-size:16px;color:#123f72;white-space:nowrap}
+#perfil .score-card em{font-size:10px;color:#617487;margin:0;white-space:nowrap}
+#perfil .score-card .score-points{display:flex;flex-direction:column;align-items:flex-end;gap:2px;font-variant-numeric:tabular-nums}
+#perfil .score-card[aria-expanded=true]{padding:10px 12px;border:1px solid #176a9c;background:#e6f3fc}
+#perfil .score-detail{margin-top:-4px;padding:12px}
+
+#perfil #edit-profile-panel{margin-top:12px;padding:12px;border:1px solid #dce6f2;border-radius:12px;background:#f7fbff}#perfil #edit-profile-panel .auth-field{padding:9px 10px;margin:5px 0 10px}#perfil #edit-profile-toggle{padding:8px 12px;font-size:12px}#perfil #edit-dni[readonly]{background:#edf2f7;color:#64748b}
+#ranking .top10-row{display:flex;align-items:center;gap:10px;padding:10px 6px;border-bottom:1px solid #e0eaf1;font-size:13px}#ranking .top10-pos{width:28px;color:#155e8d;font-weight:800}#ranking .top10-name{flex:1;font-weight:650}#ranking .top10-points{color:#155e8d;font-weight:750;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}#ranking .actions .button{width:100%}
+/* Notificaciones: expandir hacia abajo y desplazar botones sin cambiar su tamaño */
+body:has(#inicio.active #fafg-notification-list:not(.hidden)) {overflow-y:auto!important;overflow-x:hidden;}
+body:has(#inicio.active #fafg-notification-list:not(.hidden)) .app {height:auto!important;min-height:100dvh!important;overflow:visible!important;}
+body:has(#inicio.active #fafg-notification-list:not(.hidden)) main {flex:0 0 auto!important;min-height:0!important;display:block!important;}
+#inicio.active:has(#fafg-notification-list:not(.hidden)) {display:flex!important;flex:0 0 auto!important;min-height:0!important;overflow:visible!important;}
+#inicio.active:has(#fafg-notification-list:not(.hidden)) #fafg-notification-card {flex:0 0 auto!important;overflow:visible!important;}
+#inicio.active:has(#fafg-notification-list:not(.hidden)) #fafg-notification-list {display:block;overflow:visible!important;}
+#inicio.active:has(#fafg-notification-list:not(.hidden)) .home-links {display:grid!important;flex:0 0 auto!important;grid-template-rows:none!important;grid-auto-rows:auto!important;min-height:0!important;}
+#inicio.active:has(#fafg-notification-list:not(.hidden)) .home-link {height:var(--fafg-home-link-height,76px)!important;min-height:var(--fafg-home-link-height,76px)!important;flex-shrink:0!important;}
+
+/* Inicio: cinco botones iguales que llenan el espacio disponible hasta la navegación */
+@media (max-width:699px) {
+ body:has(#inicio.active) {height:100dvh!important;overflow:hidden!important;}
+ body:has(#inicio.active) .app {display:flex!important;flex-direction:column!important;height:100dvh!important;min-height:0!important;overflow:hidden!important;padding-bottom:calc(78px + env(safe-area-inset-bottom))!important;box-sizing:border-box!important;}
+ body:has(#inicio.active) .hero {flex:0 0 auto!important;}
+ body:has(#inicio.active) main {display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;overflow:hidden!important;}
+ #inicio.active {display:flex!important;flex-direction:column!important;flex:1 1 0!important;min-height:0!important;padding:8px 0!important;overflow:hidden!important;}
+ #inicio.active > .home-links {display:grid!important;flex:1 1 0!important;min-height:0!important;grid-template-rows:repeat(5,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:clamp(7px,1.1dvh,12px)!important;margin:0!important;}
+ #inicio.active > .home-links > .home-link {display:flex!important;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;box-sizing:border-box!important;padding:clamp(6px,1dvh,12px) 13px!important;margin:0!important;flex:none!important;}
+ #inicio.active #home-link-notice.hidden {display:none!important;}
+}
+/* Contraste del subtítulo sobre el degradé azul de inscripción */
+#inicio .home-link[href*="docs.google.com/forms"] .home-link-copy small {color:#fff!important;opacity:1!important;}
+
+/* FAFG: tema oscuro automático según la preferencia del dispositivo. */
+:root{color-scheme:light dark}
+@media (prefers-color-scheme:dark){
+:root{color-scheme:dark;color:#e7f1fc;background:#091a2e}
+body,main{background-color:#091a2e;color:#e7f1fc}
+.card,#perfil .stat,#perfil .score-card,.score-card,.score-detail,#perfil #edit-profile-panel{background:#102c53!important;color:#e7f1fc!important;border-color:#315779!important}
+.card h1,.card h2,.card h3,.card strong,#perfil .stat strong,#perfil .stat small,#perfil .score-card small,#perfil .score-card strong,.score-detail h3{color:#f1f7ff!important}
+.muted,.score-meta,.score-rounds,.score-card em,.score-detail p,.score-card .score-date,#profile-meta{color:#b9cee3!important}
+.score-detail-grid span,.score-values span,.stat-grid .stat,.notice{background:#1b426b;color:#f1f7ff;border-color:#315779}
+.auth-field,input,select,textarea{background:#142f4b!important;color:#f1f7ff!important;border-color:#51718f!important}
+.auth-field::placeholder,input::placeholder,textarea::placeholder{color:#b9cee3}
+.button.secondary,.access-back{background:#1b426b;color:#fff;border-color:#51718f}
+#perfil .score-card[aria-expanded=true]{background:#20517c!important;border-color:#64b7ee!important}
+#fafg-about-panel{background:#091a2e!important}
+#perfil #edit-dni[readonly]{background:#1b3653!important;color:#c3d5e8!important}
+}
+
+@media (prefers-color-scheme:dark){
+#inicio .home-link:not([style*="background:linear-gradient"]){background:#173c64!important;color:#f1f7ff!important;border-color:#38628a!important}
+#inicio .home-link:not([style*="background:linear-gradient"]):hover{background:#20517c!important}
+#inicio .home-link-copy strong{color:#fff!important}
+#inicio .home-link-copy small{color:#d4e6f6!important}
+#inicio .home-link-icon{background:#2a5680!important;color:#fff!important}
+#inicio .home-link-arrow{color:#a9d9ff!important}
+}
+</style>
+<style id="fafg-calendar-2026-styles">#inicio>.home-links:first-child{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#inicio>.home-links:first-child .home-link{min-width:0;min-height:100px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:13px;border-radius:15px}#inicio>.home-links:first-child .home-link:nth-child(n+5){grid-column:1/-1;min-height:66px;flex-direction:row;align-items:center}#inicio>.home-links:first-child .home-link .home-link-icon{flex-shrink:0}#inicio>.home-links:first-child .home-link .home-link-copy{min-width:0}#inicio>.home-links:first-child .home-link strong{font-size:13px;line-height:1.25}#inicio>.home-links:first-child .home-link small{font-size:11px;line-height:1.3}#inicio>.home-links:first-child .home-link .home-link-arrow{display:none}#inicio>.home-links:first-child .home-link:nth-child(n+5) .home-link-arrow{display:block}#fafg-calendar-panel{margin-top:12px;padding:15px;border:1px solid #d5e6f3;border-radius:17px;background:var(--card-bg,#fff);color:inherit}#fafg-calendar-panel.hidden{display:none!important}.fafg-calendar-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}.fafg-calendar-heading h2{font-size:18px;margin:0}.fafg-calendar-heading button{background:transparent;color:inherit;border:0;font-size:19px;cursor:pointer}.fafg-calendar-filters{display:flex;gap:6px;margin:13px 0}.fafg-calendar-filters button{padding:8px 10px;border:1px solid #bed6e9;border-radius:9px;background:transparent;color:inherit;font-size:12px;cursor:pointer}.fafg-calendar-filters button[aria-pressed=true]{background:#155e8d;color:white}.fafg-calendar-event{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #dbe7f0}.fafg-calendar-date{min-width:82px;padding:9px 4px;background:#eaf3fa;border-radius:9px;color:#164b76;font-size:11px;text-align:center;font-weight:700;align-self:flex-start}.fafg-calendar-event strong{font-size:13px}.fafg-calendar-event small{display:block;margin-top:4px;font-size:11px;color:#688098}@media(max-width:360px){#inicio>.home-links:first-child .home-link{padding:10px}#inicio>.home-links:first-child .home-link strong{font-size:12px}}#inicio>.home-links:first-child{align-items:stretch;grid-auto-rows:auto}#inicio>.home-links:first-child .home-link{height:auto!important;max-height:none!important;overflow:visible!important;min-height:132px;justify-content:flex-start;align-items:flex-start;flex-wrap:nowrap;gap:8px;padding:14px 12px}#inicio>.home-links:first-child .home-link .home-link-copy{display:block;flex:0 1 auto;width:100%;min-width:0;overflow:visible!important}#inicio>.home-links:first-child .home-link strong,#inicio>.home-links:first-child .home-link small{display:block;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:break-word;word-break:normal;max-height:none!important;-webkit-line-clamp:unset!important;line-clamp:unset!important}#inicio>.home-links:first-child .home-link strong{font-size:clamp(11px,3.15vw,13px);line-height:1.3}#inicio>.home-links:first-child .home-link small{font-size:clamp(10px,2.65vw,11px);line-height:1.35;margin-top:5px}#inicio>.home-links:first-child .home-link:nth-child(n+5){min-height:78px;align-items:center;justify-content:flex-start}#inicio>.home-links:first-child .home-link:nth-child(n+5) .home-link-copy{width:auto;flex:1}#inicio>.home-links:first-child .home-link .home-link-icon{margin:0!important}#inicio>.home-links:first-child .home-link .home-link-arrow{position:static!important;flex-shrink:0}@media(max-width:360px){#inicio>.home-links:first-child{gap:8px}#inicio>.home-links:first-child .home-link{min-height:145px;padding:12px 9px}#inicio>.home-links:first-child .home-link:nth-child(n+5){min-height:85px}}/* Corrección definitiva: seis accesos necesitan altura natural, no filas comprimidas. */@media(max-width:699px){body:has(#inicio.active){overflow-y:auto!important;overflow-x:hidden!important}body:has(#inicio.active) .app{height:auto!important;min-height:100dvh!important;overflow:visible!important;display:block!important;padding-bottom:calc(92px + env(safe-area-inset-bottom))!important}body:has(#inicio.active) main{display:block!important;min-height:auto!important;overflow:visible!important}#inicio.active{display:block!important;min-height:auto!important;overflow:visible!important;padding:12px 0 20px!important}#inicio.active .home-links{display:grid!important;flex:none!important;min-height:auto!important;height:auto!important;grid-template-rows:none!important;grid-auto-rows:auto!important;margin:0!important;gap:10px!important}#inicio.active>.home-links:first-child{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:stretch!important}#inicio.active>.home-links:first-child .home-link{height:auto!important;min-height:145px!important;max-height:none!important;overflow:visible!important;padding:14px 12px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:7px!important}#inicio.active>.home-links:first-child .home-link:nth-child(n+5){grid-column:1/-1!important;min-height:76px!important;flex-direction:row!important;align-items:center!important}#inicio.active>.home-links:first-child .home-link .home-link-copy{min-width:0!important;flex:0 1 auto!important;width:100%!important}#inicio.active>.home-links:first-child .home-link:nth-child(n+5) .home-link-copy{width:auto!important;flex:1 1 auto!important}#inicio.active>.home-links:first-child .home-link strong,#inicio.active>.home-links:first-child .home-link small{white-space:normal!important;overflow:visible!important;max-height:none!important;display:block!important;overflow-wrap:anywhere!important;line-height:1.35!important}#inicio.active>.home-links:first-child .home-link strong{font-size:13px!important}#inicio.active>.home-links:first-child .home-link small{font-size:11px!important}#inicio.active #fafg-calendar-panel{margin-top:12px!important}}@media(prefers-color-scheme:dark){#fafg-calendar-panel{background:#173653;border-color:#376185}.fafg-calendar-date{background:#214e72;color:#dceeff}.fafg-calendar-event small{color:#bbd2e5}}</style>
+<style id="fafg-career-styles">#perfil #career-card{padding:12px}#perfil .career-overview{padding:13px;border-radius:12px;background:#e9f3fb;color:#174b78}#perfil .career-overview strong,#perfil .career-overview small{display:block}#perfil .career-overview strong{font-size:16px}#perfil .career-overview small{font-size:11px;margin-top:5px}#perfil .career-season{font-size:15px;margin:17px 0 7px;color:inherit}#perfil .career-event{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #dce8f1}#perfil .career-event>div:first-child{flex:1;min-width:0}#perfil .career-event strong,#perfil .career-event small{display:block;overflow-wrap:anywhere}#perfil .career-event strong{font-size:12px}#perfil .career-event small{font-size:11px;color:#6b8196;margin-top:4px}#perfil .career-event-result{text-align:right;flex:0 0 42%;min-width:0}#perfil .career-event-result strong{color:#176b9e}@media(prefers-color-scheme:dark){#perfil .career-overview{background:#21496b;color:#e7f4ff}#perfil .career-event small{color:#b5cadd}#perfil .career-event-result strong{color:#a6dfff}}</style>
+<style id="fafg-profile-tiles-styles">#perfil .fafg-profile-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0}#perfil .fafg-profile-tile{min-width:0;min-height:145px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:9px;padding:15px 12px;border:1px solid #2875a7;border-radius:16px;background:linear-gradient(145deg,#12558d,#174877);color:#fff;box-shadow:0 6px 16px #123f7024;text-align:left;cursor:pointer;font:inherit;width:100%;height:auto;overflow:visible}#perfil .fafg-profile-tile-icon{font-size:24px;line-height:1.2}#perfil .fafg-profile-tile-title{font-size:13px;line-height:1.35;font-weight:750;white-space:normal;overflow-wrap:anywhere}#perfil .fafg-profile-tile-desc{font-size:11px;line-height:1.4;color:#d3e7f8;white-space:normal;overflow-wrap:anywhere}#perfil .fafg-profile-tile:focus-visible{outline:3px solid #57b7ef;outline-offset:2px}#perfil .fafg-profile-tiles~#scores-card,#perfil .fafg-profile-tiles~#career-card{margin-top:8px!important}#perfil .fafg-profile-tiles~#scores-card>button,#perfil .fafg-profile-tiles~#career-card>button{display:none!important}#perfil #fafg-admin-entry>button{width:100%;text-align:left;padding:15px;border-radius:14px;background:#194b77;color:#fff;border:0}#perfil .fafg-profile-tile[aria-expanded=true]{background:linear-gradient(145deg,#1674b2,#135081)}@media(max-width:360px){#perfil .fafg-profile-tile{padding:12px 10px;min-height:150px}#perfil .fafg-profile-tile-title{font-size:12px}}</style>
+<style id="fafg-career-unified-styles">#perfil .fafg-profile-tile:first-child{grid-column:1/-1;min-height:100px;flex-direction:row;flex-wrap:wrap;align-content:center;align-items:center;column-gap:13px}#perfil .fafg-profile-tile:first-child .fafg-profile-tile-icon{font-size:27px}#perfil .fafg-profile-tile:first-child .fafg-profile-tile-title{font-size:15px}#perfil .fafg-profile-tile:first-child .fafg-profile-tile-desc{width:100%;padding-left:41px}#perfil #scores-card{display:none!important}#perfil #career-card{margin-top:10px!important}</style>
+<style id="fafg-career-screen-v2-css">#fafg-career-screen{position:fixed;inset:0;z-index:10020;overflow-y:auto;overscroll-behavior:contain;background:#edf4fa;color:#123f6b;padding:calc(14px + env(safe-area-inset-top)) 14px calc(26px + env(safe-area-inset-bottom));box-sizing:border-box}#fafg-career-screen.hidden{display:none!important}#fafg-career-screen .career-shell{max-width:650px;margin:auto}#fafg-career-screen .career-head{background:linear-gradient(130deg,#123f6b,#176a9c);border-radius:17px;color:#fff;padding:18px;margin-bottom:12px}#fafg-career-screen .career-head button{background:#ffffff24;border:1px solid #ffffff55;color:#fff;border-radius:10px;padding:10px 13px;font:inherit}#fafg-career-screen .career-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;background:white;padding:7px;border-radius:13px;margin-bottom:12px}#fafg-career-screen .career-tabs button{border:0;border-radius:9px;background:#e9f2f9;color:#175582;padding:11px 4px;font-size:12px;font-weight:650}#fafg-career-screen .career-tabs button[aria-selected=true]{background:#176a9c;color:white}#fafg-career-screen .career-pane{background:white;border-radius:14px;padding:15px;min-height:180px}#fafg-career-screen .career-stat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}#fafg-career-screen .career-stat{background:#edf4fa;border-radius:12px;padding:14px}#fafg-career-screen .career-stat strong{display:block;font-size:24px;color:#124a79}#fafg-career-screen .career-stat small{font-size:12px;color:#54738d}#fafg-career-screen .career-line{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #e1eaf1;padding:12px 0;font-size:13px}#fafg-career-screen .career-line strong{text-align:right}#fafg-career-screen .career-season-heading{margin:20px 0 5px;color:#12558d}#fafg-career-screen .career-muted{color:#607c94;font-size:13px;line-height:1.5}#fafg-career-screen select{max-width:190px;width:100%;padding:10px;border:1px solid #cbdce9;border-radius:9px;background:white;color:#173d5f}#fafg-career-screen .career-bar{height:12px;background:#dceaf4;border-radius:20px;overflow:hidden;margin-top:5px}#fafg-career-screen .career-bar>span{display:block;height:100%;background:#176a9c;border-radius:20px}body.fafg-career-open{overflow:hidden!important}</style>
+<style id="fafg-notices-v1-css">header:has(.fafg-notice-bell){position:relative}.fafg-notice-bell{position:absolute;right:12px;top:calc(10px + env(safe-area-inset-top));z-index:15;border:1px solid #b9d5e8;border-radius:13px;background:#fff;color:#14578a;min-width:43px;min-height:43px;font-size:22px;cursor:pointer;box-shadow:0 3px 10px #153b6418}.fafg-notice-bell .notice-count{position:absolute;top:-5px;right:-5px;border-radius:15px;background:#176a9c;color:white;font-size:11px;min-width:17px;padding:2px}.fafg-notice-bell .notice-count[hidden]{display:none}#fafg-notices-screen{position:fixed;inset:0;z-index:10030;background:#edf4fa;color:#123f6b;overflow:auto;box-sizing:border-box;padding:calc(14px + env(safe-area-inset-top)) 14px calc(25px + env(safe-area-inset-bottom))}#fafg-notices-screen.hidden{display:none!important}#fafg-notices-screen .notice-shell{max-width:650px;margin:auto}#fafg-notices-screen .notice-heading{background:linear-gradient(125deg,#123f6b,#176a9c);color:white;padding:17px;border-radius:16px;margin-bottom:12px}#fafg-notices-screen .notice-heading h2{color:white;margin:12px 0 5px}#fafg-notices-screen button{cursor:pointer}#fafg-notices-screen .notice-back{background:#ffffff22;color:white;border:1px solid #ffffff55;border-radius:9px;padding:10px}#fafg-notices-screen .notice-filters{display:flex;gap:7px;background:white;border-radius:12px;padding:8px;margin-bottom:12px}#fafg-notices-screen .notice-filters button{flex:1;border:0;background:#e8f2f9;color:#145582;border-radius:9px;padding:10px 4px;font-weight:600}#fafg-notices-screen .notice-filters button[aria-pressed=true]{background:#176a9c;color:white}#fafg-notices-screen .notice-card{background:white;border-radius:13px;padding:15px;margin-bottom:10px;border:1px solid #e0ebf3}#fafg-notices-screen .notice-card button{background:transparent;color:#176a9c;border:0;padding:7px 0;text-align:left}#fafg-notices-screen .notice-muted{color:#5d7890;font-size:13px;line-height:1.5}body.fafg-notices-open{overflow:hidden!important}@media(max-width:520px){header:has(.fafg-notice-bell) .fafg-notice-bell{right:9px;top:calc(8px + env(safe-area-inset-top))}}</style>
+<style id="fafg-visual-polish-2026">
+:root{--fafg-blue:#155e8d;--fafg-blue-deep:#102c53;--fafg-focus:#36a8dc}
+.card{border-radius:18px;box-shadow:0 8px 24px rgba(14,51,84,.09)}
+.button,.home-link,.fafg-profile-tile{transition:box-shadow .18s ease,transform .18s ease,border-color .18s ease}
+@media(hover:hover){.button:hover,.home-link:hover,.fafg-profile-tile:hover{transform:translateY(-1px);box-shadow:0 9px 22px rgba(16,69,112,.16)}}
+.button:active,.home-link:active,.fafg-profile-tile:active{transform:scale(.99)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--fafg-focus);outline-offset:2px}
+#ranking-top10 table{font-variant-numeric:tabular-nums}
+#ranking .actions .button{flex:1 1 100%;min-height:45px}
+#fafg-career-screen .career-stat-grid{gap:10px}
+#fafg-career-screen .career-stat{border-radius:14px}
+#fafg-career-screen .career-line{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){.button,.home-link,.fafg-profile-tile{transition:none}}
+</style>
+<style id="fafg-profile-center-nav">
+/* Barra aprobada: perfil circular central, sin leyenda visible. */
+nav.bottom-nav{display:grid;grid-template-columns:1fr 1fr 1.14fr 1fr 1fr;align-items:start;overflow:visible;border-radius:25px 25px 0 0;padding:15px 8px calc(12px + env(safe-area-inset-bottom));}
+nav.bottom-nav button{order:initial!important;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;min-width:0;max-width:none;min-height:55px;width:100%;margin:0;padding:8px 0 10px;font-size:11px;line-height:1.25;font-weight:600;color:#dceffc;border-radius:10px;}
+nav.bottom-nav .nav-icon{display:block;width:23px;height:23px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+nav.bottom-nav button[aria-current=page]{background:#ffffff16;color:#fff;}
+nav.bottom-nav button.nav-profile{margin-top:-42px;padding:0;min-height:76px;color:#fff;}
+nav.bottom-nav button.nav-profile[aria-current=page]{background:transparent;}
+nav.bottom-nav .nav-profile-circle{box-sizing:border-box;display:grid;place-items:center;width:76px;height:76px;flex-shrink:0;border-radius:50%;background:linear-gradient(145deg,#164f7e,#0b2c50);border:4px solid #f3f7fb;box-shadow:0 0 0 2px #55a6cf,0 5px 14px #062c4a66;}
+nav.bottom-nav .nav-profile-circle .nav-icon{width:33px;height:33px;}
+nav.bottom-nav .nav-profile[aria-current=page] .nav-profile-circle{background:linear-gradient(145deg,#1b7ab2,#0b3d6d);}
+@media(prefers-color-scheme:dark){nav.bottom-nav .nav-profile-circle{border-color:#8bcfff;box-shadow:0 0 0 2px #256eab,0 5px 18px #020e20a8;}}
+@media(max-width:350px){nav.bottom-nav .nav-profile-circle{width:68px;height:68px;}nav.bottom-nav button.nav-profile{margin-top:-38px;min-height:68px;}}
+</style>
+<style id="fafg-history-cards-v3">
+#fafg-career-screen .history-card{border:1px solid #cbdce9;border-radius:16px;padding:16px;margin:14px 0;background:#fff;overflow:hidden}
+#fafg-career-screen .history-name{font-size:17px;line-height:1.35;margin:0;color:#123f6b;overflow-wrap:anywhere}
+#fafg-career-screen .history-date{font-size:13px;color:#60758a;margin:6px 0 14px}
+#fafg-career-screen .history-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #dce7ef;padding:13px 0;gap:0}
+#fafg-career-screen .history-values>div{text-align:center;min-width:0;padding:0 4px}
+#fafg-career-screen .history-values>div+div{border-left:1px solid #dce7ef}
+#fafg-career-screen .history-values small{display:block;font-size:12px;color:#60758a}
+#fafg-career-screen .history-values strong{display:block;font-size:clamp(18px,5.6vw,25px);font-variant-numeric:tabular-nums;margin-top:5px;overflow-wrap:anywhere}
+#fafg-career-screen .history-details summary{background:#e6f2fc;color:#154f80;text-align:center;padding:12px 8px;border-radius:10px;cursor:pointer;font-size:13px;font-weight:650;min-height:44px}
+#fafg-career-screen .history-details summary:focus-visible{outline:3px solid #33b7e8;outline-offset:2px}
+#fafg-career-screen .history-detail-body{padding-top:9px}
+#fafg-career-screen .history-detail-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;font-size:12px;border-bottom:1px solid #e3edf5}
+#fafg-career-screen .history-detail-row strong{text-align:right;overflow-wrap:anywhere}
+#fafg-career-screen .history-rounds{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:12px;line-height:1.6;margin:8px 0}
+@media(prefers-color-scheme:dark){
+#fafg-career-screen{background:#0d2035;color:#e4f1fc}
+#fafg-career-screen .career-pane,#fafg-career-screen .history-card{background:#142e48;color:#e4f1fc;border-color:#35516e}
+#fafg-career-screen .history-name,#fafg-career-screen .career-season-heading{color:#d6edff}
+#fafg-career-screen .history-date,#fafg-career-screen .history-values small,#fafg-career-screen .career-muted{color:#b5cade}
+#fafg-career-screen .history-details summary{background:#214b70;color:#e0f2ff}
+#fafg-career-screen .history-values,#fafg-career-screen .history-values>div+div,#fafg-career-screen .history-detail-row{border-color:#35516e}
+}
+</style>
+<style id="fafg-history-compact-v4">
+#fafg-career-screen .history-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1.35fr) 66px;align-items:center;gap:8px;padding:10px;margin:8px 0;border-radius:12px}
+#fafg-career-screen .history-heading{min-width:0}
+#fafg-career-screen .history-name{font-size:12px;line-height:1.3;margin:0}
+#fafg-career-screen .history-date{font-size:10px;line-height:1.3;margin:4px 0 0}
+#fafg-career-screen .history-values{border-top:0;padding:3px 0;min-width:0}
+#fafg-career-screen .history-values>div{padding:0 3px}
+#fafg-career-screen .history-values small{font-size:9px}
+#fafg-career-screen .history-values strong{font-size:15px;line-height:1.25;margin-top:4px}
+#fafg-career-screen .history-details{min-width:0}
+#fafg-career-screen .history-details summary{display:block;list-style:none;font-size:10px;line-height:1.25;min-height:36px;padding:6px 4px;align-content:center;border-radius:8px}
+#fafg-career-screen .history-details summary::-webkit-details-marker{display:none}
+#fafg-career-screen .history-details summary::after{content:' ⌄'}
+#fafg-career-screen .history-details[open]{grid-column:1/-1}
+#fafg-career-screen .history-details[open] summary{width:max-content;max-width:100%;margin-left:auto;padding:6px 10px}
+#fafg-career-screen .history-details[open] summary::after{content:' ⌃'}
+#fafg-career-screen .history-detail-body{padding-top:4px}
+#fafg-career-screen .history-detail-row{padding:7px 0;font-size:11px}
+#fafg-career-screen .career-pane{padding:11px}
+#fafg-career-screen .career-season-heading{font-size:12px;margin:14px 0 6px}
+@media(min-width:520px){#fafg-career-screen .history-card{grid-template-columns:minmax(0,1.15fr) minmax(0,1.3fr) 90px;padding:12px}#fafg-career-screen .history-name{font-size:14px}#fafg-career-screen .history-values strong{font-size:19px}#fafg-career-screen .history-values small,#fafg-career-screen .history-date,#fafg-career-screen .history-details summary{font-size:11px}}
+@media(max-width:359px){#fafg-career-screen .history-card{grid-template-columns:minmax(0,1fr) minmax(0,1.45fr);gap:6px;padding:9px}#fafg-career-screen .history-details{grid-column:1/-1}#fafg-career-screen .history-details summary{width:max-content;margin-left:auto;padding:4px 9px;min-height:30px}}
+</style>
+<style id="fafg-typography-2026">
+:root{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+body,button,input,select,textarea{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif}
+h1,h2,h3,h4,h5,h6,.welcome,.app-wordmark,.tile,.home-link,.button,.card h2{font-family:'Montserrat','Inter',system-ui,sans-serif}
+button,.button,.tile,.home-link{font-weight:600}
+h1,h2,h3,h4,h5,h6{font-weight:700}
+.stat strong,.score-values,.score-meta{font-family:'Inter',system-ui,sans-serif;font-variant-numeric:tabular-nums}
+</style>
+<style>html,body{background:#102c53}</style>
+<style id="fafg-glass-unified-2026-11-12">
+/* One consistent white translucent glass system across every screen. */
+:root{--fafg-glass-white:rgba(255,255,255,.27);--fafg-glass-stroke:rgba(255,255,255,.42)}
+:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){background:var(--fafg-glass-white)!important;border-color:var(--fafg-glass-stroke)!important;color:#fff!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 6px 20px rgba(2,20,43,.13);text-shadow:0 1px 3px rgba(0,17,41,.65)}
+:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary) :is(h1,h2,h3,h4,h5,p,small,span,strong,b,label,a,svg,i){color:#fff!important}
+:is(.tile,.home-link,.button.secondary):hover{background:rgba(255,255,255,.35)!important}
+/* Keep the original blue primary buttons and functional form controls. */
+:is(.card,#perfil #edit-profile-panel,#fafg-career-screen .career-pane) :is(input,textarea,select){background:#fff!important;color:#163d60!important;text-shadow:none!important}
+:is(.card,#perfil #edit-profile-panel,#fafg-career-screen .career-pane) :is(input,textarea,select) :is(option){color:#163d60!important}
+.bottom-nav button[aria-current=page]:not([data-go="perfil"]){background:rgba(255,255,255,.27)!important}
+@media(prefers-reduced-transparency:reduce){:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){background:rgba(45,88,132,.95)!important;backdrop-filter:none;-webkit-backdrop-filter:none}}
+</style>
+<style id="fafg-global-gradient-2026-11-12">
+/* Unified institutional blue gradient behind all app screens. */
+html{min-height:100%;background:#071b38!important}
+body{min-height:100vh;min-height:100dvh;background:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%) fixed!important;color:#f3f8ff}
+.app{background:transparent!important}
+.tab{background:transparent}
+/* Preserve glass bubbles, photo splash, official logos and primary actions. */
+</style>
+<style id="fafg-profile-visual-repair-2026-11-12">
+/* Profile: same visible white glass as the rest of the application. */
+#perfil :is(.tile,.home-link,.card,.button.secondary,#career-toggle,#scores-toggle,#fafg-admin-toggle,#logout-btn){background:rgba(255,255,255,.27)!important;border:1px solid rgba(255,255,255,.43)!important;color:#fff!important;text-shadow:0 1px 3px rgba(0,22,48,.48)!important;box-shadow:0 5px 17px rgba(3,26,55,.12)!important}
+#perfil :is(.tile,.home-link,.button.secondary,#career-toggle,#scores-toggle,#fafg-admin-toggle,#logout-btn) :is(span,small,strong){color:#fff!important}
+/* Data and secondary copy should never inherit low-contrast gray. */
+#perfil :is(.muted,#profile-personal-details,#profile-meta,#profile-message,.card p,.card small,.card label,.stat small,.stat strong,.score-card small,.score-card strong){color:#fff!important;opacity:1!important}
+#perfil #profile-personal-details :is(span,strong,b,small){color:#fff!important;opacity:1!important}
+/* Give the scores accordion a readable title and avoid a blank-looking pill. */
+#perfil #scores-card{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#perfil #scores-toggle{min-height:54px;padding:14px 18px!important;justify-content:space-between!important;font-weight:700!important;opacity:1!important}
+#perfil #scores-toggle::before{content:'📋';margin-right:9px}
+#perfil #scores-content{padding:12px}
+/* Profile action cards, including the previously solid-blue ones. */
+#perfil :is(.profile-action,.profile-tile,.profile-link,#career-card){background:rgba(255,255,255,.27)!important;border-color:rgba(255,255,255,.43)!important}
+/* Keep the official blue navigation and brand logos unchanged. */
+</style>
+<style id="fafg-career-contrast-repair-2026-11-12">
+/* Career is a fixed full-screen view: give it the same gradient as the app. */
+#fafg-career-screen{background:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%)!important;color:#fff!important}
+#fafg-career-screen :is(.career-shell,.career-pane,.career-tabs,.career-stat,.history-card,.history-details,.history-details summary){color:#fff!important}
+#fafg-career-screen :is(.career-pane,.career-tabs,.career-stat,.history-card,.history-details summary){background:rgba(255,255,255,.25)!important;border-color:rgba(255,255,255,.4)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+/* Fix low-contrast history list, labels and chart captions. */
+#fafg-career-screen :is(.history-name,.history-date,.history-values,.history-values *, .history-details,.history-details *, .career-stat strong,.career-stat small,.career-pane p,.career-pane span,.career-pane small,.career-pane strong,.career-pane label,.career-pane li,.career-pane h1,.career-pane h2,.career-pane h3,.career-pane button:not([aria-selected=true])){color:#fff!important;opacity:1!important;text-shadow:0 1px 2px rgba(0,16,38,.35)}
+#fafg-career-screen .career-tabs button[aria-selected=true]{background:#176a9c!important;color:#fff!important}
+#fafg-career-screen :is(input,select,textarea){background:#fff!important;color:#123f6b!important;text-shadow:none!important}
+#fafg-career-screen :is(.history-values,.history-card){border-color:rgba(255,255,255,.35)!important}
+</style>
+<style id="fafg-career-redesign-2026-11-12">
+#fafg-career-screen .career-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
+#fafg-career-screen .career-tabs button{font-size:13px!important;font-weight:700!important;padding:13px 5px!important}
+#fafg-career-screen .career-result-compact{background:rgba(255,255,255,.24);border:1px solid rgba(255,255,255,.38);border-radius:13px;margin:9px 0;overflow:hidden;color:#fff}
+#fafg-career-screen .career-result-compact summary{list-style:none;display:grid;grid-template-columns:1fr auto;gap:5px 12px;padding:14px;cursor:pointer;align-items:center}
+#fafg-career-screen .career-result-compact summary::-webkit-details-marker{display:none}
+#fafg-career-screen .career-result-compact summary strong{grid-column:1;color:#fff;font-size:14px}
+#fafg-career-screen .career-result-compact summary small{grid-column:1;color:#fff;opacity:.85}
+#fafg-career-screen .career-result-compact summary span{grid-column:2;grid-row:1/3;color:#fff;font-weight:700;white-space:nowrap}
+#fafg-career-screen .career-result-body{padding:4px 14px 14px;border-top:1px solid rgba(255,255,255,.22)}
+#fafg-career-screen .career-results-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+#fafg-career-screen .career-results-actions button{flex:1;min-width:125px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.22);border-radius:10px;color:#fff;padding:10px;font:inherit;font-size:12px;font-weight:700}
+#perfil .fafg-profile-tiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#perfil .fafg-profile-tile{min-height:112px!important;background:rgba(255,255,255,.27)!important;border:1px solid rgba(255,255,255,.42)!important;box-shadow:0 5px 16px rgba(0,20,44,.12)!important}
+#perfil .fafg-profile-tile:first-child{grid-column:1/-1;min-height:92px!important}
+#perfil .fafg-profile-tile-desc{color:#fff!important;opacity:.88}
+#perfil #profile-stats{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
+#perfil #profile-stats .stat{min-width:0;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;padding:11px 4px!important;gap:5px!important}
+#perfil #profile-stats .stat small{font-size:10px!important;line-height:1.2!important}
+#perfil #profile-stats .stat strong{font-size:16px!important;white-space:normal!important;overflow-wrap:anywhere}
+#perfil #profile-stats .stat:nth-child(n+4){display:none!important}
+</style>
+<style id="fafg-consistent-overlays-2026-11-12">
+/* Unified design tokens: blue gradient + visible white glass + white text. */
+:root{--fafg-screen-gradient:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%);--fafg-glass-bg:rgba(255,255,255,.27);--fafg-glass-edge:rgba(255,255,255,.43)}
+/* Full-screen panels must not expose their former light backgrounds. */
+#fafg-about-panel,#fafg-calendar-panel,#fafg-career-screen,#fafg-notices-screen{background:var(--fafg-screen-gradient)!important;color:#fff!important}
+#fafg-about-panel :is(.card,.notice),#fafg-calendar-panel :is(.card,.fafg-calendar-event),#fafg-notices-screen :is(.notice-card,.notice-filters){background:var(--fafg-glass-bg)!important;border:1px solid var(--fafg-glass-edge)!important;color:#fff!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+#fafg-about-panel :is(h1,h2,h3,h4,p,small,span,strong,.muted),#fafg-calendar-panel :is(h1,h2,h3,h4,p,small,span,strong,.muted),#fafg-notices-screen :is(h1,h2,h3,h4,p,small,span,strong,.muted){color:#fff!important;opacity:1!important;text-shadow:0 1px 2px rgba(0,15,35,.4)}
+/* Default white-glass cards and their subdued copy across ordinary tabs. */
+.tab :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,.button.secondary){color:#fff!important}
+.tab :is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail) :is(.muted,small,p,label,em){color:#fff!important;opacity:1!important}
+/* Leave colored brand buttons and official image assets unchanged. */
+#inicio .home-link:not([style*="background:linear-gradient"]){background:var(--fafg-glass-bg)!important;border-color:var(--fafg-glass-edge)!important}
+#inicio .home-link:not([style*="background:linear-gradient"]) :is(strong,small,span){color:#fff!important}
+#inicio .home-link-icon{background:rgba(255,255,255,.16)!important}
+/* Form fields keep a solid surface for editing, regardless of theme. */
+.tab :is(input:not([type=checkbox]):not([type=radio]),textarea,select),#fafg-career-screen :is(input,select,textarea){background:#fff!important;color:#123f6b!important;text-shadow:none!important}
+</style>
+<style id="fafg-fixed-institutional-theme-2026-11-12">
+/* A single institutional theme, independent of the device appearance. */
+:root{color-scheme:dark!important;--fafg-glass-bg:rgba(255,255,255,.27)!important;--fafg-glass-border:rgba(255,255,255,.43)!important;--fafg-glass-white:rgba(255,255,255,.27)!important;--fafg-glass-stroke:rgba(255,255,255,.43)!important}
+html,body{color-scheme:dark!important;background:#071b38!important}
+body{background:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%) fixed!important;color:#fff!important}
+main,.app,.tab{color:#fff}
+:is(.card,.tile,.home-link,.home-link-icon,.notice,.status,.stat,.score-card,.score-detail,.score-detail-grid span,.score-values span,.fafg-calendar-date,#perfil .career-overview,#perfil #edit-profile-panel,#fafg-career-screen .career-tabs,#fafg-career-screen .career-tabs button,#fafg-career-screen .career-pane,#fafg-career-screen .career-stat,#fafg-career-screen .history-card,#fafg-career-screen .history-details summary,#fafg-notices-screen .notice-filters,#fafg-notices-screen .notice-filters button,#fafg-notices-screen .notice-card,.fafg-notice-bell,.button.secondary){background:rgba(255,255,255,.27)!important;border-color:rgba(255,255,255,.43)!important;color:#fff!important}
+:is(#fafg-about-panel,#fafg-calendar-panel,#fafg-career-screen,#fafg-notices-screen){background:linear-gradient(155deg,#071b38 0%,#103c70 42%,#176b9c 76%,#0b305c 100%)!important;color:#fff!important}
+:is(.card,.tile,.home-link,.notice,.status,.stat,.score-card,.score-detail,#fafg-about-panel,#fafg-calendar-panel,#fafg-career-screen,#fafg-notices-screen) :is(.muted,small,p,label){color:#fff!important}
+:is(input:not([type=checkbox]):not([type=radio]),textarea,select){background:#fff!important;color:#123f6b!important;-webkit-text-fill-color:#123f6b;text-shadow:none!important}
+:is(input,textarea)::placeholder{color:#60758a!important;-webkit-text-fill-color:#60758a}
+/* Official blue primary CTAs, official logo assets and splash remain unchanged. */
+</style>
+<style id="fafg-calendar-legibility-fix-2026-11-12">
+/* Calendar is an inline panel within Inicio; prevent pale date tiles and inherited gray text. */
+#inicio #fafg-calendar-panel{background:linear-gradient(155deg,#0b2b50,#155b8d)!important;color:#fff!important;border:1px solid rgba(255,255,255,.35)!important;box-shadow:0 10px 25px rgba(0,15,35,.2)}
+#inicio #fafg-calendar-panel .fafg-calendar-heading h2,#inicio #fafg-calendar-panel .fafg-calendar-heading button{color:#fff!important;opacity:1!important}
+#inicio #fafg-calendar-panel .fafg-calendar-event{background:rgba(255,255,255,.16)!important;border:1px solid rgba(255,255,255,.32)!important;border-radius:12px;padding:12px!important;margin:9px 0!important;align-items:flex-start}
+#inicio #fafg-calendar-panel .fafg-calendar-date{background:rgba(255,255,255,.25)!important;border:1px solid rgba(255,255,255,.3)!important;color:#fff!important;flex-shrink:0}
+#inicio #fafg-calendar-panel .fafg-calendar-event :is(strong,small,span,p,div,time),#inicio #fafg-calendar-panel .fafg-calendar-date *{color:#fff!important;opacity:1!important;-webkit-text-fill-color:#fff!important}
+#inicio #fafg-calendar-panel .fafg-calendar-filters button{background:rgba(255,255,255,.18)!important;color:#fff!important;border:1px solid rgba(255,255,255,.4)!important;-webkit-text-fill-color:#fff!important}
+#inicio #fafg-calendar-panel .fafg-calendar-filters button[aria-pressed=true]{background:#fff!important;color:#103c70!important;-webkit-text-fill-color:#103c70!important;font-weight:800}
+</style>
+<style id="fafg-profile-uniform-glass-2026-11-13">
+/* Match the lower profile tiles without stacking another backdrop blur. */
+#perfil #private-profile :is(#profile-stats .stat,#my-tours-pilot,.fafg-profile-tile){
+background:var(--fafg-glass-bg,rgba(255,255,255,.27))!important;
+border:1px solid rgba(255,255,255,.42)!important;
+backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+box-shadow:0 5px 16px rgba(0,20,44,.12)!important;
+color:#fff!important
+}
+</style>
+<style id="official-league-pilot-style">
+#perfil #private-profile #official-league-pilot{background:var(--fafg-glass-bg,rgba(255,255,255,.27))!important;border:1px solid rgba(255,255,255,.42)!important;backdrop-filter:none!important;box-shadow:0 7px 25px #183a5810;color:inherit}
+.league-eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.75;margin:0 0 10px}.league-main-summary{display:flex;justify-content:space-between;align-items:center;gap:12px;cursor:pointer;list-style:none;min-height:44px;font-weight:750}.league-main-summary::-webkit-details-marker{display:none}.league-main-summary::after{content:'⌄';font-size:22px;margin-left:auto}.league-pilot-tag{font-size:10px;font-weight:600;border:1px solid #b9d8f28c;border-radius:20px;padding:4px 9px;white-space:nowrap}.league-muted{font-size:12px;line-height:1.65;opacity:.8}.league-note{font-size:12px;line-height:1.7;padding:12px;background:rgba(84,155,215,.12);border:1px solid rgba(140,190,234,.3);border-radius:10px}.league-overview{display:flex;flex-direction:column;gap:5px;margin:16px 0}.league-round{border:1px solid rgba(140,190,234,.45);border-radius:12px;margin:10px 0;background:rgba(65,130,190,.06);overflow:hidden}.league-round>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;list-style:none;cursor:pointer;padding:13px 12px;min-height:60px}.league-round>summary::-webkit-details-marker{display:none}.league-round>summary strong{display:block;font-size:13px}.league-round>summary .league-muted{display:block;font-size:11px;margin-top:5px}.league-open{font-size:10px;white-space:nowrap;opacity:.85}.league-round[open] .league-open{font-size:0}.league-round[open] .league-open::after{content:'Cerrar';font-size:10px}.league-round-content{border-top:1px solid rgba(140,190,234,.3);padding:12px 9px}.league-card-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:15px;text-align:center}.league-card-stats strong{display:block;font-size:18px}.league-card-stats small{font-size:10px;opacity:.7;display:block;margin-top:4px}.league-scorecard{width:100%;border-collapse:collapse;table-layout:fixed;font-size:11px;text-align:center;font-variant-numeric:tabular-nums;margin:12px 0}.league-scorecard caption{text-align:left;font-size:11px;font-weight:700;padding:7px 0}.league-scorecard th,.league-scorecard td{padding:8px 1px;border-bottom:1px solid rgba(140,190,234,.3)}.league-scorecard th:first-child{width:40px;font-size:9px;text-align:left}.league-scorecard th:last-child{width:36px;font-size:9px}.league-scorecard thead{opacity:.7}.league-scorecard tbody tr:last-child{font-weight:750;background:rgba(100,170,228,.12)}.league-subtotal{font-weight:750}.league-total{display:flex;justify-content:space-between;font-size:12px;padding:12px 4px}.league-source{font-size:10px;line-height:1.7;opacity:.8;margin-top:12px}.league-source>summary{cursor:pointer;min-height:35px;display:flex;align-items:center}.league-source p{overflow-wrap:anywhere}.league-check{border:1px dashed rgba(140,190,234,.65);padding:12px;border-radius:10px;font-size:11px;line-height:1.7;margin:10px 0}.league-check p{margin:5px 0}.league-footnote{font-size:10px;margin-top:16px}@media(max-width:360px){#official-league-pilot{padding:14px}.league-scorecard{font-size:10px}.league-scorecard th:first-child{width:35px}.league-scorecard th:last-child{width:30px}}
+</style>
+<style id="fafg-official-menu-style">.league-competition{margin:10px 0;border:1px solid rgba(140,190,234,.45);border-radius:12px;background:rgba(65,130,190,.06);overflow:hidden}.league-competition>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;cursor:pointer;min-height:55px;padding:13px 12px;font-size:13px;font-weight:700}.league-competition>summary::-webkit-details-marker{display:none}.league-competition>summary::after{content:'⌄';font-size:18px;font-weight:400}.league-competition>summary small{font-size:9px;font-weight:400;opacity:.7;margin-left:auto}.league-competition>.league-note{margin:0 10px 12px}.league-competition>#official-league-content{padding:0 10px 10px}.league-competition .league-round-content{padding:12px 7px}.league-competition .league-scorecard th:first-child{width:35px}.league-competition .league-scorecard th:last-child{width:30px}@media(max-width:380px){.league-competition .league-scorecard{font-size:10px}.league-competition .league-scorecard th:first-child{width:31px}.league-competition .league-scorecard th:last-child{width:27px}#official-league-pilot{padding:14px}.league-competition>summary{padding:12px 10px}}</style>
+<style id="liga1-personal-style">.league-competition>#liga1-content{padding:0 10px 10px}.league-tournament-total{margin:14px 0 18px;border:1px solid rgba(140,190,234,.5);border-radius:12px;padding:15px 10px;background:rgba(90,160,220,.12)}.league-tournament-total h4{margin:0 0 16px;font-size:13px}.league-tournament-total .league-card-stats strong{font-size:17px}.league-final-rounds{display:flex;justify-content:space-around;gap:8px;font-size:12px;font-variant-numeric:tabular-nums;border-top:1px solid rgba(140,190,234,.25);padding-top:12px}</style>
+<style id="official-tournament-logos-style">#official-league-pilot .league-competition>summary{display:grid;grid-template-columns:68px minmax(0,1fr) 12px;grid-template-rows:auto auto;column-gap:12px;row-gap:4px;min-height:84px;padding:14px 12px}#official-league-pilot .tournament-logo{grid-column:1;grid-row:1/3;width:68px;height:48px;position:relative;overflow:hidden;pointer-events:none}#official-league-pilot .tournament-logo img{position:absolute;max-width:none;object-fit:contain}#official-league-pilot .tournament-title{grid-column:2;grid-row:1;align-self:end;font-size:13px;line-height:1.4}#official-league-pilot .league-competition>summary small{grid-column:2;grid-row:2;align-self:start;margin:0;line-height:1.4}#official-league-pilot .league-competition>summary::after{grid-column:3;grid-row:1/3;align-self:center}#official-league-pilot .league-competition[open]>summary::after{transform:rotate(180deg)}</style>
+<style id="official-tournament-glass-style">
+/* Fondo claro solo en los cuatro encabezados; conservar logos y tarjetas. */
+#perfil #official-league-pilot .league-competition>summary{background:rgba(255,255,255,.82);color:#103c70!important;text-shadow:none!important}
+#perfil #official-league-pilot .league-competition>summary :is(.tournament-title,small){color:#103c70!important;-webkit-text-fill-color:#103c70!important;text-shadow:none!important;opacity:1!important}
+#perfil #official-league-pilot .league-competition>summary::after{color:#103c70!important;text-shadow:none!important}
+#perfil #official-league-pilot .league-competition>summary:focus-visible{outline:3px solid #103c70;outline-offset:-4px}
+</style>
+<style id="fafg-consistent-accordion-arrows">
+#fafg-official-tournaments > summary,#my-tours-details > summary{display:flex!important;align-items:center!important;justify-content:space-between!important;list-style:none!important;list-style-position:unset!important;cursor:pointer}
+#fafg-official-tournaments > summary::-webkit-details-marker,#my-tours-details > summary::-webkit-details-marker{display:none!important}
+#fafg-official-tournaments > summary::marker,#my-tours-details > summary::marker{content:''}
+#fafg-official-tournaments > summary::after,#my-tours-details > summary::after{content:'⌄';font-size:19px;font-weight:700;line-height:1;transition:transform .2s;display:inline-block;margin-left:auto}
+#fafg-official-tournaments[open] > summary::after,#my-tours-details[open] > summary::after{transform:rotate(180deg)}
+</style>
+<style id="fafg-birth-fields-styles">#edit-profile-form .birth-fields{border:0;padding:0;margin:12px 0;min-width:0}#edit-profile-form .birth-parts{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.5fr) minmax(0,1fr);gap:8px}#edit-profile-form .birth-parts>div{min-width:0}#edit-profile-form .birth-parts .auth-field{width:100%;min-width:0;max-width:100%;box-sizing:border-box;font-size:16px;min-height:48px;padding-left:8px;padding-right:8px}#edit-profile-form .birth-parts .auth-label{font-size:12px}</style>
+<style id="my-tours-association-style">#my-tours-pilot .league-competition>summary{display:grid;grid-template-columns:68px minmax(0,1fr) 12px;grid-template-rows:auto auto;column-gap:12px;row-gap:4px;min-height:84px;padding:14px 12px}#my-tours-pilot .tournament-logo{grid-column:1;grid-row:1/3;width:68px;height:48px;position:relative;overflow:hidden;pointer-events:none}#my-tours-pilot .tournament-logo img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}#my-tours-pilot .tournament-title{grid-column:2;grid-row:1;align-self:end;font-size:13px;line-height:1.4}#my-tours-pilot .league-competition>summary small{grid-column:2;grid-row:2;align-self:start;margin:0;line-height:1.4}#my-tours-pilot .league-competition>summary::after{grid-column:3;grid-row:1/3;align-self:center}#my-tours-pilot .league-competition[open]>summary::after{transform:rotate(180deg)}
+/* Fondo claro solo en los cuatro encabezados; conservar logos y tarjetas. */
+#perfil #my-tours-pilot .league-competition>summary{background:rgba(255,255,255,.82);color:#103c70!important;text-shadow:none!important}
+#perfil #my-tours-pilot .league-competition>summary :is(.tournament-title,small){color:#103c70!important;-webkit-text-fill-color:#103c70!important;text-shadow:none!important;opacity:1!important}
+#perfil #my-tours-pilot .league-competition>summary::after{color:#103c70!important;text-shadow:none!important}
+#perfil #my-tours-pilot .league-competition>summary:focus-visible{outline:3px solid #103c70;outline-offset:-4px}
+#my-tours-pilot .tour-association-content{padding:0 10px 10px}#my-tours-pilot .tournament-logo{overflow:visible}</style>
+<style id="fafg-identical-header">body:has(#inicio.active) .hero{padding:30px 22px 32px!important;border-radius:0 0 25px 25px!important;flex:0 0 auto!important}body:has(#inicio.active) .hero .welcome{margin-top:25px!important}body:has(#inicio.active) .hero .brand{justify-content:center!important}body:has(#inicio.active) .hero .brand-title{gap:12px!important}</style>
+<style id="fafg-uniform-brand">body:has(#inicio.active) .hero .brand-title{gap:12px!important}body:has(#inicio.active) .hero .fafg-logo{width:118px!important;max-width:36vw!important;height:66px!important;padding:0!important;object-fit:contain!important}body:has(#inicio.active) .hero .brand-title .app-wordmark{font-size:clamp(22px,6vw,29px)!important;letter-spacing:.21em!important;padding:8px 0 8px 17px!important}</style>
+<style id="fafg-uniform-welcome">.hero .welcome,body:has(#inicio.active) .hero .welcome{font-family:Montserrat,Inter,system-ui,sans-serif!important;font-size:clamp(19px,5vw,24px)!important;font-weight:750!important;line-height:1.2!important;letter-spacing:normal!important;text-align:center!important;white-space:nowrap!important}</style>
+<style id="fafg-career-2-0-styles">
+#fafg-career-screen{background:#eaf2fa}
+#fafg-career-screen .career-head{padding:14px;border-radius:16px;background:linear-gradient(135deg,#071b39,#174a7b);box-shadow:0 8px 22px #0a305528}
+#fafg-career-screen .career-head>button{font-size:12px;padding:8px 11px;border-radius:9px}
+#fafg-career-screen .career-identity{display:flex;align-items:center;gap:12px;margin-top:14px}
+#fafg-career-screen .career-avatar{width:60px;height:60px;min-width:60px;flex:0 0 60px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;align-self:center;margin:0;padding:0;border-radius:50%;overflow:hidden;background:#1e679e;border:2px solid #8ac5f0;font-size:29px;line-height:1;cursor:zoom-in;appearance:none}#fafg-career-screen .career-avatar:disabled{cursor:default}#fafg-career-screen .career-avatar:focus-visible{outline:3px solid #a8d9ff;outline-offset:3px}
+#fafg-career-screen .career-avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%;margin:0;padding:0;transform:none}#fafg-career-screen .career-avatar img[hidden]{display:none}
+#career-photo-viewer[hidden]{display:none!important}
+#career-photo-viewer{position:fixed;inset:0;z-index:11000;display:flex;align-items:center;justify-content:center;padding:calc(65px + env(safe-area-inset-top)) 16px calc(30px + env(safe-area-inset-bottom));box-sizing:border-box;background:rgba(3,14,33,.96)}
+#career-photo-viewer img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;object-position:center;border-radius:8px}
+#career-photo-viewer .career-photo-close{position:absolute;top:calc(14px + env(safe-area-inset-top));right:18px;width:44px;height:44px;border:1px solid #87b5d2;border-radius:50%;background:#184a78;color:#fff;font-size:24px;cursor:pointer}
+#fafg-career-screen .career-identity-text{min-width:0}
+#fafg-career-screen .career-identity h2{font-size:20px;color:#fff;margin:0 0 4px}
+#fafg-career-screen .career-identity strong{display:block;font-size:13px;overflow-wrap:anywhere}
+#fafg-career-screen .career-identity small{display:block;color:#b9d7f4;font-size:11px;margin-top:4px}
+#fafg-career-screen .career-header-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
+#fafg-career-screen .career-header-stat{background:#ffffff14;border:1px solid #ffffff20;border-radius:11px;padding:11px;min-width:0}
+#fafg-career-screen .career-header-stat small{display:block;color:#b9d7f4;font-size:11px;margin-bottom:5px}
+#fafg-career-screen .career-header-stat strong{display:block;color:#fff;font-size:23px;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+#fafg-career-screen .career-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;background:#103a64;padding:7px;border-radius:13px}
+#fafg-career-screen .career-tabs button{min-width:0;display:flex;align-items:center;justify-content:center;gap:4px;background:#1d507f;color:#e3f3ff;border:1px solid #4879a5;border-bottom:3px solid transparent;padding:11px 3px 9px;border-radius:10px;font-size:clamp(10px,2.8vw,13px);line-height:1.2;font-weight:700;white-space:normal}
+#fafg-career-screen .career-tabs button span{font-size:16px}
+#fafg-career-screen .career-tabs button[aria-selected=true]{background:#2669ac;border-color:#4879a5;border-bottom-color:#80d7ff;color:#fff}
+#fafg-career-screen .career-tabs button:focus-visible{outline:2px solid #8ed3ff;outline-offset:2px}
+#fafg-career-screen .career-pane{background:#fff;border-radius:14px;box-shadow:0 5px 18px #164a7510}
+#fafg-career-screen .career-stat{border-radius:12px}
+#fafg-career-screen .career-history-button{background:#176a9c;color:white;border:0;border-radius:10px;padding:12px 16px;font:inherit;font-weight:650;cursor:pointer}
+#fafg-career-screen .career-evolution-chart{margin:12px 0;padding:14px;border-radius:12px;background:#103a64;color:white}
+#fafg-career-screen .career-evolution-chart h4{color:#fff;margin:0 0 8px}
+#fafg-career-screen .career-evolution-chart svg{display:block;width:100%;height:auto}
+#fafg-career-screen .career-evolution-chart .career-muted{color:#c8e2fa}
+#fafg-career-screen .career-chart-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 0}
+#fafg-career-screen .career-chart-kpi{padding:9px 6px;background:#1b4b79;border-radius:9px;text-align:center}
+#fafg-career-screen .career-chart-kpi small{display:block;color:#c9e6ff;font-size:10px}
+#fafg-career-screen .career-chart-kpi strong{display:block;color:#fff;font-size:18px;margin-top:4px}
+#fafg-career-screen .career-chart-help{font-size:12px;color:#d7ebff;margin:12px 0 8px}
+#fafg-career-screen .career-chart-choices{display:flex;flex-wrap:wrap;gap:5px}
+#fafg-career-screen .career-chart-choices button{flex:1 0 13%;min-width:37px;background:#1d507f;color:#e5f5ff;border:1px solid #638eb5;border-radius:7px;padding:8px 4px;font-size:11px;font-weight:700}
+#fafg-career-screen .career-chart-choices button[aria-pressed=true]{background:#287bd0;color:white;border-color:#b8dfff}
+#fafg-career-screen .career-chart-detail{background:#1b4b79;border:1px solid #3c719f;border-radius:10px;padding:12px;margin-top:10px;display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12px}
+#fafg-career-screen .career-chart-detail strong,#fafg-career-screen .career-chart-detail small,#fafg-career-screen .career-chart-detail p{display:block;flex-basis:100%;margin:0}
+#fafg-career-screen .career-chart-detail small{color:#c9e6ff}
+#fafg-career-screen .career-chart-detail p{font-weight:700;font-size:14px}
+
+@media(prefers-color-scheme:dark){
+#fafg-career-screen{background:#071b39;color:#e7f3ff}
+#fafg-career-screen .career-pane{background:#12345d;color:#e7f3ff}
+#fafg-career-screen .career-stat{background:#1c4a78}
+#fafg-career-screen .career-stat strong{color:#fff}
+#fafg-career-screen .career-stat small{color:#c3dfff}
+#fafg-career-screen .career-season-heading{color:#a9d9ff}
+#fafg-career-screen .career-line{border-bottom-color:#325a80}
+#fafg-career-screen .career-muted{color:#bfd8ed}
+}
+
+body.fafg-photo-open{overflow:hidden!important}
+#career-photo-viewer{touch-action:pan-y}
+</style></head><body><main class="app" style="padding-top:20px"><p style="font:13px system-ui;color:#173d5f;background:#fff;padding:12px;border-radius:10px">Revisión visual · Logos originales. Las posiciones y tarjetas se consultan desde tu perfil en la app.</p><section id="perfil"><section id="my-tours-pilot" class="card" style="margin-top:16px" aria-label="Mis tours"><details id="my-tours-details" open><summary class="league-main-summary"><span>Mis tours</span></summary><p class="league-muted">Elegí una asociación para consultar sus posiciones y tarjetas disponibles.</p><div hidden><label for="my-tour-select">Elegí tu tour</label><select id="my-tour-select"><option value="Tour BAFG">Tour BAFG</option><option value="Tour de Ramallo">Tour de Ramallo</option><option value="Tour de Santa Fe">Tour de Santa Fe</option><option value="Tour del Sudoeste">Tour del Sudoeste</option><option value="Tour de Tandil">Tour de Tandil</option></select></div><details class="league-competition tour-association" data-tour="Tour BAFG"><summary><span class="tournament-logo"><img src="../assets/images/tours/bafg.jpg" alt="" width="68" height="48" loading="lazy"></span><span class="tournament-title">Tour BAFG</span><small>Planillas pendientes</small></summary><div class="tour-association-content"><div id="my-tour-content" aria-live="polite"></div></div></details><details class="league-competition tour-association" data-tour="Tour de Ramallo"><summary><span class="tournament-logo"><img src="../assets/images/tours/ramallo.jpg" alt="" width="68" height="48" loading="lazy"></span><span class="tournament-title">Tour de Ramallo</span><small>Planillas pendientes</small></summary><div class="tour-association-content"></div></details><details class="league-competition tour-association" data-tour="Tour de Santa Fe"><summary><span class="tournament-logo"><img src="../assets/images/tours/santa-fe.jpg" alt="" width="68" height="48" loading="lazy"></span><span class="tournament-title">Tour de Santa Fe</span><small>Posiciones y tarjetas</small></summary><div class="tour-association-content"></div></details><details class="league-competition tour-association" data-tour="Tour del Sudoeste"><summary><span class="tournament-logo"><img src="../assets/images/tours/sudoeste.jpg" alt="" width="68" height="48" loading="lazy"></span><span class="tournament-title">Tour del Sudoeste</span><small>Posiciones y tarjetas</small></summary><div class="tour-association-content"></div></details><details class="league-competition tour-association" data-tour="Tour de Tandil"><summary><span class="tournament-logo"><img src="../assets/images/tours/tandil.jpg" alt="" width="68" height="48" loading="lazy"></span><span class="tournament-title">Tour de Tandil</span><small>Planillas pendientes</small></summary><div class="tour-association-content"></div></details></details></section></section><a href="../app.html" class="button secondary" style="margin-top:18px">Volver a FAFG App</a></main></body></html>
