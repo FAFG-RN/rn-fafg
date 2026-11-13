@@ -91,3 +91,8 @@ Verificados sintaxis de scripts, ambos paneles, privacidad, rondas y totales. La
 
 
 Publicación Liga 1 confirmada — 13/11/2026: PR #8 fusionado, commit c3a7b23735fe5a829f0aac186d53160ca8ea3397. GitHub Pages sirve HTTP 200 para app.html con liga1-details, liga1-prueba.js y liga1-prueba.json con 141 registros y 47 resultados finales. La vista personal fue revisada en navegador; la sesión real de cada jugador sigue su vinculación deportiva existente.
+
+
+## Orden de Mis torneos FAFG — 13/11/2026
+
+Solicitud directa del usuario: Liga Nacional, Liga 1, Copa de la República, Copa Federación. Se reordenan únicamente los cuatro bloques HTML existentes, preservando exactamente sus contenidos, IDs y manejadores. Verificación del cambio mediante sustitución inversa exacta. No cambia datos ni funcionalidad de tarjetas.
