@@ -1,0 +1,28 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const source=fs.readFileSync(__dirname+'/comercial.js','utf8');
+const context={window:{},document:{getElementById:()=>({})},Intl,Date,URL,Blob,setTimeout};
+vm.createContext(context);
+vm.runInContext(source.slice(0,source.indexOf('(async()=>{try{if(!db)'))+'\nthis.testAPI={esc,norm,today,validURL,eligible,csv,card};',context);
+const t=context.testAPI;
+assert.equal(t.norm('  BAH�A BLANCA  '),'bahia blanca');
+assert.equal(t.esc('<img onerror="x">'),'&lt;img onerror=&quot;x&quot;&gt;');
+assert.equal(t.validURL('javascript:alert(1)'),null);
+assert.equal(t.validURL('http://example.com'),null);
+assert.equal(t.validURL('https://example.com/'),'https://example.com/');
+assert.match(t.today(),/^\d{4}-\d{2}-\d{2}$/);
+const b={estado:'publicado',desde:'2026-11-13',hasta:'2026-11-13'};
+assert.equal(t.eligible(b,'2026-11-13'),true);
+assert.equal(t.eligible(b,'2026-11-14'),false);
+assert.equal(t.eligible(b,'2026-11-12'),false);
+assert.equal(t.eligible({...b,estado:'borrador'},'2026-11-13'),false);
+assert.equal(t.eligible({...b,estado:'pausado'},'2026-11-13'),false);
+assert.match(t.csv([{nombre:'=HYPERLINK("evil")'}]),/'=HYPERLINK/);
+assert.match(t.card({...b,titulo:'<script>alert(1)</script>',url_publica:'javascript:alert(1)'}),/&lt;script&gt;/);
+assert.doesNotMatch(t.card({...b,url_publica:'javascript:alert(1)'}),/href=/);
+const places=JSON.parse(fs.readFileSync(__dirname+'/comercial-ciudades.json','utf8'));
+assert.equal(places.length,77);
+assert.equal(places.reduce((s,p)=>s+p.jugadores,0),270);
+assert.equal(new Set(places.map(p=>p.provincia)).size,8);
+assert.equal(places.find(p=>p.ciudad==='ROSARIO').jugadores,17);
+console.log('PASS: fechas inclusivas, estados, URLs, escape HTML, CSV y relevamiento (77 / 270 / 8).');
+
