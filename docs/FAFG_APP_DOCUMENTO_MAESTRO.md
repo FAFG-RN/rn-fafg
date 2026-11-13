@@ -195,3 +195,14 @@ Pedido directo según captura: mismo título/alineación/flecha que Mis torneos 
 
 
 Publicación del acceso Mi carrera deportiva comprobada — 13/11/2026: PR #17 fusionado en 8d42100606ed06b9122a7d08e88c43cd081f8aeb. Pages run 43505722416 completado con success. Navegador HTTPS confirmó el bloque CSS cargado y cascada efectiva del botón generado: padding izquierdo/derecho 20 px, altura mínima 86 px, título 16 px, chevron ⌄ con margin-left auto, icono y subtítulo ocultos. No se alteró el manejador de apertura. Verificación visual dentro de sesión real sigue a cargo del usuario; no se accedió a su sesión.
+
+
+## Puntos del perfil iguales al Ranking Nacional — 13/11/2026
+
+Incidente confirmado: rankings de Supabase conserva 2194.65 para Luciano, mientras ranking-general-2026.csv y categorías públicas al 11/11/2026 muestran 2220.75. Snapshot aprobado get_fafg_ranking devuelve null. La normalización de nombres de la búsqueda anterior tenía expresiones doblemente escapadas; no obtenía coincidencia única y activaba el reemplazo con la tabla anterior.
+
+Corrección: nuevo resolver FAFGPublishedRanking.profile en js/ranking-public.js. Prioriza snapshot aprobado; si no existe, usa el archivo de categorías público, con búsqueda por todos los tokens del nombre (sin tildes/edad/orden) y categoría cuando sea necesario. Coincidencias ambiguas no se adjudican. Perfil deja de consultar rankings anterior y no muestra sus valores ante error, ausencia o ambigüedad: muestra guiones y un aviso específico. Puntos, posición por categoría, HCP y torneos provienen de una sola ficha pública. Se actualiza la fecha desde la fuente y se protege contra respuestas tardías de otra sesión. La carrera sigue tomando sus estadísticas del perfil, sin sumar scores históricos como ranking.
+
+No se alteran tablas, puntos oficiales, cálculos, afiliación, permisos, resultados ni archivos de ranking. La función histórica de estado de socio permanece intacta. Cache de biblioteca renovada en app.html. Posición de Luciano: 2 en General Caballeros, 3 en general; puntos iguales (2220.75). Esa diferencia de posición es legítima por ámbito.
+
+Validación: 276 coincidencias de fichas correctas, dos filas duplicadas MORALEDA ANDRES bloqueadas; nombres invertidos/edad/tildes, categoría, homónimos, ceros, snapshot posterior, errores de red y diez scripts inline correctos. Caso Luciano: 2.220,75 puntos idénticos al CSV público, posición de categoría 2, HCP 0 y 15 torneos. Pendiente comprobar entrega Pages al fusionar. Publicación autorizada por pedido directo de corrección.
