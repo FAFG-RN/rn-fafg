@@ -67,3 +67,10 @@ Se extraen solo AC/RE correspondientes a las fechas nominales de cada uno de los
 Datos distribuidos mediante lista permitida de campos deportivos: nombres, zona, fecha ordinal, hoyos, par de referencia, score, posición/puntos RE y procedencia por hoja/fila. Excluidos DNI, pagos, afiliación y contactos. El par por hoyo se rotula «Par ref.» y las salidas diferenciadas requieren confirmación.
 
 Validación: sintaxis de todos los scripts inline y del módulo; 500 registros y 442 sumas; NPT y privacidad de campos; seis tarjetas de Luciano. La vista privada de revisión se publica aparte en Coordinación interna /pruebas/liga/. Integración preparada en rama; no fusionada ni disponible todavía en la app pública.
+
+
+## Mis torneos FAFG personalizado — 13/11/2026
+
+Usuario aprobó «excelente, hagamos esa prueba» tras definir un botón personal en Mi perfil sobre Mis tours. Se reemplaza la entrada directa de Liga Nacional por un desplegable Mis torneos FAFG con Liga 1, Copa de la República, Liga Nacional y Copa Federación. No hay selector de nombres en la app; el nombre proviene de la ficha deportiva vinculada. Liga Nacional conserva el módulo probado de tarjetas; las otras tres competencias indican planillas pendientes sin inferir que el jugador no participó.
+
+La vista privada de revisión se ajusta a un ejemplo personal de Luciano sin selector de nombres. Verificados orden, cuatro competencias, ausencia de selector y sintaxis de scripts. Publicación del modo prueba solicitada por usuario; confirmar entrega en Pages después de fusionar PR #7. No cambia resultados, rankings ni Supabase.
