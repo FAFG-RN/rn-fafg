@@ -134,3 +134,12 @@ Validación local: fechas válidas, 29/2 bisiesto/no bisiesto, 31/4, futuro, fec
 
 
 Publicación de fecha de nacimiento comprobada — 13/11/2026: PR #11 fusionado en 3de556920609a747d5f89ff370792c405dccb994. Pages run 43466463251 completado con success; app.html servido por HTTPS incluye Día/Mes/Año, validateBirthParts y populateBirthFields. Prueba del manejador real con cliente simulado: updateUser recibe 1983-08-18 al guardar sin cambiar una fecha precargada; 31/2 bloquea la actualización. No se modificaron perfiles reales. Pendiente comprobar desde el celular y sesión del amigo del usuario.
+
+
+## Comunidad dentro de FAFG App, sin sesión de ChatGPT — 13/11/2026
+
+El usuario no puede iniciar sesión en el Site privado externo. Se reemplaza el enlace externo por ./admin-comunidad.html, dentro del mismo origen y con storageKey fafg-app-auth existente. La pantalla verifica getUser y RPC is_fafg_admin, igual que el administrador de ranking. Sin sesión o sin rol, no muestra el panel; al cerrar sesión limpia filas y bloquea la vista. No se transfieren tokens a otro origen ni se modifica Supabase, roles o RLS.
+
+La página contiene únicamente estadísticas agregadas derivadas del ranking ya público, no datos privados de jugadores. Esas estadísticas y su fuente son públicas a nivel de código; el control de sesión organiza el acceso administrativo y no pretende proteger cifras públicas como secretos. Para futuros datos confidenciales será necesario un endpoint protegido por RLS. Cuenta con 270 nombres únicos, 77 localidades, 8 jurisdicciones, buscador, filtro por provincia y CSV de selección. Conserva fuente, fecha de corte, normalizaciones, advertencia sobre residencia y socios activos y pendientes geográficos. El Site externo se conserva privado y no se cambia su audiencia.
+
+Comprobaciones locales: sintaxis, totales 270/77, Córdoba=10; casos sin sesión, usuario sin rol, administrador válido y cierre de sesión. Prueba con la sesión real del usuario y iPhone pendientes. Preparado en fix/comunidad-dentro-app; comprobar PR y Pages antes de afirmar disponibilidad.
