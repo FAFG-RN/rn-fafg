@@ -77,3 +77,14 @@ La vista privada de revisión se ajusta a un ejemplo personal de Luciano sin sel
 
 
 Publicación confirmada — 13/11/2026: PR #7 fusionado con autorización del usuario, commit a473203250383b0081bcb4d23264188df9c92f25. GitHub Pages sirve HTTP 200 para app.html con Mis torneos FAFG y los cuatro desplegables, módulo JS y archivo de 500 registros. No hay selector de nombres en el nuevo menú. La revisión visual del ejemplo personal funcionó; falta corroborar dentro de la sesión real del usuario en la PWA.
+
+
+## Liga 1 2026: tres rondas y resultado total — 13/11/2026
+
+Solicitud expresa del usuario: incorporar LIGA 1 2026 (1).xlsm en Mis torneos FAFG → Liga 1 para cada perfil. Se agregan módulo y datos separados, manteniendo intactos Liga Nacional y los otros paneles. La identidad se resuelve por el mismo nombre deportivo normalizado, sin selector de jugadores. No modifica Supabase, ranking ni archivos originales.
+
+Fuente: AC1/RE1, AC2/RE2, AC3/RE3; total en RESULTADOS. Solo las tres rondas indicadas por el usuario, no las pestañas de plantilla AC4–AC10/RE4–RE10. RE1 contiene una columna extra, por lo que PAR y PTS RANK se localizan por encabezado. Se distingue puntaje de ronda RE del puntaje final de RESULTADOS; no se suman puntos de ronda para sustituir el final.
+
+47 jugadores; 141 registros, 136 tarjetas completas con suma de 18 hoyos igual a SCORE y 5 NPT conservados sin ceros ficticios. 47 filas de resultado final, 44 totales completos reconciliados contra las tres rondas. Tres participantes no tienen total final en la fuente y conservan ese estado. No se detectaron discrepancias de score AC/RE ni colisiones de identidad dentro de este libro. Datos exportados solo deportivos; DNI, pagos, cuotas y contactos excluidos.
+
+Verificados sintaxis de scripts, ambos paneles, privacidad, rondas y totales. La fuente original se incorpora también a Documentos de Coordinación interna. Cambios preparados para publicación autorizada; verificar entrega GitHub Pages después de fusionar.
