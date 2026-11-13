@@ -11,7 +11,7 @@
   },
   {
     "ciudad": "CABA",
-    "provincia": "Ciudad Aut�noma de Buenos Aires",
+    "provincia": "Ciudad Autónoma de Buenos Aires",
     "jugadores": 20
   },
   {
@@ -21,7 +21,7 @@
   },
   {
     "ciudad": "MARCOS JUAREZ",
-    "provincia": "C�rdoba",
+    "provincia": "Córdoba",
     "jugadores": 10
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "ciudad": "PARANA",
-    "provincia": "Entre R�os",
+    "provincia": "Entre Ríos",
     "jugadores": 10
   },
   {
@@ -56,7 +56,7 @@
   },
   {
     "ciudad": "GENERAL ROCA",
-    "provincia": "R�o Negro",
+    "provincia": "Río Negro",
     "jugadores": 4
   },
   {
@@ -141,7 +141,7 @@
   },
   {
     "ciudad": "VICTORIA",
-    "provincia": "Entre R�os",
+    "provincia": "Entre Ríos",
     "jugadores": 3
   },
   {
@@ -151,12 +151,12 @@
   },
   {
     "ciudad": "VILLA LA ANGOSTURA",
-    "provincia": "Neuqu�n",
+    "provincia": "Neuquén",
     "jugadores": 3
   },
   {
     "ciudad": "BARILOCHE",
-    "provincia": "R�o Negro",
+    "provincia": "Río Negro",
     "jugadores": 2
   },
   {
@@ -201,7 +201,7 @@
   },
   {
     "ciudad": "ROCA",
-    "provincia": "R�o Negro",
+    "provincia": "Río Negro",
     "jugadores": 2
   },
   {
@@ -301,7 +301,7 @@
   },
   {
     "ciudad": "LIBERTADOR SAN MARTIN",
-    "provincia": "Entre R�os",
+    "provincia": "Entre Ríos",
     "jugadores": 1
   },
   {
@@ -336,7 +336,7 @@
   },
   {
     "ciudad": "RIO COLORADO",
-    "provincia": "R�o Negro",
+    "provincia": "Río Negro",
     "jugadores": 1
   },
   {
@@ -385,4 +385,3 @@
     "jugadores": 1
   }
 ]
-
