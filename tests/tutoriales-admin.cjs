@@ -81,7 +81,8 @@ const tick = () => new Promise(r => setImmediate(r));
 
   const race = setup(OWNER); race.state.authEvent('SIGNED_OUT'); await tick();
   assert.equal(race.elements.get('fafg-tutorials-preview').hidden, true);
-  assert.equal((app.match(/tutoriales-admin\.js/g) || []).length, 1);
+  assert.equal((app.match(/tutoriales-admin\.js/g) || []).length, 0);
+  assert.ok(app.includes('tutoriales-ayuda.js'));
   assert.ok(!app.includes('PRIVATE_MEDIA'));
   const previewPath = path.join(root, 'supabase/functions/tutoriales-admin-preview/preview.ts');
   if (fs.existsSync(previewPath)) {

@@ -230,3 +230,12 @@ Pruebas: tests/tutoriales-admin.cjs cubre servidor, cuenta única, denegación, 
 
 
 Publicación de tutoriales privados comprobada — 14/11/2026: autorización explícita del usuario y PR #20 fusionado en 00ab5f7f8e4f6abb23d975cfa56624839918bbc3. Pages run 43596686423 completado con success. app.html devuelve 200 e incluye el módulo; tutoriales-admin.js devuelve 200 e idénticos bytes a la fuente probada. Payload privado preview.ts devuelve 404 desde Pages. Función ACTIVE v1 con JWT habilitado, rechazo anónimo 401, RPC propietario true y cuenta ajena false. Se mantiene pendiente la revisión desde la sesión real de Luciano en iPhone; no se accedió ni solicitó su sesión.
+
+
+## Tutoriales aprobados en Ayuda — 14/11/2026
+
+Luciano revisó la vista previa en su iPhone, la aprobó y pidió trasladarla a Ayuda para todos, reemplazando «¿Cómo uso la Tarjeta Digital?». Se conserva exactamente el contenido de los dos videos con logos oficiales y la práctica aprobada. Se reemplaza esa explicación de texto por un único acceso a los videos. Se retira el script que insertaba el acceso privado en el perfil; no queda duplicado.
+
+La guía pública autónoma ayuda-tarjeta-digital.html contiene los mismos medios embebidos y el mismo aislamiento de práctica, sin depender de la cuenta ni de la función privada. El modal vuelve a Ayuda y destruye el iframe para detener la reproducción; también al cambiar de pestaña. Se eliminan las leyendas de vista previa privada. No cambia el inicio de sesión, panel de administrador, tarjetas, scores, rankings ni resultados oficiales. La función privada anterior permanece como respaldo, sin enlaces desde la app.
+
+Pruebas previstas: acceso sin sesión desde Ayuda, reapertura, cierre y cambio de pestaña; integridad de ambos videos respecto de la vista aprobada; compilación de guía y regresiones de carrera/ranking. Publicación para todos autorizada por el pedido expreso de trasladar los videos aprobados a Ayuda.
