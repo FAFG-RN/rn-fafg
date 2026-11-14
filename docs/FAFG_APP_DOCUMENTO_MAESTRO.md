@@ -239,3 +239,10 @@ Luciano revisó la vista previa en su iPhone, la aprobó y pidió trasladarla a 
 La guía pública autónoma ayuda-tarjeta-digital.html contiene los mismos medios embebidos y el mismo aislamiento de práctica, sin depender de la cuenta ni de la función privada. El modal vuelve a Ayuda y destruye el iframe para detener la reproducción; también al cambiar de pestaña. Se eliminan las leyendas de vista previa privada. No cambia el inicio de sesión, panel de administrador, tarjetas, scores, rankings ni resultados oficiales. La función privada anterior permanece como respaldo, sin enlaces desde la app.
 
 Pruebas previstas: acceso sin sesión desde Ayuda, reapertura, cierre y cambio de pestaña; integridad de ambos videos respecto de la vista aprobada; compilación de guía y regresiones de carrera/ranking. Publicación para todos autorizada por el pedido expreso de trasladar los videos aprobados a Ayuda.
+
+
+## Globo de tarjeta en Ayuda — 14/11/2026
+
+Pedido de Luciano: igualar el acceso de Tarjeta Digital a las demás tarjetas de Ayuda. Se elimina la clase home-link que duplicaba el fondo transparente dentro del globo y se reutilizan h2 y p de las demás tarjetas. El botón completo conserva apertura del modal y flecha, con fondo transparente, sin borde ni padding extra. Videos, logos oficiales dentro de la guía y práctica sin cambios. Se actualiza la versión del script para renovar caché.
+
+Validación: tests/tutoriales-ayuda.cjs y git diff --check correctos. Comparación estática: mismo contenedor card y mismos h2/p; sin clase home-link interna. Revisión visual automática no disponible porque falta el ejecutable de Chromium; pendiente revisión en iPhone.
