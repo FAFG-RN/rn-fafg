@@ -1,2 +1,5 @@
 node_modules
 package-lock.json
+
+# Private tutorial media is deployed only to the authenticated Edge Function.
+supabase/functions/tutoriales-admin-preview/preview.ts
