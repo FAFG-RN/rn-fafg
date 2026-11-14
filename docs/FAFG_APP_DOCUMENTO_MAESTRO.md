@@ -214,3 +214,16 @@ La pantalla de carrera y el acordeón histórico escuchaban el mismo botón: al 
 Se retira únicamente el acceso público «Beneficios FAFG» del Inicio a pedido de Luciano; el módulo y herramientas administrativas se conservan para continuar su desarrollo. Sin modificaciones en datos o permisos.
 
 Validación: tests/career-close.cjs (tres ciclos de apertura/cierre, detalles, foco, manejador único, lista oculta y enlace retirado), tests/profile-public-ranking.cjs (276 fichas y diez scripts inline) y git diff --check correctos. Navegador local bloqueado por restricciones de sockets del entorno; queda pendiente verificación visual en iPhone. Publicación autorizada por pedido directo de corregir la app; comprobar Pages al integrar.
+
+
+## Tutoriales privados de tarjeta digital — 14/11/2026
+
+Pedido de Luciano: aplicar los dos tutoriales, con logos oficiales, únicamente en su perfil de administrador para revisar cómo se ven. Acceso «Cómo usar la tarjeta digital» insertado en #perfil #private-profile; no se agrega a Inicio, Ayuda ni a otros perfiles. El acceso y el servidor exigen el usuario propietario verificado y RPC is_fafg_admin() verdadero; otros administradores/operadores tampoco acceden a esta prueba.
+
+Dos videos verticales H.264 1080×1920: una línea 48 s y Live con amigos 56 s. Se compuso el original assets/images/FAFG-Horizontal-2.png con proporciones intactas en todos los cuadros, cabecera de la guía y práctica. Son pantallas esquemáticas con texto; sin voz grabada. Guía con capítulos, repetir paso, voz opcional del navegador y prácticas locales sin datos reales.
+
+La función tutoriales-admin-preview valida el JWT mediante Auth y el permiso RPC con el token del usuario; no usa service_role. JWT del gateway habilitado. Devuelve el HTML con medios embebidos únicamente después de ambas comprobaciones, con no-store y CORS del origen de la app. El payload generado preview.ts se excluye del repositorio/Pages mediante .gitignore; los originales privados se conservan en la implementación desplegada de la función. No publicar una copia del payload en assets ni una ruta HTML pública.
+
+El modal carga el contenido solo al abrir, en iframe con origen opaco (sin allow-same-origin). CSP de la guía prohíbe conexiones y formularios. Cerrar, cambiar pestaña o cerrar sesión destruye iframe y medios; respuestas tardías quedan invalidadas. No cambia tarjetas, resultados, ranking, tablas, roles, perfiles ni el resto del panel de administración.
+
+Pruebas: tests/tutoriales-admin.cjs cubre servidor, cuenta única, denegación, caché, cierre, salida y respuestas tardías; verifica payload y sintaxis cuando el archivo privado está presente. Regresiones career-close y profile-public-ranking correctas. RPC existente comprobada para cuenta ajena (false); cuenta propietaria identificada en FAFG admins. Revisión visual del logo en cuadros 1080×1920 y duraciones por ffprobe. Pendiente verificación desde sesión real de Luciano en iPhone; no se tomó ni se solicitó su sesión. Publicación autorizada para esta prueba privada por pedido expreso del usuario.
