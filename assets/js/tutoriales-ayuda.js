@@ -7,12 +7,8 @@
   style.textContent = `
     #fafg-tutorials-preview.hidden{display:none!important}
     #fafg-tutorials-preview{margin-top:14px;padding:0;overflow:hidden}
-    #fafg-tutorials-open{width:100%;border:0;background:transparent;color:inherit;display:flex;align-items:center;gap:14px;text-align:left;padding:18px 16px;font:inherit;cursor:pointer}
-    #fafg-tutorials-open img{width:72px;height:46px;object-fit:contain;flex:none}
-    #fafg-tutorials-open .tutorials-copy{flex:1;min-width:0}
-    #fafg-tutorials-open strong{display:block;font-size:16px}
-    #fafg-tutorials-open small{display:block;margin-top:5px;font-size:12px;line-height:1.4;opacity:.85}
-    #fafg-tutorials-open .tutorials-chevron{font-size:25px}
+    #fafg-tutorials-open{width:100%;border:0;border-radius:0;background:transparent;color:inherit;display:block;text-align:left;padding:0;font:inherit;text-shadow:inherit;box-shadow:none;cursor:pointer}
+    #fafg-tutorials-open .tutorials-chevron{float:right;margin-left:8px;font-size:25px;line-height:1}
     #fafg-tutorials-dialog{width:min(100vw,900px);max-width:100vw;height:100dvh;max-height:100dvh;margin:auto;padding:0;border:0;border-radius:16px;background:#071b35;color:#fff;overflow:hidden}
     #fafg-tutorials-dialog::backdrop{background:rgba(0,12,30,.8)}
     #fafg-tutorials-dialog .tutorials-toolbar{height:64px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;border-bottom:1px solid #50769a}
