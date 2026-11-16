@@ -1,7 +1,10 @@
 (()=>{
 'use strict';
-const root=document.createElement('section');root.className='card';root.id='torneos-fafg';
-document.querySelector('.app>header').after(root);
+const panel=document.createElement('details');panel.className='accordion-panel';panel.id='torneos-fafg';
+panel.innerHTML='<summary><span>🏆 Mis torneos e inscripciones</span><span class="accordion-chevron" aria-hidden="true">⌄</span></summary><div class="accordion-content"></div>';
+const root=document.createElement('section');root.className='card';
+panel.querySelector('.accordion-content').append(root);
+document.querySelector('.app>header').after(panel);
 const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let db,user,admin=false,tab='proximos',events=[],entries=[],busy=false;
 const date=x=>new Date(x+'T12:00:00').toLocaleDateString('es-AR');
