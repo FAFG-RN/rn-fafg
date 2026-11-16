@@ -279,3 +279,8 @@ Verificado: 10 scripts inline compilan; extracción de 16 resultados y tarjetas 
 
 
 Publicación de Ramallo comprobada — 16/11/2026: PR #23 fusionado en 3e76a20615fe7c158a650a305f501dace67ccdaa. Pages run 43897218455 completado con success. Navegador HTTPS confirmó app.html con renderRamallo y ambos JSON publicados: 16 posiciones/resultados y 16 tarjetas de 18 hoyos, todas con suma igual a scoreTarjeta. Revisión visual dentro del perfil autenticado/iPhone pendiente; no se accedió a una sesión personal.
+
+
+## Editar perfil desplegable — 16/11/2026
+
+Pedido directo: mismo indicador de flecha que los demás botones y formulario desplegable. El acceso visible Editar perfil ocupa una fila completa con título y chevron ⌄ a la derecha, alineados como Mi carrera deportiva; la flecha gira al abrir. El formulario existente se reubica inmediatamente debajo del botón dentro de la misma grilla. Se reutilizan el manejador original de apertura/cierre y el formulario/guardado existentes. aria-controls y aria-expanded sincronizados con la visibilidad del panel, incluidos cierres programáticos. Desplazamiento al formulario solo al abrir. Datos, validaciones, autenticación y permisos sin cambios. Sintaxis y conservación del formulario verificadas; revisión visual autenticada en iPhone pendiente. Publicación autorizada por solicitud directa de aplicar el cambio.
