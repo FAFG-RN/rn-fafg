@@ -255,3 +255,7 @@ Pedido autorizado: Próximos torneos y Mis torneos internos a FAFG, sin abrir Ro
 Tablas separadas fafg_eventos y fafg_inscripciones con RLS. Solo is_fafg_admin puede crear/publicar/cerrar torneos, confirmar/rechazar solicitudes y publicar salida y código de ronda. Gestión accesible desde el mismo módulo para administradores. El código vincula una ronda FAFG existente; NO crea automáticamente líneas ni asigna anotadores. Live provisional; papel oficial. Se conserva tarjeta anterior y marca Ronda.
 
 Verificado: sintaxis JS, diff, CDN fijado responde 200; prueba transaccional con rol authenticated de alta propia, lectura propia, bloqueo de autoconfirmación y duplicado; consulta anónima del catálogo. Pruebas revertidas con ROLLBACK. RLS habilitada. Asesor sin nuevos hallazgos en estas tablas; conserva avisos históricos. Pendiente revisión visual y flujo completo con sesión real en iPhone.
+
+
+### Torneos desplegable — 16/11/2026
+El bloque se presenta cerrado al ingresar como «Mis torneos e inscripciones», usando details/summary y las mismas clases accordion-panel, accordion-chevron y accordion-content de los otros accesos. Flecha a la derecha y rotación al abrir; conserva las pestañas y operaciones internas. Sintaxis JS y diff verificados. Commit de interfaz 8e632d7dc9b97cbba86d42a724c2fbfa00d88bb4.
