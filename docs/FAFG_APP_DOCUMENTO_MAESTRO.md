@@ -263,3 +263,16 @@ El bloque se presenta cerrado al ingresar como «Mis torneos e inscripciones», 
 
 ## Ícono oficial para pantalla de inicio — 16/11/2026
 Se usa el símbolo pelota/bandera del archivo original assets/images/FAFG-Horizontal-2.png, sin letras, conservando colores y proporciones. Composición SVG con viewport del símbolo original, fondo azul translúcido y exportaciones PNG de 192/512; versión Apple 180 con fondo compuesto azul para compatibilidad. app.html e index.html apuntan al nuevo apple-touch-icon; ambos manifiestos usan las nuevas rutas. No modifica logos interiores. Revisión visual contra fuente y tamaños verificados. No se verificó reinstalación en dispositivo iOS real.
+
+
+## Tour de Ramallo — 16/11/2026
+
+Pedido expreso: cargar la planilla de Ramallo con el mismo diseño y proceso que Santa Fe y Sudoeste. Fuente local 000 2026 ACREDITACIONES RAMALLO.xlsm, SHA-256 4f863901360f73c947dd129f5d9fa561be4fd98b649b7cc6302077c48e05f986. Lectura de valores guardados sin ejecutar macros ni modificar el libro original.
+
+AC1/RE1 contienen 16 jugadores y 16 tarjetas completas; AC2–AC10/RE2–RE10 sin jugadores, excluidas como plantillas vacías. Todas las sumas de 18 hoyos coinciden con SCORE, total AC y RE1. Identidades AC/RE y POSICIONES coinciden sin duplicados. Se conserva la posición y los puntos computables de POSICIONES, cotejados contra los puntos RE1; puntos de ranking se muestran por separado, sin recalcular ni publicar el Ranking Nacional.
+
+Datos nuevos en data/tour-ramallo-2026-re1.json y data/tour-ramallo-2026-hoyos.json: únicamente campos deportivos, procedencia y hash. No se publica el XLSM, DNI, cuotas, pagos, contactos ni afiliación. Sin cambios de Supabase, perfiles o rankings existentes.
+
+Mis tours → Tour de Ramallo: mismo encabezado/logo existente, Top Ten, ranking completo con búsqueda y paginación de 10 filas, detalle por fecha y tarjeta de ida/vuelta de 18 hoyos. Se reutiliza la estructura de Sudoeste para Ramallo; función original de Sudoeste conservada íntegra, Santa Fe conserva datos y renderizado. El overlay de Ramallo se elimina al cambiar de tour.
+
+Verificado: 10 scripts inline compilan; extracción de 16 resultados y tarjetas reconciliada; pruebas de DOM de Top Ten, puntos de POSICIONES, 18 hoyos y total, búsqueda, paginación, volver, limpieza al cambiar de tour y regresión Santa Fe/Sudoeste. Revisión visual automatizada bloqueada: Edge no inicia en el entorno restringido (canalización del proceso cerrada). Pendiente revisión en sesión real/iPhone. Publicación autorizada por la solicitud de cargarlo igual que los tours existentes; verificar fusión y entrega Pages antes de afirmar publicado.
