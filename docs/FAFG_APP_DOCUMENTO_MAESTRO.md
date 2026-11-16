@@ -288,3 +288,7 @@ Pedido directo: mismo indicador de flecha que los demás botones y formulario de
 
 ### Corrección de tamaño de Editar perfil — 16/11/2026
 El usuario aclara que solo solicitó la flecha: conservar exactamente el tamaño previo, igual a Mi credencial. Se retiran del acceso Editar perfil los estilos de fila completa, altura, padding, orientación, tipografía y ocultación de icono/subtítulo agregados en PR #24. Vuelve a heredar íntegramente las clases compartidas con Mi credencial, en la segunda columna de la grilla. Solo se agrega chevron posicionado sin ocupar espacio de layout; conserva despliegue debajo y sincronización accesible. Verificado por sustitución inversa exacta: exclusivamente cambia el bloque CSS específico; formulario y JavaScript idénticos.
+
+
+## Logos oficiales en Noticias — 16/11/2026
+Se reemplazan los avatares externos de Instagram por los PNG oficiales existentes de Mis tours para Ramallo, Santa Fe y Sudoeste. Archivos originales sin modificaciones, object-fit:contain sin máscara circular, dimensiones reservadas y texto alternativo. Tres PNG verificados y originales revisados visualmente. Revisión móvil automatizada no disponible por restricción del navegador local; pendiente comprobación en iPhone. Usuario autorizó explícitamente publicar el cambio. Implementado en rama fix/noticias-logos-asociaciones; verificar entrega pública tras fusionar.
