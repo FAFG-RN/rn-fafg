@@ -259,3 +259,7 @@ Verificado: sintaxis JS, diff, CDN fijado responde 200; prueba transaccional con
 
 ### Torneos desplegable — 16/11/2026
 El bloque se presenta cerrado al ingresar como «Mis torneos e inscripciones», usando details/summary y las mismas clases accordion-panel, accordion-chevron y accordion-content de los otros accesos. Flecha a la derecha y rotación al abrir; conserva las pestañas y operaciones internas. Sintaxis JS y diff verificados. Commit de interfaz 8e632d7dc9b97cbba86d42a724c2fbfa00d88bb4.
+
+
+## Ícono oficial para pantalla de inicio — 16/11/2026
+Se usa el símbolo pelota/bandera del archivo original assets/images/FAFG-Horizontal-2.png, sin letras, conservando colores y proporciones. Composición SVG con viewport del símbolo original, fondo azul translúcido y exportaciones PNG de 192/512; versión Apple 180 con fondo compuesto azul para compatibilidad. app.html e index.html apuntan al nuevo apple-touch-icon; ambos manifiestos usan las nuevas rutas. No modifica logos interiores. Revisión visual contra fuente y tamaños verificados. No se verificó reinstalación en dispositivo iOS real.
