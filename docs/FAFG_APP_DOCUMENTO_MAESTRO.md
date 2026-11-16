@@ -246,3 +246,12 @@ Pruebas previstas: acceso sin sesión desde Ayuda, reapertura, cierre y cambio d
 Pedido de Luciano: igualar el acceso de Tarjeta Digital a las demás tarjetas de Ayuda. Se elimina la clase home-link que duplicaba el fondo transparente dentro del globo y se reutilizan h2 y p de las demás tarjetas. El botón completo conserva apertura del modal y flecha, con fondo transparente, sin borde ni padding extra. Videos, logos oficiales dentro de la guía y práctica sin cambios. Se actualiza la versión del script para renovar caché.
 
 Validación: tests/tutoriales-ayuda.cjs y git diff --check correctos. Comparación estática: mismo contenedor card y mismos h2/p; sin clase home-link interna. Revisión visual automática no disponible porque falta el ejecutable de Chromium; pendiente revisión en iPhone.
+
+
+## Torneos dentro de Tarjeta digital — 16/11/2026
+
+Pedido autorizado: Próximos torneos y Mis torneos internos a FAFG, sin abrir Ronda. Implementados en assets/js/torneos-tarjeta.js, cargado por tarjeta-digital.html. Sesión FAFG existente; catálogo público; solicitudes vinculadas al usuario, únicas por torneo. Copa de la República 2026 habilitada con cierre 3/12 20:00 Argentina. Las solicitudes quedan pendientes, sin importar formularios externos ni confirmar pagos o categorías automáticamente.
+
+Tablas separadas fafg_eventos y fafg_inscripciones con RLS. Solo is_fafg_admin puede crear/publicar/cerrar torneos, confirmar/rechazar solicitudes y publicar salida y código de ronda. Gestión accesible desde el mismo módulo para administradores. El código vincula una ronda FAFG existente; NO crea automáticamente líneas ni asigna anotadores. Live provisional; papel oficial. Se conserva tarjeta anterior y marca Ronda.
+
+Verificado: sintaxis JS, diff, CDN fijado responde 200; prueba transaccional con rol authenticated de alta propia, lectura propia, bloqueo de autoconfirmación y duplicado; consulta anónima del catálogo. Pruebas revertidas con ROLLBACK. RLS habilitada. Asesor sin nuevos hallazgos en estas tablas; conserva avisos históricos. Pendiente revisión visual y flujo completo con sesión real en iPhone.
