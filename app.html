@@ -493,11 +493,9 @@ color:#fff!important
 #perfil .fafg-profile-tile:first-child .fafg-profile-tile-title{font-size:inherit!important;line-height:normal;font-weight:750;flex:1;min-width:0}
 #perfil .fafg-profile-tile:first-child::after{content:'⌄';font-size:19px;font-weight:700;line-height:1;display:inline-block;margin-left:auto;flex-shrink:0}
 </style><style id="fafg-edit-profile-accordion">
-#perfil .fafg-profile-tile.fafg-profile-edit{grid-column:1/-1;min-height:86px!important;flex-direction:row;align-items:center;justify-content:space-between;gap:12px;padding:20px!important;border-radius:18px}
-#perfil .fafg-profile-edit .fafg-profile-tile-icon,#perfil .fafg-profile-edit .fafg-profile-tile-desc{display:none!important}
-#perfil .fafg-profile-edit .fafg-profile-tile-title{font-size:inherit!important;line-height:normal;font-weight:750;flex:1;min-width:0}
-#perfil .fafg-profile-edit::after{content:'⌄';font-size:19px;font-weight:700;line-height:1;display:inline-block;margin-left:auto;flex-shrink:0;transition:transform .2s}
-#perfil .fafg-profile-edit[aria-expanded=true]::after{transform:rotate(180deg)}
+#perfil .fafg-profile-edit{position:relative}
+#perfil .fafg-profile-edit::after{content:'⌄';position:absolute;right:12px;top:50%;font-size:19px;font-weight:700;line-height:1;transform:translateY(-50%);transition:transform .2s;pointer-events:none}
+#perfil .fafg-profile-edit[aria-expanded=true]::after{transform:translateY(-50%) rotate(180deg)}
 #perfil .fafg-profile-tiles>#edit-profile-panel{grid-column:1/-1;margin-top:0;width:100%;box-sizing:border-box}
 </style></head><body><div id="fafg-splash" aria-hidden="true"><div class="splash-photo"></div><div class="splash-shade"></div><div class="splash-grain"></div><div class="splash-brand"><img src="./assets/images/FAFG-Horizontal-2.png" alt=""><div class="splash-line"></div><div class="splash-subtitle">APP OFICIAL</div></div><div class="splash-footer">TU FOOTGOLF EN UN SOLO LUGAR</div></div><script>(function(){var splash=document.getElementById('fafg-splash');var photo=new Image(),logo=new Image(),loaded=0;function next(){loaded++;if(loaded===2)splash.classList.add('splash-ready')}photo.onload=next;photo.onerror=next;logo.onload=next;logo.onerror=next;photo.src='./assets/images/2930250d-2805-474f-9f84-7a9cc2c59207.jpeg';logo.src='./assets/images/FAFG-Horizontal-2.png';if(photo.complete&&photo.naturalWidth){photo.onload=null;next()}if(logo.complete&&logo.naturalWidth){logo.onload=null;next()}setTimeout(function(){splash.classList.add('splash-ready')},4500)})();</script><div class="app">
 <style id="fafg-identical-header">body:has(#inicio.active) .hero{padding:30px 22px 32px!important;border-radius:0 0 25px 25px!important;flex:0 0 auto!important}body:has(#inicio.active) .hero .welcome{margin-top:25px!important}body:has(#inicio.active) .hero .brand{justify-content:center!important}body:has(#inicio.active) .hero .brand-title{gap:12px!important}</style>
