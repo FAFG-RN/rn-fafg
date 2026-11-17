@@ -1,0 +1,3153 @@
+{
+  "tour": "Tour BAFG",
+  "season": 2026,
+  "source": "000 2026 ACREDITACIONES BAFG.xlsm",
+  "sourceSha256": "2c41f5c5d38375e1d5bb4401fb2a498dc41e01493d8c0da03ec1318a5f026ac6",
+  "fechas": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "sheetDateMap": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10
+  },
+  "positions": [
+    {
+      "pos": 1,
+      "nombre": "DEL RIO SEBASTIAN",
+      "categoria": "S",
+      "puntosTour": 355.639296
+    },
+    {
+      "pos": 2,
+      "nombre": "CHAMORRO MAURICIO",
+      "categoria": "S",
+      "puntosTour": 273.6099677878972
+    },
+    {
+      "pos": 3,
+      "nombre": "ANZISI GIOVANI",
+      "categoria": "G",
+      "puntosTour": 267.4787677878972
+    },
+    {
+      "pos": 4,
+      "nombre": "TKACH GUILLERMO",
+      "categoria": "S",
+      "puntosTour": 258.4594512091362
+    },
+    {
+      "pos": 5,
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "categoria": "G",
+      "puntosTour": 258.4000287361194
+    },
+    {
+      "pos": 6,
+      "nombre": "GVIRTZ FERNANDO",
+      "categoria": "V",
+      "puntosTour": 238.50103990255622
+    },
+    {
+      "pos": 7,
+      "nombre": "MURUA DIEGO",
+      "categoria": "S",
+      "puntosTour": 232.27479613440002
+    },
+    {
+      "pos": 8,
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "categoria": "V",
+      "puntosTour": 229.42374240662534
+    },
+    {
+      "pos": 9,
+      "nombre": "SCHEINDER CARLOS",
+      "categoria": "S",
+      "puntosTour": 199.85163646305568
+    },
+    {
+      "pos": 10,
+      "nombre": "LEFFLER RUBEN DARIO",
+      "categoria": "G",
+      "puntosTour": 192
+    },
+    {
+      "pos": 11,
+      "nombre": "MONTELEONE LEONARDO",
+      "categoria": "V",
+      "puntosTour": 187.17915258880004
+    },
+    {
+      "pos": 12,
+      "nombre": "GONZALEZ RICARDO",
+      "categoria": "G",
+      "puntosTour": 186.98336946848656
+    },
+    {
+      "pos": 13,
+      "nombre": "OLIVERA JORGE",
+      "categoria": "S",
+      "puntosTour": 183.2423297885742
+    },
+    {
+      "pos": 14,
+      "nombre": "SZISTER GERMAN",
+      "categoria": "V",
+      "puntosTour": 168.9089487723037
+    },
+    {
+      "pos": 15,
+      "nombre": "MIÑO JOSE RAMON",
+      "categoria": "G",
+      "puntosTour": 167.7420475718042
+    },
+    {
+      "pos": 16,
+      "nombre": "BIEN GUILLERMO",
+      "categoria": "S",
+      "puntosTour": 167.18034549671034
+    },
+    {
+      "pos": 17,
+      "nombre": "ALMADA CLAUDIO",
+      "categoria": "V",
+      "puntosTour": 166.55812847347246
+    },
+    {
+      "pos": 18,
+      "nombre": "ROSAS JUAN MANUEL",
+      "categoria": "G",
+      "puntosTour": 149.50809600000002
+    },
+    {
+      "pos": 19,
+      "nombre": "MENTASTI FERNANDO",
+      "categoria": "S",
+      "puntosTour": 138.5043001344
+    },
+    {
+      "pos": 20,
+      "nombre": "FRIDMAN RONIE",
+      "categoria": "S",
+      "puntosTour": 133.63443312287274
+    },
+    {
+      "pos": 21,
+      "nombre": "SANDOVAL ARIEL (BA)",
+      "categoria": "S",
+      "puntosTour": 117.83253778857417
+    },
+    {
+      "pos": 22,
+      "nombre": "BRANDAN FAUSTINO",
+      "categoria": "S",
+      "puntosTour": 117.23003963375618
+    },
+    {
+      "pos": 23,
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "categoria": "S",
+      "puntosTour": 106.96515978678543
+    },
+    {
+      "pos": 24,
+      "nombre": "AGUIRRE JULIO CESAR",
+      "categoria": "V",
+      "puntosTour": 104.98700103359545
+    },
+    {
+      "pos": 25,
+      "nombre": "MATE GASTON",
+      "categoria": "S",
+      "puntosTour": 98.53802364241184
+    },
+    {
+      "pos": 26,
+      "nombre": "POLO LUCAS",
+      "categoria": "G",
+      "puntosTour": 94.4608077986492
+    },
+    {
+      "pos": 27,
+      "nombre": "BIEN TOMAS",
+      "categoria": "G",
+      "puntosTour": 94.43227265731136
+    },
+    {
+      "pos": 28,
+      "nombre": "SANDOVAL ARIEL",
+      "categoria": "S",
+      "puntosTour": 90.65498175101891
+    },
+    {
+      "pos": 29,
+      "nombre": "KOLTAN ALEJO",
+      "categoria": "G",
+      "puntosTour": 89.19181807095049
+    },
+    {
+      "pos": 30,
+      "nombre": "FERNANDEZ ALFREDO",
+      "categoria": "S",
+      "puntosTour": 87.69001447057073
+    },
+    {
+      "pos": 31,
+      "nombre": "FERNANDEZ IGNACIO",
+      "categoria": "V",
+      "puntosTour": 87.17987411722984
+    },
+    {
+      "pos": 32,
+      "nombre": "PAZ JUAN",
+      "categoria": "V",
+      "puntosTour": 85.14719497800536
+    },
+    {
+      "pos": 33,
+      "nombre": "GAINZA DIEGO",
+      "categoria": "G",
+      "puntosTour": 78.33541937976493
+    },
+    {
+      "pos": 34,
+      "nombre": "GALLESE MAURO",
+      "categoria": "G",
+      "puntosTour": 75.84587673567619
+    },
+    {
+      "pos": 35,
+      "nombre": "DOBRILLA JOSE",
+      "categoria": "M",
+      "puntosTour": 73.53327753097648
+    },
+    {
+      "pos": 36,
+      "nombre": "GOICOECHEA MARCELO",
+      "categoria": "M",
+      "puntosTour": 73.07192881462952
+    },
+    {
+      "pos": 37,
+      "nombre": "SKOCAJ DAMIAN",
+      "categoria": "V",
+      "puntosTour": 66.01521042366815
+    },
+    {
+      "pos": 38,
+      "nombre": "PALHEIRO JUAN",
+      "categoria": "S",
+      "puntosTour": 62.45504807126969
+    },
+    {
+      "pos": 39,
+      "nombre": "MARTINEZ AGUSTIN",
+      "categoria": "G",
+      "puntosTour": 59.749023458129756
+    },
+    {
+      "pos": 40,
+      "nombre": "LESCANO DANIEL GUSTAVO",
+      "categoria": "V",
+      "puntosTour": 55.635971681767906
+    },
+    {
+      "pos": 41,
+      "nombre": "MORALEDA ANDRES",
+      "categoria": "G",
+      "puntosTour": 52.400166468803675
+    },
+    {
+      "pos": 42,
+      "nombre": "CURCIO WALTER",
+      "categoria": "V",
+      "puntosTour": 44.74235675471918
+    },
+    {
+      "pos": 43,
+      "nombre": "DOMENECH STEPHAN",
+      "categoria": "G",
+      "puntosTour": 43.43884542236323
+    },
+    {
+      "pos": 44,
+      "nombre": "GONZALEZ LEANDRO",
+      "categoria": "G",
+      "puntosTour": 43.32306351693249
+    },
+    {
+      "pos": 45,
+      "nombre": "GIORDANO JULIETA",
+      "categoria": "DS",
+      "puntosTour": 39.379477390496696
+    },
+    {
+      "pos": 46,
+      "nombre": "CABALLERO GASTON",
+      "categoria": "S",
+      "puntosTour": 28.629740407020506
+    },
+    {
+      "pos": 47,
+      "nombre": "MARTINEZ DARIO",
+      "categoria": "G",
+      "puntosTour": 28.629740407020506
+    },
+    {
+      "pos": 48,
+      "nombre": "BASTUS ALEX",
+      "categoria": "M",
+      "puntosTour": 22.293635298061986
+    },
+    {
+      "pos": 49,
+      "nombre": "BASTUS FABIAN",
+      "categoria": "M",
+      "puntosTour": 17.359786282977293
+    },
+    {
+      "pos": 50,
+      "nombre": "RELLECATI CECILIA",
+      "categoria": "D",
+      "puntosTour": 15.496254982976206
+    },
+    {
+      "pos": 51,
+      "nombre": "ALMADA LUCILA",
+      "categoria": "D",
+      "puntosTour": 13.517857261119024
+    },
+    {
+      "pos": 52,
+      "nombre": "LAVALLEN NOELIA INES",
+      "categoria": "DS",
+      "puntosTour": 7.430644689503902
+    },
+    {
+      "pos": 53,
+      "nombre": "MOTTA DOMINGO",
+      "categoria": "M",
+      "puntosTour": 6.382609913123039
+    },
+    {
+      "pos": 54,
+      "nombre": "AGUIRRE MACARENA",
+      "categoria": "D",
+      "puntosTour": 6.382609913123039
+    },
+    {
+      "pos": 55,
+      "nombre": "ARANA MARCELO",
+      "categoria": "M",
+      "puntosTour": 0
+    },
+    {
+      "pos": 56,
+      "nombre": "SANDLER LAURA",
+      "categoria": "DS",
+      "puntosTour": 0
+    },
+    {
+      "pos": 57,
+      "nombre": "VAZQUEZ SERGIO",
+      "categoria": "M",
+      "puntosTour": 0
+    }
+  ],
+  "results": [
+    {
+      "fecha": 1,
+      "pos": 1,
+      "nombre": "TKACH GUILLERMO",
+      "score": 65,
+      "par": -7,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 5
+    },
+    {
+      "fecha": 1,
+      "pos": 2,
+      "nombre": "DEL RIO SEBASTIAN",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 6
+    },
+    {
+      "fecha": 1,
+      "pos": 3,
+      "nombre": "LEFFLER RUBEN DARIO",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 7
+    },
+    {
+      "fecha": 1,
+      "pos": 4,
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 8
+    },
+    {
+      "fecha": 1,
+      "pos": 5,
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 9
+    },
+    {
+      "fecha": 1,
+      "pos": 6,
+      "nombre": "OLIVERA JORGE",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 10
+    },
+    {
+      "fecha": 1,
+      "pos": 7,
+      "nombre": "MONTELEONE LEONARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": "DES. AUT. ULTIMOS 2",
+      "source": "RE1",
+      "row": 11
+    },
+    {
+      "fecha": 1,
+      "pos": 8,
+      "nombre": "BRANDAN FAUSTINO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 12
+    },
+    {
+      "fecha": 1,
+      "pos": 9,
+      "nombre": "MURUA DIEGO",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 13
+    },
+    {
+      "fecha": 1,
+      "pos": 10,
+      "nombre": "AGUIRRE JULIO CESAR",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 14
+    },
+    {
+      "fecha": 1,
+      "pos": 11,
+      "nombre": "CHAMORRO MAURICIO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 15
+    },
+    {
+      "fecha": 1,
+      "pos": 12,
+      "nombre": "GVIRTZ FERNANDO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 16
+    },
+    {
+      "fecha": 1,
+      "pos": 13,
+      "nombre": "MIÑO JOSE RAMON",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE1",
+      "row": 17
+    },
+    {
+      "fecha": 1,
+      "pos": 14,
+      "nombre": "SKOCAJ DAMIAN",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 18
+    },
+    {
+      "fecha": 1,
+      "pos": 15,
+      "nombre": "SZISTER GERMAN",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 19
+    },
+    {
+      "fecha": 1,
+      "pos": 16,
+      "nombre": "GAINZA DIEGO",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 20
+    },
+    {
+      "fecha": 1,
+      "pos": 17,
+      "nombre": "DOMENECH STEPHAN",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 21
+    },
+    {
+      "fecha": 1,
+      "pos": 18,
+      "nombre": "SANDOVAL ARIEL",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 22
+    },
+    {
+      "fecha": 1,
+      "pos": 19,
+      "nombre": "FERNANDEZ IGNACIO",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 23
+    },
+    {
+      "fecha": 1,
+      "pos": 20,
+      "nombre": "DOBRILLA JOSE",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": "DES. AUT. ULTIMOS 3",
+      "source": "RE1",
+      "row": 24
+    },
+    {
+      "fecha": 1,
+      "pos": 21,
+      "nombre": "FERNANDEZ ALFREDO",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 25
+    },
+    {
+      "fecha": 1,
+      "pos": 22,
+      "nombre": "BIEN GUILLERMO",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 26
+    },
+    {
+      "fecha": 1,
+      "pos": 23,
+      "nombre": "PAZ JUAN",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 27
+    },
+    {
+      "fecha": 1,
+      "pos": 24,
+      "nombre": "ANZISI GIOVANI",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 28
+    },
+    {
+      "fecha": 1,
+      "pos": 25,
+      "nombre": "GONZALEZ RICARDO",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 29
+    },
+    {
+      "fecha": 1,
+      "pos": 26,
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 30
+    },
+    {
+      "fecha": 1,
+      "pos": 27,
+      "nombre": "GALLESE MAURO",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 31
+    },
+    {
+      "fecha": 1,
+      "pos": 28,
+      "nombre": "MARTINEZ AGUSTIN",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 32
+    },
+    {
+      "fecha": 1,
+      "pos": 29,
+      "nombre": "GONZALEZ LEANDRO",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 33
+    },
+    {
+      "fecha": 1,
+      "pos": 30,
+      "nombre": "CURCIO WALTER",
+      "score": 82,
+      "par": 10,
+      "puntosTour": 24.232212280502157,
+      "puntosRanking": 18.17415921037662,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 34
+    },
+    {
+      "fecha": 1,
+      "pos": 31,
+      "nombre": "GIORDANO JULIETA",
+      "score": 85,
+      "par": 13,
+      "puntosTour": 18.869332916279667,
+      "puntosRanking": 14.15199968720975,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 35
+    },
+    {
+      "fecha": 1,
+      "pos": 32,
+      "nombre": "LESCANO DANIEL GUSTAVO",
+      "score": 85,
+      "par": 13,
+      "puntosTour": 18.869332916279667,
+      "puntosRanking": 14.15199968720975,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 36
+    },
+    {
+      "fecha": 1,
+      "pos": 33,
+      "nombre": "KOLTAN ALEJO",
+      "score": 86,
+      "par": 14,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 13.01983971223297,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 37
+    },
+    {
+      "fecha": 1,
+      "pos": 34,
+      "nombre": "GOICOECHEA MARCELO",
+      "score": 90,
+      "par": 18,
+      "puntosTour": 12.436428680229502,
+      "puntosRanking": 9.327321510172126,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 38
+    },
+    {
+      "fecha": 1,
+      "pos": 35,
+      "nombre": "RELLECATI CECILIA",
+      "score": 92,
+      "par": 20,
+      "puntosTour": 10.526193234946252,
+      "puntosRanking": 7.89464492620969,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 39
+    },
+    {
+      "fecha": 1,
+      "pos": 36,
+      "nombre": "MOTTA DOMINGO",
+      "score": 98,
+      "par": 26,
+      "puntosTour": 6.382609913123039,
+      "puntosRanking": 4.78695743484228,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 40
+    },
+    {
+      "fecha": 1,
+      "pos": 37,
+      "nombre": "AGUIRRE MACARENA",
+      "score": 98,
+      "par": 26,
+      "puntosTour": 6.382609913123039,
+      "puntosRanking": 4.78695743484228,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 41
+    },
+    {
+      "fecha": 1,
+      "pos": 38,
+      "nombre": "LAVALLEN NOELIA INES",
+      "score": 104,
+      "par": 32,
+      "puntosTour": 3.870127442449949,
+      "puntosRanking": 2.902595581837462,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 42
+    },
+    {
+      "fecha": 1,
+      "pos": 39,
+      "nombre": "ROSAS JUAN MANUEL",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 43
+    },
+    {
+      "fecha": 2,
+      "pos": 1,
+      "nombre": "LEFFLER RUBEN DARIO",
+      "score": 64,
+      "par": -8,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 5
+    },
+    {
+      "fecha": 2,
+      "pos": 2,
+      "nombre": "CHAMORRO MAURICIO",
+      "score": 65,
+      "par": -7,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 6
+    },
+    {
+      "fecha": 2,
+      "pos": 3,
+      "nombre": "ANZISI GIOVANI",
+      "score": 67,
+      "par": -5,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 7
+    },
+    {
+      "fecha": 2,
+      "pos": 4,
+      "nombre": "DEL RIO SEBASTIAN",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE2",
+      "row": 8
+    },
+    {
+      "fecha": 2,
+      "pos": 5,
+      "nombre": "OLIVERA JORGE",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 9
+    },
+    {
+      "fecha": 2,
+      "pos": 6,
+      "nombre": "TKACH GUILLERMO",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 10
+    },
+    {
+      "fecha": 2,
+      "pos": 7,
+      "nombre": "FRIDMAN RONIE",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 11
+    },
+    {
+      "fecha": 2,
+      "pos": 8,
+      "nombre": "MONTELEONE LEONARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 12
+    },
+    {
+      "fecha": 2,
+      "pos": 9,
+      "nombre": "GVIRTZ FERNANDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE2",
+      "row": 13
+    },
+    {
+      "fecha": 2,
+      "pos": 10,
+      "nombre": "GONZALEZ RICARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 14
+    },
+    {
+      "fecha": 2,
+      "pos": 11,
+      "nombre": "GOICOECHEA MARCELO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 15
+    },
+    {
+      "fecha": 2,
+      "pos": 12,
+      "nombre": "MIÑO JOSE RAMON",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 16
+    },
+    {
+      "fecha": 2,
+      "pos": 13,
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 17
+    },
+    {
+      "fecha": 2,
+      "pos": 14,
+      "nombre": "BRANDAN FAUSTINO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 18
+    },
+    {
+      "fecha": 2,
+      "pos": 15,
+      "nombre": "PAZ JUAN",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 19
+    },
+    {
+      "fecha": 2,
+      "pos": 16,
+      "nombre": "SCHEINDER CARLOS",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE2",
+      "row": 20
+    },
+    {
+      "fecha": 2,
+      "pos": 17,
+      "nombre": "SANDOVAL ARIEL",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 21
+    },
+    {
+      "fecha": 2,
+      "pos": 18,
+      "nombre": "GALLESE MAURO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 22
+    },
+    {
+      "fecha": 2,
+      "pos": 19,
+      "nombre": "FERNANDEZ IGNACIO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 23
+    },
+    {
+      "fecha": 2,
+      "pos": 20,
+      "nombre": "BIEN GUILLERMO",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 24
+    },
+    {
+      "fecha": 2,
+      "pos": 21,
+      "nombre": "DOBRILLA JOSE",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 25
+    },
+    {
+      "fecha": 2,
+      "pos": 22,
+      "nombre": "LESCANO DANIEL GUSTAVO",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 26
+    },
+    {
+      "fecha": 2,
+      "pos": 23,
+      "nombre": "MARTINEZ AGUSTIN",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 27
+    },
+    {
+      "fecha": 2,
+      "pos": 24,
+      "nombre": "ALMADA CLAUDIO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 28
+    },
+    {
+      "fecha": 2,
+      "pos": 25,
+      "nombre": "GAINZA DIEGO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 29
+    },
+    {
+      "fecha": 2,
+      "pos": 26,
+      "nombre": "PALHEIRO JUAN",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 30
+    },
+    {
+      "fecha": 2,
+      "pos": 27,
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 31
+    },
+    {
+      "fecha": 2,
+      "pos": 28,
+      "nombre": "MARTINEZ DARIO",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 32
+    },
+    {
+      "fecha": 2,
+      "pos": 29,
+      "nombre": "BASTUS ALEX",
+      "score": 82,
+      "par": 10,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 16.72022647354649,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 33
+    },
+    {
+      "fecha": 2,
+      "pos": 30,
+      "nombre": "FERNANDEZ ALFREDO",
+      "score": 82,
+      "par": 10,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 16.72022647354649,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 34
+    },
+    {
+      "fecha": 2,
+      "pos": 31,
+      "nombre": "KOLTAN ALEJO",
+      "score": 83,
+      "par": 11,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 35
+    },
+    {
+      "fecha": 2,
+      "pos": 32,
+      "nombre": "GIORDANO JULIETA",
+      "score": 83,
+      "par": 11,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 36
+    },
+    {
+      "fecha": 2,
+      "pos": 33,
+      "nombre": "CURCIO WALTER",
+      "score": 83,
+      "par": 11,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 37
+    },
+    {
+      "fecha": 2,
+      "pos": 34,
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "score": 85,
+      "par": 13,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 13.01983971223297,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 38
+    },
+    {
+      "fecha": 2,
+      "pos": 35,
+      "nombre": "BASTUS FABIAN",
+      "score": 85,
+      "par": 13,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 13.01983971223297,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 39
+    },
+    {
+      "fecha": 2,
+      "pos": 36,
+      "nombre": "GONZALEZ LEANDRO",
+      "score": 87,
+      "par": 15,
+      "puntosTour": 14.693323109911983,
+      "puntosRanking": 11.019992332433988,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 40
+    },
+    {
+      "fecha": 2,
+      "pos": 37,
+      "nombre": "SKOCAJ DAMIAN",
+      "score": 87,
+      "par": 15,
+      "puntosTour": 14.693323109911983,
+      "puntosRanking": 11.019992332433988,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 41
+    },
+    {
+      "fecha": 2,
+      "pos": 38,
+      "nombre": "ALMADA LUCILA",
+      "score": 88,
+      "par": 16,
+      "puntosTour": 13.517857261119024,
+      "puntosRanking": 10.138392945839268,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 42
+    },
+    {
+      "fecha": 2,
+      "pos": 39,
+      "nombre": "AGUIRRE JULIO CESAR",
+      "score": 91,
+      "par": 19,
+      "puntosTour": 10.526193234946252,
+      "puntosRanking": 7.89464492620969,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 43
+    },
+    {
+      "fecha": 2,
+      "pos": 40,
+      "nombre": "RELLECATI CECILIA",
+      "score": 100,
+      "par": 28,
+      "puntosTour": 4.970061748029954,
+      "puntosRanking": 3.7275463110224654,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 44
+    },
+    {
+      "fecha": 2,
+      "pos": 41,
+      "nombre": "LAVALLEN NOELIA INES",
+      "score": 104,
+      "par": 32,
+      "puntosTour": 3.5605172470539532,
+      "puntosRanking": 2.670387935290465,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 45
+    },
+    {
+      "fecha": 2,
+      "pos": 42,
+      "nombre": "AGUIRRE MACARENA",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 46
+    },
+    {
+      "fecha": 2,
+      "pos": 43,
+      "nombre": "SZISTER GERMAN",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 47
+    },
+    {
+      "fecha": 2,
+      "pos": 44,
+      "nombre": "ROSAS JUAN MANUEL",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 48
+    },
+    {
+      "fecha": 2,
+      "pos": 45,
+      "nombre": "DOMENECH STEPHAN",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 49
+    },
+    {
+      "fecha": 2,
+      "pos": 46,
+      "nombre": "MURUA DIEGO",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 50
+    },
+    {
+      "fecha": 3,
+      "pos": 1,
+      "nombre": "MURUA DIEGO",
+      "score": 67,
+      "par": -5,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": "DESEMPATE EN CANCHA",
+      "source": "RE3",
+      "row": 5
+    },
+    {
+      "fecha": 3,
+      "pos": 2,
+      "nombre": "ANZISI GIOVANI",
+      "score": 67,
+      "par": -5,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 6
+    },
+    {
+      "fecha": 3,
+      "pos": 3,
+      "nombre": "ALMADA CLAUDIO",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE3",
+      "row": 7
+    },
+    {
+      "fecha": 3,
+      "pos": 4,
+      "nombre": "CHAMORRO MAURICIO",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE3",
+      "row": 8
+    },
+    {
+      "fecha": 3,
+      "pos": 5,
+      "nombre": "SCHEINDER CARLOS",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE3",
+      "row": 9
+    },
+    {
+      "fecha": 3,
+      "pos": 6,
+      "nombre": "DEL RIO SEBASTIAN",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 10
+    },
+    {
+      "fecha": 3,
+      "pos": 7,
+      "nombre": "MENTASTI FERNANDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE3",
+      "row": 11
+    },
+    {
+      "fecha": 3,
+      "pos": 8,
+      "nombre": "GONZALEZ RICARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE3",
+      "row": 12
+    },
+    {
+      "fecha": 3,
+      "pos": 9,
+      "nombre": "SANDOVAL ARIEL (BA)",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 13
+    },
+    {
+      "fecha": 3,
+      "pos": 10,
+      "nombre": "ROSAS JUAN MANUEL",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 14
+    },
+    {
+      "fecha": 3,
+      "pos": 11,
+      "nombre": "SZISTER GERMAN",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 15
+    },
+    {
+      "fecha": 3,
+      "pos": 12,
+      "nombre": "GVIRTZ FERNANDO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE3",
+      "row": 16
+    },
+    {
+      "fecha": 3,
+      "pos": 13,
+      "nombre": "POLO LUCAS",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE3",
+      "row": 17
+    },
+    {
+      "fecha": 3,
+      "pos": 14,
+      "nombre": "BIEN GUILLERMO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 18
+    },
+    {
+      "fecha": 3,
+      "pos": 15,
+      "nombre": "TKACH GUILLERMO",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE3",
+      "row": 19
+    },
+    {
+      "fecha": 3,
+      "pos": 16,
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 20
+    },
+    {
+      "fecha": 3,
+      "pos": 17,
+      "nombre": "MATE GASTON",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 21
+    },
+    {
+      "fecha": 3,
+      "pos": 18,
+      "nombre": "FRIDMAN RONIE",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE3",
+      "row": 22
+    },
+    {
+      "fecha": 3,
+      "pos": 19,
+      "nombre": "BIEN TOMAS",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 23
+    },
+    {
+      "fecha": 3,
+      "pos": 20,
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 24
+    },
+    {
+      "fecha": 3,
+      "pos": 21,
+      "nombre": "MORALEDA ANDRES",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": null,
+      "source": "RE3",
+      "row": 25
+    },
+    {
+      "fecha": 3,
+      "pos": null,
+      "nombre": "DOBRILLA JOSE",
+      "score": 71,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE3",
+      "source": "AC3",
+      "row": 5,
+      "pending": true
+    },
+    {
+      "fecha": 3,
+      "pos": null,
+      "nombre": "VAZQUEZ SERGIO",
+      "score": 71,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE3",
+      "source": "AC3",
+      "row": 9,
+      "pending": true
+    },
+    {
+      "fecha": 3,
+      "pos": null,
+      "nombre": "SANDLER LAURA",
+      "score": 86,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE3",
+      "source": "AC3",
+      "row": 17,
+      "pending": true
+    },
+    {
+      "fecha": 3,
+      "pos": null,
+      "nombre": "RELLECATI CECILIA",
+      "score": 84,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE3",
+      "source": "AC3",
+      "row": 21,
+      "pending": true
+    },
+    {
+      "fecha": 4,
+      "pos": 1,
+      "nombre": "DEL RIO SEBASTIAN",
+      "score": 63,
+      "par": -9,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 5
+    },
+    {
+      "fecha": 4,
+      "pos": 2,
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "score": 64,
+      "par": -8,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 6
+    },
+    {
+      "fecha": 4,
+      "pos": 3,
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "score": 65,
+      "par": -7,
+      "puntosTour": 84.64,
+      "puntosRanking": 63.48,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 7
+    },
+    {
+      "fecha": 4,
+      "pos": 4,
+      "nombre": "ROSAS JUAN MANUEL",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 8
+    },
+    {
+      "fecha": 4,
+      "pos": 5,
+      "nombre": "MURUA DIEGO",
+      "score": 67,
+      "par": -5,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 9
+    },
+    {
+      "fecha": 4,
+      "pos": 6,
+      "nombre": "GVIRTZ FERNANDO",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 10
+    },
+    {
+      "fecha": 4,
+      "pos": 7,
+      "nombre": "MIÑO JOSE RAMON",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 11
+    },
+    {
+      "fecha": 4,
+      "pos": 8,
+      "nombre": "SCHEINDER CARLOS",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 12
+    },
+    {
+      "fecha": 4,
+      "pos": 9,
+      "nombre": "MONTELEONE LEONARDO",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. POR RANKING",
+      "source": "RE4",
+      "row": 13
+    },
+    {
+      "fecha": 4,
+      "pos": 10,
+      "nombre": "MENTASTI FERNANDO",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 14
+    },
+    {
+      "fecha": 4,
+      "pos": 11,
+      "nombre": "ANZISI GIOVANI",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 15
+    },
+    {
+      "fecha": 4,
+      "pos": 12,
+      "nombre": "SZISTER GERMAN",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 16
+    },
+    {
+      "fecha": 4,
+      "pos": 13,
+      "nombre": "KOLTAN ALEJO",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 17
+    },
+    {
+      "fecha": 4,
+      "pos": 14,
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE4",
+      "row": 18
+    },
+    {
+      "fecha": 4,
+      "pos": 15,
+      "nombre": "MATE GASTON",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 19
+    },
+    {
+      "fecha": 4,
+      "pos": 16,
+      "nombre": "BIEN TOMAS",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 20
+    },
+    {
+      "fecha": 4,
+      "pos": 17,
+      "nombre": "ALMADA CLAUDIO",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 21
+    },
+    {
+      "fecha": 4,
+      "pos": 18,
+      "nombre": "SANDOVAL ARIEL (BA)",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 22
+    },
+    {
+      "fecha": 4,
+      "pos": 19,
+      "nombre": "OLIVERA JORGE",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 23
+    },
+    {
+      "fecha": 4,
+      "pos": 20,
+      "nombre": "TKACH GUILLERMO",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 24
+    },
+    {
+      "fecha": 4,
+      "pos": 21,
+      "nombre": "POLO LUCAS",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 25
+    },
+    {
+      "fecha": 4,
+      "pos": 22,
+      "nombre": "CHAMORRO MAURICIO",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 26
+    },
+    {
+      "fecha": 4,
+      "pos": 23,
+      "nombre": "PALHEIRO JUAN",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": "DES. AUT. ULTIMO HOYO",
+      "source": "RE4",
+      "row": 27
+    },
+    {
+      "fecha": 4,
+      "pos": 24,
+      "nombre": "AGUIRRE JULIO CESAR",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 28
+    },
+    {
+      "fecha": 4,
+      "pos": 25,
+      "nombre": "FERNANDEZ ALFREDO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE4",
+      "row": 29
+    },
+    {
+      "fecha": 4,
+      "pos": 26,
+      "nombre": "CABALLERO GASTON",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 30
+    },
+    {
+      "fecha": 4,
+      "pos": 27,
+      "nombre": "BIEN GUILLERMO",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 19.75452088084415,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 31
+    },
+    {
+      "fecha": 4,
+      "pos": 28,
+      "nombre": "FRIDMAN RONIE",
+      "score": 82,
+      "par": 10,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 32
+    },
+    {
+      "fecha": 4,
+      "pos": 29,
+      "nombre": "GONZALEZ RICARDO",
+      "score": 84,
+      "par": 12,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 13.01983971223297,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 33
+    },
+    {
+      "fecha": 4,
+      "pos": 30,
+      "nombre": "MORALEDA ANDRES",
+      "score": 88,
+      "par": 16,
+      "puntosTour": 12.436428680229502,
+      "puntosRanking": 9.327321510172126,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 34
+    },
+    {
+      "fecha": 4,
+      "pos": 31,
+      "nombre": "CURCIO WALTER",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 35
+    },
+    {
+      "fecha": 4,
+      "pos": 32,
+      "nombre": "GALLESE MAURO",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 36
+    },
+    {
+      "fecha": 4,
+      "pos": 33,
+      "nombre": "BRANDAN FAUSTINO",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 37
+    },
+    {
+      "fecha": 4,
+      "pos": 34,
+      "nombre": "DOMENECH STEPHAN",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 38
+    },
+    {
+      "fecha": 4,
+      "pos": 35,
+      "nombre": "PAZ JUAN",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 39
+    },
+    {
+      "fecha": 4,
+      "pos": 36,
+      "nombre": "FERNANDEZ IGNACIO",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 40
+    },
+    {
+      "fecha": 4,
+      "pos": 37,
+      "nombre": "SKOCAJ DAMIAN",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 41
+    },
+    {
+      "fecha": 4,
+      "pos": 38,
+      "nombre": "MARTINEZ DARIO",
+      "score": "NPT",
+      "par": null,
+      "puntosTour": 0,
+      "puntosRanking": 0,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 42
+    },
+    {
+      "fecha": 4,
+      "pos": null,
+      "nombre": "DOBRILLA JOSE",
+      "score": 80,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE4",
+      "source": "AC4",
+      "row": 5,
+      "pending": true
+    },
+    {
+      "fecha": 4,
+      "pos": null,
+      "nombre": "ARANA MARCELO",
+      "score": 73,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE4",
+      "source": "AC4",
+      "row": 28,
+      "pending": true
+    },
+    {
+      "fecha": 4,
+      "pos": null,
+      "nombre": "VAZQUEZ SERGIO",
+      "score": 72,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE4",
+      "source": "AC4",
+      "row": 33,
+      "pending": true
+    },
+    {
+      "fecha": 4,
+      "pos": null,
+      "nombre": "RELLECATI CECILIA",
+      "score": 90,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE4",
+      "source": "AC4",
+      "row": 34,
+      "pending": true
+    },
+    {
+      "fecha": 4,
+      "pos": null,
+      "nombre": "SANDLER LAURA",
+      "score": 97,
+      "par": null,
+      "puntosTour": null,
+      "puntosRanking": null,
+      "observaciones": "Solo acreditación: sin fila vinculada en RE4",
+      "source": "AC4",
+      "row": 45,
+      "pending": true
+    }
+  ],
+  "registrations": [
+    {
+      "nombre": "DOBRILLA JOSE",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 5
+    },
+    {
+      "nombre": "KOLTAN ALEJO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 6
+    },
+    {
+      "nombre": "LAVALLEN NOELIA INES",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 7
+    },
+    {
+      "nombre": "AGUIRRE JULIO CESAR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 8
+    },
+    {
+      "nombre": "AGUIRRE MACARENA",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 9
+    },
+    {
+      "nombre": "CURCIO WALTER",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 10
+    },
+    {
+      "nombre": "DEL RIO SEBASTIAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 11
+    },
+    {
+      "nombre": "SZISTER GERMAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 12
+    },
+    {
+      "nombre": "LEFFLER RUBEN DARIO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 13
+    },
+    {
+      "nombre": "SANDOVAL ARIEL",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 14
+    },
+    {
+      "nombre": "ANZISI GIOVANI",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 15
+    },
+    {
+      "nombre": "GVIRTZ FERNANDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 16
+    },
+    {
+      "nombre": "TKACH GUILLERMO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 17
+    },
+    {
+      "nombre": "GALLESE MAURO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 18
+    },
+    {
+      "nombre": "MIÑO JOSE RAMON",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 19
+    },
+    {
+      "nombre": "OLIVERA JORGE",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 20
+    },
+    {
+      "nombre": "BRANDAN FAUSTINO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 21
+    },
+    {
+      "nombre": "GONZALEZ RICARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 22
+    },
+    {
+      "nombre": "GIORDANO JULIETA",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 23
+    },
+    {
+      "nombre": "MONTELEONE LEONARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 24
+    },
+    {
+      "nombre": "ROSAS JUAN MANUEL",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 25
+    },
+    {
+      "nombre": "LESCANO DANIEL GUSTAVO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 26
+    },
+    {
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 27
+    },
+    {
+      "nombre": "MARTINEZ AGUSTIN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 28
+    },
+    {
+      "nombre": "GAINZA DIEGO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 29
+    },
+    {
+      "nombre": "CHAMORRO MAURICIO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 30
+    },
+    {
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 31
+    },
+    {
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 32
+    },
+    {
+      "nombre": "GONZALEZ LEANDRO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 33
+    },
+    {
+      "nombre": "RELLECATI CECILIA",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 34
+    },
+    {
+      "nombre": "DOMENECH STEPHAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 35
+    },
+    {
+      "nombre": "MOTTA DOMINGO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 36
+    },
+    {
+      "nombre": "PAZ JUAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 37
+    },
+    {
+      "nombre": "GOICOECHEA MARCELO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 38
+    },
+    {
+      "nombre": "FERNANDEZ ALFREDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 39
+    },
+    {
+      "nombre": "MURUA DIEGO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 40
+    },
+    {
+      "nombre": "FERNANDEZ IGNACIO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 41
+    },
+    {
+      "nombre": "BIEN GUILLERMO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 42
+    },
+    {
+      "nombre": "SKOCAJ DAMIAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 43
+    },
+    {
+      "nombre": "DOBRILLA JOSE",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 5
+    },
+    {
+      "nombre": "KOLTAN ALEJO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 6
+    },
+    {
+      "nombre": "LAVALLEN NOELIA INES",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 7
+    },
+    {
+      "nombre": "AGUIRRE JULIO CESAR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 8
+    },
+    {
+      "nombre": "AGUIRRE MACARENA",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 9
+    },
+    {
+      "nombre": "CURCIO WALTER",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 10
+    },
+    {
+      "nombre": "DEL RIO SEBASTIAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 11
+    },
+    {
+      "nombre": "SZISTER GERMAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 12
+    },
+    {
+      "nombre": "LEFFLER RUBEN DARIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 13
+    },
+    {
+      "nombre": "SANDOVAL ARIEL",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 14
+    },
+    {
+      "nombre": "ANZISI GIOVANI",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 15
+    },
+    {
+      "nombre": "GVIRTZ FERNANDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 16
+    },
+    {
+      "nombre": "TKACH GUILLERMO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 17
+    },
+    {
+      "nombre": "GALLESE MAURO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 18
+    },
+    {
+      "nombre": "MIÑO JOSE RAMON",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 19
+    },
+    {
+      "nombre": "OLIVERA JORGE",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 20
+    },
+    {
+      "nombre": "BRANDAN FAUSTINO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 21
+    },
+    {
+      "nombre": "GONZALEZ RICARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 22
+    },
+    {
+      "nombre": "GIORDANO JULIETA",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 23
+    },
+    {
+      "nombre": "MONTELEONE LEONARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 24
+    },
+    {
+      "nombre": "ROSAS JUAN MANUEL",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 25
+    },
+    {
+      "nombre": "LESCANO DANIEL GUSTAVO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 26
+    },
+    {
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 27
+    },
+    {
+      "nombre": "MARTINEZ AGUSTIN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 28
+    },
+    {
+      "nombre": "GAINZA DIEGO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 29
+    },
+    {
+      "nombre": "CHAMORRO MAURICIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 30
+    },
+    {
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 31
+    },
+    {
+      "nombre": "SCHEINDER CARLOS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 32
+    },
+    {
+      "nombre": "GONZALEZ LEANDRO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 33
+    },
+    {
+      "nombre": "RELLECATI CECILIA",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 34
+    },
+    {
+      "nombre": "DOMENECH STEPHAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 35
+    },
+    {
+      "nombre": "FRIDMAN RONIE",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 36
+    },
+    {
+      "nombre": "PAZ JUAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 37
+    },
+    {
+      "nombre": "GOICOECHEA MARCELO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 38
+    },
+    {
+      "nombre": "FERNANDEZ ALFREDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 39
+    },
+    {
+      "nombre": "MURUA DIEGO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 40
+    },
+    {
+      "nombre": "FERNANDEZ IGNACIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 41
+    },
+    {
+      "nombre": "BIEN GUILLERMO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 42
+    },
+    {
+      "nombre": "SKOCAJ DAMIAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 43
+    },
+    {
+      "nombre": "BASTUS ALEX",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 44
+    },
+    {
+      "nombre": "BASTUS FABIAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 45
+    },
+    {
+      "nombre": "ALMADA CLAUDIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 46
+    },
+    {
+      "nombre": "ALMADA LUCILA",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 47
+    },
+    {
+      "nombre": "MARTINEZ DARIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 48
+    },
+    {
+      "nombre": "PALHEIRO JUAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 49
+    },
+    {
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 50
+    },
+    {
+      "nombre": "DOBRILLA JOSE",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 5
+    },
+    {
+      "nombre": "MORALEDA ANDRES",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 6
+    },
+    {
+      "nombre": "DEL RIO SEBASTIAN",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 7
+    },
+    {
+      "nombre": "SZISTER GERMAN",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 8
+    },
+    {
+      "nombre": "VAZQUEZ SERGIO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 9
+    },
+    {
+      "nombre": "MENTASTI FERNANDO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 10
+    },
+    {
+      "nombre": "ANZISI GIOVANI",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 11
+    },
+    {
+      "nombre": "GVIRTZ FERNANDO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 12
+    },
+    {
+      "nombre": "TKACH GUILLERMO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 13
+    },
+    {
+      "nombre": "GONZALEZ RICARDO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 14
+    },
+    {
+      "nombre": "ROSAS JUAN MANUEL",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 15
+    },
+    {
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 16
+    },
+    {
+      "nombre": "SANDLER LAURA",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 17
+    },
+    {
+      "nombre": "CHAMORRO MAURICIO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 18
+    },
+    {
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 19
+    },
+    {
+      "nombre": "SCHEINDER CARLOS",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 20
+    },
+    {
+      "nombre": "RELLECATI CECILIA",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 21
+    },
+    {
+      "nombre": "FRIDMAN RONIE",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 22
+    },
+    {
+      "nombre": "MATE GASTON",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 23
+    },
+    {
+      "nombre": "MURUA DIEGO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 24
+    },
+    {
+      "nombre": "BIEN GUILLERMO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 25
+    },
+    {
+      "nombre": "BIEN TOMAS",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 26
+    },
+    {
+      "nombre": "POLO LUCAS",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 27
+    },
+    {
+      "nombre": "ALMADA CLAUDIO",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 28
+    },
+    {
+      "nombre": "SANDOVAL ARIEL (BA)",
+      "fecha": 3,
+      "source": "AC3",
+      "row": 29
+    },
+    {
+      "nombre": "DOBRILLA JOSE",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 5
+    },
+    {
+      "nombre": "KOLTAN ALEJO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 6
+    },
+    {
+      "nombre": "LAVALLEN NOELIA INES",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 7
+    },
+    {
+      "nombre": "AGUIRRE JULIO CESAR",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 8
+    },
+    {
+      "nombre": "MORALEDA ANDRES",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 9
+    },
+    {
+      "nombre": "CURCIO WALTER",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 10
+    },
+    {
+      "nombre": "DEL RIO SEBASTIAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 11
+    },
+    {
+      "nombre": "SZISTER GERMAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 12
+    },
+    {
+      "nombre": "BIEN TOMAS",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 13
+    },
+    {
+      "nombre": "SANDOVAL ARIEL (BA)",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 14
+    },
+    {
+      "nombre": "ANZISI GIOVANI",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 15
+    },
+    {
+      "nombre": "GVIRTZ FERNANDO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 16
+    },
+    {
+      "nombre": "TKACH GUILLERMO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 17
+    },
+    {
+      "nombre": "GALLESE MAURO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 18
+    },
+    {
+      "nombre": "MIÑO JOSE RAMON",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 19
+    },
+    {
+      "nombre": "OLIVERA JORGE",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 20
+    },
+    {
+      "nombre": "BRANDAN FAUSTINO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 21
+    },
+    {
+      "nombre": "GONZALEZ RICARDO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 22
+    },
+    {
+      "nombre": "MATE GASTON",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 23
+    },
+    {
+      "nombre": "MONTELEONE LEONARDO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 24
+    },
+    {
+      "nombre": "ROSAS JUAN MANUEL",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 25
+    },
+    {
+      "nombre": "MENTASTI FERNANDO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 26
+    },
+    {
+      "nombre": "GONZALEZ SEBASTIAN JESUS",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 27
+    },
+    {
+      "nombre": "ARANA MARCELO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 28
+    },
+    {
+      "nombre": "POLO LUCAS",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 29
+    },
+    {
+      "nombre": "CHAMORRO MAURICIO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 30
+    },
+    {
+      "nombre": "GONZALEZ HECTOR OSCAR",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 31
+    },
+    {
+      "nombre": "SCHEINDER CARLOS",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 32
+    },
+    {
+      "nombre": "VAZQUEZ SERGIO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 33
+    },
+    {
+      "nombre": "RELLECATI CECILIA",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 34
+    },
+    {
+      "nombre": "DOMENECH STEPHAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 35
+    },
+    {
+      "nombre": "FRIDMAN RONIE",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 36
+    },
+    {
+      "nombre": "PAZ JUAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 37
+    },
+    {
+      "nombre": "GOICOECHEA MARCELO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 38
+    },
+    {
+      "nombre": "FERNANDEZ ALFREDO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 39
+    },
+    {
+      "nombre": "MURUA DIEGO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 40
+    },
+    {
+      "nombre": "FERNANDEZ IGNACIO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 41
+    },
+    {
+      "nombre": "BIEN GUILLERMO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 42
+    },
+    {
+      "nombre": "SKOCAJ DAMIAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 43
+    },
+    {
+      "nombre": "BASTUS ALEX",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 44
+    },
+    {
+      "nombre": "SANDLER LAURA",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 45
+    },
+    {
+      "nombre": "ALMADA CLAUDIO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 46
+    },
+    {
+      "nombre": "CABALLERO GASTON",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 47
+    },
+    {
+      "nombre": "MARTINEZ DARIO",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 48
+    },
+    {
+      "nombre": "PALHEIRO JUAN",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 49
+    },
+    {
+      "nombre": "NOGUERA NAHUEL JORGE",
+      "fecha": 4,
+      "source": "AC4",
+      "row": 50
+    }
+  ]
+}
