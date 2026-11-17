@@ -1,0 +1,1703 @@
+{
+  "tour": "Tour Serrano",
+  "season": 2026,
+  "source": "000 2026 ACREDITACIONES SERRANO 5-6.xlsm",
+  "sourceSha256": "b51be8650b42ff2057f6ddf12efc5d1beb06ddb4a1fd143fbb7f113683c45b75",
+  "fechas": [
+    1,
+    2,
+    3
+  ],
+  "sheetDateMap": {
+    "1": 1,
+    "2": 2,
+    "4": 3,
+    "3": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10
+  },
+  "positions": [
+    {
+      "pos": 1,
+      "nombre": "GHEZZI MARCOS",
+      "categoria": "S",
+      "puntosTour": 284
+    },
+    {
+      "pos": 2,
+      "nombre": "GHEZZI ROBERTO",
+      "categoria": "S",
+      "puntosTour": 225.65346012364802
+    },
+    {
+      "pos": 3,
+      "nombre": "PEDRONCINI GABRIEL",
+      "categoria": "G",
+      "puntosTour": 156.27929600000002
+    },
+    {
+      "pos": 4,
+      "nombre": "AMERI GERARDO",
+      "categoria": "G",
+      "puntosTour": 151.32188731375618
+    },
+    {
+      "pos": 5,
+      "nombre": "VULCANO GERARDO",
+      "categoria": "G",
+      "puntosTour": 147.07028522597835
+    },
+    {
+      "pos": 6,
+      "nombre": "CORRADI FEDERICO",
+      "categoria": "G",
+      "puntosTour": 118.4888016486759
+    },
+    {
+      "pos": 7,
+      "nombre": "PEREZ DIEGO OMAR",
+      "categoria": "S",
+      "puntosTour": 104.49291956836095
+    },
+    {
+      "pos": 8,
+      "nombre": "CONQUEIRO VICTOR",
+      "categoria": "S",
+      "puntosTour": 104.07434555676323
+    },
+    {
+      "pos": 9,
+      "nombre": "TEBES JORGE",
+      "categoria": "G",
+      "puntosTour": 100.59923792297418
+    },
+    {
+      "pos": 10,
+      "nombre": "FERNANDEZ PABLO JAVIER",
+      "categoria": "V",
+      "puntosTour": 100
+    },
+    {
+      "pos": 11,
+      "nombre": "CONQUEIRO FELIX",
+      "categoria": "S",
+      "puntosTour": 98.17139296243207
+    },
+    {
+      "pos": 12,
+      "nombre": "LOPEZ IRIART CRISTIAN",
+      "categoria": "G",
+      "puntosTour": 88.201787618062
+    },
+    {
+      "pos": 13,
+      "nombre": "SOSA CESAR ADOLFO",
+      "categoria": "S",
+      "puntosTour": 86.68726035177184
+    },
+    {
+      "pos": 14,
+      "nombre": "PALACIOS RAMIRO",
+      "categoria": "S",
+      "puntosTour": 83.98277509414392
+    },
+    {
+      "pos": 15,
+      "nombre": "GAMALERO JUAN CARLOS",
+      "categoria": "M",
+      "puntosTour": 83.4025832109374
+    },
+    {
+      "pos": 16,
+      "nombre": "AVALOS LEONARDO",
+      "categoria": "G",
+      "puntosTour": 82.44117036486541
+    },
+    {
+      "pos": 17,
+      "nombre": "CARROSSIO RICARDO",
+      "categoria": "M",
+      "puntosTour": 81.04144399290486
+    },
+    {
+      "pos": 18,
+      "nombre": "FUNARI HECTOR",
+      "categoria": "S",
+      "puntosTour": 80.20548418785147
+    },
+    {
+      "pos": 19,
+      "nombre": "JOFRE PABLO MARTIN",
+      "categoria": "G",
+      "puntosTour": 79.92747557714834
+    },
+    {
+      "pos": 20,
+      "nombre": "MONSALVE JUAN IGNACIO",
+      "categoria": "G",
+      "puntosTour": 73.55549750311454
+    },
+    {
+      "pos": 21,
+      "nombre": "OUDOKIAN WALTER",
+      "categoria": "M",
+      "puntosTour": 68.59347819559468
+    },
+    {
+      "pos": 22,
+      "nombre": "PERNIA OMAR",
+      "categoria": "G",
+      "puntosTour": 65.90815232000001
+    },
+    {
+      "pos": 23,
+      "nombre": "ZEPEDA LUIS",
+      "categoria": "G",
+      "puntosTour": 65.73248072042522
+    },
+    {
+      "pos": 24,
+      "nombre": "RODRIGUEZ NESTOR",
+      "categoria": "V",
+      "puntosTour": 63.94898989658026
+    },
+    {
+      "pos": 25,
+      "nombre": "FRANZINO CARLOS",
+      "categoria": "G",
+      "puntosTour": 57.45864422556811
+    },
+    {
+      "pos": 26,
+      "nombre": "TREVOLAZAVALA LUCIANO",
+      "categoria": "G",
+      "puntosTour": 55.78466012364801
+    },
+    {
+      "pos": 27,
+      "nombre": "CORRADO JORGE",
+      "categoria": "G",
+      "puntosTour": 55.78466012364801
+    },
+    {
+      "pos": 28,
+      "nombre": "GARCIA LUCIANO MIGUEL",
+      "categoria": "G",
+      "puntosTour": 55.78466012364801
+    },
+    {
+      "pos": 29,
+      "nombre": "SUAREZ CRISTIN",
+      "categoria": "G",
+      "puntosTour": 52.69464058052885
+    },
+    {
+      "pos": 30,
+      "nombre": "DIAZ CRISTIAN",
+      "categoria": "G",
+      "puntosTour": 51.32188731375617
+    },
+    {
+      "pos": 31,
+      "nombre": "CORRO CESAR DANIEL",
+      "categoria": "V",
+      "puntosTour": 47.21613632865568
+    },
+    {
+      "pos": 32,
+      "nombre": "ALES MATIAS",
+      "categoria": "G",
+      "puntosTour": 47.21613632865568
+    },
+    {
+      "pos": 33,
+      "nombre": "TOMASI MAURICIO",
+      "categoria": "V",
+      "puntosTour": 43.43884542236323
+    },
+    {
+      "pos": 34,
+      "nombre": "INOSTROZA ROBERTO",
+      "categoria": "V",
+      "puntosTour": 42.31036455479798
+    },
+    {
+      "pos": 35,
+      "nombre": "TEBES ADRIAN",
+      "categoria": "M",
+      "puntosTour": 41.59199856347945
+    },
+    {
+      "pos": 36,
+      "nombre": "CEÑAL RAMIRO",
+      "categoria": "S",
+      "puntosTour": 36.76663876548824
+    },
+    {
+      "pos": 37,
+      "nombre": "SZAPIEL GUSTAVO",
+      "categoria": "S",
+      "puntosTour": 33.82530766424918
+    },
+    {
+      "pos": 38,
+      "nombre": "SPERANZA CARLOS",
+      "categoria": "G",
+      "puntosTour": 31.119283051109246
+    },
+    {
+      "pos": 39,
+      "nombre": "CACERES BENITEZ HENRY",
+      "categoria": "S",
+      "puntosTour": 28.629740407020506
+    },
+    {
+      "pos": 40,
+      "nombre": "ALLER ATUCHA JOAQUIN",
+      "categoria": "G",
+      "puntosTour": 24.232212280502157
+    },
+    {
+      "pos": 41,
+      "nombre": "LAZZARINI JAVIER OSCAR",
+      "categoria": "S",
+      "puntosTour": 22.293635298061986
+    },
+    {
+      "pos": 42,
+      "nombre": "FORNILLO MAURICIO",
+      "categoria": "V",
+      "puntosTour": 22.293635298061986
+    },
+    {
+      "pos": 43,
+      "nombre": "HOLL JONATAN",
+      "categoria": "G",
+      "puntosTour": 18.869332916279667
+    },
+    {
+      "pos": 44,
+      "nombre": "BASUALDO MARCOS RODRIGO",
+      "categoria": "G",
+      "puntosTour": 17.359786282977293
+    },
+    {
+      "pos": 45,
+      "nombre": "DEL GIORGIO FRANCISCO",
+      "categoria": "G",
+      "puntosTour": 11.441514385811143
+    }
+  ],
+  "results": [
+    {
+      "fecha": 1,
+      "pos": 1,
+      "nombre": "AMERI GERARDO",
+      "score": 63,
+      "par": -9,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 5
+    },
+    {
+      "fecha": 1,
+      "pos": 2,
+      "nombre": "GHEZZI ROBERTO",
+      "score": 64,
+      "par": -8,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE1",
+      "row": 6
+    },
+    {
+      "fecha": 1,
+      "pos": 3,
+      "nombre": "GHEZZI MARCOS",
+      "score": 64,
+      "par": -8,
+      "puntosTour": 92,
+      "puntosRanking": 69,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 7
+    },
+    {
+      "fecha": 1,
+      "pos": 4,
+      "nombre": "PEDRONCINI GABRIEL",
+      "score": 65,
+      "par": -7,
+      "puntosTour": 84.64,
+      "puntosRanking": 63.48,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 8
+    },
+    {
+      "fecha": 1,
+      "pos": 5,
+      "nombre": "CORRADI FEDERICO",
+      "score": 67,
+      "par": -5,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 9
+    },
+    {
+      "fecha": 1,
+      "pos": 6,
+      "nombre": "LOPEZ IRIART CRISTIAN",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 49.43111424000001,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 10
+    },
+    {
+      "fecha": 1,
+      "pos": 7,
+      "nombre": "CONQUEIRO VICTOR",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": "DES. AUT. POR RANKING",
+      "source": "RE1",
+      "row": 11
+    },
+    {
+      "fecha": 1,
+      "pos": 8,
+      "nombre": "TEBES JORGE",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 60.63550013440001,
+      "puntosRanking": 45.476625100800014,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 12
+    },
+    {
+      "fecha": 1,
+      "pos": 9,
+      "nombre": "DIAZ CRISTIAN",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 13
+    },
+    {
+      "fecha": 1,
+      "pos": 10,
+      "nombre": "CONQUEIRO FELIX",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 14
+    },
+    {
+      "fecha": 1,
+      "pos": 11,
+      "nombre": "VULCANO GERARDO",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": "DES. AUT. POR RANKING",
+      "source": "RE1",
+      "row": 15
+    },
+    {
+      "fecha": 1,
+      "pos": 12,
+      "nombre": "AVALOS LEONARDO",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 16
+    },
+    {
+      "fecha": 1,
+      "pos": 13,
+      "nombre": "ALES MATIAS",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 17
+    },
+    {
+      "fecha": 1,
+      "pos": 14,
+      "nombre": "CARROSSIO RICARDO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 18
+    },
+    {
+      "fecha": 1,
+      "pos": 15,
+      "nombre": "PALACIOS RAMIRO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 19
+    },
+    {
+      "fecha": 1,
+      "pos": 16,
+      "nombre": "MONSALVE JUAN IGNACIO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 20
+    },
+    {
+      "fecha": 1,
+      "pos": 17,
+      "nombre": "RODRIGUEZ NESTOR",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 21
+    },
+    {
+      "fecha": 1,
+      "pos": 18,
+      "nombre": "ZEPEDA LUIS",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": "DES. AUT. POR RANKING",
+      "source": "RE1",
+      "row": 22
+    },
+    {
+      "fecha": 1,
+      "pos": 19,
+      "nombre": "FUNARI HECTOR",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 23
+    },
+    {
+      "fecha": 1,
+      "pos": 20,
+      "nombre": "JOFRE PABLO MARTIN",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 24
+    },
+    {
+      "fecha": 1,
+      "pos": 21,
+      "nombre": "GAMALERO JUAN CARLOS",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 25
+    },
+    {
+      "fecha": 1,
+      "pos": 22,
+      "nombre": "OUDOKIAN WALTER",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 26
+    },
+    {
+      "fecha": 1,
+      "pos": 23,
+      "nombre": "PEREZ DIEGO OMAR",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 27
+    },
+    {
+      "fecha": 1,
+      "pos": 24,
+      "nombre": "SUAREZ CRISTIN",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE1",
+      "row": 28
+    },
+    {
+      "fecha": 1,
+      "pos": 25,
+      "nombre": "SOSA CESAR ADOLFO",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 29
+    },
+    {
+      "fecha": 1,
+      "pos": 26,
+      "nombre": "FRANZINO CARLOS",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 30
+    },
+    {
+      "fecha": 1,
+      "pos": 27,
+      "nombre": "INOSTROZA ROBERTO",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 19.75452088084415,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 31
+    },
+    {
+      "fecha": 1,
+      "pos": 28,
+      "nombre": "TEBES ADRIAN",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 24.232212280502157,
+      "puntosRanking": 18.17415921037662,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 32
+    },
+    {
+      "fecha": 1,
+      "pos": 29,
+      "nombre": "HOLL JONATAN",
+      "score": 83,
+      "par": 11,
+      "puntosTour": 18.869332916279667,
+      "puntosRanking": 14.15199968720975,
+      "observaciones": null,
+      "source": "RE1",
+      "row": 33
+    },
+    {
+      "fecha": 2,
+      "pos": 1,
+      "nombre": "GHEZZI MARCOS",
+      "score": 62,
+      "par": -10,
+      "puntosTour": 100,
+      "puntosRanking": 75,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 5
+    },
+    {
+      "fecha": 2,
+      "pos": 2,
+      "nombre": "GHEZZI ROBERTO",
+      "score": 65,
+      "par": -7,
+      "puntosTour": 77.86880000000001,
+      "puntosRanking": 58.40160000000001,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 6
+    },
+    {
+      "fecha": 2,
+      "pos": 3,
+      "nombre": "PEDRONCINI GABRIEL",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 71.63929600000002,
+      "puntosRanking": 53.729472000000015,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 7
+    },
+    {
+      "fecha": 2,
+      "pos": 4,
+      "nombre": "VULCANO GERARDO",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 41.83849509273601,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 8
+    },
+    {
+      "fecha": 2,
+      "pos": 5,
+      "nombre": "AMERI GERARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 51.32188731375617,
+      "puntosRanking": 38.49141548531713,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 9
+    },
+    {
+      "fecha": 2,
+      "pos": 6,
+      "nombre": "PEREZ DIEGO OMAR",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 35.412102246491756,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 10
+    },
+    {
+      "fecha": 2,
+      "pos": 7,
+      "nombre": "CONQUEIRO VICTOR",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 11
+    },
+    {
+      "fecha": 2,
+      "pos": 8,
+      "nombre": "GAMALERO JUAN CARLOS",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 32.57913406677242,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 12
+    },
+    {
+      "fecha": 2,
+      "pos": 9,
+      "nombre": "JOFRE PABLO MARTIN",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 13
+    },
+    {
+      "fecha": 2,
+      "pos": 10,
+      "nombre": "TEBES JORGE",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 29.972803341430627,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 14
+    },
+    {
+      "fecha": 2,
+      "pos": 11,
+      "nombre": "FUNARI HECTOR",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 15
+    },
+    {
+      "fecha": 2,
+      "pos": 12,
+      "nombre": "PALACIOS RAMIRO",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 27.574979074116175,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 16
+    },
+    {
+      "fecha": 2,
+      "pos": 13,
+      "nombre": "CARROSSIO RICARDO",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 25.368980748186885,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 17
+    },
+    {
+      "fecha": 2,
+      "pos": 14,
+      "nombre": "AVALOS LEONARDO",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 23.339462288331934,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 18
+    },
+    {
+      "fecha": 2,
+      "pos": 15,
+      "nombre": "OUDOKIAN WALTER",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 21.47230530526538,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 19
+    },
+    {
+      "fecha": 2,
+      "pos": 16,
+      "nombre": "MONSALVE JUAN IGNACIO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 19.75452088084415,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 20
+    },
+    {
+      "fecha": 2,
+      "pos": 17,
+      "nombre": "FRANZINO CARLOS",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 19.75452088084415,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 21
+    },
+    {
+      "fecha": 2,
+      "pos": 18,
+      "nombre": "CORRADI FEDERICO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 19.75452088084415,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 22
+    },
+    {
+      "fecha": 2,
+      "pos": 19,
+      "nombre": "SOSA CESAR ADOLFO",
+      "score": 79,
+      "par": 7,
+      "puntosTour": 24.232212280502157,
+      "puntosRanking": 18.17415921037662,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 23
+    },
+    {
+      "fecha": 2,
+      "pos": 20,
+      "nombre": "LOPEZ IRIART CRISTIAN",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 16.72022647354649,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 24
+    },
+    {
+      "fecha": 2,
+      "pos": 21,
+      "nombre": "ZEPEDA LUIS",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 16.72022647354649,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 25
+    },
+    {
+      "fecha": 2,
+      "pos": 22,
+      "nombre": "RODRIGUEZ NESTOR",
+      "score": 81,
+      "par": 9,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE2",
+      "row": 26
+    },
+    {
+      "fecha": 2,
+      "pos": 23,
+      "nombre": "CONQUEIRO FELIX",
+      "score": 81,
+      "par": 9,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 15.382608355662772,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 27
+    },
+    {
+      "fecha": 2,
+      "pos": 24,
+      "nombre": "SUAREZ CRISTIN",
+      "score": 82,
+      "par": 10,
+      "puntosTour": 18.869332916279667,
+      "puntosRanking": 14.15199968720975,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 28
+    },
+    {
+      "fecha": 2,
+      "pos": 25,
+      "nombre": "TEBES ADRIAN",
+      "score": 83,
+      "par": 11,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 13.01983971223297,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 29
+    },
+    {
+      "fecha": 2,
+      "pos": 26,
+      "nombre": "INOSTROZA ROBERTO",
+      "score": 84,
+      "par": 12,
+      "puntosTour": 15.971003380339111,
+      "puntosRanking": 11.978252535254333,
+      "observaciones": null,
+      "source": "RE2",
+      "row": 30
+    },
+    {
+      "fecha": 3,
+      "pos": 1,
+      "nombre": "FERNANDEZ PABLO JAVIER",
+      "score": 59,
+      "par": -13,
+      "puntosTour": 100,
+      "puntosRanking": 50,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 5
+    },
+    {
+      "fecha": 3,
+      "pos": 2,
+      "nombre": "GHEZZI MARCOS",
+      "score": 60,
+      "par": -12,
+      "puntosTour": 92,
+      "puntosRanking": 46,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 6
+    },
+    {
+      "fecha": 3,
+      "pos": 3,
+      "nombre": "PERNIA OMAR",
+      "score": 64,
+      "par": -8,
+      "puntosTour": 65.90815232000001,
+      "puntosRanking": 32.95407616000001,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 7
+    },
+    {
+      "fecha": 3,
+      "pos": 4,
+      "nombre": "GHEZZI ROBERTO",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 27.892330061824005,
+      "observaciones": "DES. AUT. ULTIMOS 3",
+      "source": "RE4",
+      "row": 8
+    },
+    {
+      "fecha": 3,
+      "pos": 5,
+      "nombre": "GARCIA LUCIANO MIGUEL",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 27.892330061824005,
+      "observaciones": "DES. AUT. ULTIMOS 6",
+      "source": "RE4",
+      "row": 9
+    },
+    {
+      "fecha": 3,
+      "pos": 6,
+      "nombre": "CORRADO JORGE",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 27.892330061824005,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 10
+    },
+    {
+      "fecha": 3,
+      "pos": 7,
+      "nombre": "TREVOLAZAVALA LUCIANO",
+      "score": 66,
+      "par": -6,
+      "puntosTour": 55.78466012364801,
+      "puntosRanking": 27.892330061824005,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 11
+    },
+    {
+      "fecha": 3,
+      "pos": 8,
+      "nombre": "CORRO CESAR DANIEL",
+      "score": 68,
+      "par": -4,
+      "puntosTour": 47.21613632865568,
+      "puntosRanking": 23.608068164327836,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 12
+    },
+    {
+      "fecha": 3,
+      "pos": 9,
+      "nombre": "TOMASI MAURICIO",
+      "score": 69,
+      "par": -3,
+      "puntosTour": 43.43884542236323,
+      "puntosRanking": 21.719422711181615,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 13
+    },
+    {
+      "fecha": 3,
+      "pos": 10,
+      "nombre": "VULCANO GERARDO",
+      "score": 70,
+      "par": -2,
+      "puntosTour": 39.96373778857417,
+      "puntosRanking": 19.981868894287086,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 14
+    },
+    {
+      "fecha": 3,
+      "pos": 11,
+      "nombre": "CEÑAL RAMIRO",
+      "score": 71,
+      "par": -1,
+      "puntosTour": 36.76663876548824,
+      "puntosRanking": 18.38331938274412,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 15
+    },
+    {
+      "fecha": 3,
+      "pos": 12,
+      "nombre": "SZAPIEL GUSTAVO",
+      "score": 72,
+      "par": 0,
+      "puntosTour": 33.82530766424918,
+      "puntosRanking": 16.91265383212459,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 16
+    },
+    {
+      "fecha": 3,
+      "pos": 13,
+      "nombre": "SPERANZA CARLOS",
+      "score": 73,
+      "par": 1,
+      "puntosTour": 31.119283051109246,
+      "puntosRanking": 15.559641525554623,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 17
+    },
+    {
+      "fecha": 3,
+      "pos": 14,
+      "nombre": "SOSA CESAR ADOLFO",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 14.314870203510255,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 18
+    },
+    {
+      "fecha": 3,
+      "pos": 15,
+      "nombre": "CACERES BENITEZ HENRY",
+      "score": 74,
+      "par": 2,
+      "puntosTour": 28.629740407020506,
+      "puntosRanking": 14.314870203510255,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 19
+    },
+    {
+      "fecha": 3,
+      "pos": 16,
+      "nombre": "CONQUEIRO FELIX",
+      "score": 75,
+      "par": 3,
+      "puntosTour": 26.339361174458865,
+      "puntosRanking": 13.169680587229431,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 20
+    },
+    {
+      "fecha": 3,
+      "pos": 17,
+      "nombre": "ALLER ATUCHA JOAQUIN",
+      "score": 76,
+      "par": 4,
+      "puntosTour": 24.232212280502157,
+      "puntosRanking": 12.116106140251079,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 21
+    },
+    {
+      "fecha": 3,
+      "pos": 18,
+      "nombre": "FORNILLO MAURICIO",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 11.146817649030993,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 22
+    },
+    {
+      "fecha": 3,
+      "pos": 19,
+      "nombre": "LAZZARINI JAVIER OSCAR",
+      "score": 77,
+      "par": 5,
+      "puntosTour": 22.293635298061986,
+      "puntosRanking": 11.146817649030993,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 23
+    },
+    {
+      "fecha": 3,
+      "pos": 20,
+      "nombre": "PEREZ DIEGO OMAR",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 10.255072237108514,
+      "observaciones": "DES. AUT. ULTIMOS 9",
+      "source": "RE4",
+      "row": 24
+    },
+    {
+      "fecha": 3,
+      "pos": 21,
+      "nombre": "CORRADI FEDERICO",
+      "score": 78,
+      "par": 6,
+      "puntosTour": 20.51014447421703,
+      "puntosRanking": 10.255072237108514,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 25
+    },
+    {
+      "fecha": 3,
+      "pos": 22,
+      "nombre": "BASUALDO MARCOS RODRIGO",
+      "score": 80,
+      "par": 8,
+      "puntosTour": 17.359786282977293,
+      "puntosRanking": 8.679893141488646,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 26
+    },
+    {
+      "fecha": 3,
+      "pos": 23,
+      "nombre": "DEL GIORGIO FRANCISCO",
+      "score": 85,
+      "par": 13,
+      "puntosTour": 11.441514385811143,
+      "puntosRanking": 5.720757192905571,
+      "observaciones": null,
+      "source": "RE4",
+      "row": 27
+    }
+  ],
+  "registrations": [
+    {
+      "nombre": "CORRADI FEDERICO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 5
+    },
+    {
+      "nombre": "ALES MATIAS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 6
+    },
+    {
+      "nombre": "PEDRONCINI GABRIEL",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 7
+    },
+    {
+      "nombre": "CONQUEIRO FELIX",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 8
+    },
+    {
+      "nombre": "TEBES JORGE",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 9
+    },
+    {
+      "nombre": "SUAREZ CRISTIN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 10
+    },
+    {
+      "nombre": "FUNARI HECTOR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 11
+    },
+    {
+      "nombre": "PEREZ DIEGO OMAR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 12
+    },
+    {
+      "nombre": "AVALOS LEONARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 13
+    },
+    {
+      "nombre": "JOFRE PABLO MARTIN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 14
+    },
+    {
+      "nombre": "AMERI GERARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 15
+    },
+    {
+      "nombre": "PALACIOS RAMIRO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 16
+    },
+    {
+      "nombre": "TEBES ADRIAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 17
+    },
+    {
+      "nombre": "INOSTROZA ROBERTO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 18
+    },
+    {
+      "nombre": "HOLL JONATAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 19
+    },
+    {
+      "nombre": "GHEZZI ROBERTO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 20
+    },
+    {
+      "nombre": "GHEZZI MARCOS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 21
+    },
+    {
+      "nombre": "SOSA CESAR ADOLFO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 22
+    },
+    {
+      "nombre": "MONSALVE JUAN IGNACIO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 23
+    },
+    {
+      "nombre": "FRANZINO CARLOS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 24
+    },
+    {
+      "nombre": "RODRIGUEZ NESTOR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 25
+    },
+    {
+      "nombre": "DIAZ CRISTIAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 26
+    },
+    {
+      "nombre": "GAMALERO JUAN CARLOS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 27
+    },
+    {
+      "nombre": "ZEPEDA LUIS",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 28
+    },
+    {
+      "nombre": "OUDOKIAN WALTER",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 29
+    },
+    {
+      "nombre": "CONQUEIRO VICTOR",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 30
+    },
+    {
+      "nombre": "LOPEZ IRIART CRISTIAN",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 31
+    },
+    {
+      "nombre": "CARROSSIO RICARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 32
+    },
+    {
+      "nombre": "VULCANO GERARDO",
+      "fecha": 1,
+      "source": "AC1",
+      "row": 33
+    },
+    {
+      "nombre": "PEDRONCINI GABRIEL",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 5
+    },
+    {
+      "nombre": "CONQUEIRO FELIX",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 6
+    },
+    {
+      "nombre": "TEBES JORGE",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 7
+    },
+    {
+      "nombre": "SUAREZ CRISTIN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 8
+    },
+    {
+      "nombre": "FUNARI HECTOR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 9
+    },
+    {
+      "nombre": "PEREZ DIEGO OMAR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 10
+    },
+    {
+      "nombre": "AVALOS LEONARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 11
+    },
+    {
+      "nombre": "JOFRE PABLO MARTIN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 12
+    },
+    {
+      "nombre": "AMERI GERARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 13
+    },
+    {
+      "nombre": "PALACIOS RAMIRO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 14
+    },
+    {
+      "nombre": "TEBES ADRIAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 15
+    },
+    {
+      "nombre": "INOSTROZA ROBERTO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 16
+    },
+    {
+      "nombre": "GHEZZI ROBERTO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 17
+    },
+    {
+      "nombre": "GHEZZI MARCOS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 18
+    },
+    {
+      "nombre": "SOSA CESAR ADOLFO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 19
+    },
+    {
+      "nombre": "MONSALVE JUAN IGNACIO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 20
+    },
+    {
+      "nombre": "FRANZINO CARLOS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 21
+    },
+    {
+      "nombre": "RODRIGUEZ NESTOR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 22
+    },
+    {
+      "nombre": "GAMALERO JUAN CARLOS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 23
+    },
+    {
+      "nombre": "ZEPEDA LUIS",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 24
+    },
+    {
+      "nombre": "CONQUEIRO VICTOR",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 25
+    },
+    {
+      "nombre": "LOPEZ IRIART CRISTIAN",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 26
+    },
+    {
+      "nombre": "CARROSSIO RICARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 27
+    },
+    {
+      "nombre": "VULCANO GERARDO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 28
+    },
+    {
+      "nombre": "OUDOKIAN WALTER",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 29
+    },
+    {
+      "nombre": "CORRADI FEDERICO",
+      "fecha": 2,
+      "source": "AC2",
+      "row": 30
+    },
+    {
+      "nombre": "GHEZZI MARCOS",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 5
+    },
+    {
+      "nombre": "GARCIA LUCIANO MIGUEL",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 6
+    },
+    {
+      "nombre": "SPERANZA CARLOS",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 7
+    },
+    {
+      "nombre": "CORRADI FEDERICO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 8
+    },
+    {
+      "nombre": "CORRO CESAR DANIEL",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 9
+    },
+    {
+      "nombre": "VULCANO GERARDO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 10
+    },
+    {
+      "nombre": "CONQUEIRO FELIX",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 11
+    },
+    {
+      "nombre": "TOMASI MAURICIO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 12
+    },
+    {
+      "nombre": "GHEZZI ROBERTO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 13
+    },
+    {
+      "nombre": "CACERES BENITEZ HENRY",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 14
+    },
+    {
+      "nombre": "PERNIA OMAR",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 15
+    },
+    {
+      "nombre": "SZAPIEL GUSTAVO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 16
+    },
+    {
+      "nombre": "CEÑAL RAMIRO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 17
+    },
+    {
+      "nombre": "FORNILLO MAURICIO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 18
+    },
+    {
+      "nombre": "CORRADO JORGE",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 19
+    },
+    {
+      "nombre": "PEREZ DIEGO OMAR",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 20
+    },
+    {
+      "nombre": "LAZZARINI JAVIER OSCAR",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 21
+    },
+    {
+      "nombre": "ALLER ATUCHA JOAQUIN",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 22
+    },
+    {
+      "nombre": "SOSA CESAR ADOLFO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 23
+    },
+    {
+      "nombre": "FERNANDEZ PABLO JAVIER",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 24
+    },
+    {
+      "nombre": "BASUALDO MARCOS RODRIGO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 25
+    },
+    {
+      "nombre": "TREVOLAZAVALA LUCIANO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 26
+    },
+    {
+      "nombre": "DEL GIORGIO FRANCISCO",
+      "fecha": 3,
+      "source": "AC4",
+      "row": 27
+    }
+  ]
+}
