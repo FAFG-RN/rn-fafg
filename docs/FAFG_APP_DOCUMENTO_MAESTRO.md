@@ -302,3 +302,11 @@ Se incorpora data/tour-sudoeste-2026-posiciones.json con las 73 posiciones, nomb
 El ranking usa el orden oficial de POSICIONES en lugar de sumar las siete fechas existentes. Primero Martínez Meier Germán: 417,2300396337562 puntos. Mismo Top Ten, formato de dos decimales, búsqueda por nombre/apellido, paginación de 10, detalles y tarjetas. Jugadores sin resultados individuales muestran una aclaración. Santa Fe/Ramallo conservan su implementación.
 
 Verificado: 10 scripts inline compilan; prueba DOM de Top Ten, puntuación, 73 jugadores, búsqueda del último jugador preservando posición 73, segunda página y volver. Regresiones career-close y profile-public-ranking correctas; git diff --check correcto. Revisión visual en iPhone no realizada. Publicación autorizada por solicitud de incorporarlo a la app; verificar entrega pública antes de afirmar publicado.
+
+## Sudoeste actualizado con F6 y F7 — 17/11/2026
+
+Nueva planilla enviada por Luciano: F6-7 FR 000 2026 ACREDITACIONES SUDOESTE (4) (2)_.xlsm. Se reemplaza el ranking anterior por las 72 posiciones exactas de POSICIONES, ahora con puntos de las siete fechas. Primero Martínez Meier Germán 595,0988396337563; segundo Ocampo Cristian Aníbal 497,7594501967632; tercero Maier Jonatan 464,1402745336444. Se respeta la cantidad y orden del nuevo archivo, sin arrastrar filas ausentes del ranking anterior.
+
+Se extraen nuevamente RE1–RE7 (296 resultados, 50 por cada fecha 6/7) y AC1–AC7 (255 tarjetas completas, todas con suma de hoyos igual al score). Solo campos deportivos públicos; no se publica el libro ni datos personales. Se actualizan las leyendas a ranking y resultados hasta fecha 7 y versiones de consulta para renovar caché. Diseño, Top Ten, búsqueda y paginación conservados.
+
+Validación: 72 posiciones consecutivas cotejadas con la hoja; 10 scripts inline compilados; cantidades por fecha, total de tarjetas y regresión de ranking público correctos; git diff --check correcto. Publicación autorizada por continuación expresa del pedido. Verificar entrega pública antes de afirmar publicado; revisión visual en iPhone pendiente.
