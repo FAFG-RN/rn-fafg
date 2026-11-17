@@ -310,3 +310,11 @@ Nueva planilla enviada por Luciano: F6-7 FR 000 2026 ACREDITACIONES SUDOESTE (4)
 Se extraen nuevamente RE1–RE7 (296 resultados, 50 por cada fecha 6/7) y AC1–AC7 (255 tarjetas completas, todas con suma de hoyos igual al score). Solo campos deportivos públicos; no se publica el libro ni datos personales. Se actualizan las leyendas a ranking y resultados hasta fecha 7 y versiones de consulta para renovar caché. Diseño, Top Ten, búsqueda y paginación conservados.
 
 Validación: 72 posiciones consecutivas cotejadas con la hoja; 10 scripts inline compilados; cantidades por fecha, total de tarjetas y regresión de ranking público correctos; git diff --check correcto. Publicación autorizada por continuación expresa del pedido. Verificar entrega pública antes de afirmar publicado; revisión visual en iPhone pendiente.
+
+## Ayuda compacta con desplegables — 17/11/2026
+
+Pedido expreso: acortar Ayuda usando menús desplegables y flecha a la derecha como los demás paneles. Los siete temas se presentan con details/summary nativos, cerrados al cargar, conservando el encabezado introductorio. Misma flecha ⌄ de 19 px y giro al abrir, alineada a la derecha, tipografía y fondo de las tarjetas existentes. Se oculta el marcador nativo para evitar flechas duplicadas; foco visible y uso por teclado nativos.
+
+Todos los textos de ayuda se conservan. Tarjeta Digital también es desplegable: dentro mantiene el botón existente de videos/práctica, mismo id y funcionamiento del modal, con título Ver videos y práctica. No se cambian sus medios, aislamiento ni cierre al navegar.
+
+Verificado: siete details sin open inicial, flechas y cuerpos presentes, listas y párrafos iguales al original; acceso único a videos; tests/tutoriales-ayuda.cjs correcto (reapertura, cierre y navegación sin sesión); diez scripts inline compilan y git diff --check correcto. Revisión visual en iPhone no realizada. Publicación autorizada por solicitud de aplicarlo en el panel de Ayuda.
