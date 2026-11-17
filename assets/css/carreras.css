@@ -1,0 +1,42 @@
+#fafg-careers{width:min(100vw,850px);max-width:100vw;height:100dvh;max-height:100dvh;margin:auto;padding:0;border:0;border-radius:18px;background:#092447;color:#fff;box-sizing:border-box;overflow:auto;font-family:Montserrat,Inter,system-ui,sans-serif}
+#fafg-careers::backdrop{background:rgba(0,12,30,.85)}
+#fafg-careers *{box-sizing:border-box}
+#fafg-careers .cc-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;position:sticky;top:0;background:#092447;z-index:2;border-bottom:1px solid #426288}
+#fafg-careers button,#fafg-careers select,#fafg-careers input{font:inherit;color:inherit;background:#174573;border:1px solid #6b91b8;border-radius:10px;padding:11px;min-height:44px}
+#fafg-careers button{cursor:pointer;font-weight:650}
+#fafg-careers button:disabled{opacity:.45;cursor:default}
+#fafg-careers :is(button,summary,input,select):focus-visible{outline:3px solid #b3ddff;outline-offset:2px}
+#fafg-careers .cc-content{padding:20px 18px 40px}
+#fafg-careers h2{font-size:22px;margin:12px 0}
+#fafg-careers h3{font-size:17px;margin:18px 0 12px}
+#fafg-careers p{line-height:1.6;font-size:13px}
+#fafg-careers .cc-muted{color:#c5d9ee;font-size:12px}
+#fafg-careers .cc-search{width:100%;margin:12px 0}
+#fafg-careers .cc-list{display:flex;flex-direction:column;gap:8px}
+#fafg-careers .cc-player{display:flex;align-items:center;justify-content:space-between;gap:12px;text-align:left;width:100%;padding:16px;background:rgba(255,255,255,.09)}
+#fafg-careers .cc-player small{display:block;color:#c5d9ee;margin-top:5px;font-weight:400;font-size:11px}
+#fafg-careers .cc-pager{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:18px 0;font-size:12px}
+#fafg-careers .cc-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0}
+#fafg-careers .cc-stat{padding:14px 10px;border-radius:12px;background:rgba(255,255,255,.10);min-width:0}
+#fafg-careers .cc-stat strong{display:block;font-size:21px;overflow-wrap:anywhere}
+#fafg-careers .cc-stat small{display:block;font-size:11px;color:#c5d9ee;margin-top:5px;line-height:1.5}
+#fafg-careers .cc-section{margin:12px 0;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid #3b6188;overflow:hidden}
+#fafg-careers summary{display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;padding:16px;cursor:pointer;font-size:14px;font-weight:700}
+#fafg-careers summary::-webkit-details-marker{display:none}
+#fafg-careers summary::marker{content:''}
+#fafg-careers summary::after{content:'⌄';font-size:19px;margin-left:auto;flex-shrink:0;transition:transform .2s}
+#fafg-careers details[open]>summary::after{transform:rotate(180deg)}
+#fafg-careers .cc-inner{padding:0 14px 16px}
+#fafg-careers .cc-line{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #3d6085;font-size:12px;line-height:1.5}
+#fafg-careers .cc-line strong{text-align:right}
+#fafg-careers .cc-filters{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+#fafg-careers .cc-filters select{flex:1;min-width:140px;max-width:100%;font-size:13px}
+#fafg-careers .cc-table-wrap{overflow-x:auto;margin:12px 0}
+#fafg-careers table{width:100%;border-collapse:collapse;font-size:11px;font-variant-numeric:tabular-nums}
+#fafg-careers th,#fafg-careers td{padding:9px 5px;text-align:center;border-bottom:1px solid #527293;white-space:nowrap}
+#fafg-careers caption{text-align:left;font-weight:700;padding:8px 0;font-size:12px}
+#fafg-careers .cc-note{padding:12px;border-left:3px solid #a9cfee;background:#193e65;border-radius:7px;font-size:12px;line-height:1.6}
+#fafg-careers .cc-event-title{display:block;font-size:13px}
+#fafg-careers .cc-event-score{display:block;font-size:12px;font-weight:400;margin-top:6px;color:#d2e7fb}
+@media(min-width:600px){#fafg-careers .cc-stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:600px){#fafg-careers{border-radius:0}}

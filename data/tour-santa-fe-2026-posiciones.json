@@ -1,0 +1,592 @@
+{
+  "tour": "Tour de Santa Fe",
+  "season": 2026,
+  "source": "POSICIONES · ranking ya publicado en Mis tours",
+  "positions": [
+    {
+      "pos": 1,
+      "nombre": "WASINGER DAMIAN",
+      "puntosTour": 640.0461
+    },
+    {
+      "pos": 2,
+      "nombre": "CLEMENZ CRISTIAN EZEQUIEL",
+      "puntosTour": 636.2845
+    },
+    {
+      "pos": 3,
+      "nombre": "OLMEDO SEBASTIAN",
+      "puntosTour": 568.5036
+    },
+    {
+      "pos": 4,
+      "nombre": "BOERO MARIO",
+      "puntosTour": 559.2999
+    },
+    {
+      "pos": 5,
+      "nombre": "TREVOLAZAVALA LUCIANO",
+      "puntosTour": 544.1286
+    },
+    {
+      "pos": 6,
+      "nombre": "CASONI ALBANO",
+      "puntosTour": 514.8716
+    },
+    {
+      "pos": 7,
+      "nombre": "COLOMBO DAMIAN",
+      "puntosTour": 505.3344
+    },
+    {
+      "pos": 8,
+      "nombre": "FIGUEROA FRANCO SEBASTIAN",
+      "puntosTour": 500.7274
+    },
+    {
+      "pos": 9,
+      "nombre": "PRIERI DANIEL",
+      "puntosTour": 496.4057
+    },
+    {
+      "pos": 10,
+      "nombre": "AYALA JOSE RODRIGO",
+      "puntosTour": 493.5328
+    },
+    {
+      "pos": 11,
+      "nombre": "AUGUSTO GUSTAVO",
+      "puntosTour": 492.5966
+    },
+    {
+      "pos": 12,
+      "nombre": "HERRERA CARLOS",
+      "puntosTour": 471.0525
+    },
+    {
+      "pos": 13,
+      "nombre": "HUMBERT MAURICIO ARIEL",
+      "puntosTour": 456.426
+    },
+    {
+      "pos": 14,
+      "nombre": "LUDUEÑA DANIEL",
+      "puntosTour": 438.6563
+    },
+    {
+      "pos": 15,
+      "nombre": "MARTINEZ SEBASTIAN",
+      "puntosTour": 428.9028
+    },
+    {
+      "pos": 16,
+      "nombre": "VEIGA RUBEN",
+      "puntosTour": 413.7582
+    },
+    {
+      "pos": 17,
+      "nombre": "ESPINDOLA MAXIMILIANO",
+      "puntosTour": 406.8578
+    },
+    {
+      "pos": 18,
+      "nombre": "GARCILAZO GUSTAVO",
+      "puntosTour": 398.6991
+    },
+    {
+      "pos": 19,
+      "nombre": "ELSENER ALBERTO",
+      "puntosTour": 393.2818
+    },
+    {
+      "pos": 20,
+      "nombre": "SIMILI LEANDRO",
+      "puntosTour": 392.7432
+    },
+    {
+      "pos": 21,
+      "nombre": "ULRICH SANTIAGO",
+      "puntosTour": 386.8245
+    },
+    {
+      "pos": 22,
+      "nombre": "PIRCHIO BRUNO",
+      "puntosTour": 379.601
+    },
+    {
+      "pos": 23,
+      "nombre": "DEZZUTTO ANDRES",
+      "puntosTour": 370.7741
+    },
+    {
+      "pos": 24,
+      "nombre": "FERREYRA MATIAS RAMIRO",
+      "puntosTour": 363.1528
+    },
+    {
+      "pos": 25,
+      "nombre": "NAZ JOAQUIN",
+      "puntosTour": 345.3851
+    },
+    {
+      "pos": 26,
+      "nombre": "ZELAYA LEONARDO",
+      "puntosTour": 341.7644
+    },
+    {
+      "pos": 27,
+      "nombre": "PASCHETTA MARIANO",
+      "puntosTour": 339.0941
+    },
+    {
+      "pos": 28,
+      "nombre": "PONTINI JUAN",
+      "puntosTour": 338.8451
+    },
+    {
+      "pos": 29,
+      "nombre": "MONTORO AGUSTIN",
+      "puntosTour": 330.553
+    },
+    {
+      "pos": 30,
+      "nombre": "GOROSITO EMILIANO",
+      "puntosTour": 307.8751
+    },
+    {
+      "pos": 31,
+      "nombre": "MARINONE DIEGO",
+      "puntosTour": 306.283
+    },
+    {
+      "pos": 32,
+      "nombre": "DELFINO MAXIMILIANO",
+      "puntosTour": 303.1837
+    },
+    {
+      "pos": 33,
+      "nombre": "COLOMBO FEDERICO",
+      "puntosTour": 295.962
+    },
+    {
+      "pos": 34,
+      "nombre": "DELGADO DAMIAN",
+      "puntosTour": 283.4046
+    },
+    {
+      "pos": 35,
+      "nombre": "ANDRES MATIAS",
+      "puntosTour": 282.8593
+    },
+    {
+      "pos": 36,
+      "nombre": "UBEDA RODRIGO",
+      "puntosTour": 278.3551
+    },
+    {
+      "pos": 37,
+      "nombre": "LAFFATIGUE JOSE LUIS",
+      "puntosTour": 272.9225
+    },
+    {
+      "pos": 38,
+      "nombre": "CRISTALDO BRIAN",
+      "puntosTour": 271.7162
+    },
+    {
+      "pos": 39,
+      "nombre": "CRIADO FRANCO HERNAN",
+      "puntosTour": 267.2753
+    },
+    {
+      "pos": 40,
+      "nombre": "GAITAN DAMIAN",
+      "puntosTour": 250.2139
+    },
+    {
+      "pos": 41,
+      "nombre": "PONZIO TOMAS",
+      "puntosTour": 248.1124
+    },
+    {
+      "pos": 42,
+      "nombre": "WILLINER JAVIER",
+      "puntosTour": 242.2742
+    },
+    {
+      "pos": 43,
+      "nombre": "CUELLO EMANUEL",
+      "puntosTour": 235.777
+    },
+    {
+      "pos": 44,
+      "nombre": "MACEDA ANDRES EZEQUIEL",
+      "puntosTour": 232.1895
+    },
+    {
+      "pos": 45,
+      "nombre": "PISTARELLI MAURO ADRIAN",
+      "puntosTour": 226.3968
+    },
+    {
+      "pos": 46,
+      "nombre": "CASTELLANO PABLO",
+      "puntosTour": 225.7087
+    },
+    {
+      "pos": 47,
+      "nombre": "BAUMAN DANIEL",
+      "puntosTour": 186.506
+    },
+    {
+      "pos": 48,
+      "nombre": "BILBAO HECTOR",
+      "puntosTour": 185.4157
+    },
+    {
+      "pos": 49,
+      "nombre": "FLORES CARLOS ALBERTO",
+      "puntosTour": 184.2798
+    },
+    {
+      "pos": 50,
+      "nombre": "VILLALBA IVAN",
+      "puntosTour": 181.31
+    },
+    {
+      "pos": 51,
+      "nombre": "LOBOS CRISTIAN",
+      "puntosTour": 179.608
+    },
+    {
+      "pos": 52,
+      "nombre": "CHIABRANDO GUSTAVO DANIEL",
+      "puntosTour": 177.3926
+    },
+    {
+      "pos": 53,
+      "nombre": "RUPPEN ESTEBAN",
+      "puntosTour": 172.9891
+    },
+    {
+      "pos": 54,
+      "nombre": "GARNERO FABIAN",
+      "puntosTour": 165.8558
+    },
+    {
+      "pos": 55,
+      "nombre": "CASTELLO SERGIO",
+      "puntosTour": 156.5629
+    },
+    {
+      "pos": 56,
+      "nombre": "TROANE FERNANDO",
+      "puntosTour": 153.761
+    },
+    {
+      "pos": 57,
+      "nombre": "HERNANDEZ LUIS",
+      "puntosTour": 148.3493
+    },
+    {
+      "pos": 58,
+      "nombre": "HUNDT OSCAR",
+      "puntosTour": 146.0826
+    },
+    {
+      "pos": 59,
+      "nombre": "GOROSITO RAUL ALBERTO",
+      "puntosTour": 144.5276
+    },
+    {
+      "pos": 60,
+      "nombre": "DI CARLO AGUSTIN",
+      "puntosTour": 135.3047
+    },
+    {
+      "pos": 61,
+      "nombre": "GONZALEZ CLAUDIO",
+      "puntosTour": 133.7631
+    },
+    {
+      "pos": 62,
+      "nombre": "GONZALEZ JULIAN EZEQUIEL",
+      "puntosTour": 133.0488
+    },
+    {
+      "pos": 63,
+      "nombre": "GIULIANELLI MAURO",
+      "puntosTour": 128.586
+    },
+    {
+      "pos": 64,
+      "nombre": "CALCIA RICARDO",
+      "puntosTour": 127.424
+    },
+    {
+      "pos": 65,
+      "nombre": "CAMINOS PEDRO",
+      "puntosTour": 125.0031
+    },
+    {
+      "pos": 66,
+      "nombre": "WILLINER CONRADO",
+      "puntosTour": 124.4803
+    },
+    {
+      "pos": 67,
+      "nombre": "MARTINEZ NICOLAS",
+      "puntosTour": 121.3076
+    },
+    {
+      "pos": 68,
+      "nombre": "CORTES MARCOS",
+      "puntosTour": 115.0781
+    },
+    {
+      "pos": 69,
+      "nombre": "CARABALLO EDGARDO",
+      "puntosTour": 112.0323
+    },
+    {
+      "pos": 70,
+      "nombre": "JARMOLKOWICZ ERED DORIAN ROMAN",
+      "puntosTour": 102.7279
+    },
+    {
+      "pos": 71,
+      "nombre": "STRACQUALURSI DENIS",
+      "puntosTour": 98.538
+    },
+    {
+      "pos": 72,
+      "nombre": "BERON RODRIGO",
+      "puntosTour": 92.5513
+    },
+    {
+      "pos": 73,
+      "nombre": "SCHLOTTHAUER RICARDO",
+      "puntosTour": 91.7357
+    },
+    {
+      "pos": 74,
+      "nombre": "BUTTO JESUS",
+      "puntosTour": 82.1886
+    },
+    {
+      "pos": 75,
+      "nombre": "ROSANO FRANCISCO",
+      "puntosTour": 78.3354
+    },
+    {
+      "pos": 76,
+      "nombre": "JULIA CARLOS ALBERTO",
+      "puntosTour": 76.2473
+    },
+    {
+      "pos": 77,
+      "nombre": "CAMPOS CARLOS",
+      "puntosTour": 74.737
+    },
+    {
+      "pos": 78,
+      "nombre": "LAVALLEN GERMAN DANIEL",
+      "puntosTour": 71.6393
+    },
+    {
+      "pos": 79,
+      "nombre": "NOVOSAD GONZALO",
+      "puntosTour": 65.9082
+    },
+    {
+      "pos": 80,
+      "nombre": "LEONCINI DAVID",
+      "puntosTour": 55.7847
+    },
+    {
+      "pos": 81,
+      "nombre": "ROSSI LUCAS",
+      "puntosTour": 55.7847
+    },
+    {
+      "pos": 82,
+      "nombre": "LATTANZI JORGE",
+      "puntosTour": 55.7847
+    },
+    {
+      "pos": 83,
+      "nombre": "GONZALEZ VICTOR",
+      "puntosTour": 51.3219
+    },
+    {
+      "pos": 84,
+      "nombre": "PERRONE MATIAS",
+      "puntosTour": 51.3219
+    },
+    {
+      "pos": 85,
+      "nombre": "CHINGOLO EZEQUIEL",
+      "puntosTour": 47.2161
+    },
+    {
+      "pos": 86,
+      "nombre": "FEGLIA MATEO",
+      "puntosTour": 47.2161
+    },
+    {
+      "pos": 87,
+      "nombre": "OLMOS LAUTARO",
+      "puntosTour": 46.5258
+    },
+    {
+      "pos": 88,
+      "nombre": "CEGNA ALEJANDRO",
+      "puntosTour": 46.5258
+    },
+    {
+      "pos": 89,
+      "nombre": "GOROSITO MARCOS ENRIQUE",
+      "puntosTour": 43.4388
+    },
+    {
+      "pos": 90,
+      "nombre": "BIGLIERI AGUSTIN JESUS",
+      "puntosTour": 43.4388
+    },
+    {
+      "pos": 91,
+      "nombre": "ARBOIT LETIZIA",
+      "puntosTour": 40.6476
+    },
+    {
+      "pos": 92,
+      "nombre": "FEGLIA MAURO",
+      "puntosTour": 39.9637
+    },
+    {
+      "pos": 93,
+      "nombre": "DOMENECH KEVIN",
+      "puntosTour": 39.6534
+    },
+    {
+      "pos": 94,
+      "nombre": "TRIVELLI MARIANO",
+      "puntosTour": 36.7666
+    },
+    {
+      "pos": 95,
+      "nombre": "MEDINA FRANCO TOMAS",
+      "puntosTour": 36.4811
+    },
+    {
+      "pos": 96,
+      "nombre": "BOVER FACUNDO",
+      "puntosTour": 33.8253
+    },
+    {
+      "pos": 97,
+      "nombre": "PAPALEO MARCELO",
+      "puntosTour": 31.1193
+    },
+    {
+      "pos": 98,
+      "nombre": "SALOM SOFIA",
+      "puntosTour": 29.7359
+    },
+    {
+      "pos": 99,
+      "nombre": "JUAREZ CRISTIAN",
+      "puntosTour": 28.6297
+    },
+    {
+      "pos": 100,
+      "nombre": "LEWANDOWSKI AIRTON",
+      "puntosTour": 28.6297
+    },
+    {
+      "pos": 101,
+      "nombre": "GORDILLO EMILIO",
+      "puntosTour": 28.6297
+    },
+    {
+      "pos": 102,
+      "nombre": "SEERY WALTER GUSTAVO",
+      "puntosTour": 26.3394
+    },
+    {
+      "pos": 103,
+      "nombre": "GUERRERO GABRIEL",
+      "puntosTour": 26.3394
+    },
+    {
+      "pos": 104,
+      "nombre": "PAZ LEANDRO",
+      "puntosTour": 24.2322
+    },
+    {
+      "pos": 105,
+      "nombre": "LEYRIA CLAUDIO",
+      "puntosTour": 24.2322
+    },
+    {
+      "pos": 106,
+      "nombre": "CASTELLI EDGARDO",
+      "puntosTour": 24.2322
+    },
+    {
+      "pos": 107,
+      "nombre": "MORALES MAXIMILIANO",
+      "puntosTour": 22.2936
+    },
+    {
+      "pos": 108,
+      "nombre": "ZALATEL LUCAS MAXIMILIANO",
+      "puntosTour": 20.5101
+    },
+    {
+      "pos": 109,
+      "nombre": "VEGA IVAN",
+      "puntosTour": 20.5101
+    },
+    {
+      "pos": 110,
+      "nombre": "GOLTZ JONATAN",
+      "puntosTour": 18.8693
+    },
+    {
+      "pos": 111,
+      "nombre": "DURE GERMAN",
+      "puntosTour": 17.3598
+    },
+    {
+      "pos": 112,
+      "nombre": "MONTENEGRO GABRIEL",
+      "puntosTour": 15.971
+    },
+    {
+      "pos": 113,
+      "nombre": "VEGA THOMAS",
+      "puntosTour": 15.971
+    },
+    {
+      "pos": 114,
+      "nombre": "CASTELLI CRISTIAN",
+      "puntosTour": 14.6933
+    },
+    {
+      "pos": 115,
+      "nombre": "LEWANDOWSKI MARCELO",
+      "puntosTour": 9.6841
+    },
+    {
+      "pos": 116,
+      "nombre": "SALOMON MARIANO GERMAN",
+      "puntosTour": 0.0
+    },
+    {
+      "pos": 117,
+      "nombre": "ANRIQUE NICOLAS",
+      "puntosTour": 0.0
+    }
+  ]
+}
