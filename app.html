@@ -867,7 +867,7 @@ const tourPositions="WASINGER DAMIAN|640.0461;CLEMENZ CRISTIAN EZEQUIEL|636.2845
 const fmt=n=>Number(n).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2});
 let fullViewNode=null;
 async function renderSudoeste(){
- const intro=document.createElement('p');intro.className='muted';intro.textContent='Tour del Sudoeste 2026 · Tabla de posiciones según puntos del tour (RE1 a RE7).';content.append(intro);
+ const intro=document.createElement('p');intro.className='muted';intro.textContent='Tour del Sudoeste 2026 · Ranking de la hoja POSICIONES, actualizado hasta la fecha 5. Resultados individuales disponibles hasta la fecha 7.';content.append(intro);
  const topTitle=document.createElement('h4');topTitle.textContent='Top Ten · Tour del Sudoeste';topTitle.style.margin='12px 0';content.append(topTitle);
  const top=document.createElement('div');top.style.cssText='display:flex;flex-direction:column;gap:7px';content.append(top);
  const openFull=document.createElement('button');openFull.type='button';openFull.className='btn';openFull.style.cssText='width:100%;margin:12px 0';openFull.textContent='Ver tabla completa y buscar jugadores';content.append(openFull);
@@ -878,15 +878,15 @@ async function renderSudoeste(){
  try{
   const response=await fetch('./data/tour-sudoeste-2026-re1-re7.json?v=20261113',{cache:'no-store'});
   if(!response.ok)throw Error('HTTP '+response.status);
-  const payload=await response.json();if(select.value!=='Tour del Sudoeste'||!content.contains(top))return;
+  const payload=await response.json();const rankingResponse=await fetch('./data/tour-sudoeste-2026-posiciones.json?v=20261117',{cache:'no-store'});if(!rankingResponse.ok)throw Error('HTTP '+rankingResponse.status);const ranking=await rankingResponse.json();if(select.value!=='Tour del Sudoeste'||!content.contains(top))return;
   const players=new Map();
   for(const x of payload.results||[]){const key=normalize(x.nombre);if(!key)continue;if(!players.has(key))players.set(key,{name:x.nombre,points:0,rounds:[]});const player=players.get(key);player.rounds.push(x);const pts=Number(x.puntosTour);if(String(x.puntosTour??'').trim()!==''&&Number.isFinite(pts))player.points+=pts}
-  const positions=[...players.values()].sort((a,b)=>b.points-a.points||a.name.localeCompare(b.name,'es'));
-  status.textContent=positions.length+' jugadores · Tabla de posiciones y resultados de las 7 fechas';
+  const positions=ranking.positions.slice().sort((a,b)=>a.pos-b.pos).map(x=>({name:x.nombre,rank:x.pos,points:Number(x.puntosTour),rounds:players.get(normalize(x.nombre))?.rounds||[]}));
+  status.textContent=positions.length+' jugadores · Ranking hasta fecha 5 · Resultados hasta fecha 7';
   function makeRow(player,index){
    const details=document.createElement('details');details.style.cssText='border:1px solid var(--color-border,#6386ac);border-radius:10px;overflow:hidden';
    const summary=document.createElement('summary');summary.style.cssText='cursor:pointer;padding:12px;display:flex;gap:10px;align-items:center;font-variant-numeric:tabular-nums';
-   const rank=document.createElement('strong');rank.textContent=(index+1)+'º';rank.style.minWidth='28px';
+   const rank=document.createElement('strong');rank.textContent=player.rank+'º';rank.style.minWidth='28px';
    const playerName=document.createElement('span');playerName.textContent=player.name;playerName.style.cssText='flex:1;font-size:12px;font-weight:650';
    const points=document.createElement('strong');points.textContent=fmt(player.points);points.style.whiteSpace='nowrap';summary.append(rank,playerName,points);details.append(summary);
    const body=document.createElement('div');body.style.cssText='padding:8px 12px 12px;border-top:1px solid var(--color-border,#6386ac);font-size:12px';
@@ -895,6 +895,7 @@ async function renderSudoeste(){
     const v=s=>String(s??'').trim()||'—';const pt=s=>{const n=Number(s);return String(s??'').trim()!==''&&Number.isFinite(n)?fmt(n):v(s)};
     line.textContent='Fecha '+x.fecha+' · Pos. '+v(x.pos)+' · '+v(x.score)+' golpes · Par '+v(x.par)+' · '+pt(x.puntosTour)+' pts tour · '+pt(x.puntosRanking)+' pts ranking';body.append(line);const card=tourHoleCard(x,'sudoeste');if(card)body.append(card)
    }
+   if(!player.rounds.length){const note=document.createElement('small');note.className='muted';note.textContent='Sin resultados individuales disponibles en las fechas importadas.';body.append(note)}
    details.append(body);return details
   }
   positions.slice(0,10).forEach((p,i)=>top.append(makeRow(p,i)));
