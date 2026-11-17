@@ -1,0 +1,448 @@
+{
+  "tour": "Tour del Sudoeste",
+  "season": 2026,
+  "source": "POSICIONES",
+  "sourceFile": "F6-7 FR 000 2026 ACREDITACIONES SUDOESTE (4).xlsm",
+  "sourceSha256": "88a7b8813295ec5d6d6ace1f737d2269f0b21e8f2cd032b932d9eb9549076adb",
+  "rankingThroughDate": 5,
+  "positions": [
+    {
+      "pos": 1,
+      "nombre": "MARTINEZ MEIER GERMAN",
+      "categoria": "G",
+      "puntosTour": 417.2300396337562
+    },
+    {
+      "pos": 2,
+      "nombre": "MAIER JONATAN",
+      "categoria": "G",
+      "puntosTour": 376.0517484544
+    },
+    {
+      "pos": 3,
+      "nombre": "OCAMPO CRISTIAN ANIBAL",
+      "categoria": "S",
+      "puntosTour": 339.8512978767632
+    },
+    {
+      "pos": 4,
+      "nombre": "QUIROGA JOSE EDUARDO",
+      "categoria": "S",
+      "puntosTour": 306.54688334533745
+    },
+    {
+      "pos": 5,
+      "nombre": "GOMEZ EDGARDO FABIAN",
+      "categoria": "S",
+      "puntosTour": 295.8208929941674
+    },
+    {
+      "pos": 6,
+      "nombre": "AMERI GERARDO",
+      "categoria": "G",
+      "puntosTour": 295.1660036954522
+    },
+    {
+      "pos": 7,
+      "nombre": "JOFRE PABLO MARTIN",
+      "categoria": "G",
+      "puntosTour": 284.2584601054676
+    },
+    {
+      "pos": 8,
+      "nombre": "MOSCONI SILVIO",
+      "categoria": "S",
+      "puntosTour": 269.4008251884231
+    },
+    {
+      "pos": 9,
+      "nombre": "SOSA DIEGO ANDRES",
+      "categoria": "G",
+      "puntosTour": 255.59763640300278
+    },
+    {
+      "pos": 10,
+      "nombre": "FERNANDEZ DANIEL",
+      "categoria": "G",
+      "puntosTour": 248.38389804662222
+    },
+    {
+      "pos": 11,
+      "nombre": "REÑONES MARIO",
+      "categoria": "S",
+      "puntosTour": 237.61456322628595
+    },
+    {
+      "pos": 12,
+      "nombre": "IBARRA HUGO",
+      "categoria": "G",
+      "puntosTour": 200.98808305110927
+    },
+    {
+      "pos": 13,
+      "nombre": "FUNARI HECTOR",
+      "categoria": "S",
+      "puntosTour": 199.81154900042753
+    },
+    {
+      "pos": 14,
+      "nombre": "REVELANTE FABIO",
+      "categoria": "V",
+      "puntosTour": 184.36517204550196
+    },
+    {
+      "pos": 15,
+      "nombre": "BARRA ELCO DANIEL",
+      "categoria": "V",
+      "puntosTour": 174.28307062751236
+    },
+    {
+      "pos": 16,
+      "nombre": "TORRES FACUNDO",
+      "categoria": "G",
+      "puntosTour": 168.32354186796283
+    },
+    {
+      "pos": 17,
+      "nombre": "AMARA GERARDO",
+      "categoria": "G",
+      "puntosTour": 149.71525581456913
+    },
+    {
+      "pos": 18,
+      "nombre": "ORTIZ FACUNDO",
+      "categoria": "G",
+      "puntosTour": 149.0126278195133
+    },
+    {
+      "pos": 19,
+      "nombre": "GUERRA GERMAN",
+      "categoria": "V",
+      "puntosTour": 139.67519612477275
+    },
+    {
+      "pos": 20,
+      "nombre": "KIHN MARCELO",
+      "categoria": "S",
+      "puntosTour": 137.31872234891773
+    },
+    {
+      "pos": 21,
+      "nombre": "GARTNER ALEJO",
+      "categoria": "G",
+      "puntosTour": 136.26453589846005
+    },
+    {
+      "pos": 22,
+      "nombre": "MILLAN WALTER",
+      "categoria": "G",
+      "puntosTour": 132.61564841822383
+    },
+    {
+      "pos": 23,
+      "nombre": "LANDA EMANUEL",
+      "categoria": "S",
+      "puntosTour": 121.69281244364802
+    },
+    {
+      "pos": 24,
+      "nombre": "GARCIA RUBEN DARIO",
+      "categoria": "V",
+      "puntosTour": 110.23474502801835
+    },
+    {
+      "pos": 25,
+      "nombre": "INOSTROZA ROBERTO",
+      "categoria": "V",
+      "puntosTour": 109.75644640993633
+    },
+    {
+      "pos": 26,
+      "nombre": "TEBES JORGE",
+      "categoria": "G",
+      "puntosTour": 100.162435298062
+    },
+    {
+      "pos": 27,
+      "nombre": "PEDRONCINI GABRIEL",
+      "categoria": "G",
+      "puntosTour": 100
+    },
+    {
+      "pos": 28,
+      "nombre": "IBARRA WALTER GABRIEL",
+      "categoria": "G",
+      "puntosTour": 98.09590632084938
+    },
+    {
+      "pos": 29,
+      "nombre": "JARA PINTO ANGELO",
+      "categoria": "S",
+      "puntosTour": 97.68213677980428
+    },
+    {
+      "pos": 30,
+      "nombre": "NESTOR EMANUEL RUBEN SANCHEZ",
+      "categoria": "G",
+      "puntosTour": 81.04144399290486
+    },
+    {
+      "pos": 31,
+      "nombre": "CORRO CESAR DANIEL",
+      "categoria": "V",
+      "puntosTour": 81.04144399290486
+    },
+    {
+      "pos": 32,
+      "nombre": "ROLON JUAN MANUEL",
+      "categoria": "G",
+      "puntosTour": 72.06858582938374
+    },
+    {
+      "pos": 33,
+      "nombre": "LAMBERTI LUCAS",
+      "categoria": "G",
+      "puntosTour": 71.63929600000002
+    },
+    {
+      "pos": 34,
+      "nombre": "OCCHIPINTI NICOLAS ",
+      "categoria": "G",
+      "puntosTour": 70.59194642973742
+    },
+    {
+      "pos": 35,
+      "nombre": "LAUMAN MAURO",
+      "categoria": "G",
+      "puntosTour": 69.77820659682209
+    },
+    {
+      "pos": 36,
+      "nombre": "PALACIOS RAMIRO",
+      "categoria": "S",
+      "puntosTour": 67.67105770286538
+    },
+    {
+      "pos": 37,
+      "nombre": "CLEPPE MAURICIO",
+      "categoria": "V",
+      "puntosTour": 66.21821317682188
+    },
+    {
+      "pos": 38,
+      "nombre": "VULCANO GERARDO",
+      "categoria": "G",
+      "puntosTour": 64.94459071535843
+    },
+    {
+      "pos": 39,
+      "nombre": "FRANZINO CARLOS",
+      "categoria": "G",
+      "puntosTour": 57.45864422556811
+    },
+    {
+      "pos": 40,
+      "nombre": "BUCHIARELLI DAVID",
+      "categoria": "G",
+      "puntosTour": 55.78466012364801
+    },
+    {
+      "pos": 41,
+      "nombre": "PECASTAING ALEJANDRA",
+      "categoria": "DS",
+      "puntosTour": 55.05404237203534
+    },
+    {
+      "pos": 42,
+      "nombre": "TEBES ADRIAN",
+      "categoria": "M",
+      "puntosTour": 53.35349689013635
+    },
+    {
+      "pos": 43,
+      "nombre": "REVELANTE JUAN CARLOS",
+      "categoria": "M",
+      "puntosTour": 51.32188731375617
+    },
+    {
+      "pos": 44,
+      "nombre": "OBREGON SANTIAGO NICOLAS",
+      "categoria": "G",
+      "puntosTour": 51.32188731375617
+    },
+    {
+      "pos": 45,
+      "nombre": "SANTILLAN PABLO JOSE MARIANO",
+      "categoria": "G",
+      "puntosTour": 33.82530766424918
+    },
+    {
+      "pos": 46,
+      "nombre": "CARIAC BRANCO",
+      "categoria": "G",
+      "puntosTour": 33.82530766424918
+    },
+    {
+      "pos": 47,
+      "nombre": "YOICE PATRICIO ROBERTO",
+      "categoria": "S",
+      "puntosTour": 28.629740407020506
+    },
+    {
+      "pos": 48,
+      "nombre": "LANDA VERONICA",
+      "categoria": "D",
+      "puntosTour": 24.872857360459005
+    },
+    {
+      "pos": 49,
+      "nombre": "BERNAL FACUNDO",
+      "categoria": "G",
+      "puntosTour": 24.232212280502157
+    },
+    {
+      "pos": 50,
+      "nombre": "COLLAZO IVAN",
+      "categoria": "G",
+      "puntosTour": 20.51014447421703
+    },
+    {
+      "pos": 51,
+      "nombre": "VERA HUGO DANIEL",
+      "categoria": "V",
+      "puntosTour": 13.517857261119024
+    },
+    {
+      "pos": 52,
+      "nombre": "BARBERON PABLO DAMIAN",
+      "categoria": "G",
+      "puntosTour": 5.402241030467341
+    },
+    {
+      "pos": 53,
+      "nombre": "GONZALEZ CARLOS",
+      "categoria": "M",
+      "puntosTour": 3.870127442449949
+    },
+    {
+      "pos": 54,
+      "nombre": "SOTELO ARIEL",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 55,
+      "nombre": "PIZZIO JOSE ROBERTO",
+      "categoria": "S",
+      "puntosTour": 0
+    },
+    {
+      "pos": 56,
+      "nombre": "PEREZ FABRICIO",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 57,
+      "nombre": "PALFERRO MATIAS",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 58,
+      "nombre": "NIEVAS JEREMIAS",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 59,
+      "nombre": "NETA MARIO",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 60,
+      "nombre": "MUÑOZ SEBASTIAN",
+      "categoria": "S",
+      "puntosTour": 0
+    },
+    {
+      "pos": 61,
+      "nombre": "LOPEZ ALEJANDRO HERNAN",
+      "categoria": "S",
+      "puntosTour": 0
+    },
+    {
+      "pos": 62,
+      "nombre": "KUNZ GABRIEL",
+      "categoria": "V",
+      "puntosTour": 0
+    },
+    {
+      "pos": 63,
+      "nombre": "GAYONE GERARDO",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 64,
+      "nombre": "ESCALANTE GENARO EZEQUIEL",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 65,
+      "nombre": "DANIELE LUIS",
+      "categoria": "M",
+      "puntosTour": 0
+    },
+    {
+      "pos": 66,
+      "nombre": "CONTE NORBERTO",
+      "categoria": "V",
+      "puntosTour": 0
+    },
+    {
+      "pos": 67,
+      "nombre": "CARINGELLA ALEJANDRO",
+      "categoria": "M",
+      "puntosTour": 0
+    },
+    {
+      "pos": 68,
+      "nombre": "BORRA DIEGO",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 69,
+      "nombre": "FARIAS IGNACIO ANDRES",
+      "categoria": "S",
+      "puntosTour": 0
+    },
+    {
+      "pos": 70,
+      "nombre": "ANZORENA PABLO",
+      "categoria": "S",
+      "puntosTour": 0
+    },
+    {
+      "pos": 71,
+      "nombre": "LLADO ELVIO",
+      "categoria": "G",
+      "puntosTour": 0
+    },
+    {
+      "pos": 72,
+      "nombre": "RODRIGUEZ NESTOR",
+      "categoria": "V",
+      "puntosTour": 0
+    },
+    {
+      "pos": 73,
+      "nombre": "BARRIONUEVO MARCOS",
+      "categoria": "S",
+      "puntosTour": 0
+    }
+  ]
+}

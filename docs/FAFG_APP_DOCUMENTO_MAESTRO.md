@@ -292,3 +292,13 @@ El usuario aclara que solo solicitó la flecha: conservar exactamente el tamaño
 
 ## Logos oficiales en Noticias — 16/11/2026
 Se reemplazan los avatares externos de Instagram por los PNG oficiales existentes de Mis tours para Ramallo, Santa Fe y Sudoeste. Archivos originales sin modificaciones, object-fit:contain sin máscara circular, dimensiones reservadas y texto alternativo. Tres PNG verificados y originales revisados visualmente. Revisión móvil automatizada no disponible por restricción del navegador local; pendiente comprobación en iPhone. Usuario autorizó explícitamente publicar el cambio. Implementado en rama fix/noticias-logos-asociaciones; verificar entrega pública tras fusionar.
+
+## Ranking del Tour del Sudoeste — 17/11/2026
+
+Pedido directo: incorporar la planilla adjunta manteniendo diseño y formato de Mis tours. Fuente: F6-7 FR 000 2026 ACREDITACIONES SUDOESTE (4).xlsm; SHA-256 88a7b8813295ec5d6d6ace1f737d2269f0b21e8f2cd032b932d9eb9549076adb. Lectura de valores guardados, sin ejecutar macros ni modificar el archivo.
+
+Se incorpora data/tour-sudoeste-2026-posiciones.json con las 73 posiciones, nombres, categorías y puntos exactos de POSICIONES. La hoja contiene puntos hasta F5 y cero en F6/F7; RE6/RE7 no tienen resultados generales cargados en este archivo. Por eso se muestra explícitamente «Ranking hasta fecha 5 · Resultados hasta fecha 7». Se conservan los 296 resultados y todas las tarjetas previamente publicadas, incluidos los 100 resultados de fechas 6/7 que faltan en este archivo. Los 196 resultados de fechas 1–5 coinciden en score y puntos con la fuente, normalizando espacios finales en nombres.
+
+El ranking usa el orden oficial de POSICIONES en lugar de sumar las siete fechas existentes. Primero Martínez Meier Germán: 417,2300396337562 puntos. Mismo Top Ten, formato de dos decimales, búsqueda por nombre/apellido, paginación de 10, detalles y tarjetas. Jugadores sin resultados individuales muestran una aclaración. Santa Fe/Ramallo conservan su implementación.
+
+Verificado: 10 scripts inline compilan; prueba DOM de Top Ten, puntuación, 73 jugadores, búsqueda del último jugador preservando posición 73, segunda página y volver. Regresiones career-close y profile-public-ranking correctas; git diff --check correcto. Revisión visual en iPhone no realizada. Publicación autorizada por solicitud de incorporarlo a la app; verificar entrega pública antes de afirmar publicado.
