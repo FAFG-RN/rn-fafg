@@ -1,0 +1,8 @@
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync(path.resolve(__dirname,'../app.html'),'utf8');
+const source=html.slice(html.indexOf("document.getElementById('signup-form').addEventListener"),html.indexOf("document.getElementById('login-form').addEventListener"));
+const elements=new Map();let submit,calls=[];
+function node(id,value=''){const n={value,classList:{add(){},remove(){}},addEventListener(_event,fn){submit=fn;}};elements.set(id,n);return n;}
+node('signup-form');node('signup-message');node('signup-submit');node('signup-email','prueba@example.test');node('signup-password','password-de-prueba');node('signup-dni','12345678');node('signup-name','  Sofía   Salom ');
+vm.runInNewContext(source,{document:{getElementById:id=>elements.get(id)},client:{auth:{signUp:async args=>{calls.push(args);return {data:{},error:null};}}},location:{origin:'https://example.test',pathname:'/app.html'},friendlyError:()=>''});
+(async()=>{await submit({preventDefault(){}});assert.equal(calls.length,1);assert.equal(calls[0].options.data.nombre_completo,'Sofía Salom');assert.equal(calls[0].options.data.dni_declarado,'12345678');assert.equal(elements.get('signup-password').value,'');elements.get('signup-name').value='Sofía';await submit({preventDefault(){}});assert.equal(calls.length,1,'Un nombre incompleto no crea una cuenta nueva');assert(html.includes('id="signup-name"'));console.log('PASS: el alta guarda nombre completo y DNI declarado, valida nombre/apellido y conserva el flujo existente, sin crear cuentas reales.');})().catch(e=>{console.error(e);process.exitCode=1;});
