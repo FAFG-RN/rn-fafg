@@ -368,3 +368,13 @@ Pruebas: resolver de Sofía con tildes y orden invertido; pantalla Mi perfil o s
 ## Ojo de contraseña en registro — 17/11/2026
 Pedido limitado de Luciano: mostrar/ocultar contraseña al registrarse. Se añade un botón ojo dentro del campo de contraseña de alta, con type=button para no enviar el formulario, aria-label dinámico Mostrar/Ocultar contraseña y aria-pressed. Solo alterna type password/text; conserva valor, reglas y envío existentes. Ícono SVG local, área táctil 44 px, foco visible y estilos acotados al campo de registro. No cambia inicio de sesión ni otros campos.
 Verificado: dos alternancias, conservación del valor, estados accesibles y botón sin envío; regresión del registro correcta y diff limpio. Publicación autorizada por pedido directo; verificar entrega pública.
+
+## 19/11/2026 — Live Scores públicos en FAFG App
+
+Cambio específico de `ronda-amigos.html` en este repositorio (FAFG), independiente del Site Ronda. Se suma `Compartir Live Scores` y control del organizador para activar/desactivar. La invitación de anotadores, tarjetas y carga de golpes se conservan.
+
+Página `live-scores.html?ronda=<UUID>` con logos oficiales FAFG/Ronda, clasificación por ± par de hoyos jugados, posiciones compartidas en empates, golpes, progreso y tarjeta desplegable de 18 hoyos; NPT y sin iniciar al final. Actualización cada 12 segundos, recuperación tras reconectar, retiro de resultados al revocar. Sin login, instalación ni lectura de la sesión FAFG.
+
+Base: migración `amistosas_live_publico` aplicada en FAFG APP. Columnas aditivas `publico` (false por defecto) y `enlace_publico`. RPC `amistosa_publicar` verifica `auth.uid()=creador`, funciona también tras finalizar y revoca el UUID anterior. RPC `amistosa_publica` expone únicamente campos deportivos por UUID habilitado. No cambia las funciones de carga, RLS ni registros existentes. El aviso del advisor sobre SECURITY DEFINER anónimo en esta RPC es intencional: API pública acotada por UUID; sin SQL dinámico, search_path vacío ni acceso a datos de cuenta.
+
+Validación: `node tests/live-publico.cjs`; SQL transaccional con rollback prueba lectura con rol anon, rechazo de publicación por terceros/anon, rechazo de carga anónima, RLS sin filas públicas, revocación de ronda finalizada y nuevo UUID al reactivar. Navegador sin sesión a 390 px con ronda sintética en Supabase: resultados, tarjeta de 18 hoyos y actualización. No se dispuso de teléfono físico ni WhatsApp real. Publicación prevista mediante PR a main y GitHub Pages; confirmar estado del despliegue en GitHub.

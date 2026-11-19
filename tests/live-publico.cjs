@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync('ronda-amigos.html','utf8'),script=fs.readFileSync('assets/js/live-scores.js','utf8');
+for(const match of html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g))new vm.Script(match[1]);
+new vm.Script(script);new vm.Script(fs.readFileSync('assets/js/amistosas-compartir.js','utf8'));
+const body=script.slice(script.indexOf('function standings'),script.indexOf('function render'));
+const standings=vm.runInNewContext('('+body.trim()+')');
+const data={pares:Array(18).fill(4),jugadores:[{nombre:'Al par',golpes:Array(18).fill(4),linea:1},{nombre:'Birdie',golpes:[3,...Array(17).fill(0)],linea:2},{nombre:'Sin jugar',golpes:Array(18).fill(0),linea:3},{nombre:'NPT',golpes:Array(18).fill(1),linea:4,npt:true}]};
+const result=standings(data);assert.equal(result[0].nombre,'Birdie');assert.equal(result[0].diff,-1);assert.equal(result[0].played,1);assert.equal(result[0].total,3);assert.equal(result[1].nombre,'Al par');assert.equal(result[2].nombre,'Sin jugar');assert.equal(result[3].nombre,'NPT');
+assert.ok(!fs.readFileSync('live-scores.html','utf8').includes('app.html'));
+assert.match(script,/credentials:'omit'/);assert.match(script,/cache:'no-store'/);
+console.log('PASS: score ordering with unequal progress, played-hole par, NPT, unstarted players, script syntax, anonymous page isolation.');
