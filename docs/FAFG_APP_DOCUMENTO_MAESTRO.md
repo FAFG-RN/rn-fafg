@@ -368,3 +368,13 @@ Pruebas: resolver de Sofía con tildes y orden invertido; pantalla Mi perfil o s
 ## Ojo de contraseña en registro — 17/11/2026
 Pedido limitado de Luciano: mostrar/ocultar contraseña al registrarse. Se añade un botón ojo dentro del campo de contraseña de alta, con type=button para no enviar el formulario, aria-label dinámico Mostrar/Ocultar contraseña y aria-pressed. Solo alterna type password/text; conserva valor, reglas y envío existentes. Ícono SVG local, área táctil 44 px, foco visible y estilos acotados al campo de registro. No cambia inicio de sesión ni otros campos.
 Verificado: dos alternancias, conservación del valor, estados accesibles y botón sin envío; regresión del registro correcta y diff limpio. Publicación autorizada por pedido directo; verificar entrega pública.
+
+## Boggie — 21/11/2026 — preparado, pendiente de publicación
+
+Implementación en `feature/boggie-asistente`, basada en main 22fc026. Botón Jabulani de 60 px por encima de la navegación, resplandor con respeto de movimiento reducido, aviso temporal y diálogo accesible. Cuatro preguntas iniciales, consultas por texto con respuestas guiadas, dos sugerencias relacionadas y derivación a fafootgolf@gmail.com cuando no existe una respuesta verificada. Los accesos reutilizan la navegación y los documentos actuales. No hay integración con un modelo de IA ni consultas personales nuevas: no confirmar pagos, afiliación ni resultados desde Boggie.
+
+Referencia visual: `App FAFG con asistente Boggie.png`, suministrada previamente por el usuario; utilizada como imagen con ventanas CSS para el personaje y la pelota, sin modificar logos institucionales. No se incorporan los textos del mockup a la interfaz. No se almacenan ni transmiten conversaciones; historial en memoria acotado. Service worker actualizado para incluir los archivos de Boggie.
+
+Validación: sintaxis JavaScript y 10 consultas con sugerencias válidas comprobadas. Prueba visual automatizada pendiente: Chromium local no inicia por restricción de sockets. No se modificaron usuarios, datos, ranking ni Supabase. La revisión automática rechazó la subida a GitHub indicando que necesita autorización explícita para publicar el código y la imagen recuperada de archivos del usuario en el repositorio externo. No se subió la rama ni se publicó la app; solicitar esa autorización antes de reintentar. Próximo paso: revisar visualmente, subir rama, abrir/fusionar PR autorizado y comprobar GitHub Pages.
+
+21/11/2026: el usuario autorizó expresamente subir el código y la imagen aprobada al repositorio y publicarlos en la app existente. Publicación en curso; comprobar Pages antes de confirmar disponibilidad.
