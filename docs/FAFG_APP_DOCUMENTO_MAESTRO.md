@@ -384,3 +384,6 @@ Publicado y verificado el 21/11/2026: PR #36 fusionado, commit 1f051fbfb0665477d
 
 ## Ajuste visual Boggie — 21/11/2026
 Solicitud del usuario: quitar Jabulani de la pelota del personaje, subir y usar la foto adjunta para el botón flotante y eliminar el rectángulo negro del Inicio en modo oscuro. Se agregan boggie-sin-texto.png y boggie-pelota.png, se actualiza CSS y caché PWA. La foto original se conserva sin modificaciones. La regla oscura de main queda transparente solo en Inicio. Input de Boggie conserva contraste. Publicación autorizada en el pedido; datos y navegación intactos.
+
+## Pelota Boggie movible — 21/11/2026
+Pedido final de Luciano: leve movimiento y arrastre libre. Balanceo de 3 px y 3 grados, desactivado con movimiento reducido. Pointer Events distingue toque de arrastre con umbral de 7 px, captura del puntero y cancelación; mover no abre el diálogo. Posición proporcional guardada localmente, límites de pantalla y barra inferior y ajuste al rotar/cambiar viewport. Caché PWA actualizada. Sin cambios de datos ni funciones del asistente. Publicación autorizada por pedido directo; comprobar Pages tras fusionar.

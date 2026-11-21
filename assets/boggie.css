@@ -12,3 +12,12 @@
 @media(prefers-color-scheme:dark){body:has(#inicio.active) .app > main{background:transparent!important}}
 /* Isolate the assistant input from the app-wide dark input rule. */
 #boggie-dialog .boggie-form input{background:#fff!important;color:#122b43!important;color-scheme:light}#boggie-dialog .boggie-form input::placeholder{color:#60768a;opacity:1}
+
+/* Gentle motion stays inside the stationary draggable touch target. */
+#boggie-launcher{touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:grab}
+#boggie-launcher .boggie-ball{animation:boggie-float 4s ease-in-out infinite;pointer-events:none}
+#boggie-launcher.boggie-dragging{cursor:grabbing;animation:none}
+#boggie-launcher.boggie-dragging .boggie-ball{animation:none}
+#boggie-launcher.boggie-hint-right .boggie-hint{right:auto;left:70px}
+@keyframes boggie-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){#boggie-launcher .boggie-ball{animation:none}}
