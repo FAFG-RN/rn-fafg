@@ -380,3 +380,7 @@ Validación: sintaxis JavaScript y 10 consultas con sugerencias válidas comprob
 21/11/2026: el usuario autorizó expresamente subir el código y la imagen aprobada al repositorio y publicarlos en la app existente. Publicación en curso; comprobar Pages antes de confirmar disponibilidad.
 
 Publicado y verificado el 21/11/2026: PR #36 fusionado, commit 1f051fbfb0665477ddbb42094ad464f64e0b8f3a. En https://fafg-rn.github.io/rn-fafg/app.html se comprobó visualmente el botón Jabulani y el personaje Boggie, las cuatro consultas iniciales, la respuesta de ranking y sus dos sugerencias, navegación efectiva a Ranking, reapertura del diálogo y derivación de una consulta no resuelta a fafootgolf@gmail.com. La prueba visual se realizó en navegador de escritorio; queda pendiente la revisión en dispositivo móvil físico. Es ayuda guiada, sin modelo generativo conectado.
+
+
+## Ajuste visual Boggie — 21/11/2026
+Solicitud del usuario: quitar Jabulani de la pelota del personaje, subir y usar la foto adjunta para el botón flotante y eliminar el rectángulo negro del Inicio en modo oscuro. Se agregan boggie-sin-texto.png y boggie-pelota.png, se actualiza CSS y caché PWA. La foto original se conserva sin modificaciones. La regla oscura de main queda transparente solo en Inicio. Input de Boggie conserva contraste. Publicación autorizada en el pedido; datos y navegación intactos.
