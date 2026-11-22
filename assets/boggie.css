@@ -23,7 +23,7 @@
 @media(prefers-reduced-motion:reduce){#boggie-launcher .boggie-ball{animation:none}}
 
 /* Approved realistic Boggie artwork; launcher and dragging remain unchanged. */
-#boggie-dialog .boggie-avatar{width:130px;height:130px;border-radius:50%;background-image:url('./images/boggie-realista-aprobado.png');background-size:360px 394px;background-position:-65px -3px}
+#boggie-dialog .boggie-avatar{width:130px;height:130px;border-radius:50%;background-image:url('./images/boggie-realista-fafg.png');background-size:360px 394px;background-position:-65px -3px}
 #boggie-dialog[open]{animation:boggie-open 280ms ease-out both}
 #boggie-dialog[open]::backdrop{animation:boggie-backdrop-in 240ms ease-out both}
 #boggie-dialog[open] .boggie-avatar{animation:boggie-hello 420ms 80ms ease-out both}

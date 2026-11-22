@@ -395,3 +395,7 @@ Validación previa: 10 respuestas y sugerencias correctas, sintaxis JS y service
 
 ## Corrección de presentación Boggie — 22/11/2026
 A pedido del usuario se restaura el avatar circular de 130 × 130 px (100 × 100 px en pantallas pequeñas), con encuadre de cabeza y torso del robot 3D aprobado. Se elimina la presentación vertical de cuerpo entero y su altura adicional. Conserva animaciones, Jabulani arrastrable y funciones. La publicación anterior se verificó en Pages; esta corrección actualiza versión de recursos y caché PWA.
+
+
+## Chomba FAFG de Boggie — 22/11/2026
+Se reemplaza únicamente el texto BOGGIE de la chomba por FAFG en la imagen del robot. Se mantiene el encuadre circular, dimensiones, distribución, animaciones y lógica existentes. Nuevo recurso boggie-realista-fafg.png y caché PWA versionada. Edición visual inspeccionada: FAFG legible y composición conservada. Publicación solicitada en continuidad con la app existente.
