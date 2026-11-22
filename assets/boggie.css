@@ -23,12 +23,12 @@
 @media(prefers-reduced-motion:reduce){#boggie-launcher .boggie-ball{animation:none}}
 
 /* Approved realistic Boggie artwork; launcher and dragging remain unchanged. */
-#boggie-dialog .boggie-avatar{width:110px;height:210px;border-radius:16px;background-image:url('./images/boggie-realista-aprobado.png');background-size:192px 210px;background-position:left top}
+#boggie-dialog .boggie-avatar{width:130px;height:130px;border-radius:50%;background-image:url('./images/boggie-realista-aprobado.png');background-size:360px 394px;background-position:-65px -3px}
 #boggie-dialog[open]{animation:boggie-open 280ms ease-out both}
 #boggie-dialog[open]::backdrop{animation:boggie-backdrop-in 240ms ease-out both}
 #boggie-dialog[open] .boggie-avatar{animation:boggie-hello 420ms 80ms ease-out both}
 @keyframes boggie-open{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes boggie-backdrop-in{from{opacity:0}to{opacity:1}}
 @keyframes boggie-hello{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@media(max-height:700px){#boggie-dialog .boggie-avatar{width:84px;height:160px;background-size:146px 160px}}
+@media(max-width:350px){#boggie-dialog .boggie-avatar{width:100px;height:100px;background-size:288px 315px;background-position:-52px -2px}}
 @media(prefers-reduced-motion:reduce){#boggie-dialog[open],#boggie-dialog[open]::backdrop,#boggie-dialog[open] .boggie-avatar{animation:none}}

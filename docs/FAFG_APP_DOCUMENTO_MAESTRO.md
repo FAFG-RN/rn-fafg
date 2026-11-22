@@ -391,3 +391,7 @@ Pedido final de Luciano: leve movimiento y arrastre libre. Balanceo de 3 px y 3 
 ## Boggie realista aprobado — 22/11/2026
 Cambio limitado al personaje y apertura del asistente: imagen aprobada original boggie-realista-aprobado.png con encuadre CSS del robot, entrada suave del diálogo, fondo y personaje, respetando prefers-reduced-motion. Pelota Jabulani, arrastre, consultas, sugerencias y navegación conservados. Caché PWA y referencias versionadas actualizadas para entregar el recurso nuevo. Sin modificaciones de otros componentes ni datos.
 Validación previa: 10 respuestas y sugerencias correctas, sintaxis JS y service worker, diff limpio y vista previa del personaje completo y diálogo. Publicación autorizada explícitamente por el usuario sobre la URL existente; verificar entrega pública después del push.
+
+
+## Corrección de presentación Boggie — 22/11/2026
+A pedido del usuario se restaura el avatar circular de 130 × 130 px (100 × 100 px en pantallas pequeñas), con encuadre de cabeza y torso del robot 3D aprobado. Se elimina la presentación vertical de cuerpo entero y su altura adicional. Conserva animaciones, Jabulani arrastrable y funciones. La publicación anterior se verificó en Pages; esta corrección actualiza versión de recursos y caché PWA.
