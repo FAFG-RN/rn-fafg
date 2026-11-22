@@ -387,3 +387,7 @@ Solicitud del usuario: quitar Jabulani de la pelota del personaje, subir y usar 
 
 ## Pelota Boggie movible — 21/11/2026
 Pedido final de Luciano: leve movimiento y arrastre libre. Balanceo de 3 px y 3 grados, desactivado con movimiento reducido. Pointer Events distingue toque de arrastre con umbral de 7 px, captura del puntero y cancelación; mover no abre el diálogo. Posición proporcional guardada localmente, límites de pantalla y barra inferior y ajuste al rotar/cambiar viewport. Caché PWA actualizada. Sin cambios de datos ni funciones del asistente. Publicación autorizada por pedido directo; comprobar Pages tras fusionar.
+
+## Boggie realista aprobado — 22/11/2026
+Cambio limitado al personaje y apertura del asistente: imagen aprobada original boggie-realista-aprobado.png con encuadre CSS del robot, entrada suave del diálogo, fondo y personaje, respetando prefers-reduced-motion. Pelota Jabulani, arrastre, consultas, sugerencias y navegación conservados. Caché PWA y referencias versionadas actualizadas para entregar el recurso nuevo. Sin modificaciones de otros componentes ni datos.
+Validación previa: 10 respuestas y sugerencias correctas, sintaxis JS y service worker, diff limpio y vista previa del personaje completo y diálogo. Publicación autorizada explícitamente por el usuario sobre la URL existente; verificar entrega pública después del push.
