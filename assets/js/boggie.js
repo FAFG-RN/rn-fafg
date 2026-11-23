@@ -24,7 +24,7 @@
   launcher.setAttribute('aria-label','Preguntale a Boggie'); launcher.setAttribute('aria-haspopup','dialog'); launcher.setAttribute('aria-controls','boggie-dialog'); launcher.setAttribute('aria-expanded','false');
   launcher.innerHTML='<span class="boggie-ball" aria-hidden="true"></span><span class="boggie-hint" hidden>Preguntale a Boggie</span>';
   const dialog=document.createElement('dialog'); dialog.id='boggie-dialog'; dialog.setAttribute('aria-labelledby','boggie-title');
-  dialog.innerHTML='<header class="boggie-header"><div class="boggie-avatar" role="img" aria-label="Boggie, robot humanoide blanco y plateado, visor azul, chomba blanca, bermuda azul y bandera argentina"></div><div><h2 id="boggie-title">Boggie</h2><p>Tu asistente FAFG</p></div><button type="button" class="boggie-close" aria-label="Cerrar Boggie">×</button></header><div class="boggie-scroll"><p class="boggie-welcome">¡Hola! 👋 Soy Boggie.<br>¿En qué puedo ayudarte?</p><div class="boggie-topics" aria-label="Consultas frecuentes"></div><div class="boggie-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversación con Boggie"></div><div class="boggie-suggestions" aria-label="Sugerencias relacionadas"></div></div><form class="boggie-form"><label class="boggie-sr" for="boggie-question">Escribí tu consulta</label><input id="boggie-question" placeholder="Escribí tu consulta…" maxlength="500" autocomplete="off" enterkeyhint="send"><button type="submit">Enviar</button></form><footer>¿No encontraste lo que buscabas?<br><a href="mailto:fafootgolf@gmail.com">fafootgolf@gmail.com</a></footer>';
+  dialog.innerHTML='<header class="boggie-header"><div class="boggie-avatar" role="img" aria-label="Boggie con chomba FAFG, sosteniendo la Jabulani y apoyado en el borde del chat"><svg class="boggie-character" viewBox="0 0 1053 1494" aria-hidden="true" focusable="false"><defs><clipPath id="boggie-body-clip"><path d="M0 337 H1053 V1494 H0Z"/></clipPath><clipPath id="boggie-head-clip"><path d="M0 0 H1053 V339 H0Z"/></clipPath></defs><g class="boggie-body"><image href="./assets/images/boggie-integrado.webp" width="1053" height="1494" clip-path="url(#boggie-body-clip)"/></g><g class="boggie-head"><image href="./assets/images/boggie-integrado.webp" width="1053" height="1494" clip-path="url(#boggie-head-clip)"/><g class="boggie-blink" fill="#08111a"><path d="M450 170 Q496 135 541 181 L546 218 Q497 205 452 207Z"/><path d="M563 194 Q608 160 653 202 L653 241 Q611 226 564 226Z"/></g></g></svg></div><div><h2 id="boggie-title">Boggie</h2><p>Tu asistente FAFG</p></div><button type="button" class="boggie-close" aria-label="Cerrar Boggie">×</button></header><div class="boggie-scroll"><p class="boggie-welcome">¡Hola! 👋 Soy Boggie.<br>¿En qué puedo ayudarte?</p><div class="boggie-topics" aria-label="Consultas frecuentes"></div><div class="boggie-messages" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversación con Boggie"></div><div class="boggie-suggestions" aria-label="Sugerencias relacionadas"></div></div><form class="boggie-form"><label class="boggie-sr" for="boggie-question">Escribí tu consulta</label><input id="boggie-question" placeholder="Escribí tu consulta…" maxlength="500" autocomplete="off" enterkeyhint="send"><button type="submit">Enviar</button></form><footer>¿No encontraste lo que buscabas?<br><a href="mailto:fafootgolf@gmail.com">fafootgolf@gmail.com</a></footer>';
   document.body.append(launcher,dialog);
   const log=dialog.querySelector('.boggie-messages'), suggestions=dialog.querySelector('.boggie-suggestions'), input=dialog.querySelector('input'), scroll=dialog.querySelector('.boggie-scroll');
   let previousFocus, previousOverflow;
@@ -62,7 +62,15 @@
     launcher.classList.toggle('boggie-hint-right',x<b.left+180);
     return {x,y};
   }
+  function fitDialog(){
+    const v=window.visualViewport;
+    const compact=!!v && (v.height<500 || window.innerHeight-v.height>150);
+    dialog.classList.toggle('boggie-keyboard',compact);
+    dialog.style.setProperty('--boggie-viewport-height',(v?.height||window.innerHeight)+'px');
+    dialog.style.setProperty('--boggie-viewport-top',(v?.offsetTop||0)+'px');
+  }
   function position(){
+    fitDialog();
     const b=bounds();
     if(savedPosition){place(b.left+savedPosition.x*(b.right-b.left),b.top+savedPosition.y*(b.bottom-b.top));}
     else place(Math.min(b.right-4,(window.innerWidth+680)/2-76),b.bottom);

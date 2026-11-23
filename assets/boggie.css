@@ -22,13 +22,32 @@
 @keyframes boggie-float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-3px) rotate(3deg)}}
 @media(prefers-reduced-motion:reduce){#boggie-launcher .boggie-ball{animation:none}}
 
-/* Approved realistic Boggie artwork; launcher and dragging remain unchanged. */
-#boggie-dialog .boggie-avatar{width:130px;height:130px;border-radius:50%;background-image:url('./images/boggie-realista-fafg.png');background-size:360px 394px;background-position:-65px -3px}
+/* Transparent approved-identity pose. Header keeps its existing footprint. */
+#boggie-dialog{overflow:visible;max-height:calc(100dvh - 144px);margin-block:auto}
+#boggie-dialog .boggie-header{min-height:146px;padding-left:158px;isolation:isolate}
+#boggie-dialog .boggie-avatar{position:absolute;left:8px;top:-61px;width:145px;height:206px;border-radius:0;background:none;pointer-events:none;transform-origin:82% 29%;filter:drop-shadow(0 5px 4px #00132655)}
+.boggie-header::before{content:"";position:absolute;top:-2px;left:112px;width:35px;height:5px;border-radius:50%;background:#00162f88;filter:blur(2px);z-index:-1;pointer-events:none}
+.boggie-character{display:block;width:100%;height:100%;overflow:visible}
+.boggie-head{transform-origin:520px 330px}
+.boggie-body{transform-origin:830px 445px}
+.boggie-blink{opacity:0}
 #boggie-dialog[open]{animation:boggie-open 280ms ease-out both}
 #boggie-dialog[open]::backdrop{animation:boggie-backdrop-in 240ms ease-out both}
-#boggie-dialog[open] .boggie-avatar{animation:boggie-hello 420ms 80ms ease-out both}
-@keyframes boggie-open{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+#boggie-dialog[open] .boggie-avatar{animation:boggie-hello 520ms ease-out both}
+#boggie-dialog[open] .boggie-head{animation:boggie-look 8s 600ms ease-in-out infinite}
+#boggie-dialog[open] .boggie-body{animation:boggie-breathe 5s 600ms ease-in-out infinite}
+#boggie-dialog[open] .boggie-blink{animation:boggie-blink 6.7s 1.2s linear infinite}
+@keyframes boggie-open{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
 @keyframes boggie-backdrop-in{from{opacity:0}to{opacity:1}}
-@keyframes boggie-hello{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:350px){#boggie-dialog .boggie-avatar{width:100px;height:100px;background-size:288px 315px;background-position:-52px -2px}}
-@media(prefers-reduced-motion:reduce){#boggie-dialog[open],#boggie-dialog[open]::backdrop,#boggie-dialog[open] .boggie-avatar{animation:none}}
+@keyframes boggie-hello{0%{opacity:0;transform:translateY(5px) rotate(-2deg)}65%{opacity:1;transform:rotate(.6deg)}100%{opacity:1;transform:none}}
+@keyframes boggie-look{0%,35%,100%{transform:rotate(0)}48%,60%{transform:rotate(1.2deg)}80%{transform:rotate(-.6deg)}}
+@keyframes boggie-breathe{0%,100%{transform:rotate(0) scaleY(1)}50%{transform:rotate(.18deg) scaleY(1.003)}}
+@keyframes boggie-blink{0%,44%,48%,100%{opacity:0}45%,47%{opacity:.96}}
+@media(max-width:350px){#boggie-dialog .boggie-header{padding-left:139px;gap:6px}#boggie-dialog .boggie-avatar{width:130px;height:184px;top:-54px;left:5px}.boggie-header::before{left:96px;width:32px}}
+/* Keep the original compact header when landscape or keyboard leaves little room. */
+@media(max-height:600px){#boggie-dialog{max-height:calc(100dvh - 24px)}#boggie-dialog .boggie-header{min-height:64px;padding-left:76px;padding-block:12px}#boggie-dialog .boggie-avatar{display:block;left:12px;top:2px;width:52px;height:60px;overflow:hidden;filter:none}#boggie-dialog .boggie-character{width:72px;height:102px;margin-left:-10px}.boggie-header::before{display:none}}
+#boggie-dialog.boggie-keyboard{max-height:calc(var(--boggie-viewport-height) - 16px);height:650px;position:fixed;top:var(--boggie-viewport-top);bottom:auto;margin-top:8px}
+#boggie-dialog.boggie-keyboard .boggie-header{min-height:56px;padding:8px 54px 8px 18px}
+#boggie-dialog.boggie-keyboard .boggie-avatar,#boggie-dialog.boggie-keyboard .boggie-header::before{display:none}
+@media(prefers-reduced-motion:reduce){#boggie-dialog[open],#boggie-dialog[open]::backdrop,#boggie-dialog[open] .boggie-avatar,#boggie-dialog[open] .boggie-head,#boggie-dialog[open] .boggie-body,#boggie-dialog[open] .boggie-blink{animation:none}}
+@media print{#boggie-launcher,#boggie-dialog{display:none!important}}
