@@ -411,3 +411,7 @@ Validación previa: 10 casos de respuesta y sugerencias, sintaxis JS/service wor
 ## Botines de Boggie — 23/11/2026
 
 Se incorpora la imagen exacta aprobada por el usuario con Adidas Copa Mundial negros y taponcitos para sintético, transparente, 1053 × 1494 px. Conserva postura, capas SVG, animaciones, dimensiones y funciones del asistente. Se actualizan referencias y caché PWA para evitar mostrar el calzado anterior. Validación: imagen inspeccionada, geometría compatible con el SVG actual, prueba de respuestas y sintaxis JS/service worker. Publicación autorizada por continuidad del pedido; verificar despliegue de este commit en Pages.
+
+
+## 2026-11-25 — Foto de inicio sin logo L1
+Se reemplaza la foto de bienvenida por la imagen del usuario con el escudo L1 eliminado. Se mantienen marca FAFG, filtro y animaciones. Precarga y carga inicial apuntan al mismo archivo; caché PWA v11 incluye la foto. Publicación solicitada por el usuario; verificar despliegue del commit.
