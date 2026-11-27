@@ -423,3 +423,5 @@ Se reemplaza la foto de bienvenida por la imagen del usuario con el escudo L1 el
 - PNG paginados cada 20 jugadores; preparación previa al toque para conservar activación de compartir en móvil. Alternativas: compartir texto, copiar y descarga por página. NPT identificado sin asignar posición. Sin escrituras de datos ni cambios en RLS.
 - Verificado: sintaxis JS e inline; caso 3 jugadores 64/-8, 67/-5, 68/-4; gating de ronda abierta; 121 jugadores en 7 imágenes con canvas simulado, NPT y conservación de filas. No probado todavía con navegador/iPhone real ni Supabase autenticado.
 - Pendiente: revisión móvil, autorización de fusión/publicación. No confundir cierre informal con validación oficial FAFG.
+
+- 2026-11-27: Luciano autorizó explícitamente la publicación del PR #45. Revisión previa: PR fusionable, sin cambios en las tarjetas ni base de datos. Intento de QA con Playwright no ejecutable: navegadores ausentes y launcher Chromium sin binario; no afirmar prueba móvil real. Se procede con verificaciones de sintaxis/modelo previas y comprobación HTTP posterior al despliegue. Estado de publicación verificable en PR #45 y GitHub Pages.
