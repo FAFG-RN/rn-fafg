@@ -415,3 +415,11 @@ Se incorpora la imagen exacta aprobada por el usuario con Adidas Copa Mundial ne
 
 ## 2026-11-25 — Foto de inicio sin logo L1
 Se reemplaza la foto de bienvenida por la imagen del usuario con el escudo L1 eliminado. Se mantienen marca FAFG, filtro y animaciones. Precarga y carga inicial apuntan al mismo archivo; caché PWA v11 incluye la foto. Publicación solicitada por el usuario; verificar despliegue del commit.
+
+
+## 2026-11-27 — Compartir resultados de Ronda con amigos
+- Implementado en feature/compartir-resultados-ronda; NO publicado. Cambios funcionales: c58015fd8118d8ff5f412a174557b7551b8a8b8d y 911c2f115fb946d766668dd18c52a28366f68dee.
+- Botón independiente de la invitación, visible también en vista Live solo con estado finalizada. Exporta la clasificación existente completa, sin cambiar orden ni criterios de desempate: jugador, posición, línea, hoyos, golpes y diferencia con par; nombre de ronda, cancha y par total.
+- PNG paginados cada 20 jugadores; preparación previa al toque para conservar activación de compartir en móvil. Alternativas: compartir texto, copiar y descarga por página. NPT identificado sin asignar posición. Sin escrituras de datos ni cambios en RLS.
+- Verificado: sintaxis JS e inline; caso 3 jugadores 64/-8, 67/-5, 68/-4; gating de ronda abierta; 121 jugadores en 7 imágenes con canvas simulado, NPT y conservación de filas. No probado todavía con navegador/iPhone real ni Supabase autenticado.
+- Pendiente: revisión móvil, autorización de fusión/publicación. No confundir cierre informal con validación oficial FAFG.
